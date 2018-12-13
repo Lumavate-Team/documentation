@@ -1,7 +1,9 @@
 Authors
 -------
 
-* Eric (New contributor)
-* Anthony 
+* Tim (New contributor)
+* John
+* Matt
+* Wes
 
 
