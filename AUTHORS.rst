@@ -1,9 +1,7 @@
 Authors
 -------
 
-* Tim (New contributor)
-* John
-* Matt
-* Wes
-
-
+* Lauren (New contributor)
+* Gunnar
+* Emily
+* Tim
