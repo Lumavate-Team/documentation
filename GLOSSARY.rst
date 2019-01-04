@@ -1,4 +1,4 @@
-Lumavate Terminology
+Terminology
 ====================
 
 Activations
