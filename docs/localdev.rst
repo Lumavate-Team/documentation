@@ -63,7 +63,8 @@ This endpoint is how the widget informs the platform of which properties exist f
 
 This endpoint is called every time the tool must render itself either in preview or in production. This is the core endpoint that actually produces the UI for this tool.  In many cases, a microservice simply returns a status code for this route.
 
-Tools may also implment additional endpoints that are called during a tool's lifecycle:
+
+## Optional Endpoints
 
 * ON_CREATE_VERSION
 
