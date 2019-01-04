@@ -42,8 +42,8 @@ Installing Thor
 Testing a Tool Locally
 ----------------------
 
-Implmenting Tool API Endpoints
-------------------------------
+Implementing Tool API Endpoints
+-------------------------------
 
 Every Tool developed to be registered within Lumavate must implement two key API endpoints
 
