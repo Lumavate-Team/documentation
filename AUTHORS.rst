@@ -1,7 +1,7 @@
 Authors
 -------
 
-* Lauren (New contributor)
+* Lauren
 * Gunnar
 * Emily
 * Tim
