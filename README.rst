@@ -1,27 +1,17 @@
-Template
+CLI
 ========
 
-This sample project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+The Lumavate Commandline Interface (CLI) can be used to streamline many administrative tasks, such as adding & updating widgets, microservices, and/or
+component sets.
 
-Look how easy it is to use:
+Behind the scenes, the CLI uses the native REST APIs available via the Platform.
+The CLI is also available via open-source here.
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
+Getting Started
+---------------
 
-Features
---------
-
-- Be awesome
-- Make things faster
-
-Installation
-------------
-
-Install $project by running:
-
-    install project
+Install the CLI via pip
+`pip install lumavate-cli`
 
 Contribute
 ----------
