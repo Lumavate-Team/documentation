@@ -6,10 +6,15 @@ Activations
 
 Activations refer to the method by which an Experience is started. Activation methods can include such things as URL link, QR Code, NFC tag, or text back reply. The Lumavate Studio automatically generates activation methods for each Experience. Each activation method can optionally pass additional “contextual data” during the activation to the widget.  What data is passed during activation can be setup and configured in the Lumavate Studio. The developer has access to this activation data in the standard payload that is passed to each widget.
 
-Components
-----------
+Command Center
+--------------
+In the Lumavate platform, a Command Center is a central location where Tools, used
+within the Experiences, are managed. Tools are made up of Widgets, Microservices, and Component Sets. The Command Center is used to share those Tools with associated Studios. The Command Center can be thought of as “the gatekeeper of Studio Tools,” because Studios must be given access to Tools by a command center in order to use them.
 
-A component is an advanced property type for a widget that allows a studio user, through the Lumavate Studio, to add and configure a set of objects with their own properties to configure the widget for their specific Experience. For instance, if the widget has a toolbar, a component would be each item on the toolbar that the studio user could add and configure, which has its own set of properties such as toolbar image, text value, and page link URL.
+Component Sets
+--------------
+
+A Component Set is a group of custom Web Components that can be used within Experiences, similar to Widgets. Web Components are based on existing web standards & is an industry standard with the intent to bring component-based engineering to the World Wide Web.
 
 Environment Variables
 ---------------------
@@ -29,7 +34,7 @@ The Lumavate Studio refers to the WYSIWYG designer application within the Lumava
 Microservice
 ------------
 
-A Microservice is a reusable web application component that can consist of one to many pages. It is a reusable web component that can be utilized across multiple Lumavate Experiences. For example, a “Locator” is a standard Widget. It provides location services and can be used in multiple Experiences.
+Similar to Widgets, Microservices are container-based applications used within Experiences. A Microservice is intended to be a behind-the-scenes addition to an Experience, providing additional business logic and/or data access to an Experience.
 
 Progressive Web Application
 ---------------------------
@@ -55,6 +60,11 @@ Studio Users
 ------------
 
 Users of the Lumavate Studio product. Often these users do not have a development background. The Lumavate Studio is designed so users without a development background can assemble and publish Experiences using reusable widgets.
+
+Tools
+-----
+
+Widgets, Microservices, & Component Sets used within the Platform
 
 Widget
 ------
