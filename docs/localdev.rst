@@ -172,6 +172,7 @@ Checkbox
 ^^^^^^^^
 
 Present the Studio user with a checkbox option, which is useful when the value of the property is pre-defined & only selectable by the Studio user.
+
 .. code-block:: javascript
 
   type: 'checkbox'
@@ -189,6 +190,7 @@ Dropdown
 ^^^^^^^^
 
 A list of options from which a Studio user can choose a single value.
+
 .. code-block:: javascript
 
   type: 'dropdown',
