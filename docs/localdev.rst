@@ -230,3 +230,4 @@ Used to provide a link to another Tool included in the Experience, useful for na
 
   type: 'page-link'
 
+.. include:: ../COMPONENTS.rst
