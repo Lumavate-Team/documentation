@@ -58,6 +58,7 @@ This endpoint is how the widget informs the platform of which properties exist f
 * RENDER
 
 .. code-block:: python
+
   /<string:integration_cloud>/<string:widget_type>
 
 This endpoint is called every time the tool must render itself either in preview or in production. This is the core endpoint that actually produces the UI for this tool.  In many cases, a microservice simply returns a status code for this route.
@@ -68,6 +69,7 @@ This endpoint is called every time the tool must render itself either in preview
 * ON_CREATE_VERSION
 
 .. code-block:: python
+
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/on-create-version
 
 This endpoint is called just BEFORE the properties are saved within the Lumavate Studio. This allows the developer to adjust any property data before saving. This is an optional endpoint.
@@ -75,6 +77,7 @@ This endpoint is called just BEFORE the properties are saved within the Lumavate
 * AFTER_CREATE_VERSION
 
 .. code-block:: python
+
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/after-create-version
 
 This endpoint is called just AFTER the properties are saved within the Lumavate Studio. This allows the developer to adjust any property data after saving.  This is an optional endpoint.
@@ -82,6 +85,7 @@ This endpoint is called just AFTER the properties are saved within the Lumavate 
 * DEFAULT
 
 .. code-block:: python
+
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/index.html
 
 This is a simple redirect endpoint that redirects the base URL to the fully qualified URL.
