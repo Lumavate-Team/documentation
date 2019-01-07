@@ -99,7 +99,7 @@ This is a simple redirect endpoint that redirects the base URL to the fully qual
 Registering Properties
 ----------------------
 
-The Discover endpoint enables the ability to expose properties through the Lumavate Studio.
+The Discover endpoint enables the ability to expose properties through the Lumavate Studio, by returning an array of properties via JSON.
 Each property is defined by denoting the tab, section, name, & label using the following JSON structure:
 
 .. code-block:: javascript
@@ -113,7 +113,7 @@ Each property is defined by denoting the tab, section, name, & label using the f
   'type': 'Property Type - see below'
   }
 
-The following list of properties are available & can be implmented by including the appropriate JSON in the Discover endpoint.
+The following list of properties are available & can be implemented by including the appropriate JSON in the Discover endpoint.
 
 * Translatable Text
 * Text
@@ -152,7 +152,7 @@ A simple text property, which is not typically end-user visible (othreiwse trans
 Color
 ^^^^^
 
-Rather than setting a HEX or RGB color, use this property to enable the Stuiod User to use a color picker when setting a color, like background, text, or
+Rather than setting a HEX or RGB color, use this property to enable the Stuiod user to use a color picker when setting a color, like background, text, or
 header styles.
 
 .. code-block:: javascript
@@ -162,6 +162,8 @@ header styles.
 Image
 ^^^^^
 
+The ability to store an image as a property of a Tool.  This is useful when doing image recognition, branding, and/or personalization.
+
 .. code-block:: javascript
 
   type: 'image-upload'
@@ -169,12 +171,15 @@ Image
 Checkbox
 ^^^^^^^^
 
+Present the Studio user with a checkbox option, which is useful when the value of the property is pre-defined & only selectable by the Studio user.
 .. code-block:: javascript
 
   type: 'checkbox'
 
 Toggle
 ^^^^^^
+
+A boolean property type useful when detemrining if a property should be "on" or "off".
 
 .. code-block:: javascript
 
@@ -183,6 +188,7 @@ Toggle
 Dropdown
 ^^^^^^^^
 
+A list of options from which a Studio user can choose a single value.
 .. code-block:: javascript
 
   type: 'dropdown',
@@ -194,6 +200,8 @@ Dropdown
 Numeric
 ^^^^^^^
 
+Numeric properties can be represented as a decimal, however also give the option to set a min & max range.
+
 .. code-block:: javascript
 
   type: 'numeric',
@@ -204,6 +212,8 @@ Numeric
 
 Multiple Selection
 ^^^^^^^^^^^^^^^^^^
+
+Multiple selection will allow the studio user to select from a list of options, which will be returned as an array for use later.
 
 .. code-block:: python
 
