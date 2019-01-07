@@ -1,8 +1,8 @@
 Component Sets
 --------------
 
-Component Sets are bundled webcomponets that are registered to be used by Widgets.  Any current web component, regardless of framework, can be registered for
-use by Widget via supplementing the distributable with a metadata file.
+Component Sets are bundled webcomponents that are registered to be used by Widgets.  Any current web component, regardless of framework, can be registered for
+used by Widgets via supplementing the distributable with a metadata file.
 
 A Component Set metadata can be defined via the components.json file which adheres to the following JSON structure:
 
@@ -26,3 +26,5 @@ A Component Set metadata can be defined via the components.json file which adher
     }
   ],
   'template': '<component-tag property1='{{componentData.property1}}'></component-tag>'
+
+The components.json file should be included within the root folder of the dsitrubtable taht is uploaded to Lumavate.

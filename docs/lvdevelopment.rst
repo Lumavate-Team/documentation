@@ -6,7 +6,7 @@ Getting Started
 
 Within Lumavate, Experiences are created by studio users using a set of reusable Tools that provide discrete web functionality.
 
-Lumavate provides a set of common tools as a standard feature of the platform. However, as a platform, Lumavate allows developers to develop their own tools that can be managed and made available in the Lumavate Studio so studio users can build Experiences using your own specific functionality.
+Lumavate provides a set of common tools as a standard feature of the platform. However, as a platform, Lumavate enables developers to develop their own tools that can be managed and made available in the Lumavate Studio so studio users can build Experiences using your own specific functionality.
 
 A Tool consists of four primary things:
 
@@ -35,12 +35,6 @@ Docker is not a bad thing.
 The Community Edition of Docker is sufficent for Lumavate Development: https://www.docker.com/community-edition
 
 You can also learn more about Docker at https://docs.docker.com
-
-Installing Thor
----------------
-
-Testing a Tool Locally
-----------------------
 
 Implementing Tool API Endpoints
 -------------------------------
