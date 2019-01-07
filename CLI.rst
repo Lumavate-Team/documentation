@@ -8,9 +8,7 @@ component sets.
 Behind the scenes, the CLI uses the native REST APIs available via the Platform.
 The CLI is also available via open-source here.
 
-Config Summary
-^^^^^^^^^^^^^^
-
+## Config Summary:
 * Installation
 * Provisioning Credentials
 * Configuration
@@ -18,54 +16,43 @@ Config Summary
 
 Installation
 ------------
+### From pip
 
-From pip
-^^^^^^^^
+* On Windows, run BASH as admin and omit 'sudo'::
+  $ sudo pip3 install luma
 
-* On Windows, run BASH as admin and omit 'sudo'
-
-  `$ sudo pip3 install luma`
-
-From source
-^^^^^^^^^^^
+### From source
 
 * Clone this repo.
-* CD into the CLI dir and run
+* CD into the CLI dir and run::
+  $ sudo pip3 install .
 
-  `$ sudo pip3 install .`
+### Installing the CLI as a non-admin:
+* Install luma using the --user flag and then add to path::
+$ pip3 install luma --user
 
-Installing the CLI as a non-admin
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Install luma using the --user flag and then add to path
-  `$ pip3 install luma --user`
-
-CLI Support
------------
-
+### CLI support:
+---
 * The CLI is written for and tested in a BASH shell
 * To get the most of of the CLI, use it with ZSH. This enables extra features such as showing help text during autocompletion
 * To activate autocompletion after install, restart your terminal or source your shell config (Either .zshrc or .bash_profile)
 
 Provisioning Credentials
 -------------------------
-
 * In the Lumavate App, navigate to the Lumavate CLI page inside a command center
 * Provisioning CLI credentials will generate credentials for the user you are currently signed in as
 * When running the add profile command, you will have the option to associate the new profile to any organization your user has access to, regardless of the command center you are currently in
 
 Configuration
 -------------
-
 * Configuring the CLI requires two steps, configuring environments and configuring profiles.
     * **Environments** know how to get and refresh tokens so you stay authorized with the platform as a user.
     * **Profiles** give the user a company context which is required by most of the platform API.
 
-CLI Env
-^^^^^^^
+#### CLI Env:
 * To configure the CLI Env, run the generated command from the Lumavate CLI page in the app in your terminal
-* To configure each Env value one by one, run
-  `$ luma env config`
+* To configure each Env value one by one, run::
+$ luma env config
 
 Env Name: prod
 App: appUrl
