@@ -96,46 +96,121 @@ This endpoint is called just AFTER the properties are saved within the Lumavate 
 
 This is a simple redirect endpoint that redirects the base URL to the fully qualified URL.
 
-Understanding Lumavate Properties
----------------------------------
+Registering Properties
+----------------------
 
-* Translatable Text - translated-text
-* Text - text
-* Color - color
-* Image - image-upload
-* Checkbox - checkbox
-* Toggle - toggle
-* Dropdown - dropdown
-* Numeric - numeric
-* Multiple Selection - multiselect
-* Page Link - page-link
+The Discover endpoint enables the ability to expose properties through the Lumavate Studio.
+Each property is defined by denoting the tab, section, name, & label using the following JSON structure:
+
+.. code-block:: javascript
+
+  var property = {
+  'classification': 'Tab Name',
+  'section': 'Section Name',
+  'help': 'Help text for the property.  Use Markup to provide additional help to the Studio User',
+  'name': 'Property Name which will be used to reference this property',
+  'label': 'Property Label',
+  'type': 'Property Type - see below'
+  }
+
+The following list of properties are available & can be implmented by including the appropriate JSON in the Discover endpoint.
+
+* Translatable Text
+* Text
+* Color
+* Image
+* Checkbox
+* Toggle
+* Dropdown
+* Numeric
+* Multiple Selection
+* Page Link
 
 Translatable Text
 ^^^^^^^^^^^^^^^^^
 
+This property will allow the Studio user to set a property value which might be language specific.  This allows the application to render the proper text
+based on the end user's language settings.
+
+.. code-block:: javascript
+
+  type: 'translatable-text'
+
 Text
 ^^^^
+
+A simple text property, which is not typically end-user visible (othreiwse translatable text is recomended).
+
+.. code-block:: javascript
+
+  type: 'text'
 
 Color
 ^^^^^
 
+Rather than setting a HEX or RGB color, use this property to enable the Stuiod User to use a color picker when setting a color, like background, text, or
+header styles.
+
+.. code-block:: javascript
+
+  type: 'color'
+
 Image
 ^^^^^
+
+.. code-block:: javascript
+
+  type: 'image-upload'
 
 Checkbox
 ^^^^^^^^
 
+.. code-block:: javascript
+
+  type: 'checkbox'
+
 Toggle
 ^^^^^^
+
+.. code-block:: javascript
+
+  type: 'toggle'
 
 Dropdown
 ^^^^^^^^
 
+.. code-block:: javascript
+
+  type: 'dropdown',
+  options: {
+    'value1': 'Display Value',
+    'value2': 'Display Value Too'
+  }
+
 Numeric
 ^^^^^^^
+
+.. code-block:: javascript
+
+  type: 'numeric',
+  options: {
+    'min': 0,
+    'max': 99999
+  }
 
 Multiple Selection
 ^^^^^^^^^^^^^^^^^^
 
+.. code-block:: python
+
+  type: 'multi-select'
+
 Page Link
 ^^^^^^^^^
+
+Used to provide a link to another Tool included in the Experience, useful for navigation between Widgets.
+
+.. code-block:: python
+
+  type: 'page-link'
+
