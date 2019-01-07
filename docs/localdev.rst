@@ -143,7 +143,11 @@ A simple text property, which is not typically end-user visible (othreiwse trans
 
 .. code-block:: javascript
 
-  type: 'text'
+  type: 'text',
+  options: {
+    'readonly': true || false - defaults to true,
+    'rows': 0 - Modify the text box to a text area
+  }
 
 Color
 ^^^^^
