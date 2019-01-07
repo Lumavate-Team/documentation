@@ -45,7 +45,12 @@ Testing a Tool Locally
 Implementing Tool API Endpoints
 -------------------------------
 
-Every Tool developed to be registered within Lumavate must implement two key API endpoints
+Every Tool developed to be registered within Lumavate must implement two key API endpoints.
+Each endpoint will contain dynamic parts that correspond to both the type of Tool uploaded (denoted as widget_type), along with the logical location of the
+Tool itself (denoted as integration_cloud).  Both of these URI parts are in the form of a string & should be consumed dynamically.
+
+Required Endpoints
+^^^^^^^^^^^^^^^^^^
 
 * DISCOVER
 
@@ -99,10 +104,38 @@ Understanding Lumavate Properties
 * Color - color
 * Image - image-upload
 * Checkbox - checkbox
-* toggle - toggle
+* Toggle - toggle
 * Dropdown - dropdown
 * Numeric - numeric
 * Multiple Selection - multiselect
 * Page Link - page-link
 
+Translatable Text
+^^^^^^^^^^^^^^^^^
 
+Text
+^^^^
+
+Color
+^^^^^
+
+Image
+^^^^^
+
+Checkbox
+^^^^^^^^
+
+Toggle
+^^^^^^
+
+Dropdown
+^^^^^^^^
+
+Numeric
+^^^^^^^
+
+Multiple Selection
+^^^^^^^^^^^^^^^^^^
+
+Page Link
+^^^^^^^^^
