@@ -1,14 +1,4 @@
 Code Samples
 ============
 
-C#
---
-
-Python
-------
-
-Go
---
-
-Node
-----
+Code samples can be found at https://github.com/Lumavate-Team
