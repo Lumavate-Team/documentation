@@ -1,21 +1,21 @@
 Properties
-^^^^^^^^^^
+----------
 
-The Discover endpoint enables the ability to expose properties through the Lumavate Studio, by returning an array of properties via JSON.
-Each property is defined by denoting the tab, section, name, & label using the following JSON structure:
+The Discover endpoint enables the ability to expose configurable settings through the Lumavate studio, by returning an array of properties via JSON.
+A property is defined by denoting the tab, section, help text, name, label, & type using the following JSON structure:
 
 .. code-block:: javascript
 
   var property = {
-  'classification': 'Tab Name',
-  'section': 'Section Name',
-  'help': 'Help text for the property.  Use Markup to provide additional help to the Studio User',
-  'name': 'Property Name which will be used to reference this property',
-  'label': 'Property Label',
-  'type': 'Property Type - see below'
+    'classification': 'Tab name',
+    'section': 'Section name',
+    'help': 'Help text for the property.  Use Markdown to provide additional help to the studio user',
+    'name': 'Property name which will be used to reference this property',
+    'label': 'Property label',
+    'type': 'Property type - see below'
   }
 
-The following list of properties are available & can be implemented by including the appropriate JSON in the Discover endpoint.
+The following list of types are available & can be implemented by including the appropriate JSON in the Discover endpoint.
 
 * Translatable Text
 * Text
@@ -28,18 +28,20 @@ The following list of properties are available & can be implemented by including
 * Multiple Selection
 * Page Link
 
-**Translatable Text**
+Translatable Text
+^^^^^^^^^^^^^^^^^
 
-This property will allow the Studio user to set a property value which might be language specific.  This allows the application to render the proper text
+Translatable Text allows the studio user to set a lanugage specific property value.  The application will then render the proper text
 based on the end user's language settings.
 
 .. code-block:: javascript
 
   type: 'translatable-text'
 
-**Text**
+Text
+^^^^
 
-A simple text property, which is not typically end-user visible (othreiwse translatable text is recomended).
+Text allows studio users to set a text-only value.
 
 .. code-block:: javascript
 
@@ -49,42 +51,46 @@ A simple text property, which is not typically end-user visible (othreiwse trans
     'rows': 0 - Modify the text box to a text area
   }
 
-**Color**
+Color
+^^^^^
 
-Rather than setting a HEX or RGB color, use this property to enable the Stuiod user to use a color picker when setting a color, like background, text, or
-header styles.
+Color allows studio users to set a color via a color picker rather than setting a HEX or RGB color value.
 
 .. code-block:: javascript
 
   type: 'color'
 
-**Image**
+Image
+^^^^^
 
-The ability to store an image as a property of a Tool.  This is useful when doing image recognition, branding, and/or personalization.
+Image allows a studio user to upload an image.
 
 .. code-block:: javascript
 
   type: 'image-upload'
 
-**Checkbox**
+Checkbox
+^^^^^^^^
 
-Present the Studio user with a checkbox option, which is useful when the value of the property is pre-defined & only selectable by the Studio user.
+Checkbox allows studio users to set a boolean value by checking a checkbox
 
 .. code-block:: javascript
 
   type: 'checkbox'
 
-**Toggle**
+Toggle
+^^^^^^
 
-A boolean property type useful when detemrining if a property should be "on" or "off".
+Toggle allows studio users to set a boolean value between "on" and "off".
 
 .. code-block:: javascript
 
   type: 'toggle'
 
-**Dropdown**
+Dropdown
+^^^^^^^^
 
-A list of options from which a Studio user can choose a single value.
+Dropdown presents studio users with a list of options. The user is able to select a single value.
 
 .. code-block:: javascript
 
@@ -94,9 +100,10 @@ A list of options from which a Studio user can choose a single value.
     'value2': 'Display Value Too'
   }
 
-**Numeric**
+Numeric
+^^^^^^^
 
-Numeric properties can be represented as a decimal, however also give the option to set a min & max range.
+Numeric allows studio user to enter numeric values.  Numeric properties can be represented as a decimal and a min & max range can be set.
 
 .. code-block:: javascript
 
@@ -106,17 +113,19 @@ Numeric properties can be represented as a decimal, however also give the option
     'max': 99999
   }
 
-**Multiple Selection**
+Multiple Selection
+^^^^^^^^^^^^^^^^^^
 
-Multiple selection will allow the studio user to select from a list of options, which will be returned as an array for use later.
+Multiple selection presents studio users with a list of options. The user is able to select multiple options.
 
 .. code-block:: python
 
   type: 'multi-select'
 
-**Page Link**
+Page Link
+^^^^^^^^^
 
-Used to provide a link to another Tool included in the Experience, useful for navigation between Widgets.
+Page Link allows studio users to link to another URL by either selecting a Widget from the current Experience or typing in an external URL.
 
 .. code-block:: python
 

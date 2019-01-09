@@ -1,10 +1,13 @@
-Component Sets
+Component-Sets
 --------------
 
-Component Sets are bundled webcomponents that are registered to be used by Widgets.  Any current web component, regardless of framework, can be registered for
-used by Widgets via supplementing the distributable with a metadata file.
+Component-sets are bundled web components that are registered to be used by widgets.  Any web component, regardless of framework, upon upload can be
+used by any widget via supplementing the distributable with a metadata file & proper tags.
 
-A Component Set metadata can be defined via the components.json file which adheres to the following JSON structure:
+Metadata
+^^^^^^^^
+
+A Component-set metadata can be defined via the components.json file which adheres to the following JSON structure:
 
 .. code-block:: javascript
 
@@ -13,21 +16,22 @@ A Component Set metadata can be defined via the components.json file which adher
   'tags': ['Array of Tags which can be used within a Widget to denote where a Component can be used'],
   'type': 'Unique Label per Component',
   'properties':
-  [  // Array of Properties to be shown within the Studio
+  [  // Array of Properties to be shown within the studio
     {
-      'classification': 'Tab Name for which this property resides',
-      'default': 'Default Value',
-      'helpText': 'Help Text',
-      'label': 'Display Label',
-      'name': 'property1' //Property Name used in the Component',
+      'classification': 'Tab name',
+      'section': 'Section name',
+      'help': 'Help text for the property.  Use Markdown to provide additional help to the studio user',
+      'name': 'Property name which will be used to reference this property',
+      'label': 'Property label',
+      'type': 'Property type - see below'
+      'default': 'Default value',
+      'label': 'Display label',
       'options': {},
-      'section': null,
-      'type': 'Property Type: Text, Toggle, Image, Color, etc.'
     }
   ],
   'template': '<component-tag property1='{{componentData.property1}}'></component-tag>'
 
-The components.json file should be included within the root folder of the dsitrubtable taht is uploaded to Lumavate.
+The components.json file should be included within the root folder of the distributable that is uploaded to Lumavate.
 
 .. include:: ../PROPERTIES.rst
 

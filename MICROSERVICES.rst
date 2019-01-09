@@ -1,31 +1,35 @@
 Microservices
 -------------
 
-Implementing Microservice API Endpoints
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Microservices are container-based applications used within Experiences. A Microservice is intended to be a behind-the-scenes addition to an Experience, providing additional business logic and/or data access to an Experience.
 
-Every widget developed to be registered within Lumavate must implement two key API endpoints.
-Each endpoint will contain dynamic parts that correspond to both the type of widget uploaded (denoted as widget_type), along with the logical location of the
-widget itself (denoted as integration_cloud).  Both of these URI parts are in the form of a string & should be consumed dynamically.
+Implementing API Endpoints
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Any microservice developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
+Each endpoint will contain dynamic parts that correspond to both the type of microservice uploaded (denoted as service_type), along with the logical location of the
+microservice (denoted as integration_cloud).  Both of these URI parts are in the form of a string & should be handled dynamically.
 
 Required Endpoints
 ^^^^^^^^^^^^^^^^^^
 
-* DISCOVER
+All microservices require the following API Endpoints:
+
+1. DISCOVER
 
 .. code-block:: python
 
-  /<string:integration_cloud>/<string:widget_type>/discover/properties
+  /<string:integration_cloud>/<string:service_type>/discover/properties
 
-This endpoint is how the widget informs the platform of which properties exist for this widget. The platform automatically adds a few platform level properties outside of this endpoint. They include the page_type, page_title, etc.  This is only used to add additional, widget specific properties. If the widget does not require any additional properties, this can return an empty set.
+This endpoint informs the platform of which properties exist for the microservice. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
 
-* RENDER
+2. RENDER
 
 .. code-block:: python
 
-  /<string:integration_cloud>/<string:widget_type>
+  /<string:integration_cloud>/<string:service_type>
 
-This endpoint is called every time the tool must render itself either in preview or in production. This is the core endpoint that actually produces the UI for this tool.  In many cases, a microservice simply returns a status code for this route.
+This endpoint is called when the microservice renders itself for preview.
 
 
 Optional Endpoints
@@ -37,7 +41,8 @@ Optional Endpoints
 
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/on-create-version
 
-This endpoint is called just BEFORE the properties are saved within the Lumavate Studio. This allows the developer to adjust any property data before saving. This is an optional endpoint.
+This endpoint is called BEFORE the properties are saved within the Lumavate studio. This allows the developer to modify and/or override any property data before saving.
+
 
 * AFTER_CREATE_VERSION
 
@@ -45,14 +50,6 @@ This endpoint is called just BEFORE the properties are saved within the Lumavate
 
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/after-create-version
 
-This endpoint is called just AFTER the properties are saved within the Lumavate Studio. This allows the developer to adjust any property data after saving.  This is an optional endpoint.
-
-* DEFAULT
-
-.. code-block:: python
-
-  /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/index.html
-
-This is a simple redirect endpoint that redirects the base URL to the fully qualified URL.
+This endpoint is called AFTER the properties are saved within the Lumavate studio. This allows the developer to adjust any property data after saving.
 
 .. include:: ../PROPERTIES.rst
