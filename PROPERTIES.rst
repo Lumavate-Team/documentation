@@ -29,7 +29,7 @@ The following list of properties are available & can be implemented by including
 * Page Link
 
 Translatable Text
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 This property will allow the Studio user to set a property value which might be language specific.  This allows the application to render the proper text
 based on the end user's language settings.
@@ -39,7 +39,7 @@ based on the end user's language settings.
   type: 'translatable-text'
 
 Text
-^^^^
+""""
 
 A simple text property, which is not typically end-user visible (othreiwse translatable text is recomended).
 
@@ -52,7 +52,7 @@ A simple text property, which is not typically end-user visible (othreiwse trans
   }
 
 Color
-^^^^^
+"""""
 
 Rather than setting a HEX or RGB color, use this property to enable the Stuiod user to use a color picker when setting a color, like background, text, or
 header styles.
@@ -62,7 +62,7 @@ header styles.
   type: 'color'
 
 Image
-^^^^^
+"""""
 
 The ability to store an image as a property of a Tool.  This is useful when doing image recognition, branding, and/or personalization.
 
@@ -71,7 +71,7 @@ The ability to store an image as a property of a Tool.  This is useful when doin
   type: 'image-upload'
 
 Checkbox
-^^^^^^^^
+""""""""
 
 Present the Studio user with a checkbox option, which is useful when the value of the property is pre-defined & only selectable by the Studio user.
 
@@ -80,7 +80,7 @@ Present the Studio user with a checkbox option, which is useful when the value o
   type: 'checkbox'
 
 Toggle
-^^^^^^
+""""""
 
 A boolean property type useful when detemrining if a property should be "on" or "off".
 
@@ -89,7 +89,7 @@ A boolean property type useful when detemrining if a property should be "on" or 
   type: 'toggle'
 
 Dropdown
-^^^^^^^^
+""""""""
 
 A list of options from which a Studio user can choose a single value.
 
@@ -102,7 +102,7 @@ A list of options from which a Studio user can choose a single value.
   }
 
 Numeric
-^^^^^^^
+"""""""
 
 Numeric properties can be represented as a decimal, however also give the option to set a min & max range.
 
@@ -115,7 +115,7 @@ Numeric properties can be represented as a decimal, however also give the option
   }
 
 Multiple Selection
-^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 Multiple selection will allow the studio user to select from a list of options, which will be returned as an array for use later.
 
@@ -124,7 +124,7 @@ Multiple selection will allow the studio user to select from a list of options, 
   type: 'multi-select'
 
 Page Link
-^^^^^^^^^
+"""""""""
 
 Used to provide a link to another Tool included in the Experience, useful for navigation between Widgets.
 
