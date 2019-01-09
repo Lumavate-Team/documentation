@@ -1,80 +1,10 @@
-Lumavate Overview
-=================
+Welcome to the Lumavate Developer Portal
+========================================
 
-Tools
------
+Enhance your application delivery using the Lumavate Platform!
+Lumavate is a delivery platform for cloud-based web applications. All applications, also known as experiences in the platform,
+are published as fully compliant Progressive Web Applications.
+Lumavate allows studio users to publish web-based applications using a WYSISYG designer based on reusable web components, microservices, & widgets developed by both Lumavate and external developers.
 
-Tools are used to build Experiences within Lumavate.  Each Tool can be versioned when registered with the Platform, ensuring that current production
-Experiences cannot be ill-affected during the development and/or testing of updated code.
-
-Widgets
-^^^^^^^
-
-Widgets are reusable container-based web applications that can consist of one to many pages. It is a reusable web application that can be utilized across multiple Lumavate Experiences. For example, a “Locator” is a standard Widget. It provides location services and can be used in multiple Experiences.
-
-Microservices
-^^^^^^^^^^^^^
-
-Similar to Widgets, Microservices are container-based applications used within the Experiences. A Microservice is intended to be a behind-the-scenes addition to an Experience, providing additional business logic and/or data access to an Experience.
-
-Component Sets
-^^^^^^^^^^^^^^
-
-A Component Set is a group of custom Web Components that can be used within Experiences, similar to Widgets. Web Components are based on existing web standards & is an industry standard with the intent to bring component-based engineering to the World Wide Web.
-
-Developing Tools
-================
-
-Getting Started
----------------
-
-Installing Docker
-^^^^^^^^^^^^^^^^^
-
-Component Sets
---------------
-
-Microservices
--------------
-
-Widgets
--------
-
-Lumavate Tools
-==============
-
-List of Base Tools
-------------------
-
-Lumavate Platform
-=================
-
-Tell how awesome we are.
-
-Studio
-------
-
-Command Center
---------------
-
-Activations
------------
-
-Experiences
------------
-
-Databases
----------
-
-Tools
------
-
-API Reference
-^^^^^^^^^^^^^
-
-CLI
-===
-
-Glossary
-========
+The following topics can be used as a guide to start using your current code within Lumavate.
 

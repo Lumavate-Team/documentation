@@ -1,2 +1,1 @@
 .. include:: ../THOR.rst
-

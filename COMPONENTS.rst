@@ -28,3 +28,6 @@ A Component Set metadata can be defined via the components.json file which adher
   'template': '<component-tag property1='{{componentData.property1}}'></component-tag>'
 
 The components.json file should be included within the root folder of the dsitrubtable taht is uploaded to Lumavate.
+
+.. include:: ../PROPERTIES.rst
+
