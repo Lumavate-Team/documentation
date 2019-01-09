@@ -51,5 +51,3 @@ This endpoint is called BEFORE the properties are saved within the Lumavate stud
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/after-create-version
 
 This endpoint is called AFTER the properties are saved within the Lumavate studio. This allows the developer to adjust any property data after saving.
-
-.. include:: ../PROPERTIES.rst

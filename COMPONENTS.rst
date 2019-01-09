@@ -33,5 +33,3 @@ A Component-set metadata can be defined via the components.json file which adher
 
 The components.json file should be included within the root folder of the distributable that is uploaded to Lumavate.
 
-.. include:: ../PROPERTIES.rst
-

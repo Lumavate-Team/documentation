@@ -30,13 +30,14 @@ Settings for Lumavate Containers
 Link to pre-fab docker images
 Briefly explain how to build & save a Docker container that can be used to upload into Lumavate
 
+.. include:: ../PROPERTIES.rst
+
 .. include:: ../WIDGETS.rst
 
 .. include:: ../MICROSERVICES.rst
 
 .. include:: ../COMPONENTS.rst
 
-.. include:: ../PROPERTIES.rst
 
 Lumavate Tools
 ==============
