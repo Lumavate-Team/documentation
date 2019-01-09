@@ -1,5 +1,5 @@
-Welcome to the Lumavate Developer Portal
-========================================
+Overview
+========
 
 Enhance your application delivery using the Lumavate Platform!
 Lumavate is a delivery platform for cloud-based web applications. All applications, also known as experiences in the platform,

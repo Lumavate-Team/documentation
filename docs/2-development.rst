@@ -36,11 +36,11 @@ The Community Edition of Docker is sufficent for Lumavate Development: https://w
 
 You can also learn more about Docker at https://docs.docker.com
 
-.. include:: ../widgets.rst
+.. include:: ../WIDGETS.rst
 
-.. include:: ../microservices.rst
+.. include:: ../MICROSERVICES.rst
 
-.. include:: ../components.rst
+.. include:: ../COMPONENTS.rst
 
 Lumavate Tools
 ==============

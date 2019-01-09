@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to the Lumavate Developer Portal
-==================================================
+========================================
 
 Enhance your application delivery using the Lumavate Platform!
 Lumavate is a delivery platform for cloud-based web applications. All applications, also known as experiences in the platform,
