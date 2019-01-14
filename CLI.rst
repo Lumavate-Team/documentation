@@ -2,46 +2,74 @@
 CLI
 ============
 
-The Lumavate Commandline Interface (CLI) can be used to streamline many administrative tasks, such as adding & updating widgets, microservices, and/or
-component sets.
+The Lumavate Commandline Line Interface (CLI) can be used to streamline many administrative tasks, such as adding & updating widgets, microservices, and/or component sets.
 
-Behind the scenes, the CLI uses the native REST APIs available via the Platform.
-The CLI is also available via open-source here.
+The CLI uses the native REST APIs available via the Platform. To learn more about Lumavate's REST APIs, please go here: <link to come>.
 
-## Config Summary:
+If you would like to know more about the CLI, it is available via open-source here: <link to come>.
+
+The following documentation will explain:
+
+* Requarments
+* Support Infomration
 * Installation
 * Provisioning Credentials
 * Configuration
 * Example Commands
 
-Installation
-------------
-### From pip
+Requarments
+-----------
+You will need to install 'Python 3.1.1 <https://www.python.org/downloads/>' or higher in order to use the CLI. 
 
-* On Windows, run BASH as admin and omit 'sudo'::
-  $ sudo pip3 install luma
-
-### From source
-
-* Clone this repo.
-* CD into the CLI dir and run::
-  $ sudo pip3 install .
-
-### Installing the CLI as a non-admin:
-* Install luma using the --user flag and then add to path::
-$ pip3 install luma --user
+It is also recomended that you install 'Gitbash <https://git-scm.com/downloads>'. 
 
 ### CLI support:
 ---
-* The CLI is written for and tested in a BASH shell
-* To get the most of of the CLI, use it with ZSH. This enables extra features such as showing help text during autocompletion
-* To activate autocompletion after install, restart your terminal or source your shell config (Either .zshrc or .bash_profile)
+* The CLI is written for and tested in a BASH shell.
+* To get the most out of the CLI, use it with ZSH. This enables extra features such as showing help text during autocompletion.
+* To activate autocompletion after install, restart your terminal or source your shell config (Either .zshrc or .bash_profile).
+
+Installation
+------------
+The CLI can be installed two differnt ways: through Pip or from the source.
+
+From pip
+^^^^^^^^
+As a Non-admin::
+  $ sudo pip3 install luma
+
+As an Admin::
+  $ pip3 install luma
+
+From source
+^^^^^^^^^^^
+
+Installing the CLI as a non-admin:
+1) Clone this repo.
+2) CD into the CLI dir
+3) Run::
+  $ pip3 install luma --user
+4) Add the returned path url to the path 
+  (Example Response):: 
+  $
+
+As an Admin
+1) Clone this repo.
+2) CD into the CLI dir
+3) Run::
+  $ sudo pip3 install .
 
 Provisioning Credentials
 -------------------------
-* In the Lumavate App, navigate to the Lumavate CLI page inside a command center
-* Provisioning CLI credentials will generate credentials for the user you are currently signed in as
-* When running the add profile command, you will have the option to associate the new profile to any organization your user has access to, regardless of the command center you are currently in
+1) Navigate to the Lumavate CLI page in a Lumavate command center
+2) Click the Provisioning CLI credentials button. Several boxes The platform will generate credentials for the user you are currently signed in as.
+3) Copy the information from the Configure an Environment field
+4) Past the command into your Bash window
+5) Copy the information from the Add a Profile field
+6) You will be presented with a list of organizations, pick the one you want to associate your profile with
+
+.. Note:
+While running the profile command, you will have the option to associate the new profile to any organization your user has access to, regardless of the command center you are currently in
 
 Configuration
 -------------
