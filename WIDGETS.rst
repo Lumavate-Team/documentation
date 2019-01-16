@@ -21,7 +21,36 @@ All widgets require the following API Endpoints:
 
   /<string:integration_cloud>/<string:widget_type>/discover/properties
 
-This endpoint informs the platform of which properties exist for the widget. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the widget does not require any properties.
+This endpoint informs the platform of which properties exist for the widget, via a JSON payload of an array of [properties](#PROPERTIES). The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the widget does not require any properties.
+
+.. code-block::  rest
+
+  METHOD: GET
+  CONTENT-TYPE: application/json
+  RESPONSE:
+    {
+      "payload": {
+        "data": [
+          {
+            "classification": "General",
+            "default": false,
+            "helpText": "",
+            "label": "Display Background Image",
+            "name": "displayBackgroundImage",
+            "section": "Settings",
+            "type": "toggle"
+          },
+          {
+            "classification": "General",
+            "helpText": "",
+            "label": "Background Image",
+            "name": "backgroundImage",
+            "section": "Settings",
+            "type": "image-upload"
+          }
+        ]
+      }
+    }
 
 2. RENDER
 
