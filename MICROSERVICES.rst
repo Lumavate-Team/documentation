@@ -21,7 +21,7 @@ All microservices require the following API Endpoints:
 
   /<string:integration_cloud>/<string:service_type>/discover/properties
 
-This endpoint informs the platform of which properties exist for the microservice, via a JSON payload of an array of [properties](#PROPERTIES). The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
+This endpoint informs the platform of which properties exist for the microservice, via a JSON payload of an array of properties. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
 
 .. code-block::  rest
 
