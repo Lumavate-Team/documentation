@@ -1,4 +1,5 @@
-.. _platform
+.. _platform:
+
 Platform
 ========
 .. _command center:
