@@ -46,10 +46,6 @@ To set-up Docker on your local machine:
 
 1) Download at least the Community Edition of Docker. The community edition is free and can be downloaded at this site: https://www.docker.com/community-edition.
 
-2)
-
-3)
-
 .. note::
   Lumavate relies heavely on Docker for its tool develpoment. Many of the commands, options, and syntax that are requared when devloping   a tool will comes from Docker. Therfore, we recomand that you learn more about Docker and how it works at: https://docs.docker.com.
 
@@ -70,3 +66,11 @@ Uploading Docker Containers
 
 Lumavate Tools
 ==============
+
+.. include:: ../PROPERTIES.rst
+
+.. include:: ../WIDGETS.rst
+
+.. include:: ../MICROSERVICES.rst
+
+.. include:: ../COMPONENTS.rst
