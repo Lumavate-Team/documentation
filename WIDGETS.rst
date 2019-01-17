@@ -1,19 +1,18 @@
 Widgets
 -------
 
-A Widget is a reusable web application component that can consist of one to many pages. It is a reusable web component that can be utilized across multiple Lumavate Experiences. For example, a “Locator” is a standard Widget. It provides location services and can be used in multiple Experiences.
+A widget is a reusable web application component that can consist of one or more pages. It can be utilized across multiple Lumavate :ref: 'experiences'. For example, “Locator” is a standard widget. It provides a location service to its experiences.
 
 Implementing API Endpoints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Any widget developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
-Each endpoint will contain dynamic parts that correspond to both the type of widget uploaded (denoted as widget_type), along with the logical location of the
-widget(denoted as integration_cloud).  Both of these URI parts are in the form of a string & should be handled dynamically.
+Any widget developed for Lumavate must implement two key API endpoints, :ref: '**Discover**' and :ref: '**Render**'.
+Each endpoint will contain dynamic parts that correspond to both the type of widget uploaded (denoted as widget_type), along with the logical location of the widget (denoted as integration_cloud). Both of these URI parts are in the form of a string & should be handled dynamically.
 
 Required Endpoints
 ^^^^^^^^^^^^^^^^^^
 
-All widgets require the following API Endpoints:
+All widgets require the following API endpoints:
 
 1. DISCOVER
 
@@ -21,7 +20,7 @@ All widgets require the following API Endpoints:
 
   /<string:integration_cloud>/<string:widget_type>/discover/properties
 
-This endpoint informs the platform of which properties exist for the widget, via a JSON payload of an array of properties. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the widget does not require any properties.
+This endpoint informs the platform which properties exist for the widget, via a JSON payload of an array of properties. The platform automatically adds a few platform level properties outside of this endpoint. However, a majority of a widget's properties are contained in the endpoint. An empty set should be sent if the widget does not require any properties.
 
 **Sample Response**
 
@@ -72,7 +71,7 @@ Optional Endpoints
 
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/on-create-version
 
-This endpoint is called BEFORE the properties are saved within the Lumavate studio. This allows the developer to modify and/or override any property data before saving.
+This endpoint is called BEFORE the properties are saved within the Lumavate :ref: 'studio'. This allows the developer to modify and/or override property data before saving.
 
 
 * AFTER_CREATE_VERSION
@@ -81,4 +80,4 @@ This endpoint is called BEFORE the properties are saved within the Lumavate stud
 
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/after-create-version
 
-This endpoint is called AFTER the properties are saved within the Lumavate studio. This allows the developer to adjust any property data after saving.
+This endpoint is called AFTER the properties are saved within the Lumavate :ref: 'studio'. This allows the developer to adjust property data after saving.
