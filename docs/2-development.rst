@@ -62,11 +62,6 @@ Setup Custom Docker Containers
 Uploading Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _Lumavate tools:
-
-Lumavate Tools
-==============
-
 .. include:: ../PROPERTIES.rst
 
 .. include:: ../WIDGETS.rst
@@ -74,3 +69,9 @@ Lumavate Tools
 .. include:: ../MICROSERVICES.rst
 
 .. include:: ../COMPONENTS.rst
+
+.. _Lumavate tools:
+
+Lumavate Tools
+==============
+
