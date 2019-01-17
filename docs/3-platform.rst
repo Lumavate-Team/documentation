@@ -5,7 +5,7 @@ Platform
 
 Command Center
 --------------
-A command center is a central location in the platform where :ref:`tools <tools>` are managed and created. The center cannot use :ref: `tools <tools>`, as it cannot create :ref:`experiences <experiences>`. The center can only manage, create, and distribute :ref:`tools <tools>`. A :ref:`studio <studio>` is needed to use :ref:`tools <tools>`.   
+A command center is a central location in the platform where :ref:`tools <tools>` are managed and created. The center cannot use :ref:`tools <tools>`, as it cannot create :ref:`experiences <experiences>`. The center can only manage, create, and distribute :ref:`tools <tools>`. A :ref:`studio <studio>` is needed to use :ref:`tools <tools>`.   
 
 What it does
 ^^^^^^^^^^^^
@@ -19,7 +19,7 @@ Command center users can:
 
 Why you should care
 ^^^^^^^^^^^^^^^^^^^
-The command center will be the main access point for developers. The functions it provides will allow command center users to create, manage, and distribute the various tools he/she wishes to make.
+The command center will be the main access point for developers. The functions it provides will allow command center users to create, manage, and distribute the various :ref:`tools <tools>` he/she wishes to make.
 
 .. _tools:
 
@@ -43,7 +43,7 @@ Tools will be the main way developers interact with the platform. It will allow 
 
 Studio
 ------
-A studio is a WYSIWYG designer application within the platform that allows users to assemble :ref:`experiences <experiences>` using a reusable set of tools. These :ref:`experiences <experiences>` can then be published to create the users own unique PWA. 
+A studio is a WYSIWYG designer application within the platform that allows users to assemble :ref:`experiences <experiences>` using a reusable set of :ref:`tools <tools>`. These :ref:`experiences <experiences>` can then be published to create the users own unique PWA. 
 
 There are two types of studios: production and development.
 
@@ -61,13 +61,13 @@ Studios allow users to:
 
 Why you should care
 ^^^^^^^^^^^^^^^^^^^
-Studio users will be the audience for any tool a developer creates. Therefore, a firm grasp of what a studio looks like and how it functions will greatly increase the quality of any tool. In addition, studios will be the main area where tools are tested making them an essential part in any tool development.
+Studio users will be the audience for any :ref:`tool <tools>` a developer creates. Therefore, a firm grasp of what a studio looks like and how it functions will greatly increase the quality of any :ref:`tool <tools>`. In addition, studios will be the main area where :ref:`tools <tools>` are tested making them an essential part in any :ref:`tool's <tools>` development.
 
 .. _experiences:
 
 Experiences
 -----------
-An Experience is a complete web application that delivers a full user experience for a specific need. An experience can be designed exclusively for mobile, tablets, desktops, or any combination thereof. Any Experience from the platform is automatically published as an encapsulated `Progressive Web Application <https://developers.google.com/web/progressive-web-apps/>`_.
+An experience is a complete web application that delivers a full user experience for a specific need. An experience can be designed exclusively for mobile, tablets, desktops, or any combination thereof. Any experience from the platform is automatically published as an encapsulated `Progressive Web Application <https://developers.google.com/web/progressive-web-apps/>`_.
 
 What it does
 ^^^^^^^^^^^^
@@ -79,7 +79,7 @@ Experiences allow a user to:
 
 Why you should care
 ^^^^^^^^^^^^^^^^^^^
-Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component-sets <component-sets>` meet-up, and should always be kept in mind when developing an individual tool. At the end of the day, it is much more common that users will be fusing together a wide variety of tools to make one unified experience rather than using a single tool in isolation. 
+Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component-sets <component-sets>` meet-up, and should always be kept in mind when developing an individual :ref:`tool <tools>`. At the end of the day, it is much more common that users will be fusing together a wide variety of :ref:`tools <tools>` to make one unified experience rather than using a single :ref:`tool <tools>` in isolation. 
 
 .. _activations:
 
