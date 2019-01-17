@@ -5,7 +5,7 @@ Platform
 
 Command Center
 --------------
-A command center is a central location in the platform where :ref:`tools <tools>` are managed and created. The center cannot use :ref: 'tools <tools>', as it cannot create :ref:`experiences <experiences>`. The center can only manage, create, and distribute :ref:`tools <tools>`. A :ref:`studio` is needed to use :red:`tools <tools>`.   
+A command center is a central location in the platform where :ref:`tools <tools>` are managed and created. The center cannot use :ref: 'tools <tools>', as it cannot create :ref:`experiences <experiences>`. The center can only manage, create, and distribute :ref:`tools <tools>`. A :ref:`studio <studio>` is needed to use :ref:`tools <tools>`.   
 
 What it does
 ^^^^^^^^^^^^
@@ -85,7 +85,7 @@ Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <mic
 
 Activations
 -----------
-Activations refer to the method by which an :ref:`experience <experiences>` is started. Activation methods can include URL link, QR code, NFC tag, or SMS messages. The Lumavate studio automatically generates activation methods for each :ref:`experience <experiences>`, but the user also has the option to set-up their own activation codes. 
+Activations refer to the method by which an :ref:`experience <experiences>` is started. Activation methods can include URL link, QR code, NFC tag, or SMS messages. The Lumavate :ref:`studio <studio>` automatically generates activation methods for each :ref:`experience <experiences>`, but the user also has the option to set-up their own activation codes. 
 
 What it does
 ^^^^^^^^^^^^
@@ -98,7 +98,7 @@ Activations:
 
 Why you should care
 ^^^^^^^^^^^^^^^^^^^
-Activation methods are how the end user connects with the :ref:`experience <experiences>`. However, activation methods can optionally pass additional contextual data during the activation of the :ref:`experience <experiences>`. This information can then be used by developers and studio users to create contextualized and directed :ref:`experiences <experiences>` for the end user. Developers have access to this activation data in the standard payload that is passed to each :ref:`tool <tools>` while studio users can look up the information in their databases. 
+Activation methods are how the end user connects with the :ref:`experience <experiences>`. However, activation methods can optionally pass additional contextual data during the activation of the :ref:`experience <experiences>`. This information can then be used by developers and :ref:`studio <studio>` users to create contextualized and directed :ref:`experiences <experiences>` for the end user. Developers have access to this activation data in the standard payload that is passed to each :ref:`tool <tools>` while :ref:`studio <studio>` users can look up the information in their databases. 
 
 However, a developer has to specifically design their tool to allow for contextual changes based on the data collected to take full advantage of the activation’s potential. 
 
@@ -106,7 +106,7 @@ However, a developer has to specifically design their tool to allow for contextu
 
 Databases
 ---------
-Any :ref:`microservice <microservices>` registered within Lumavate will get its own database context to be used at the developer's discretion. In addition, :ref:`studio` users can create their own databased within Lumavate in order to manage and distribute collected data.
+Any :ref:`microservice <microservices>` registered within Lumavate will get its own database context to be used at the developer's discretion. In addition, :ref:`studio <studio>` users can create their own databased within Lumavate in order to manage and distribute collected data.
 
 What it does
 ^^^^^^^^^^^^
