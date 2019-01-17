@@ -1,4 +1,4 @@
-.. _Developing-tools:
+.. _developing:
 
 Developing Tools
 ================
