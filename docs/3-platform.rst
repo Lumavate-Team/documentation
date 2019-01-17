@@ -5,7 +5,7 @@ Platform
 
 Command Center
 --------------
-A command center is a central location in the platform where tools are managed and created. The center cannot use tools. It can only manage, create, and distribute them.  
+A command center is a central location in the platform where :ref:`tools <tools>` are managed and created. The center cannot use :ref: 'tools <tools>', as it cannot create :ref:`experiences <experiences>`. The center can only manage, create, and distribute :ref:`tools <tools>`. A :ref:`studio` is needed to use :red:`tools <tools>`.   
 
 What it does
 ^^^^^^^^^^^^
@@ -15,7 +15,7 @@ Command center users can:
 * Create different versions of tools
 * Define whether versions are deprecated, complete, or in-development
 * Share tools with associated studios and command centers
-* Create CLI accounts
+* :ref:`Create CLI accounts <CLI>`
 
 Why you should care
 ^^^^^^^^^^^^^^^^^^^
@@ -25,7 +25,7 @@ The command center will be the main access point for developers. The functions i
 
 Tools
 -----
-Tools are the basic pieces of an :ref:`experience <experiences>`. There are three types: :ref:`widgets`, :ref:`microservices`, & :ref:`component-sets`.
+Tools are the basic pieces of an :ref:`experience <experiences>`. There are three types: :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, & :ref:`component-sets <component-sets>`.
 
 What it does
 ^^^^^^^^^^^^
@@ -43,13 +43,13 @@ Tools will be the main way developers interact with the platform. It will allow 
 
 Studio
 ------
-A studio is a WYSIWYG designer application within the platform that allows users to assemble :ref:`experiences` using a reusable set of tools. These :ref:`experiences` can then be published to create the users own unique PWA. 
+A studio is a WYSIWYG designer application within the platform that allows users to assemble :ref:`experiences <experiences>` using a reusable set of tools. These :ref:`experiences <experiences>` can then be published to create the users own unique PWA. 
 
 There are two types of studios: production and development.
 
 * Production studios are the main studio where final published experiences are created for the public.
 
-* Development studios are testing studios that allow developers to try out their tools within an ref:`experience <experiences>`. 
+* Development studios are testing studios that allow developers to try out their tools within an experience. 
 
 What it does
 ^^^^^^^^^^^^
@@ -75,30 +75,30 @@ Experiences allow a user to:
 
 * Use tools from a library to create applications 
 * Publish PWAs 
-* Create pre-set activatoins for a PWA
+* Create pre-set activations for a PWA
 
 Why you should care
 ^^^^^^^^^^^^^^^^^^^
-Experiences are the collective whole of the tools that developers create. It is where various widgets, microservices, and component-sets meet-up, and should always be kept in mind when developing an individual tool. At the end of the day, it is much more common that users will be fusing together a wide variety of tools to make one unified experience rather than using a single tool in isolation. 
+Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component-sets <component-sets>` meet-up, and should always be kept in mind when developing an individual tool. At the end of the day, it is much more common that users will be fusing together a wide variety of tools to make one unified experience rather than using a single tool in isolation. 
 
 .. _activations:
 
 Activations
 -----------
-Activations refer to the method by which an :ref:`experience` is started. Activation methods can include URL link, QR code, NFC tag, or SMS messages. The Lumavate studio automatically generates activation methods for each :ref:`experience <experiences>`, but the user also has the option to set-up their own activation codes. 
+Activations refer to the method by which an :ref:`experience <experiences>` is started. Activation methods can include URL link, QR code, NFC tag, or SMS messages. The Lumavate studio automatically generates activation methods for each :ref:`experience <experiences>`, but the user also has the option to set-up their own activation codes. 
 
 What it does
 ^^^^^^^^^^^^
 Activations:
 
 * Provides several pre-set activations (URL link, QA code, NFC tag, SMS message)
-* Allows the studio user to create custom activations
+* Allows studio users to create custom activations
 * Collects contextual data for developers and studio users
 * Allows developers and studio users to create specific, contextualized experiences to the end user
 
 Why you should care
 ^^^^^^^^^^^^^^^^^^^
-Activation methods are how the end user connects with the experience. However, activation methods can optionally pass additional contextual data during the activation of the :ref:`experience <experiences>`. This information can then be used by developers and studio users to create contextualized and directed experiences for the end user. Developers have access to this activation data in the standard payload that is passed to each :ref:`tool <tools>` while studio users can look up the information in their databases. 
+Activation methods are how the end user connects with the :ref:`experience <experiences>`. However, activation methods can optionally pass additional contextual data during the activation of the :ref:`experience <experiences>`. This information can then be used by developers and studio users to create contextualized and directed :ref:`experiences <experiences>` for the end user. Developers have access to this activation data in the standard payload that is passed to each :ref:`tool <tools>` while studio users can look up the information in their databases. 
 
 However, a developer has to specifically design their tool to allow for contextual changes based on the data collected to take full advantage of the activation’s potential. 
 
@@ -106,7 +106,7 @@ However, a developer has to specifically design their tool to allow for contextu
 
 Databases
 ---------
-Any :ref:`microservice <microservices>` registered within Lumavate will get its own database context to be used at the developer's discretion. In addition, studio users can create their own databased within Lumavate in order to manage and distribute collected data.
+Any :ref:`microservice <microservices>` registered within Lumavate will get its own database context to be used at the developer's discretion. In addition, :ref:`studio` users can create their own databased within Lumavate in order to manage and distribute collected data.
 
 What it does
 ^^^^^^^^^^^^
@@ -118,4 +118,4 @@ Databased allow the user to:
 
 Why you should care
 ^^^^^^^^^^^^^^^^^^^
-Anyone who is developing :ref:`microservices` will need to understand how the databases work and what information they want to collect and distribute. However, people developing other :ref:`tools` should keep in mind what these databases offer them in terms of customizability and dynamic configuration as only compatible :ref:`microservices` and :ref:`component-sets` will be able to use the :ref:`microservices` database.  
+Anyone who is developing :ref:`microservices <microservices>` will need to understand how the databases work and what information they want to collect and distribute. However, people developing other :ref:`tools <tools>` should keep in mind what these databases offer them in terms of customizability and dynamic configuration as only compatible :ref:`microservices <microservices>` and :ref:`component-sets <component-sets>` will be able to use the :ref:`microservices <microservices>` database.  
