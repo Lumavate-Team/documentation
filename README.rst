@@ -16,3 +16,5 @@ The following guide will:
 * Walk-through the Lumavate platform, :ref:'The platform'
 * Detail the Lumavate Command Line Interface, :ref:'CLI'
 * Provide additional resources for developing and creating with the Lumavate platform, :ref:'Resources'
+
+::$ luma
