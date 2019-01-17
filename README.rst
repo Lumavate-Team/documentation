@@ -15,6 +15,3 @@ The following guide will:
 * Detail the Lumavate Command Line Interface, (:ref: 'CLI')
 * Provide additional resources for developing and creating with the Lumavate platform, (:ref: 'Resources')
 
-{% if next %}
-<a href="{{ next.link|e }}">{{ next.title }}</a>
-{% endif %}
