@@ -3,7 +3,6 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-
 Welcome to the Lumavate Developer Portal
 ========================================
 
@@ -13,10 +12,12 @@ Welcome to the Lumavate Developer Portal
 
  However, Lumavate goes a step further enabling developers to develop their own tools that can be managed and made available in the Lumavate platform. These tools can be in turn used by :ref:`studio` users to build :ref:`experiences` using the tool’s specific functionality. All three types of tools can be created by external developers for use in the Lumavate platform. For more information on the types of tools and their development, go to :ref:`Developing tools`. 
 
-The following guide will:
+The following topics can be used as a guide to start using your current code within Lumavate.
 
-* Explain how to develop tools, :ref:`Developing tools`
-* Provide a run-down of Lumavate's standard tools, :ref:`Lumavate tools`
-* Walk-through the Lumavate platform, :ref:`platform`
-* Detail the Lumavate Command Line Interface, :ref:`CLI`
-* Provide additional resources for developing and creating with the Lumavate platform, :ref:`Resources`
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   *
+
+
