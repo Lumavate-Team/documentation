@@ -54,6 +54,7 @@ There are two types of studios: production and development.
 What it does
 ^^^^^^^^^^^^
 Studios allow users to:
+
 * Create and publish an experience
 * Set custom activation codes, numbers, etc.
 * Establish databases for data-collection and distribution
@@ -71,6 +72,7 @@ An Experience is a complete web application that delivers a full user experience
 What it does
 ^^^^^^^^^^^^
 Experiences allow a user to:
+
 * Use tools from a library to create applications 
 * Publish PWAs 
 * Create pre-set activatoins for a PWA
@@ -88,6 +90,7 @@ Activations refer to the method by which an :ref:`experience` is started. Activa
 What it does
 ^^^^^^^^^^^^
 Activations:
+
 * Provides several pre-set activations (URL link, QA code, NFC tag, SMS message)
 * Allows the studio user to create custom activations
 * Collects contextual data for developers and studio users
@@ -108,6 +111,7 @@ Any :ref:`microservice <microservices>` registered within Lumavate will get its 
 What it does
 ^^^^^^^^^^^^
 Databased allow the user to:
+
 * Collect specified data from the end user or studio user
 * Communicate that data to other tools
 * Create individual environments for each studio
