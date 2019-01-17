@@ -13,6 +13,6 @@ The following guide will:
 
 * Explain how to develop tools, :ref:`Developing tools`
 * Provide a run-down of Lumavate's standard tools, :ref:`Lumavate tools`
-* Walk-through the Lumavate platform, :ref:`The platform`
+* Walk-through the Lumavate platform, :ref:`platform`
 * Detail the Lumavate Command Line Interface, :ref:`CLI`
 * Provide additional resources for developing and creating with the Lumavate platform, :ref:`Resources`
