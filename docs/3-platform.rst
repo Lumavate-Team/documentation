@@ -5,7 +5,7 @@ Platform
 
 Command Center
 --------------
-A command center is a central location in the platform where :ref:`tools <tools>` are managed and created. The center cannot use :ref: 'tools <tools>', as it cannot create :ref:`experiences <experiences>`. The center can only manage, create, and distribute :ref:`tools <tools>`. A :ref:`studio <studio>` is needed to use :ref:`tools <tools>`.   
+A command center is a central location in the platform where :ref:`tools <tools>` are managed and created. The center cannot use :ref: `tools <tools>`, as it cannot create :ref:`experiences <experiences>`. The center can only manage, create, and distribute :ref:`tools <tools>`. A :ref:`studio <studio>` is needed to use :ref:`tools <tools>`.   
 
 What it does
 ^^^^^^^^^^^^
