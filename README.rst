@@ -1,21 +1,17 @@
 Overview
 ========
 
-Enhance your application delivery using the Lumavate Platform!
-Lumavate is a delivery platform for cloud-based web applications. All applications, also known as experiences in the platform,
-are published as fully compliant Progressive Web Applications.
-Lumavate allows studio users to publish web-based applications using a WYSISYG designer based on reusable web components, microservices, & widgets developed by both Lumavate and external developers.
+Lumavate is a delivery platform for cloud-based web applications. Lumavate's platform allows :ref: 'studio' users to create fully compliant 'Progressive Web Applications (PWAs) <https://developers.google.com/web/progressive-web-apps/>' using a WYSISYG designer based on a variety of reusable tools. These Lumavate PWAs are refered to as :ref: 'experiences'. 
 
-The following topics can be used as a guide to start using your current code within Lumavate.
+To help people get the most out of our platform, Lumavate provides a set of common tools as a standard feature of the platform. These tools can be broken up into three differnet types: :ref: 'widgets', :ref: 'microservices', & :ref: 'component-sets'. However, Lumavate goes a step further enabling developers to develop their own tools that can be managed and made available in the Lumavate platform, so :ref: 'studio' users can build :ref: 'experiences' using the tools specific functionality. All three types of tools can be created by external developers for use in the Lumavate platform.
 
-Lumavate, Experiences are created by studio users using a set of reusable Tools that provide discrete web functionality.
+The following guide will:
+* Explain how to devlope tools (:ref: 'Developing tools')
+* Provide a run-down of Lumavate's tools (:ref: 'Lumavate tools')
+* Walk-through the Lumavate platform (:ref: 'The platform')
+* Detail the Lumavate Command Line Interface (:ref: 'CLI')
+* Provide additional resources for devloping and creating with the Lumavate platform (:ref: 'Resources')
 
-Lumavate provides a set of common tools as a standard feature of the platform. However, as a platform, Lumavate enables developers to develop their own tools that can be managed and made available in the Lumavate Studio so studio users can build Experiences using your own specific functionality.
-
-A Tool consists of four primary things:
-
-1. The Docker container that provides the operating environment needed to fully execute and render the tool
-2. A standard set of REST APIs, for widgets & microservices, that simplifies common tasks and provides key capabilities to efficiently integrate the tool into the broader Lumavate platform
-3. A list of properties studio users can set to adapt the tool functionality to their specific Experience
-4. The code that implements the specific logic & capability (back-end processing, web page(s) rendering, etc.)
-
+{% if next %}
+<a href="{{ next.link|e }}">{{ next.title }}</a>
+{% endif %}
