@@ -1,3 +1,5 @@
+.. _component-sets:
+
 Component-Sets
 --------------
 

@@ -66,5 +66,7 @@ Setup Custom Docker Containers
 Uploading Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _Lumavate tools:
+
 Lumavate Tools
 ==============
