@@ -5,10 +5,12 @@ Widgets
 
 A widget is a reusable web application component that can consist of one or more pages. It can be utilized across multiple Lumavate :ref: 'experiences'. For example, “Locator” is a standard widget. It provides a location service to its experiences.
 
+.. _API Endpoints W:
+
 Implementing API Endpoints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Any widget developed for Lumavate must implement two key API endpoints, :ref:`**Discover**<DISCOVER>` and :ref:`**Render**<RENDER>`.
+Any widget developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
 Each endpoint will contain dynamic parts that correspond to both the type of widget uploaded (denoted as widget_type), along with the logical location of the widget (denoted as integration_cloud). Both of these URI parts are in the form of a string & should be handled dynamically.
 
 Required Endpoints
