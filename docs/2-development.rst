@@ -15,7 +15,7 @@ All Tools consist of four primary parts:
 
 1. The :ref:`Docker container <Setting-up Docker>` that provides the operating environment needed to fully execute and render the tool
 2. A standard set of :ref:`REST APIs <REST APIs>`, for :ref:`widgets <widgets>` & :ref:`microservices <microservices>`, that simplifies common tasks and provides key capabilities to efficiently integrate the :ref:`tool <tools>` into the broader Lumavate platform
-3. A list of :ref:`properties` :ref:`studio` users can set to adopt the :ref:`tool <tools>` functionality to their specific :ref:`experience`
+3. A list of :ref:`properties <properties>` :ref:`studio <studio>` users can set to adopt the :ref:`tool <tools>` functionality to their specific :ref:`experience`
 4. The :ref:`code` that implements the specific logic & capability (back-end processing, web page(s) rendering, etc.)
 
 .. _Setting-up Docker:
@@ -62,7 +62,7 @@ Setup Lumavate Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Coming soon!
 
-.. include:: https://github.com/Lumavate-Team/widget-base-go/blob/master/README.md
+.. include:: ..https://github.com/Lumavate-Team/widget-base-go/blob/master/README.md
 
 .. _Setup Custom Docker Containers:
 
