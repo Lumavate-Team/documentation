@@ -14,7 +14,7 @@ Developing Tools
 All Tools consist of four primary parts:
 
 1. The :ref:`Docker container <Setting-up Docker>` that provides the operating environment needed to fully execute and render the tool
-2. A standard set of :ref:`REST APIs <REST APIs>`, for widgets & microservices, that simplifies common tasks and provides key capabilities to efficiently integrate the tool into the broader Lumavate platform
+2. A standard set of REST APIs, for :ref:`widgets <API Endpoints W>` & :ref:`microservices <API Endpoints M>`, that simplifies common tasks and provides key capabilities to efficiently integrate the tool into the broader Lumavate platform
 3. A list of :ref:`properties <properties>` studio users can set to adopt the tool functionality to their specific experience
 4. The :ref:`code` that implements the specific logic & capability (back-end processing, web page(s) rendering, etc.)
 
