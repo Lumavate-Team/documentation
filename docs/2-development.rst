@@ -62,7 +62,7 @@ Setup Lumavate Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Coming soon!
 
-.. include:: ..https://github.com/Lumavate-Team/widget-base-go/blob/master/README.md
+.. include:: ..widget-base-go/blob/master/README.md
 
 .. _Setup Custom Docker Containers:
 
