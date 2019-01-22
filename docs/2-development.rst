@@ -60,9 +60,84 @@ Docker provides troubleshooring information for both `Windows <https://docs.dock
 
 Setup Lumavate Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-Coming soon!
+Lumavate provides three base containers to help devlopers start devloping tools with the Lumavate platform. The following explanation uses Go. Additional sample containers are provided for :ref:`python <python sample>` and :ref:`C# <C# sample>`.
 
-.. include:: ../widget-base-go/blob/master/README.md
+Build the container
++++++++++++++++++++
+
+Clone the Lumavate sample repo. Then, run the following command from the root directory of the repo.
+
+.. code-block:: go
+  
+  docker build --no-cache --rm -t gobasewidget:1.0 .
+
+This command will use the sample Docker file to build an image. The --no-cache command is specifying that we do not want to use cache when building containers, and the --rm -t gobasewidget:1.0 is specifiying that we want to remove intermediate containers after a successful builld.
+
+`Additional Docker Build Options <https://docs.docker.com/engine/reference/commandline/build/>`_
+
+Run the container
++++++++++++++++++
+
+A container must be build before running it. To start the container run the following command.
+
+.. code-block:: go
+
+  docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
+
+This command will run the container in detached mode sognified by the -d option. It will also map port 5000 on your machine to port 8080 on the container thanks to the -p 5000:8080 command. Finally, it will map the widget directory to the /go/src/widget directory inside the container through the --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0 command. Mapping to the widget directory will allow you to modify files in your local widget directory, and it will reload the process when the files change. 
+
+To see a sample of your widget running, go to http://localhost:5000
+
+[Additional Docker Run Options](https://docs.docker.com/engine/reference/commandline/run/)
+
+Check the logs
+++++++++++++++
+
+Run the following command to stream the logs to your terminal:
+
+.. code-block:: go
+
+  docker ps
+
+which should return something like:
+
+.. code-block:: go
+  CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
+  676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
+  ```
+
+Use the Container ID to stream the logs:
+
+.. code-block:: go
+  
+  docker logs -f 676
+
+Run Inside Thor
+++++++++++++++
+
+.. code-block:: go
+
+  DOCKER_IP=`ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'`
+  docker run --rm -d \
+    -e "PUBLIC_KEY=mIhuoMJh0jbA5W4pUUNK" \
+    -e "PRIVATE_KEY=LXycaMpw5BzgfhsS4ydNxGzJ36qMnPrQHI8u2x3wQCZCZyGtZ4sOQbkEWnHmVchZEa79a0Y3xK7IKCymSLkugyabbJUGuXfyuoKL" \
+    -e "HOST_IP=$DOCKER_IP" \
+    -e "WIDGET_PORT=8091" \
+    -e "HOST_PORT=80" \
+    --name=thor \
+    -p 80:4201 \
+    quay.io/lumavate/thor:latest
+
+  docker run -d --rm \
+    --volume "$(pwd)"/widget:/go/src/widget:rw \
+    -e "PUBLIC_KEY=mIhuoMJh0jbA5W4pUUNK" \
+    -e "PRIVATE_KEY=LXycaMpw5BzgfhsS4ydNxGzJ36qMnPrQHI8u2x3wQCZCZyGtZ4sOQbkEWnHmVchZEa79a0Y3xK7IKCymSLkugyabbJUGuXfyuoKL" \
+    -e "BASE_URL=http://$DOCKER_IP" \
+    -e "WIDGET_URL_PREFIX=/ic/widget/" \
+    -e "PROTO=http://" \
+    --name=widget-base-go \
+    -p 8091:8080 \
+    quay.io/lumavate/widget-base-go:latest
 
 .. _Setup Custom Docker Containers:
 
