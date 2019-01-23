@@ -147,15 +147,6 @@ Run Inside Thor
     -p 8091:8080 \
     quay.io/lumavate/widget-base-go:latest
 
-.. _Setup Custom Docker Containers:
-
-Setup Custom Docker Containers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This section will explain how to setup custom stacks and containers so they will work with the Lumavate platform. It will not explain what stacks are, how to create one, or how they relate to containers. This information can be found in the `Docker help documentation <https://docs.docker.com/get-started/part5/>`_ if you need it.
-
-Coming Soon!
-
 .. _Uploading Docker Containers:
 
 Setup Custom Docker Containers
