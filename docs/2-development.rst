@@ -54,7 +54,7 @@ Instructions on how to install Docker are avalible through `the Docker help docu
 Docker provides troubleshooring information for both `Windows <https://docs.docker.com/docker-for-windows/troubleshoot/>`_ and `Mac <https://docs.docker.com/docker-for-mac/troubleshoot/>`_ if you encounter issues with your download.
 
 .. note::
-  Lumavate relies heavely on Docker for its tool develpoment. Many of the commands, options, and syntax that are requared when devloping   a tool will comes from Docker. Therfore, we recomand that you learn more about Docker and how it works at: https://docs.docker.com.
+  Lumavate relies heavely on Docker for its tool develpoment. Many of the commands, options, and syntax that are requared when devloping   a tool will come from Docker. Therfore, we recomand that you learn more about Docker and how it works at: https://docs.docker.com.
 
 .. _Setup Lumavate Containers:
 
@@ -65,52 +65,60 @@ Lumavate provides three base containers to help devlopers start devloping tools 
 Build the container
 +++++++++++++++++++
 
-Clone the Lumavate sample repo. Then, run the following command from the root directory of the repo.
+Clone the `Lumavate sample repo <https://github.com/Lumavate-Team/widget-base-go>`_. Then, run the following command from the root directory of the repo.
 
 .. code-block:: go
   
   docker build --no-cache --rm -t gobasewidget:1.0 .
 
-This command will use the sample Docker file to build an image. The --no-cache command is specifying that we do not want to use cache when building containers, and the --rm -t gobasewidget:1.0 is specifiying that we want to remove intermediate containers after a successful builld.
+This command will use the sample Docker file to build an image. 
 
-`Additional Docker Build Options <https://docs.docker.com/engine/reference/commandline/build/>`_
+The --no-cache command is specifying that we do not want to use cache when building containers, and the --rm -t gobasewidget:1.0 is specifiying that we want to remove intermediate containers after a successful builld.
+
+.. Note:
+  Additional Docker Build Options are avaliable at: https://docs.docker.com/engine/reference/commandline/build/
 
 Run the container
 +++++++++++++++++
 
-A container must be build before running it. To start the container run the following command.
+A container must finsish building before running it. To start the container run the following command.
 
 .. code-block:: go
 
   docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
 
-This command will run the container in detached mode sognified by the -d option. It will also map port 5000 on your machine to port 8080 on the container thanks to the -p 5000:8080 command. Finally, it will map the widget directory to the /go/src/widget directory inside the container through the --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0 command. Mapping to the widget directory will allow you to modify files in your local widget directory, and it will reload the process when the files change. 
+This command will run the container in detached mode.
 
-To see a sample of your widget running, go to http://localhost:5000
+The -d option puts the container in detached mode. while, the -p 5000:8080 command maps port 5000 on your machine to port 8080 on the container. Finally, the widget directory is maped to /go/src/widget directory inside the container through the --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0 command. Mapping to the widget directory will allow you to modify files in your local widget directory, and it will reload the process when the files change. 
 
-[Additional Docker Run Options](https://docs.docker.com/engine/reference/commandline/run/)
+To see a sample of your widget running, go to http://localhost:5000.
+
+.. Note:
+  Additional Docker Run Options can be found here: https://docs.docker.com/engine/reference/commandline/run/
 
 Check the logs
 ++++++++++++++
 
-Run the following command to stream the logs to your terminal:
+Run the following command to collect container info.
 
 .. code-block:: go
 
   docker ps
 
-which should return something like:
+The command should return a list of containers:
 
 .. code-block:: go
   CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
   676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
   ```
 
-Use the Container ID to stream the logs:
+Use the Container ID for the tool you wish to stream logs for:
 
 .. code-block:: go
   
   docker logs -f 676
+
+The selected containers logs should now be streaming directly to your terminal.
 
 Run Inside Thor
 ++++++++++++++
