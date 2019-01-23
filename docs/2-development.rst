@@ -158,20 +158,91 @@ Coming Soon!
 
 .. _Uploading Docker Containers:
 
+Setup Custom Docker Containers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This section will explain how to setup custom stacks and containers so they will work with the Lumavate platform. It will not explain what stacks are, how to create one, or how they relate to containers. This information can be found in the `Docker help documentation <https://docs.docker.com/get-started/part5/>`_ if you need it.
+
+Coming Soon!
+
+.. _Uploading Docker Containers:
+
 Uploading Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Docker containers can be uploaded to the Lumavate Platform in two different ways, through the platform and through the CLI. This section will explain how to manually upload containers using the Lumavate platform. The CLI documentation explains how to :ref:`upload containers using the CLI <CLI Upload>`.
-.. Note:
-The developer must be a user in the command center in order to upload containers through the platform. However, the developer only needs a CLI profile in order to upload containers through the CLI.
 
-Login to the platform and select the command center where you want to upload the container.
+.. Note:
+The developer must be a user in the command center in order to upload containers through the platform. Developer only need a CLI profile in order to upload containers through the CLI.
+
+.. _Uploading A Tool:
+
+Uploading A Tool
+++++++++++++++++
+
+1)	Login to the platform and select the command center where you want to upload the container.
 Image of login
 
-Once inside the command center, click the 
+2)	Once inside the command center, you will have the option to add a widget, microservice, or component-set. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
+Image of sidebar
+3)	Inside the tool library page, you will have the option to add a new container or edit an existing one.
+  a)	To add a new container, click the blue + button in the bottom right corner of the tool library page.
     
-Coming soon!
+    Image of Tool page with button highlighted
+     
+     A pop-up will appear asking for the tool container name (what it will be called in the platform), urlref (what it will be called         in the experience url), and icon (the image shown with the tool in the platform). Fill out all the fields and click the Add            button.
+    
+    Image of pop-up 
+  
+  b)	To edit an existing container, click on the container info card for the container you wish to edit. 
+    
+    Image of Tool page with container card highlighted
+      
+      .. Warning:
+        Developers are unable to add or edit versions of containers that other command centers have been shared with them.
+        
+4)	You will be taken into the container page for the container you just created or selected. There will be a blue + button in the bottom right corner. Click this button to add a new version of your tool.
+Image of container page
 
+5)	You will be redirected to a add version page. You will have the option to add a new version from scratch or to use an existing version as a template. 
+  a)	To make a version from scratch, skip to the second section of fields in the form. Fill out the port, version number, and label      field.
+      Version info fields
+
+      Scroll to the bottom of the page, and click the Upload button to upload your new Docker container.
+		Image of upload
+
+    .. Warning:
+      Different tools accept different file types. If you are experiencing problems finding your file when trying to upload it, check to       make sure it is the correct file type for the tool you are creating. For more information please visit the widget, microservice,         or component-set page. 
+  b)	To use an existing version, open the No Version drop-down at the top of the form. Select the version you wish to use as your base. 
+
+      Version field
+
+      All of the fields other than the Version Number field should have updated with the previous version’s information. Fill out the         Version Number field with the new versions number. 
+
+      .. Note:
+	      Component-sets will need a new image uploaded as the previous version’s image will not carry over. The platform does not save           component-sets as a unit but instead as a series of files so the image cannot be recompiled. Widgets and microservices will             populate with the previous version’s image. 
+6)	Fill-out any additional fields that your tool requires. 
+Env fields (widgets and microservices)
+	Css fields (component-sets)
+	direct fields (component-sets)
+7)	Click Save. 
+8)	You will be redirected back to your container info page where you can see your new version. The version bar will contain basic information about your version and its status. If you would like more detail information, you can hover over the version bar and click the log button. If you would like to change the label of your version, hover over the version bar and click the edit button.
+Version bar
+
+.. _Sharing A Tool:
+
+Sharing A Tool
+++++++++++++++
+1)	To share your version with a studio, click the edit button inside the share section.
+Share section
+	.. Note: 
+	You can share tools that have been shared with you.
+2)	A pop-up will appear with all the child command centers and studios your command center has access to. Check the checkbox next to all the command centers and studios you want to share the tool container with.  
+Share pop-up
+	.. Note:
+The platform shares containers so any versions added to the container will automatically be shared with the selected child command centers and studios. To restrict studio access to versions, label the version dev or old. Old is for deprecated versions. Dev is for development versions. Studios will be unable to add old or dev versions to experiences and will be prevented from published experiences with old versions.
+3)	Click Save. The share section on the container page should update to show the command centers and studios you are currently sharing your tool with. 
+Share section updated 
 
 .. include:: ../PROPERTIES.rst
 
