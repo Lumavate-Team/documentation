@@ -45,7 +45,7 @@ Installing Locally
 
 Docker must be installed on your development machine in order to upload the :ref:`tool <tools>` you are creating to lumavate. Uploading Docker to your local envrioment will also give you acces to the :ref:`Lumavate Test Harness <thor>`.
 
-To set-up Docker on your local machine download at least the Community Edition of Docker. 
+To set-up Docker on your local machine, download at least the Community Edition of Docker. 
 
 The community edition is free and can be downloaded at this site: https://www.docker.com/community-edition.
 
@@ -151,13 +151,27 @@ Run Inside Thor
 
 Setup Custom Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Coming soon!
+
+This section will explain how to setup custom stacks and containers so they will work with the Lumavate platform. It will not explain what stacks are, how to create one, or how they relate to containers. This information can be found in the `Docker help documentation <https://docs.docker.com/get-started/part5/>`_ if you need it.
+
+Coming Soon!
 
 .. _Uploading Docker Containers:
 
 Uploading Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Docker containers can be uploaded to the Lumavate Platform in two different ways, through the platform and through the CLI. This section will explain how to manually upload containers using the Lumavate platform. The CLI documentation explains how to :ref:`upload containers using the CLI <CLI Upload>`.
+.. Note:
+The developer must be a user in the command center in order to upload containers through the platform. However, the developer only needs a CLI profile in order to upload containers through the CLI.
+
+Login to the platform and select the command center where you want to upload the container.
+Image of login
+
+Once inside the command center, click the 
+    
 Coming soon!
+
 
 .. include:: ../PROPERTIES.rst
 
