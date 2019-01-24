@@ -112,15 +112,14 @@ Check the logs
 	.. code-block:: go
 	  CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
 	  676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
-  ```
 
-2) Using the Container ID, run the command:
+3) Using the Container ID, run the command:
 
 	.. code-block:: go
 
 	  docker logs -f 676
 
-3) The selected container's logs will now be streaming directly to your terminal.
+4) The selected container's logs will now be streaming directly to your terminal.
 
 Run Inside Thor
 ++++++++++++++
