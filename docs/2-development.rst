@@ -69,7 +69,7 @@ Build the container
 
 2) Run the following command from the root directory of the repo.
 
-		.. code-block:: html
+		.. code-block:: go
 
 		  docker build --no-cache --rm -t gobasewidget:1.0 .
 
@@ -87,7 +87,7 @@ A container must finish building before it can be run.
 
 1) To start the container, run the following command.
 
-		.. code-block:: html
+		.. code-block:: go
 
 		  docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
 
@@ -103,20 +103,20 @@ Check the logs
 
 1) Run the following command to collect container info.
 
-	.. code-block:: html
+	.. code-block:: go
 
 	  docker ps
 
 2) The command will return a list of containers, shown below. Collect the Container ID for the tool who's logs you wish to stream.
 
-	.. code-block:: html
+	.. code-block:: go
 	
 	  CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
 	  676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
 
 3) Using the Container ID, run the command:
 
-	.. code-block:: html
+	.. code-block:: go
 
 	  docker logs -f 676
 
@@ -125,7 +125,7 @@ Check the logs
 Run Inside Thor
 ++++++++++++++
 
-.. code-block:: html
+.. code-block:: go
 
   DOCKER_IP=`ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'`
   docker run --rm -d \
@@ -172,14 +172,14 @@ Uploading A Tool
 ++++++++++++++++
 
 1) Login to the platform and select the command center where you want to upload the container.
-
+	
 	.. figure:: ../images/enviromentselect.PNG
 	   :height: 100px
 	   :align: center
 	   :width: 200px
 	   :alt: Image of the Lumavate Environment Select Page
-	   
-	 The Environment Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear icon. Studios are shown with a paint palette icon.
+		 
+	   The Environment Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear icon. Studios are shown with a paint palette icon.
 	
 2) Once inside the command center, you will have the option to add a :ref:`widget <widgets>`, :ref:`microservice <microservices>`, or :ref:`component-set <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
 
