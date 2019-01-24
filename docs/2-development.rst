@@ -173,23 +173,23 @@ Uploading A Tool
 
 1) Login to the platform and select the command center where you want to upload the container.
 	
-	.. figure:: ../images/enviromentselect.PNG
-	   :height: 100px
-	   :align: center
-	   :width: 200px
-	   :alt: Image of the Lumavate Environment Select Page
-		 
-	   The Environment Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear icon. Studios are shown with a paint palette icon.
+.. figure:: ../images/enviromentselect.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the Lumavate Environment Select Page
+
+   The Environment Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear icon. Studios are shown with a paint palette icon.
 	
 2) Once inside the command center, you will have the option to add a :ref:`widget <widgets>`, :ref:`microservice <microservices>`, or :ref:`component-set <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
 
-	.. figure:: ../images/sidebarcc.PNG
-	   :height: 100px
-	   :align: center
-	   :width: 200px
-	   :alt: Image of the Lumavate command center navigation sidebar
-	   
-	The navigation sidebar links to the Widget, Microservice, or Component-set Library page.
+.. figure:: ../images/sidebarcc.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the Lumavate command center navigation sidebar
+
+   The navigation sidebar links to the Widget, Microservice, or Component-set Library page.
 
 3) Inside the tool library page, you will have the option to add a new container or edit an existing one.
 
@@ -197,129 +197,129 @@ Uploading A Tool
 	
 	- Click the blue + button in the bottom right corner of the tool Library page.
 
-		.. figure:: ../images/toolpagewithbuttonhighlighted.PNG
-		   :height: 100px
-		   :align: center
-		   :width: 200px
-		   :alt: Image of the Lumavate tool Library page with the + button in the bottom right corner highlighted
-		   
-		The tool Library pages have an add container button in the bottom right corner.
+.. figure:: ../images/toolpagewithbuttonhighlighted.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the Lumavate tool Library page with the + button in the bottom right corner highlighted
+
+   The tool Library pages have an add container button in the bottom right corner.
 	
 	- A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
 
-		.. figure:: ../images/addcontainerpopup.PNG
-		   :height: 100px
-		   :align: center
-		   :width: 200px
-		   :alt: Image of the Lumavate Add Container pop-up
-		   
-		The Add Container pop-up requires a name, urlref, and an icon be added for each container. The name is what the container will be called in the platform. The urlref is what the tool will be called in the experience URL. The icon will be shown alongside the tool in the platform.
+.. figure:: ../images/addcontainerpopup.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the Lumavate Add Container pop-up
+
+   The Add Container pop-up requires a name, urlref, and an icon be added for each container. The name is what the container will be called in the platform. The urlref is what the tool will be called in the experience URL. The icon will be shown alongside the tool in the platform.
 
 	b) To edit an existing container:
 	
 	- Click on the info card for the container you wish to edit. 
 
-		.. figure:: ../images/toolpagewithcontainercardhighlighted.PNG
-		   :height: 100px
-		   :align: center
-		   :width: 200px
-		   :alt: Image of the Lumavate Container Info Card
-		   
-		The Container Info Card displays the container’s name, icon, publisher, highest version number, highest version label, number of experiences using the container, total running versions, and last modified date.
+.. figure:: ../images/toolpagewithcontainercardhighlighted.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the Lumavate Container Info Card
 
-	.. warning::
-		Developers are unable to add or edit versions in containers that other command centers have shared with him/her.
+   The Container Info Card displays the container’s name, icon, publisher, highest version number, highest version label, number of experiences using the container, total running versions, and last modified date.
+
+.. warning::
+	Developers are unable to add or edit versions in containers that other command centers have shared with him/her.
 
 4) You will be taken into the Container Info page for the container you just created or selected. Click the blue + button in the bottom right corner of the page to add a new version of your tool.
 	
-	.. figure:: ../images/containerinfopagewithhighlightedaddbutton.PNG
-	   :height: 100px
-	   :align: center
-	   :width: 200px
-	   :alt: Image of the Lumavate Container Info page with the add button in the bottom right corner highlighted
-	   
-	The Container Info page has an add version button in the bottom right corner. The page shows the container’s basic information, share status, and version information.
+.. figure:: ../images/containerinfopagewithhighlightedaddbutton.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the Lumavate Container Info page with the add button in the bottom right corner highlighted
+
+   The Container Info page has an add version button in the bottom right corner. The page shows the container’s basic information, share status, and version information.
 
 5) You will be redirected to an Add Version page. You will have the option to add a new version from scratch or to use an existing version as a template. 
 
-	.. figure:: ../images/addversionpage.PNG
-	   :height: 100px
-	   :align: center
-	   :width: 200px
-	   :alt: Image of the Lumavate Add Version page
-	   
-	The Add Version page is split into four to five sections. The first section allows the user to use a previous version as a template. The second section asks for basic information about the version. The third and fourth section asks for additional variables the version may need. The final section allows the user to upload his/her version image.
+.. figure:: ../images/addversionpage.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the Lumavate Add Version page
+
+   The Add Version page is split into four to five sections. The first section allows the user to use a previous version as a template. The second section asks for basic information about the version. The third and fourth section asks for additional variables the version may need. The final section allows the user to upload his/her version image.
 
 	a) To make a version from scratch:
 	
 	- Go to the second section of fields in the Version Add form. Fill out the port, version number, and label field.
 		
-		.. figure:: ../images/versioninfofields.PNG
-		   :height: 100px
-		   :align: center
-		   :width: 200px
-		   :alt: Image of the version info fields
-		   
-		The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version. The port indicates the programing language used in the image. The version number indicates the major, minor, and patch of the version. The label indicates if the version is in development (dev), ready for production (prod), or deprecated (old).
+.. figure:: ../images/versioninfofields.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the version info fields
+
+   The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version. The port indicates the programing language used in the image. The version number indicates the major, minor, and patch of the version. The label indicates if the version is in development (dev), ready for production (prod), or deprecated (old).
 		
-	.. note::
-		The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
+.. note::
+	The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
 	
 	- Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
 			
-			.. figure:: ../images/imageuploadfield.PNG
-			   :height: 100px
-			   :align: center
-			   :width: 200px
-			   :alt: Image of the upload image field
-			   
-			The upload image field is the last section located at the bottom of the Add Version page. 	
+.. figure:: ../images/imageuploadfield.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the upload image field
+
+   The upload image field is the last section located at the bottom of the Add Version page. 	
 			
-	.. warning::
-		Different tools accept different file types. If you are experiencing problems finding your file when trying to upload it, check to make sure it is the correct file type for the tool you are creating. For more information, please visit the :ref:`widget <widget port>.`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
+.. warning::
+	Different tools accept different file types. If you are experiencing problems finding your file when trying to upload it, check to make sure it is the correct file type for the tool you are creating. For more information, please visit the :ref:`widget <widget port>.`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
 
 	b) To use an existing version:
 	
 	- open the version template drop-down located in the first section at the top of the Add Version form. Select the version you wish to use as your base. 
 	
-		.. figure:: ../images/versionfield.PNG
-		   :height: 100px
-		   :align: center
-		   :width: 200px
-		   :alt: Image of the version template field
-		   
-		The version template field is the first section located at the top of the Add Version page. It will default to No Version if no version is selected. The page will automatically update when a version is selected from the drop-down clearing any previously filled-out fields.
+.. figure:: ../images/versionfield.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the version template field
+
+   The version template field is the first section located at the top of the Add Version page. It will default to No Version if no version is selected. The page will automatically update when a version is selected from the drop-down clearing any previously filled-out fields.
 
 	- All of the fields other than the version number field should have updated with the previous version’s information. Fill out the Version Number field with the new version’s version number. 
 
-	.. note::
-		Component-sets will also need a new image uploaded as the previous version’s image will not carry over. The platform does not save component-sets as a unit but instead as a series of files, so the image cannot be recompiled. Widgets and microservices will populate with the previous version’s image. 
+.. note::
+	Component-sets will also need a new image uploaded as the previous version’s image will not carry over. The platform does not save component-sets as a unit but instead as a series of files, so the image cannot be recompiled. Widgets and microservices will populate with the previous version’s image. 
 
 6) Fill-out any additional fields that your tool requires. 
 
-	.. figure:: ../images/envfield.PNG
-	   :height: 50px
-	   :align: center
-	   :width: 100px
-	   :alt: Image of the Environment Variables section from the widget and microservice Add Version pages
-	   
-	The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables section. Click the + button by the Environmental Variables header located in the third section of the Add Version form to create a new environmental variable. Then, fill out the Environment Key and Environment Value fields with the necessary information.   
+.. figure:: ../images/envfield.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the Environment Variables section from the widget and microservice Add Version pages
 
-	.. figure:: ../images/directfield.PNG
-	   :height: 50px
-	   :align: center
-	   :width: 100px
-	   :alt: Image of the Direct Includes section from the component-set Add Version page
-	   
-	The component-set Add Version page allows users to add direct includes using the Direct Include section. Click the + button by the Direct Includes header to create a new direct include variable. Then, fill out the Direct Include field with the necessary information.
+   The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables section. Click the + button by the Environmental Variables header located in the third section of the Add Version form to create a new environmental variable. Then, fill out the Environment Key and Environment Value fields with the necessary information.   
+
+.. figure:: ../images/directfield.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the Direct Includes section from the component-set Add Version page
+
+   The component-set Add Version page allows users to add direct includes using the Direct Include section. Click the + button by the Direct Includes header to create a new direct include variable. Then, fill out the Direct Include field with the necessary information.
 	
-	.. figure:: ../images/cssfield.PNG
-	   :height: 50px
-	   :align: center
-	   :width: 100px
-	   :alt: Image of the CSS Includes section from the component-set Add Version page
-	   
-	The component-set Add Version page allows users to add CSS using the CSS Include section. Click the + button by the CSS Includes header located in the fourth section of the Add Version form to create a new CSS variable. Then, fill out the CSS Include field with the necessary information.   
+.. figure:: ../images/cssfield.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the CSS Includes section from the component-set Add Version page
+
+   The component-set Add Version page allows users to add CSS using the CSS Include section. Click the + button by the CSS Includes header located in the fourth section of the Add Version form to create a new CSS variable. Then, fill out the CSS Include field with the necessary information.   
 	
 .. warning::
 	Any error in the Direct Include, CSS Include, or Environment Variables fields will cause a tool to error when starting up. 
@@ -329,26 +329,26 @@ Uploading A Tool
 
 8) You will be redirected back to the Container Info page where the new version’s info card can be seen. The version info card will contain basic information about the version and its status. 
 
-	.. figure:: ../images/versionbar.PNG
-	   :height: 100px
-	   :align: center
-	   :width: 200px
-	   :alt: Image of a version bar found on the Container Info page
-	   
-	The version card displays the version number, label, created at date, number of experiences using the version, and status. By clicking on the blue number that shows the total number of experiences using the tool, you can see a complete list of experiences and studios that are using the version.    
+.. figure:: ../images/versionbar.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of a version bar found on the Container Info page
+
+   The version card displays the version number, label, created at date, number of experiences using the version, and status. By clicking on the blue number that shows the total number of experiences using the tool, you can see a complete list of experiences and studios that are using the version.    
 
 Start A Version
 +++++++++++++++
 
 1) Hover over the version info card. Several buttons will appear that allow the user to refresh status, edit, view logs, delete, and stop/start the version.  
 
-	.. figure:: ../images/versioncardhover.PNG
-	   :height: 100px
-	   :align: center
-	   :width: 200px
-	   :alt: Image of a version bar with icons that appear on hover displayed. This is found on the Container Info page.
-	   
-	The version info card displays the version number, label, created at date, number of experiences using the version, and status.
+.. figure:: ../images/versioncardhover.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of a version bar with icons that appear on hover displayed. This is found on the Container Info page.
+
+   The version info card displays the version number, label, created at date, number of experiences using the version, and status.
 	
 2) To start the version, click the green arrow on the rightmost edge of the version info card.
 
@@ -361,39 +361,39 @@ Sharing A Tool
 
 1) To share your version with a studio or command center, click the edit button inside the share section located on the Container Info page.
 
-	.. figure:: ../images/sharesection.PNG
-	   :height: 100px
-	   :align: center
-	   :width: 200px
-	   :alt: Image of a share section located on the Container Info page
-	   
-	The share section shows what studios or command centers you have shared your container with.
+.. figure:: ../images/sharesection.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of a share section located on the Container Info page
+
+   The share section shows what studios or command centers you have shared your container with.
 	
 .. note:: 
 	Developers can share tools that have been shared with them.
 		
 2) A pop-up will appear with all the child command centers and studios your command center has access to. Check the checkbox next to all the command centers and studios you want to share the tool container with.  
 
-	.. figure:: ../images/sharesectionpopup.PNG
-	   :height: 100px
-	   :align: center
-	   :width: 200px
-	   :alt: Image of the share section pop-up located on the Container Info page
-	   
-	The share section pop-up will allow users to share or unshare a container with any child studio or command center. However, the user cannot unshare from a studio or command center that is currently using the tool in an experience. 
+.. figure:: ../images/sharesectionpopup.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the share section pop-up located on the Container Info page
+
+   The share section pop-up will allow users to share or unshare a container with any child studio or command center. However, the user cannot unshare from a studio or command center that is currently using the tool in an experience. 
 	
-	.. note::
-		The platform shares containers so any versions added to the container will automatically be shared with the selected child command centers and studios. To restrict studio access to versions, label the version dev or old. Old is for deprecated versions. Dev is for development versions. Studios will be unable to add old or dev versions to experiences and will be prevented from published experiences with old versions.
+.. note::
+	The platform shares containers so any versions added to the container will automatically be shared with the selected child command centers and studios. To restrict studio access to versions, label the version dev or old. Old is for deprecated versions. Dev is for development versions. Studios will be unable to add old or dev versions to experiences and will be prevented from published experiences with old versions.
 
 3) Click Save. The share section on the container page should update to show the command centers and studios you are currently 		sharing your container with. 
 	
-	.. figure:: ../images/sharesectionupdated.PNG
-	   :height: 100px
-           :align: center
-	   :width: 200px
-	   :alt: Image of the share section that shows the studio and command center that you have shared your tool with. The share section is located on the Container Info page.
-	   
-	The share section will list out the names of the studios and command centers that you have shared your tool with. 
+.. figure:: ../images/sharesectionupdated.PNG
+   :height: 200px
+   :align: center
+   :width: 400px
+   :alt: Image of the share section that shows the studio and command center that you have shared your tool with. The share section is located on the Container Info page.
+   
+   The share section will list out the names of the studios and command centers that you have shared your tool with. 
 	
 .. note::
 	There are three types of children shown in the share section list, command centers, dev/prod studios, and prod studios. Dev/prod studios can add and publish dev versions. Prod studios can only use prod versions.  
