@@ -54,7 +54,7 @@ Instructions on how to install Docker are avalible through `the Docker help docu
 Docker provides troubleshooring information for both `Windows <https://docs.docker.com/docker-for-windows/troubleshoot/>`_ and `Mac <https://docs.docker.com/docker-for-mac/troubleshoot/>`_ if you encounter issues with your download.
 
 .. note::
-  Lumavate relies heavely on Docker for its tool develpoment. Many of the commands, options, and syntax that are requared when devloping   a tool will come from Docker. Therfore, we recomand that you learn more about Docker and how it works at: https://docs.docker.com.
+  Lumavate relies heavily on Docker for its tool develpoment. Many of the commands, options, and syntax that are requared when devloping   a tool will come from Docker. Therfore, we recomand that you learn more about Docker and how it works at: https://docs.docker.com.
 
 .. _Setup Lumavate Containers:
 
@@ -67,7 +67,7 @@ Build the container
 
 1) Clone the `Lumavate sample repo <https://github.com/Lumavate-Team/widget-base-go>`_. 
 
-2) Then, run the following command from the root directory of the repo.
+2) Run the following command from the root directory of the repo.
 
 		.. code-block:: go
 
@@ -172,7 +172,7 @@ Uploading A Tool
 
 1) Login to the platform and select the command center where you want to upload the container.
 
-	.. figure:: ../Enviroment-select.png
+	.. figure:: ../Images/Enviroment-select.png
 	   :height: 100px
 	   :width: 200 px
 	   :scale: 50 %
@@ -182,9 +182,9 @@ Uploading A Tool
  
 2) Once inside the command center, you will have the option to add a :ref:`widget <widgets>`, :ref:`microservice <microservices>`, or :ref:`component-set <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
 
-	.. figure:: ../Sidebar-cc.png
+	.. figure:: ../Images/Sidebar-cc.png
 	   :height: 100px
-	   :width: 200 px
+	   :width: 200px
 	   :scale: 50 %
 	   :alt: Image of the Lumavate command center navigation sidebar
 	   :align: middle
@@ -196,9 +196,9 @@ Uploading A Tool
 	
 	- Click the blue + button in the bottom right corner of the tool Library page.
 
-		.. figure:: ../Tool-page-with-button-highlighted.png
+		.. figure:: ../Images/Tool-page-with-button-highlighted.png
 		   :height: 100px
-		   :width: 200 px
+		   :width: 200px
 		   :scale: 50 %
 		   :alt: Image of the Lumavate tool Library page with the + button in the bottom right corner highlighted
 		   :align: middle
@@ -206,7 +206,7 @@ Uploading A Tool
 	
 	- A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
 
-		.. figure:: ../Add-container-pop-up.png
+		.. figure:: ../Images/Add-container-pop-up.png
 		   :height: 100px
 		   :width: 200 px
 		   :scale: 50 %
@@ -218,7 +218,7 @@ Uploading A Tool
 	
 	- Click on the info card for the container you wish to edit. 
 
-		.. figure:: ../Tool-page-with-container-card-highlighted.png
+		.. figure:: ../Images/Tool-page-with-container-card-highlighted.png
 		   :height: 100px
 		   :width: 200 px
 		   :scale: 50 %
@@ -231,7 +231,7 @@ Uploading A Tool
 
 4) You will be taken into the Container Info page for the container you just created or selected. Click the blue + button in the bottom right corner of the page to add a new version of your tool.
 	
-	.. figure:: ../Container-info-page-with-highlighted-add-button.png
+	.. figure:: ../Images/Container-info-page-with-highlighted-add-button.png
 	   :height: 100px
 	   :width: 200 px
 	   :scale: 50 %
@@ -241,7 +241,7 @@ Uploading A Tool
 
 5) You will be redirected to an Add Version page. You will have the option to add a new version from scratch or to use an existing version as a template. 
 
-	.. figure:: ../Add-version-page.png
+	.. figure:: ../Images/Add-version-page.png
 	   :height: 100px
 	   :width: 200 px
 	   :scale: 50 %
@@ -253,7 +253,7 @@ Uploading A Tool
 	
 	- Go to the second section of fields in the Version Add form. Fill out the port, version number, and label field.
 		
-		.. figure:: ../Version-info-fields.png
+		.. figure:: ../Images/Version-info-fields.png
 		   :height: 100px
 		   :width: 200 px
 		   :scale: 50 %
@@ -266,7 +266,7 @@ Uploading A Tool
 	
 	- Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
 			
-			.. figure:: ../Image-upload-field.png
+			.. figure:: ../Images/Image-upload-field.png
 			   :height: 100px
 			   :width: 200 px
 			   :scale: 50 %
@@ -281,7 +281,7 @@ Uploading A Tool
 	
 	- open the version template drop-down located in the first section at the top of the Add Version form. Select the version you 		wish to use as your base. 
 	
-		.. figure:: ../Version-field.png
+		.. figure:: ../Images/Version-field.png
 		   :height: 100px
 		   :width: 200 px
 		   :scale: 50 %
@@ -296,7 +296,7 @@ Uploading A Tool
 
 6) Fill-out any additional fields that your tool requires. 
 
-	.. figure:: ../Env-field.png
+	.. figure:: ../Images/Env-field.png
 	   :height: 50px
 	   :width: 100px
 	   :scale: 50 %
@@ -304,7 +304,7 @@ Uploading A Tool
 	   :align: middle
 	The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables 		section. Click the + button by the Environmental Variables header located in the third section of the Add Version form to create 	a new environmental variable. Then, fill out the Environment Key and Environment Value fields with the necessary information.   
 
-	.. figure:: ../Direct-field.png
+	.. figure:: ../Images/Direct-field.png
 	   :height: 50px
 	   :width: 100px
 	   :scale: 50 %
@@ -312,7 +312,7 @@ Uploading A Tool
 	   :align: middle
 	The component-set Add Version page allows users to add direct includes using the Direct Include section. Click the + button by 		the Direct Includes header to create a new direct include variable. Then, fill out the Direct Include field with the necessary 		information.
 	
-	.. figure:: ../CSS-field.png
+	.. figure:: ../Images/CSS-field.png
 	   :height: 50px
 	   :width: 100px
 	   :scale: 50 %
@@ -327,7 +327,7 @@ Uploading A Tool
 
 8) You will be redirected back to the Container Info page where the new version’s info card can be seen. The version info card will contain basic information about the version and its status. 
 
-	.. figure:: ../Version-bar.png
+	.. figure:: ../Images/Version-bar.png
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
@@ -340,7 +340,7 @@ Start A Version
 
 1) Hover over the version info card. Several buttons will appear that allow the user to refresh status, edit, view logs, delete, and stop/start the version.  
 
-	.. figure:: ../Version-card-hover.png
+	.. figure:: ../Images/Version-card-hover.png
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
@@ -359,7 +359,7 @@ Sharing A Tool
 
 1) To share your version with a studio or command center, click the edit button inside the share section located on the Container Info page.
 
-	.. figure:: ../Share-section.png
+	.. figure:: ../Images/Share-section.png
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
@@ -372,7 +372,7 @@ Sharing A Tool
 		
 2) A pop-up will appear with all the child command centers and studios your command center has access to. Check the checkbox next to all the command centers and studios you want to share the tool container with.  
 
-	.. figure:: ../Share-section-pop-up.png
+	.. figure:: ../Images/Share-section-pop-up.png
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
@@ -385,7 +385,7 @@ Sharing A Tool
 
 3) Click Save. The share section on the container page should update to show the command centers and studios you are currently 		sharing your container with. 
 	
-	.. figure:: ../Share-section-updated.png
+	.. figure:: ../Images/Share-section-updated.png
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
