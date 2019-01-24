@@ -136,6 +136,7 @@ Using your own configuration:
 .. Note:
   While running the profile command, you will have the option to associate the new profile to any organization your user has access to   regardless of the command center you are currently in.
 
+ .. _CLI Syntax:
 CLI Syntax
 ==========
 
@@ -156,7 +157,7 @@ Index:
 10.	Widget
 11.	Widget-version
 12.	Ls Commands
-13. Version Commands
+13.     Version Commands
 14.	Additional Info
 
 
