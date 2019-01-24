@@ -212,7 +212,7 @@ Uploading A Tool
 		   :scale: 50 %
 		   :alt: Image of the Lumavate Add Container pop-up
 		   :align: middle
-		The Add Container pop-up requires a name, urlref, and an icon be added for each container. The name is what the 			container will be called in the platform. The urlref is what the tool will be called in the :ref:`experience 				<experience>` URL. The icon will be shown alongside the tool in the platform. 
+		The Add Container pop-up requires a name, urlref, and an icon be added for each container. The name is what the 			container will be called in the platform. The urlref is what the tool will be called in the :ref:`experience 				<experiences>` URL. The icon will be shown alongside the tool in the platform. 
 
 	b) To edit an existing container:
 	
