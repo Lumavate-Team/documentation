@@ -173,7 +173,13 @@ Uploading A Tool
 
 1) Login to the platform and select the command center where you want to upload the container.
 
-	image goes here 
+	.. figure:: /images/enviromentselect.PNG
+	   :height: 100px
+	   :align: center
+	   :width: 200px
+	   :alt: Image of the Lumavate Environment Select Page
+	   
+	 The Environment Select page allows the user to select the command center or studio he/she wishes to edit. Command centers are shown with a gear icon. Studios are shown with paint palette icon.
 	
 2) Once inside the command center, you will have the option to add a :ref:`widget <widgets>`, :ref:`microservice <microservices>`, or :ref:`component-set <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
 
