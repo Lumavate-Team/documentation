@@ -182,7 +182,7 @@ Uploading A Tool
  
 2) Once inside the command center, you will have the option to add a :ref:`widget <widgets>`, :ref:`microservice <microservices>`, or :ref:`component-set <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
 
-	.. figure:: ../Sidebar.png
+	.. figure:: ../Sidebar-cc.png
 	   :height: 100px
 	   :width: 200 px
 	   :scale: 50 %
