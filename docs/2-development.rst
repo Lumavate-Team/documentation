@@ -83,19 +83,17 @@ Build the container
 Run the container
 +++++++++++++++++
 
-A container must finsish building before running it. 
+A container must finish building before it can be run. 
 
-1) To start the container run the following command.
+1) To start the container, run the following command.
 
 		.. code-block:: go
 
 		  docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
 
-	This command will run the container in detached mode.
-
 	The -d option puts the container in detached mode. while, the -p 5000:8080 command maps port 5000 on your machine to port 8080 		on the container. Finally, the widget directory is maped to /go/src/widget directory inside the container through the --volume 		"$(pwd)"/widget:/go/src/widget gobasewidget:1.0 command. Mapping to the widget directory will allow you to modify files in your 	local widget directory, and it will reload the process when the files change. 
 
-2) A sample of your tool will now be running on http://localhost:5000.
+2) The container will now be running in detached mode. A sample of the tool will be running on http://localhost:5000.
 
 .. Note:
   Additional Docker Run Options can be found here: https://docs.docker.com/engine/reference/commandline/run/
