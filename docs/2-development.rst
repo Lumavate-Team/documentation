@@ -149,7 +149,7 @@ Run Inside Thor
     -p 8091:8080 \
     quay.io/lumavate/widget-base-go:latest
 
-.. _Uploading Docker Containers:
+.. _Setup Docker Containers:
 
 Setup Custom Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
