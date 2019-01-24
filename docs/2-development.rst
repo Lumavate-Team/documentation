@@ -173,7 +173,7 @@ Uploading A Tool
 
 1) Login to the platform and select the command center where you want to upload the container.
 
-	.. figure:: /images/enviromentselect.png
+	.. figure:: /images/enviromentselect.PNG
 	   :height: 100px
 	   :width: 200 px
 	   :scale: 50 %
@@ -183,7 +183,7 @@ Uploading A Tool
  
 2) Once inside the command center, you will have the option to add a :ref:`widget <widgets>`, :ref:`microservice <microservices>`, or :ref:`component-set <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
 
-	.. figure:: /images/sidebarcc.png
+	.. figure:: /images/sidebarcc.PNG
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
@@ -197,7 +197,7 @@ Uploading A Tool
 	
 	- Click the blue + button in the bottom right corner of the tool Library page.
 
-		.. figure:: /images/toolpagewithbuttonhighlighted.png
+		.. figure:: /images/toolpagewithbuttonhighlighted.PNG
 		   :height: 100px
 		   :width: 200px
 		   :scale: 50 %
@@ -207,7 +207,7 @@ Uploading A Tool
 	
 	- A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
 
-		.. figure:: /images/addcontainerpopup.png
+		.. figure:: /images/addcontainerpopup.PNG
 		   :height: 100px
 		   :width: 200 px
 		   :scale: 50 %
@@ -219,7 +219,7 @@ Uploading A Tool
 	
 	- Click on the info card for the container you wish to edit. 
 
-		.. figure:: /images/toolpagewithcontainercardhighlighted.png
+		.. figure:: /images/toolpagewithcontainercardhighlighted.PNG
 		   :height: 100px
 		   :width: 200 px
 		   :scale: 50 %
@@ -232,7 +232,7 @@ Uploading A Tool
 
 4) You will be taken into the Container Info page for the container you just created or selected. Click the blue + button in the bottom right corner of the page to add a new version of your tool.
 	
-	.. figure:: /images/containerinfopagewithhighlightedaddbutton.png
+	.. figure:: /images/containerinfopagewithhighlightedaddbutton.PNG
 	   :height: 100px
 	   :width: 200 px
 	   :scale: 50 %
@@ -242,7 +242,7 @@ Uploading A Tool
 
 5) You will be redirected to an Add Version page. You will have the option to add a new version from scratch or to use an existing version as a template. 
 
-	.. figure:: /images/addversionpage.png
+	.. figure:: /images/addversionpage.PNG
 	   :height: 100px
 	   :width: 200 px
 	   :scale: 50 %
@@ -254,7 +254,7 @@ Uploading A Tool
 	
 	- Go to the second section of fields in the Version Add form. Fill out the port, version number, and label field.
 		
-		.. figure:: /images/versioninfofields.png
+		.. figure:: /images/versioninfofields.PNG
 		   :height: 100px
 		   :width: 200 px
 		   :scale: 50 %
@@ -267,7 +267,7 @@ Uploading A Tool
 	
 	- Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
 			
-			.. figure:: /images/imageuploadfield.png
+			.. figure:: /images/imageuploadfield.PNG
 			   :height: 100px
 			   :width: 200 px
 			   :scale: 50 %
@@ -282,7 +282,7 @@ Uploading A Tool
 	
 	- open the version template drop-down located in the first section at the top of the Add Version form. Select the version you wish to use as your base. 
 	
-		.. figure:: /images/versionfield.png
+		.. figure:: /images/versionfield.PNG
 		   :height: 100px
 		   :width: 200 px
 		   :scale: 50 %
@@ -297,7 +297,7 @@ Uploading A Tool
 
 6) Fill-out any additional fields that your tool requires. 
 
-	.. figure:: /images/envfield.png
+	.. figure:: /images/envfield.PNG
 	   :height: 50px
 	   :width: 100px
 	   :scale: 50 %
@@ -305,7 +305,7 @@ Uploading A Tool
 	   :align: middle
 	The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables section. Click the + button by the Environmental Variables header located in the third section of the Add Version form to create a new environmental variable. Then, fill out the Environment Key and Environment Value fields with the necessary information.   
 
-	.. figure:: /images/directfield.png
+	.. figure:: /images/directfield.PNG
 	   :height: 50px
 	   :width: 100px
 	   :scale: 50 %
@@ -313,7 +313,7 @@ Uploading A Tool
 	   :align: middle
 	The component-set Add Version page allows users to add direct includes using the Direct Include section. Click the + button by the Direct Includes header to create a new direct include variable. Then, fill out the Direct Include field with the necessary information.
 	
-	.. figure:: /images/cssfield.png
+	.. figure:: /images/cssfield.PNG
 	   :height: 50px
 	   :width: 100px
 	   :scale: 50 %
@@ -328,7 +328,7 @@ Uploading A Tool
 
 8) You will be redirected back to the Container Info page where the new version’s info card can be seen. The version info card will contain basic information about the version and its status. 
 
-	.. figure:: /images/versionbar.png
+	.. figure:: /images/versionbar.PNG
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
@@ -341,7 +341,7 @@ Start A Version
 
 1) Hover over the version info card. Several buttons will appear that allow the user to refresh status, edit, view logs, delete, and stop/start the version.  
 
-	.. figure:: /images/versioncardhover.png
+	.. figure:: /images/versioncardhover.PNG
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
@@ -360,7 +360,7 @@ Sharing A Tool
 
 1) To share your version with a studio or command center, click the edit button inside the share section located on the Container Info page.
 
-	.. figure:: /images/sharesection.png
+	.. figure:: /images/sharesection.PNG
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
@@ -373,7 +373,7 @@ Sharing A Tool
 		
 2) A pop-up will appear with all the child command centers and studios your command center has access to. Check the checkbox next to all the command centers and studios you want to share the tool container with.  
 
-	.. figure:: /images/sharesectionpopup.png
+	.. figure:: /images/sharesectionpopup.PNG
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
@@ -386,7 +386,7 @@ Sharing A Tool
 
 3) Click Save. The share section on the container page should update to show the command centers and studios you are currently 		sharing your container with. 
 	
-	.. figure:: /images/sharesectionupdated.png
+	.. figure:: /images/sharesectionupdated.PNG
 	   :height: 100px
 	   :width: 200px
 	   :scale: 50 %
