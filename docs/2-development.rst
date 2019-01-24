@@ -65,15 +65,17 @@ Lumavate provides three base containers to help devlopers start devloping tools 
 Build the container
 +++++++++++++++++++
 
-Clone the `Lumavate sample repo <https://github.com/Lumavate-Team/widget-base-go>`_. Then, run the following command from the root directory of the repo.
+1) Clone the `Lumavate sample repo <https://github.com/Lumavate-Team/widget-base-go>`_. 
 
-.. code-block:: go
-  
-  docker build --no-cache --rm -t gobasewidget:1.0 .
+2) Then, run the following command from the root directory of the repo.
 
-This command will use the sample Docker file to build an image. 
+		.. code-block:: go
 
-The --no-cache command is specifying that we do not want to use cache when building containers, and the --rm -t gobasewidget:1.0 is specifiying that we want to remove intermediate containers after a successful builld.
+		  docker build --no-cache --rm -t gobasewidget:1.0 .
+
+	The --no-cache command is specifying that we do not want to use cache when building containers, and the --rm -t gobasewidget:1.0 	is specifiying that we want to remove intermediate containers after a successful builld.
+
+3) An image will be built with the sample Docker file. 
 
 .. Note:
   Additional Docker Build Options are avaliable at: https://docs.docker.com/engine/reference/commandline/build/
@@ -81,17 +83,19 @@ The --no-cache command is specifying that we do not want to use cache when build
 Run the container
 +++++++++++++++++
 
-A container must finsish building before running it. To start the container run the following command.
+A container must finsish building before running it. 
 
-.. code-block:: go
+1) To start the container run the following command.
 
-  docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
+		.. code-block:: go
 
-This command will run the container in detached mode.
+		  docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
 
-The -d option puts the container in detached mode. while, the -p 5000:8080 command maps port 5000 on your machine to port 8080 on the container. Finally, the widget directory is maped to /go/src/widget directory inside the container through the --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0 command. Mapping to the widget directory will allow you to modify files in your local widget directory, and it will reload the process when the files change. 
+	This command will run the container in detached mode.
 
-To see a sample of your widget running, go to http://localhost:5000.
+	The -d option puts the container in detached mode. while, the -p 5000:8080 command maps port 5000 on your machine to port 8080 		on the container. Finally, the widget directory is maped to /go/src/widget directory inside the container through the --volume 		"$(pwd)"/widget:/go/src/widget gobasewidget:1.0 command. Mapping to the widget directory will allow you to modify files in your 	local widget directory, and it will reload the process when the files change. 
+
+2) A sample of your tool will now be running on http://localhost:5000.
 
 .. Note:
   Additional Docker Run Options can be found here: https://docs.docker.com/engine/reference/commandline/run/
@@ -99,26 +103,26 @@ To see a sample of your widget running, go to http://localhost:5000.
 Check the logs
 ++++++++++++++
 
-Run the following command to collect container info.
+1) Run the following command to collect container info.
 
-.. code-block:: go
+	.. code-block:: go
 
-  docker ps
+	  docker ps
 
-The command should return a list of containers:
+2) The command will return a list of containers, shown below. Collect the Container ID for the tool who's logs you wish to stream.
 
-.. code-block:: go
-  CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
-  676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
+	.. code-block:: go
+	  CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
+	  676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
   ```
 
-Use the Container ID for the tool you wish to stream logs for:
+2) Using the Container ID, run the command:
 
-.. code-block:: go
-  
-  docker logs -f 676
+	.. code-block:: go
 
-The selected containers logs should now be streaming directly to your terminal.
+	  docker logs -f 676
+
+3) The selected container's logs will now be streaming directly to your terminal.
 
 Run Inside Thor
 ++++++++++++++
@@ -152,7 +156,7 @@ Run Inside Thor
 Setup Custom Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This section will explain how to setup custom stacks and containers so they will work with the Lumavate platform. It will not explain what stacks are, how to create one, or how they relate to containers. This information can be found in the `Docker help documentation <https://docs.docker.com/get-started/part5/>`_ if you need it.
+This section will explain how to setup custom stacks and containers to work with the Lumavate platform. It will not explain what stacks are, how to create one, or how they relate to containers. Stack and container information can be found in the `Docker help documentation <https://docs.docker.com/get-started/part5/>`_. 
 
 Coming Soon!
 
@@ -161,79 +165,239 @@ Coming Soon!
 Uploading Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Docker containers can be uploaded to the Lumavate Platform in two different ways, through the platform and through the CLI. This section will explain how to manually upload containers using the Lumavate platform. The CLI documentation explains how to :ref:`upload containers using the CLI <CLI Upload>`.
+Docker containers can be uploaded to the Lumavate platform in two different ways, through the platform and through the CLI. This section will explain how to manually upload containers using the Lumavate platform. The CLI documentation explains how to :ref:`upload containers using the CLI <CLI Upload>`.
 
 .. Note:
-The developer must be a user in the command center in order to upload containers through the platform. Developer only need a CLI profile in order to upload containers through the CLI.
-
-.. _Uploading A Tool:
+The developer must be a user in the command center in order to upload containers through the platform. Developers only need a CLI profile in order to upload containers through the CLI.
 
 Uploading A Tool
 ++++++++++++++++
 
-1)	Login to the platform and select the command center where you want to upload the container.
-Image of login
+1) Login to the platform and select the command center where you want to upload the container.
 
-2)	Once inside the command center, you will have the option to add a widget, microservice, or component-set. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
-Image of sidebar
-3)	Inside the tool library page, you will have the option to add a new container or edit an existing one.
-  a)	To add a new container, click the blue + button in the bottom right corner of the tool library page.
-    
-    Image of Tool page with button highlighted
-     
-     A pop-up will appear asking for the tool container name (what it will be called in the platform), urlref (what it will be called         in the experience url), and icon (the image shown with the tool in the platform). Fill out all the fields and click the Add            button.
-    
-    Image of pop-up 
-  
-  b)	To edit an existing container, click on the container info card for the container you wish to edit. 
-    
-    Image of Tool page with container card highlighted
-      
-      .. Warning:
-        Developers are unable to add or edit versions of containers that other command centers have been shared with them.
-        
-4)	You will be taken into the container page for the container you just created or selected. There will be a blue + button in the bottom right corner. Click this button to add a new version of your tool.
-Image of container page
+	.. figure:: Image-of-enviroment-select.jpeg
+	   :height: 100px
+	   :width: 200 px
+	   :scale: 50 %
+	   :alt: Image of the Lumavate Environment Select Page
+	   :align: middle
+	 The Environment Select page allows the user to select the command center or studio he/she wishes to edit. Command centers are 		shown with a gear icon. Studios are shown with paint palette icon.
+ 
+2) Once inside the command center, you will have the option to add a :ref:`widget <widgets>`, :ref:`microservice <microservices>`, or :ref:`component-set <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
 
-5)	You will be redirected to a add version page. You will have the option to add a new version from scratch or to use an existing version as a template. 
-  a)	To make a version from scratch, skip to the second section of fields in the form. Fill out the port, version number, and label      field.
-      Version info fields
+	.. figure:: Image-of-sidebar.jpeg
+	   :height: 100px
+	   :width: 200 px
+	   :scale: 50 %
+	   :alt: Image of the Lumavate command center navigation sidebar
+	   :align: middle
+	The navigation sidebar links to the Widget, Microservice, or Component-set Library page.
 
-      Scroll to the bottom of the page, and click the Upload button to upload your new Docker container.
-		Image of upload
+3) Inside the tool library page, you will have the option to add a new container or edit an existing one.
 
-    .. Warning:
-      Different tools accept different file types. If you are experiencing problems finding your file when trying to upload it, check to       make sure it is the correct file type for the tool you are creating. For more information please visit the widget, microservice,         or component-set page. 
-  b)	To use an existing version, open the No Version drop-down at the top of the form. Select the version you wish to use as your base. 
+	a) To add a new container: 
+	
+	- Click the blue + button in the bottom right corner of the tool Library page.
 
-      Version field
+		.. figure:: Tool-page-with-button-highlighted.jpeg
+		   :height: 100px
+		   :width: 200 px
+		   :scale: 50 %
+		   :alt: Image of the Lumavate tool Library page with the + button in the bottom right corner highlighted
+		   :align: middle
+		The tool Library pages have an add container button in the bottom right corner.
+	
+	- A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
 
-      All of the fields other than the Version Number field should have updated with the previous version’s information. Fill out the         Version Number field with the new versions number. 
+		.. figure:: add-container-pop-up.jpeg
+		   :height: 100px
+		   :width: 200 px
+		   :scale: 50 %
+		   :alt: Image of the Lumavate Add Container pop-up
+		   :align: middle
+		The Add Container pop-up requires a name, urlref, and an icon be added for each container. The name is what the 			container will be called in the platform. The urlref is what the tool will be called in the :ref:`experience 				<experience>` URL. The icon will be shown alongside the tool in the platform. 
 
-      .. Note:
-	      Component-sets will need a new image uploaded as the previous version’s image will not carry over. The platform does not save           component-sets as a unit but instead as a series of files so the image cannot be recompiled. Widgets and microservices will             populate with the previous version’s image. 
-6)	Fill-out any additional fields that your tool requires. 
-Env fields (widgets and microservices)
-	Css fields (component-sets)
-	direct fields (component-sets)
-7)	Click Save. 
-8)	You will be redirected back to your container info page where you can see your new version. The version bar will contain basic information about your version and its status. If you would like more detail information, you can hover over the version bar and click the log button. If you would like to change the label of your version, hover over the version bar and click the edit button.
-Version bar
+	b) To edit an existing container:
+	
+	- Click on the info card for the container you wish to edit. 
 
-.. _Sharing A Tool:
+		.. figure:: Tool-page-with-container-card-highlighted.jpeg
+		   :height: 100px
+		   :width: 200 px
+		   :scale: 50 %
+		   :alt: Image of the Lumavate Container Info Card
+		   :align: middle
+		The Container Info Card displays the container’s name, icon, publisher, highest version number, highest version label, 			number of experiences using the container, total running versions, and last modified date.
+
+		.. Warning:
+			Developers are unable to add or edit versions in containers that other command centers have shared with him/her.
+
+4) You will be taken into the Container Info page for the container you just created or selected. Click the blue + button in the bottom right corner of the page to add a new version of your tool.
+	
+	.. figure:: Container-info-page-with-highlighted-add-button.jpeg
+	   :height: 100px
+	   :width: 200 px
+	   :scale: 50 %
+	   :alt: Image of the Lumavate Container Info page with the add button in the bottom right corner highlighted
+	   :align: middle
+	The Container Info page has an add version button in the bottom right corner. The page shows the container’s basic information, 	share status, and version information. 
+
+5) You will be redirected to an Add Version page. You will have the option to add a new version from scratch or to use an existing version as a template. 
+
+	.. figure:: Add-version-page.jpeg
+	   :height: 100px
+	   :width: 200 px
+	   :scale: 50 %
+	   :alt: Image of the Lumavate Add Version page
+	   :align: middle
+	The Add Version page is split into four to five sections. The first section allows the user to use a previous version as a 		template. The second section asks for basic information about the version. The third and fourth section asks for additional 		variables the version may need. The final section allows the user to upload his/her version image.
+
+	a) To make a version from scratch:
+	
+	- Go to the second section of fields in the Version Add form. Fill out the port, version number, and label field.
+		
+		.. figure:: Version-info-fields.jpeg
+		   :height: 100px
+		   :width: 200 px
+		   :scale: 50 %
+		   :alt: Image of the version info fields
+		   :align: middle
+		The version info fields are in the second section of the Add Version page. They ask for the port, version number, and 			label for the new version. The port indicates the programing language used in the image. The version number indicates 			the major, minor, and patch of the version. The label indicates if the version is in development (dev), ready for 			production (prod), or deprecated (old). 
+
+		.. Note:
+			The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
+	
+	- Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
+			
+			.. figure:: Image-upload-field.jpeg
+			   :height: 100px
+			   :width: 200 px
+			   :scale: 50 %
+			   :alt: Image of the upload image field
+			   :align: middle
+			The upload image field is the last section located at the bottom of the Add Version page. 	
+
+		.. Warning:
+		Different tools accept different file types. If you are experiencing problems finding your file when trying to upload 			it, check to make sure it is the correct file type for the tool you are creating. For more information, please visit the 		:ref:`widget <widget port>.`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
+
+	b) To use an existing version:
+	
+	- open the version template drop-down located in the first section at the top of the Add Version form. Select the version you 		wish to use as your base. 
+	
+		.. figure:: Version-field.jpeg
+		   :height: 100px
+		   :width: 200 px
+		   :scale: 50 %
+		   :alt: Image of the version template field
+		   :align: middle
+		The version template field is the first section located at the top of the Add Version page. It will default to No 			Version if no version is selected. The page will automatically update when a version is selected from the drop-down 			clearing any previously filled-out fields. 
+
+	- All of the fields other than the version number field should have updated with the previous version’s information. Fill out 		the Version Number field with the new version’s version number. 
+
+		.. Note:
+			Component-sets will also need a new image uploaded as the previous version’s image will not carry over. The 				platform does not save component-sets as a unit but instead as a series of files, so the image cannot be 				recompiled. Widgets and microservices will populate with the previous version’s image. 
+
+6) Fill-out any additional fields that your tool requires. 
+
+	.. figure:: Env-field.jpeg
+	   :height: 50px
+	   :width: 100px
+	   :scale: 50 %
+	   :alt: Image of the Environment Variables section from the widget and microservice Add Version pages
+	   :align: middle
+	The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables 		section. Click the + button by the Environmental Variables header located in the third section of the Add Version form to create 	a new environmental variable. Then, fill out the Environment Key and Environment Value fields with the necessary information.   
+
+	.. figure:: Direct-field.jpeg
+	   :height: 50px
+	   :width: 100px
+	   :scale: 50 %
+	   :alt: Image of the Direct Includes section from the component-set Add Version page
+	   :align: middle
+	The component-set Add Version page allows users to add direct includes using the Direct Include section. Click the + button by 		the Direct Includes header to create a new direct include variable. Then, fill out the Direct Include field with the necessary 		information.
+	
+	.. figure:: CSS-field.jpeg
+	   :height: 50px
+	   :width: 100px
+	   :scale: 50 %
+	   :alt: Image of the CSS Includes section from the component-set Add Version page
+	   :align: middle
+	The component-set Add Version page allows users to add CSS using the CSS Include section. Click the + button by the CSS Includes 	header located in the fourth section of the Add Version form to create a new CSS variable. Then, fill out the CSS Include field 	with the necessary information.   
+
+	.. Warning:
+		Any error in the Direct Include, CSS Include, or Environment Variables fields will cause a tool to error when starting 			up. 
+
+7) Click Save. 
+
+8) You will be redirected back to the Container Info page where the new version’s info card can be seen. The version info card will contain basic information about the version and its status. 
+
+	.. figure:: Version-bar.jpeg
+	   :height: 100px
+	   :width: 200px
+	   :scale: 50 %
+	   :alt: Image of a version bar found on the Container Info page
+	   :align: middle
+	The version card displays the version number, label, created at date, number of experiences using the version, and status. By 		clicking on the blue number that shows the total number of experiences using the tool, you can see a complete list of 			experiences and studios that are using the version.    
+
+Start A Version
++++++++++++++++
+
+1) Hover over the version info card. Several buttons will appear that allow the user to refresh status, edit, view logs, delete, and stop/start the version.  
+
+	.. figure:: Version-card-hover.jpeg
+	   :height: 100px
+	   :width: 200px
+	   :scale: 50 %
+	   :alt: Image of a version bar with icons that appear on hover displayed. This is found on the Container Info page.
+	   :align: middle
+	The version info card displays the version number, label, created at date, number of experiences using the version, and status. 
+
+2) To start the version, click the green arrow on the rightmost edge of the version info card.
+
+3) The status of the version will change from stopped to a spinning icon. You can refresh the status by click the refresh status button. The tool will take a minute or two to finish validating. The larger the tool the longer the validation period.     
+
+4) After finishing validating, the status will change to either started or error. If the status is error, the version was unable to connect with the platform.  
 
 Sharing A Tool
 ++++++++++++++
-1)	To share your version with a studio, click the edit button inside the share section.
-Share section
+
+1) To share your version with a studio or command center, click the edit button inside the share section located on the Container Info page.
+
+	.. figure:: Share-section.jpeg
+	   :height: 100px
+	   :width: 200px
+	   :scale: 50 %
+	   :alt: Image of a share section located on the Container Info page
+	   :align: middle
+	The share section shows what studios or command centers you have shared your container with.
+	
 	.. Note: 
-	You can share tools that have been shared with you.
-2)	A pop-up will appear with all the child command centers and studios your command center has access to. Check the checkbox next to all the command centers and studios you want to share the tool container with.  
-Share pop-up
+		Developers can share tools that have been shared with them.
+		
+2) A pop-up will appear with all the child command centers and studios your command center has access to. Check the checkbox next to all the command centers and studios you want to share the tool container with.  
+
+	.. figure:: Share-section-pop-up.jpeg
+	   :height: 100px
+	   :width: 200px
+	   :scale: 50 %
+	   :alt: Image of the share section pop-up located on the Container Info page
+	   :align: middle
+	The share section pop-up will allow users to share or unshare a container with any child studio or command center. However, the 	user cannot unshare from a studio or command center that is currently using the tool in an experience. 
+	
 	.. Note:
-The platform shares containers so any versions added to the container will automatically be shared with the selected child command centers and studios. To restrict studio access to versions, label the version dev or old. Old is for deprecated versions. Dev is for development versions. Studios will be unable to add old or dev versions to experiences and will be prevented from published experiences with old versions.
-3)	Click Save. The share section on the container page should update to show the command centers and studios you are currently sharing your tool with. 
-Share section updated 
+		The platform shares containers so any versions added to the container will automatically be shared with the selected 			child command centers and studios. To restrict studio access to versions, label the version dev or old. Old is for 			deprecated versions. Dev is for development versions. Studios will be unable to add old or dev versions to experiences 			and will be prevented from published experiences with old versions.
+
+3) Click Save. The share section on the container page should update to show the command centers and studios you are currently 		sharing your container with. 
+	
+	.. figure:: Share-section-updated.jpeg
+	   :height: 100px
+	   :width: 200px
+	   :scale: 50 %
+	   :alt: Image of the share section that shows the studio and command center that you have shared your tool with. The share 			section is located on the Container Info page.
+	   :align: middle
+	The share section will list out the names of the studios and command centers that you have shared your tool with. 
+	
+	.. Note:
+		There are three types of children shown in the share section list, command centers, dev/prod studios, and prod studios. 		Dev/prod studios can add and publish dev versions. Prod studios can only use prod versions.  
 
 .. include:: ../PROPERTIES.rst
 
