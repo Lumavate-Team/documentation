@@ -136,7 +136,8 @@ Using your own configuration:
 .. Note:
   While running the profile command, you will have the option to associate the new profile to any organization your user has access to   regardless of the command center you are currently in.
 
- .. _CLI Syntax:
+.. _CLI Syntax:
+
 CLI Syntax
 ==========
 
