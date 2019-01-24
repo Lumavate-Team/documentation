@@ -69,7 +69,7 @@ Build the container
 
 2) Run the following command from the root directory of the repo.
 
-		.. code-block:: go
+		.. code-block:: html
 
 		  docker build --no-cache --rm -t gobasewidget:1.0 .
 
@@ -87,7 +87,7 @@ A container must finish building before it can be run.
 
 1) To start the container, run the following command.
 
-		.. code-block:: go
+		.. code-block:: html
 
 		  docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
 
@@ -103,19 +103,20 @@ Check the logs
 
 1) Run the following command to collect container info.
 
-	.. code-block:: go
+	.. code-block:: html
 
 	  docker ps
 
 2) The command will return a list of containers, shown below. Collect the Container ID for the tool who's logs you wish to stream.
 
-	.. code-block:: go
+	.. code-block:: html
+	
 	  CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
 	  676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
 
 3) Using the Container ID, run the command:
 
-	.. code-block:: go
+	.. code-block:: html
 
 	  docker logs -f 676
 
@@ -124,7 +125,7 @@ Check the logs
 Run Inside Thor
 ++++++++++++++
 
-.. code-block:: go
+.. code-block:: html
 
   DOCKER_IP=`ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'`
   docker run --rm -d \
