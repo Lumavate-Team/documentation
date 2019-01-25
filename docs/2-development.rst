@@ -65,36 +65,37 @@ Lumavate provides three base containers to help devlopers start devloping tools 
 Build the container
 +++++++++++++++++++
 
-1) Clone the `Lumavate sample repo <https://github.com/Lumavate-Team/widget-base-go>`_. 
+#. Clone the `Lumavate sample repo <https://github.com/Lumavate-Team/widget-base-go>`_. 
 
-2) Run the following command from the root directory of the repo.
+#. Run the following command from the root directory of the repo.
+ 
+ .. code-block:: go
+ 
+ 	docker build --no-cache --rm -t gobasewidget:1.0 .
 
-		.. code-block:: go
+ The ``--no-cache`` command is specifying that we do not want to use cache when building containers, and the ``--rm`` is specifiying that we want to remove intermediate containers after a successful builld.
 
-                   docker build --no-cache --rm -t gobasewidget:1.0 .
+#. An image will be built with the sample Docker file. 
 
-	The ``--no-cache`` command is specifying that we do not want to use cache when building containers, and the ``--rm`` is specifiying that we want to remove intermediate containers after a successful builld.
-
-3) An image will be built with the sample Docker file. 
-
-.. note::
-  Additional Docker build options are avaliable at: https://docs.docker.com/engine/reference/commandline/build/
+ .. note::
+ 	Additional Docker build options are avaliable at: https://docs.docker.com/engine/reference/commandline/build/
 
 Run the container
 +++++++++++++++++
 
 A container must finish building before it can be run. 
 
-1) To start the container, run the following command.
+#. To start the container, run the following command.
+ 
+ .. code-block:: go
+ 	
+	docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
 
-        .. code-block:: go
+ The ``-d option`` puts the container in detached mode. while, the ``-p 5000:8080`` command maps port 5000 on your machine to port 8080 on the container. Finally, the widget directory is maped to /go/src/widget directory inside the container through the ``--volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0`` command. 
+ 
+ Mapping to the widget directory will allow you to modify files in your local widget directory, and it will reload the process when the files change. 
 
-	   docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
-
-	The ``-d option`` puts the container in detached mode. while, the ``-p 5000:8080`` command maps port 5000 on your machine to port 8080 on the container. Finally, the widget directory is maped to /go/src/widget directory inside the container through the ``--volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0`` command. 
-	Mapping to the widget directory will allow you to modify files in your local widget directory, and it will reload the process when the files change. 
-
-2) The container will now be running in detached mode. A sample of the tool will be running on http://localhost:5000.
+#. The container will now be running in detached mode. A sample of the tool will be running on http://localhost:5000.
 
 .. note::
 	Additional Docker run options can be found here: https://docs.docker.com/engine/reference/commandline/run/
@@ -102,26 +103,26 @@ A container must finish building before it can be run.
 Check the logs
 ++++++++++++++
 
-1) Run the following command to collect container info.
+#. Run the following command to collect container info.
 
-	.. code-block:: go
-		
-	   docker ps
+ .. code-block:: go
+ 
+ 	docker ps
 
-2) The command will return a list of containers, shown below. Collect the Container ID for the tool who's logs you wish to stream.
+#. The command will return a list of containers, shown below. Collect the Container ID for the tool who's logs you wish to stream.
 
-	.. code-block:: go
+ .. code-block:: go
+ 
+ 	CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
+	676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
 
-           CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
-	  676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
+#. Using the Container ID or NAME, run the command:
 
-3) Using the Container ID or NAME, run the command:
+ .. code-block:: go
+ 
+ 	docker logs -f 676f62d88565
 
-	.. code-block:: go
-
-           docker logs -f 676f62d88565
-
-4) The selected container's logs will now be streaming directly to your terminal.
+#. The selected container's logs will now be streaming directly to your terminal.
 
 Run Inside Thor
 ++++++++++++++
@@ -172,7 +173,7 @@ Docker containers can be uploaded to the Lumavate platform in two different ways
 Uploading A Tool
 ++++++++++++++++
 
-1) Login to the platform and select the command center where you want to upload the container.
+#. Login to the platform and select the command center where you want to upload the container.
 	
                                    .. figure:: ../images/enviromentselect.PNG
 				      :align: center
@@ -181,7 +182,7 @@ Uploading A Tool
 				      
 				      The Environment Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear icon. Studios are shown with a paint palette icon.
 	
-2) Once inside the command center, you will have the option to add a :ref:`widget <widgets>`, :ref:`microservice <microservices>`, or :ref:`component-set <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
+#. Once inside the command center, you will have the option to add a :ref:`widget <widgets>`, :ref:`microservice <microservices>`, or :ref:`component-set <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s library page.
 
                                         .. figure:: ../images/sidebarcc.PNG
 				           :align: center
@@ -190,7 +191,7 @@ Uploading A Tool
 					   
 					   The navigation sidebar links to the Widget, Microservice, or Component-set Library page.
 
-3) Inside the tool library page, you will have the option to add a new container or edit an existing one.
+#. Inside the tool library page, you will have the option to add a new container or edit an existing one.
 
  a) To add a new container: 
 
@@ -223,8 +224,8 @@ Uploading A Tool
 				     The Container Info Card displays the container’s name, icon, publisher, highest version number, highest version label, number of experiences using the container, total running versions, and last modified date.
 
 
-.. warning::
-	Developers are unable to add or edit versions in containers that other command centers have shared with him/her.
+   .. warning::
+		Developers are unable to add or edit versions in containers that other command centers have shared with him/her.
 
 4) You will be taken into the Container Info page for the container you just created or selected. Click the blue + button in the bottom right corner of the page to add a new version of your tool.
 	
@@ -258,8 +259,8 @@ Uploading A Tool
 					  The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version. The port indicates the programing language used in the image. The version number indicates the major, minor, and patch of the version. The label indicates if the version is in development (dev), ready for production (prod), or deprecated (old).
 
 
-.. note::
-		The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
+   .. note::
+	The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
 
 
    - Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
@@ -271,7 +272,7 @@ Uploading A Tool
 					  
 					  The upload image field is the last section located at the bottom of the Add Version page. 	
 			
-.. warning::
+   .. warning::
 		Different tools accept different file types. If you are experiencing problems finding your file when trying to upload it, check to make sure it is the correct file type for the tool you are creating. For more information, please visit the :ref:`widget <widget port>.`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
 
 
@@ -288,7 +289,7 @@ Uploading A Tool
 
    - All of the fields other than the version number field should have updated with the previous version’s information. Fill out the Version Number field with the new version’s version number. 
 
-.. note::
+   .. note::
 	Component-sets will also need a new image uploaded as the previous version’s image will not carry over. The platform does not save component-sets as a unit but instead as a series of files, so the image cannot be recompiled. Widgets and microservices will populate with the previous version’s image. 
 
 6) Fill-out any additional fields that your tool requires. 
@@ -316,7 +317,7 @@ Uploading A Tool
 					  
 					  The component-set Add Version page allows users to add CSS using the CSS Include section. Click the + button by the CSS Includes header located in the fourth section of the Add Version form to create a new CSS variable. Then, fill out the CSS Include field with the necessary information.   
 	
-.. warning::
+ .. warning::
 	  Any error in the Direct Include, CSS Include, or Environment Variables fields will cause a tool to error when starting up. 
 
 7) Click Save. 
@@ -362,7 +363,7 @@ Sharing A Tool
 					      
 					      The share section shows what studios or command centers you have shared your container with.
 	
-.. note:: 
+ .. note:: 
 	Developers can share tools that have been shared with them.
 		
 2) A pop-up will appear with all the child command centers and studios your command center has access to. Check the checkbox next to all the command centers and studios you want to share the tool container with.  
@@ -387,7 +388,7 @@ Sharing A Tool
 					    
 					    The share section will list out the names of the studios and command centers that you have shared your tool with. 
 	
-.. note::
+ .. note::
 	There are three types of children shown in the share section list, command centers, dev/prod studios, and prod studios. Dev/prod studios can add and publish dev versions. Prod studios can only use prod versions.  
 
 .. include:: ../PROPERTIES.rst
