@@ -213,11 +213,11 @@ Uploading A Tool
 	   
 	   The Add Container pop-up requires a name, urlref, and an icon be added for each container. 
 	   
-	   - name is what the container will be called in the platform. 
+	    * name is what the container will be called in the platform. 
 	   
-	   - urlref is what the tool will be called in the experience URL. 
+	    * urlref is what the tool will be called in the experience URL. 
 	   
-	   - icon will be shown alongside the tool in the platform.
+	    * icon will be shown alongside the tool in the platform.
 
    b) To edit an existing container:
    
