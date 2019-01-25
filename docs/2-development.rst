@@ -193,9 +193,9 @@ Uploading A Tool
 
 #. Inside the tool Library page, you will have the option to add a new container or edit an existing one.
 
-   #. To add a new container: 
+   * To add a new container: 
 
-      #. Click the blue + button in the bottom right corner of the tool Library page.
+      a. Click the blue + button in the bottom right corner of the tool Library page.
 
         .. figure:: ../images/toolpagewithbuttonhighlighted.PNG
 	   :align: center
@@ -204,7 +204,7 @@ Uploading A Tool
 	   
 	   The tool Library pages have an add container button in the bottom right corner.
 
-      #. A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
+      b. A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
 
         .. figure:: ../images/addcontainerpopup.PNG
 	   :align: center
@@ -217,7 +217,7 @@ Uploading A Tool
 	* Urlref is what the tool will be called in the experience URL.
 	* Icon will be shown alongside the tool in the platform.
 
-   #. To edit an existing container, click on the info card for the container you wish to edit. 
+   * To edit an existing container, click on the info card for the container you wish to edit. 
       
       .. figure:: ../images/toolpagewithcontainercardhighlighted.PNG
 	 :align: center
@@ -254,9 +254,9 @@ Uploading A Tool
       
       ..
 
-   #. To make a version from scratch:
+   * To make a version from scratch:
    
-      #. Go to the second section of fields in the Version Add form. Fill out the port, version number, and label field.
+      a. Go to the second section of fields in the Version Add form. Fill out the port, version number, and label field.
       
          * Port asks which programing language is used in the image
 	 * Version number aks for the version major, minor, and patch 
@@ -272,7 +272,7 @@ Uploading A Tool
          .. note::
 		The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
 
-      #. Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
+      b. Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
       
          .. figure:: ../images/imageuploadfield.PNG
 	    :align: center
@@ -284,9 +284,9 @@ Uploading A Tool
          .. warning::
 		Different tools accept different file types. Check to make sure it is the correct file type for the tool you are creating if you are experiencing problems finding your file. For more information, please visit the :ref:`widget <widget port>`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
 
-   #. To use an existing version:
+   * To use an existing version:
       
-      #. Open the version template drop-down located at the top of the Add Version form in the first section. Select the version you wish to use as your base. 
+      a. Open the version template drop-down located at the top of the Add Version form in the first section. Select the version you wish to use as your base. 
       
          .. figure:: ../images/versionfield.PNG
 	    :align: center
@@ -295,7 +295,7 @@ Uploading A Tool
 	   
 	    The version template field is the first section of the Add Version page. The page will automatically update when a version is selected from the drop-down clearing any previously filled-out fields.
 
-      #. All fields other than the version number field should have updated with the previous version’s information. Fill out the Version Number field with the new version’s version number. 
+      b. All fields other than the version number field should have updated with the previous version’s information. Fill out the Version Number field with the new version’s version number. 
 
          .. note::
 		Component-sets will also need a new image uploaded as the previous version’s image will not carry over. 
@@ -309,10 +309,10 @@ Uploading A Tool
       
       The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables section.
       
-    #. Click the + button by the Environmental Variables header located in the third section of the Add Version form. This will ceate 
+   a. Click the + button by the Environmental Variables header located in the third section of the Add Version form. This will ceate 
       a new environmental variable field. 
       
-    #. Fill out the Environment Key and Environment Value fields with the necessary information.   
+   b. Fill out the Environment Key and Environment Value fields with the necessary information.   
 
    .. figure:: ../images/directfield.PNG
       :align: center
@@ -321,10 +321,10 @@ Uploading A Tool
       
       The component-set Add Version page allows users to add direct includes using the Direct Include section.
    
-    #. Click the + button by the Direct Includes header in the third section of the Add Version form. This will create a new direct
+   a. Click the + button by the Direct Includes header in the third section of the Add Version form. This will create a new direct
       include variable field. 
       
-    #. Fill out the Direct Include field with the necessary information.
+   b. Fill out the Direct Include field with the necessary information.
 
    .. figure:: ../images/cssfield.PNG
       :align: center
@@ -333,10 +333,10 @@ Uploading A Tool
       
       The component-set Add Version page allows users to add CSS using the CSS Include section.
    
-    #. Click the + button by the CSS Includes header located in the fourth section of the Add Version form. This will create a new CSS 
+   a. Click the + button by the CSS Includes header located in the fourth section of the Add Version form. This will create a new CSS 
       variable field.
       
-    #. Add your CSS variables to the CSS Include field.   
+   b. Add your CSS variables to the CSS Include field.   
 	
    .. warning::
 	  Any error in the Direct Include, CSS Include, or Environment Variables fields will cause a tool to error when starting up. 
