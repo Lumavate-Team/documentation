@@ -259,7 +259,8 @@ Uploading A Tool
 
 
 .. note::
-	The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
+		The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
+
 
    - Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
 			
@@ -271,7 +272,8 @@ Uploading A Tool
 					  The upload image field is the last section located at the bottom of the Add Version page. 	
 			
 .. warning::
-	  Different tools accept different file types. If you are experiencing problems finding your file when trying to upload it, check to make sure it is the correct file type for the tool you are creating. For more information, please visit the :ref:`widget <widget port>.`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
+		Different tools accept different file types. If you are experiencing problems finding your file when trying to upload it, check to make sure it is the correct file type for the tool you are creating. For more information, please visit the :ref:`widget <widget port>.`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
+
 
   b) To use an existing version:
 	
