@@ -167,7 +167,7 @@ Uploading Docker Containers
 Docker containers can be uploaded to the Lumavate platform in two different ways, through the platform and through the CLI. This section will explain how to manually upload containers using the Lumavate platform. The CLI documentation explains how to :ref:`upload containers using the CLI <CLI Syntax>`.
 
 .. note::
-   The developer must be a user in the command center in order to upload containers through the platform. Developers only need a CLI profile in order to upload containers through the CLI.
+	The developer must be a user in the command center in order to upload containers through the platform. Developers only need a CLI profile in order to upload containers through the CLI.
 
 Uploading A Tool
 ++++++++++++++++
@@ -224,7 +224,7 @@ Uploading A Tool
 
 
 .. warning::
-   Developers are unable to add or edit versions in containers that other command centers have shared with him/her.
+	Developers are unable to add or edit versions in containers that other command centers have shared with him/her.
 
 4) You will be taken into the Container Info page for the container you just created or selected. Click the blue + button in the bottom right corner of the page to add a new version of your tool.
 	
@@ -259,7 +259,7 @@ Uploading A Tool
 
 
 .. note::
-    The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
+	The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
 
    - Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
 			
@@ -271,7 +271,7 @@ Uploading A Tool
 					  The upload image field is the last section located at the bottom of the Add Version page. 	
 			
 .. warning::
-    Different tools accept different file types. If you are experiencing problems finding your file when trying to upload it, check to make sure it is the correct file type for the tool you are creating. For more information, please visit the :ref:`widget <widget port>.`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
+	  Different tools accept different file types. If you are experiencing problems finding your file when trying to upload it, check to make sure it is the correct file type for the tool you are creating. For more information, please visit the :ref:`widget <widget port>.`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
 
   b) To use an existing version:
 	
@@ -287,7 +287,7 @@ Uploading A Tool
    - All of the fields other than the version number field should have updated with the previous version’s information. Fill out the Version Number field with the new version’s version number. 
 
 .. note::
-    Component-sets will also need a new image uploaded as the previous version’s image will not carry over. The platform does not save component-sets as a unit but instead as a series of files, so the image cannot be recompiled. Widgets and microservices will populate with the previous version’s image. 
+	Component-sets will also need a new image uploaded as the previous version’s image will not carry over. The platform does not save component-sets as a unit but instead as a series of files, so the image cannot be recompiled. Widgets and microservices will populate with the previous version’s image. 
 
 6) Fill-out any additional fields that your tool requires. 
 
@@ -315,17 +315,17 @@ Uploading A Tool
 					  The component-set Add Version page allows users to add CSS using the CSS Include section. Click the + button by the CSS Includes header located in the fourth section of the Add Version form to create a new CSS variable. Then, fill out the CSS Include field with the necessary information.   
 	
 .. warning::
-    Any error in the Direct Include, CSS Include, or Environment Variables fields will cause a tool to error when starting up. 
+	  Any error in the Direct Include, CSS Include, or Environment Variables fields will cause a tool to error when starting up. 
 
 7) Click Save. 
 
 
 8) You will be redirected back to the Container Info page where the new version’s info card can be seen. The version info card will contain basic information about the version and its status. 
 
-                                   .. figure:: ../images/versionbar.PNG
+                                   .. figure:: ../images/versioncard.PNG
 				      :align: center
 				      :width: 400px
-				      :alt: Image of a version bar found on the Container Info page
+				      :alt: Image of a version card found on the Container Info page
 				      
 				      The version card displays the version number, label, created at date, number of experiences using the version, and status. By clicking on the blue number that shows the total number of experiences using the tool, you can see a complete list of experiences and studios that are using the version.    
 
@@ -337,7 +337,7 @@ Start A Version
                                      .. figure:: ../images/versioncardhover.PNG
 				        :align: center
 					:width: 400px
-					:alt: Image of a version bar with icons that appear on hover displayed. This is found on the Container Info page.
+					:alt: Image of a version card with icons that appear on hover displayed. This is found on the Container Info page.
 					
 					The version info card displays the version number, label, created at date, number of experiences using the version, and status.
 
@@ -361,7 +361,7 @@ Sharing A Tool
 					      The share section shows what studios or command centers you have shared your container with.
 	
 .. note:: 
-    Developers can share tools that have been shared with them.
+	Developers can share tools that have been shared with them.
 		
 2) A pop-up will appear with all the child command centers and studios your command center has access to. Check the checkbox next to all the command centers and studios you want to share the tool container with.  
 
@@ -373,7 +373,7 @@ Sharing A Tool
 					     The share section pop-up will allow users to share or unshare a container with any child studio or command center. However, the user cannot unshare from a studio or command center that is currently using the tool in an experience. 
 	
 .. note::
-    The platform shares containers so any versions added to the container will automatically be shared with the selected child command centers and studios. To restrict studio access to versions, label the version dev or old. Old is for deprecated versions. Dev is for development versions. Studios will be unable to add old or dev versions to experiences and will be prevented from published experiences with old versions.
+	The platform shares containers so any versions added to the container will automatically be shared with the selected child command centers and studios. To restrict studio access to versions, label the version dev or old. Old is for deprecated versions. Dev is for development versions. Studios will be unable to add old or dev versions to experiences and will be prevented from published experiences with old versions.
 
 
 3) Click Save. The share section on the container page should update to show the command centers and studios you are currently 		sharing your container with. 
@@ -386,7 +386,7 @@ Sharing A Tool
 					    The share section will list out the names of the studios and command centers that you have shared your tool with. 
 	
 .. note::
-    There are three types of children shown in the share section list, command centers, dev/prod studios, and prod studios. Dev/prod studios can add and publish dev versions. Prod studios can only use prod versions.  
+	There are three types of children shown in the share section list, command centers, dev/prod studios, and prod studios. Dev/prod studios can add and publish dev versions. Prod studios can only use prod versions.  
 
 .. include:: ../PROPERTIES.rst
 
