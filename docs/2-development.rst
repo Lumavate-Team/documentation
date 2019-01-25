@@ -195,7 +195,7 @@ Uploading A Tool
 
    a) To add a new container: 
 
-      - Click the blue + button in the bottom right corner of the tool Library page.
+      * Click the blue + button in the bottom right corner of the tool Library page.
 
         .. figure:: ../images/toolpagewithbuttonhighlighted.PNG
 	   :align: center
@@ -204,20 +204,17 @@ Uploading A Tool
 	   
 	   The tool Library pages have an add container button in the bottom right corner.
 
-      - A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
+      * A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
 
         .. figure:: ../images/addcontainerpopup.PNG
 	   :align: center
 	   :width: 400px
 	   :alt: Image of the Lumavate Add Container pop-up
 	   
-	   The Add Container pop-up requires a name, urlref, and an icon be added for each container. 
-	   
-	    * name is what the container will be called in the platform. 
-	   
-	    * urlref is what the tool will be called in the experience URL. 
-	   
-	    * icon will be shown alongside the tool in the platform.
+	   The Add Container pop-up requires a name, urlref, and an icon be added for each container.:: 
+	   	- Name is what the container will be called in the platform.
+		- Urlref is what the tool will be called in the experience URL.
+		- Icon will be shown alongside the tool in the platform.
 
    b) To edit an existing container:
    
@@ -249,7 +246,7 @@ Uploading A Tool
       :width: 400px
       :alt: Image of the Lumavate Add Version page
       
-      The Add Version page is split into four to five sections. 
+      The Add Version page is split into four to five sections.:: 
       	- first section allows the user to use a previous version as a template
 	- second section asks for basic version information
 	- third and fourth sections allow the user to add additional variables
@@ -264,7 +261,7 @@ Uploading A Tool
 	   :width: 400px
 	   :alt: Image of the version info fields
 	   
-	   The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version. 
+	   The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version.:: 
 	   - port asks which programing language is used in the image
 	   - version number aks for the version major, minor, and patch 
 	   - label asks if the version is in development (dev), ready for production (prod), or deprecated (old)
@@ -307,8 +304,10 @@ Uploading A Tool
       :width: 400px
       :alt: Image of the Environment Variables section from the widget and microservice Add Version page
       
-      The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables section.
-      1) Click the + button by the Environmental Variables header located in the third section of the Add Version form. This will ceate a new environmental variable field. 
+      The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables section.::
+      1) Click the + button by the Environmental Variables header located in the third section of the Add Version form. This will ceate 
+      a new environmental variable field. 
+      
       2) Fill out the Environment Key and Environment Value fields with the necessary information.   
 
    .. figure:: ../images/directfield.PNG
@@ -316,8 +315,10 @@ Uploading A Tool
       :width: 400px
       :alt: Image of the Direct Includes section from the component-set Add Version page
       
-      The component-set Add Version page allows users to add direct includes using the Direct Include section. 
-      1) Click the + button by the Direct Includes header in the third section of the Add Version form. This will create a new direct include variable field. 
+      The component-set Add Version page allows users to add direct includes using the Direct Include section.:: 
+      1) Click the + button by the Direct Includes header in the third section of the Add Version form. This will create a new direct
+      include variable field. 
+      
       2) Fill out the Direct Include field with the necessary information.
 
    .. figure:: ../images/cssfield.PNG
@@ -325,8 +326,10 @@ Uploading A Tool
       :width: 400px
       :alt: Image of the CSS Includes section from the component-set Add Version page
       
-      The component-set Add Version page allows users to add CSS using the CSS Include section. 
-      1) Click the + button by the CSS Includes header located in the fourth section of the Add Version form. This will create a new CSS variable field. 
+      The component-set Add Version page allows users to add CSS using the CSS Include section.:: 
+      1) Click the + button by the CSS Includes header located in the fourth section of the Add Version form. This will create a new CSS 
+      variable field.
+      
       2) Add your CSS variables to the CSS Include field.   
 	
    .. warning::
