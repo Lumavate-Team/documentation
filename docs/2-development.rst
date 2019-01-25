@@ -195,7 +195,7 @@ Uploading A Tool
 
    #. To add a new container: 
 
-      * Click the blue + button in the bottom right corner of the tool Library page.
+      #. Click the blue + button in the bottom right corner of the tool Library page.
 
         .. figure:: ../images/toolpagewithbuttonhighlighted.PNG
 	   :align: center
@@ -204,7 +204,7 @@ Uploading A Tool
 	   
 	   The tool Library pages have an add container button in the bottom right corner.
 
-      * A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
+      #. A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
 
         .. figure:: ../images/addcontainerpopup.PNG
 	   :align: center
@@ -240,61 +240,64 @@ Uploading A Tool
 
 #. You will be redirected to an Add Version page. You will have the option to add a new version from scratch or to use an existing version as a template. 
 
+   The Add Version page is split into four to five sections:
+    
+   * First section allows the user to use a previous version as a template
+   * Second section asks for basic version information
+   * Third and fourth sections allow the user to add additional variables
+   * Last section asks the user to upload his/her version image
+
    .. figure:: ../images/addversionpage.PNG
       :align: center
       :width: 400px
       :alt: Image of the Lumavate Add Version page
       
-      The Add Version page is split into four to five sections.:: 
-      	- first section allows the user to use a previous version as a template
-	- second section asks for basic version information
-	- third and fourth sections allow the user to add additional variables
-	- last section asks the user to upload his/her version image
+      ..
 
    #. To make a version from scratch:
    
       #. Go to the second section of fields in the Version Add form. Fill out the port, version number, and label field.
       
-        .. figure:: ../images/versioninfofields.PNG
-	   :align: center
-	   :width: 400px
-	   :alt: Image of the version info fields
+         * Port asks which programing language is used in the image
+	 * Version number aks for the version major, minor, and patch 
+	 * Label asks if the version is in development (dev), ready for production (prod), or deprecated (old)
+      
+         .. figure:: ../images/versioninfofields.PNG
+	    :align: center
+	    :width: 400px
+	    :alt: Image of the version info fields
 	   
-	   The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version.
-	   
-	* Port asks which programing language is used in the image
-	* Version number aks for the version major, minor, and patch 
-	* Label asks if the version is in development (dev), ready for production (prod), or deprecated (old)
+	    The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version.
 
-        .. note::
+         .. note::
 		The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
 
-      - Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
+      #. Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
       
-        .. figure:: ../images/imageuploadfield.PNG
-	   :align: center
-	   :width: 400px
-	   :alt: Image of the upload image field
+         .. figure:: ../images/imageuploadfield.PNG
+	    :align: center
+	    :width: 400px
+	    :alt: Image of the upload image field
 	   
-	   The upload image field is the last section located at the bottom of the Add Version page. 	
+	    The upload image field is the last section located at the bottom of the Add Version page. 	
 
-        .. warning::
+         .. warning::
 		Different tools accept different file types. Check to make sure it is the correct file type for the tool you are creating if you are experiencing problems finding your file. For more information, please visit the :ref:`widget <widget port>`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
 
    #. To use an existing version:
       
       #. Open the version template drop-down located at the top of the Add Version form in the first section. Select the version you wish to use as your base. 
       
-        .. figure:: ../images/versionfield.PNG
-	   :align: center
-	   :width: 400px
-	   :alt: Image of the version template field
+         .. figure:: ../images/versionfield.PNG
+	    :align: center
+	    :width: 400px
+	    :alt: Image of the version template field
 	   
-	   The version template field is the first section of the Add Version page. The page will automatically update when a version is selected from the drop-down clearing any previously filled-out fields.
+	    The version template field is the first section of the Add Version page. The page will automatically update when a version is selected from the drop-down clearing any previously filled-out fields.
 
       #. All fields other than the version number field should have updated with the previous version’s information. Fill out the Version Number field with the new version’s version number. 
 
-        .. note::
+         .. note::
 		Component-sets will also need a new image uploaded as the previous version’s image will not carry over. 
 
 #. Fill-out any additional fields that your tool requires. 
@@ -306,10 +309,10 @@ Uploading A Tool
       
       The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables section.
       
-   #. Click the + button by the Environmental Variables header located in the third section of the Add Version form. This will ceate 
+    #. Click the + button by the Environmental Variables header located in the third section of the Add Version form. This will ceate 
       a new environmental variable field. 
       
-   #. Fill out the Environment Key and Environment Value fields with the necessary information.   
+    #. Fill out the Environment Key and Environment Value fields with the necessary information.   
 
    .. figure:: ../images/directfield.PNG
       :align: center
@@ -318,10 +321,10 @@ Uploading A Tool
       
       The component-set Add Version page allows users to add direct includes using the Direct Include section.
    
-   #. Click the + button by the Direct Includes header in the third section of the Add Version form. This will create a new direct
+    #. Click the + button by the Direct Includes header in the third section of the Add Version form. This will create a new direct
       include variable field. 
       
-   #. Fill out the Direct Include field with the necessary information.
+    #. Fill out the Direct Include field with the necessary information.
 
    .. figure:: ../images/cssfield.PNG
       :align: center
@@ -330,10 +333,10 @@ Uploading A Tool
       
       The component-set Add Version page allows users to add CSS using the CSS Include section.
    
-   #. Click the + button by the CSS Includes header located in the fourth section of the Add Version form. This will create a new CSS 
+    #. Click the + button by the CSS Includes header located in the fourth section of the Add Version form. This will create a new CSS 
       variable field.
       
-   #. Add your CSS variables to the CSS Include field.   
+    #. Add your CSS variables to the CSS Include field.   
 	
    .. warning::
 	  Any error in the Direct Include, CSS Include, or Environment Variables fields will cause a tool to error when starting up. 
