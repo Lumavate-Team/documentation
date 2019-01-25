@@ -69,15 +69,15 @@ Build the container
 
 #. Run the following command from the root directory of the repo.
  
- .. code-block:: go
+   .. code-block:: go
  
  	docker build --no-cache --rm -t gobasewidget:1.0 .
 
- The ``--no-cache`` command is specifying that we do not want to use cache when building containers, and the ``--rm`` is specifiying that we want to remove intermediate containers after a successful builld.
+   The ``--no-cache`` command is specifying that we do not want to use cache when building containers, and the ``--rm`` is specifiying that we want to remove intermediate containers after a successful builld.
 
 #. An image will be built with the sample Docker file. 
 
- .. note::
+.. note::
  	Additional Docker build options are avaliable at: https://docs.docker.com/engine/reference/commandline/build/
 
 Run the container
@@ -87,13 +87,13 @@ A container must finish building before it can be run.
 
 #. To start the container, run the following command.
  
- .. code-block:: go
+   .. code-block:: go
  	
 	docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
 
- The ``-d option`` puts the container in detached mode. while, the ``-p 5000:8080`` command maps port 5000 on your machine to port 8080 on the container. Finally, the widget directory is maped to /go/src/widget directory inside the container through the ``--volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0`` command. 
+   The ``-d option`` puts the container in detached mode. while, the ``-p 5000:8080`` command maps port 5000 on your machine to port 8080 on the container. Finally, the widget directory is maped to /go/src/widget directory inside the container through the ``--volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0`` command. 
  
- Mapping to the widget directory will allow you to modify files in your local widget directory, and it will reload the process when the files change. 
+   Mapping to the widget directory will allow you to modify files in your local widget directory, and it will reload the process when the files change. 
 
 #. The container will now be running in detached mode. A sample of the tool will be running on http://localhost:5000.
 
@@ -105,20 +105,20 @@ Check the logs
 
 #. Run the following command to collect container info.
 
- .. code-block:: go
+   .. code-block:: go
  
  	docker ps
 
 #. The command will return a list of containers, shown below. Collect the Container ID for the tool who's logs you wish to stream.
 
- .. code-block:: go
+   .. code-block:: go
  
  	CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
 	676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000->8080/tcp       dreamy_albattani
 
 #. Using the Container ID or NAME, run the command:
 
- .. code-block:: go
+   .. code-block:: go
  
  	docker logs -f 676f62d88565
 
