@@ -213,9 +213,10 @@ Uploading A Tool
 	   
 	   The Add Container pop-up requires a name, urlref, and an icon be added for each container.
         
-	* Name is what the container will be called in the platform.
-	* Urlref is what the tool will be called in the experience URL.
-	* Icon will be shown alongside the tool in the platform.
+	The requared fields are:
+	* Name, what the container will be called in the platform.
+	* Urlref, what the tool will be called in the experience URL.
+	* Icon, the image shown alongside the tool in the platform.
 
    * To edit an existing container, click on the info card for the container you wish to edit. 
       
@@ -240,27 +241,22 @@ Uploading A Tool
 
 #. You will be redirected to an Add Version page. You will have the option to add a new version from scratch or to use an existing version as a template. 
 
-   The Add Version page is split into four to five sections:
-    
-   * First section allows the user to use a previous version as a template
-   * Second section asks for basic version information
-   * Third and fourth sections allow the user to add additional variables
-   * Last section asks the user to upload his/her version image
-
    .. figure:: ../images/addversionpage.PNG
       :align: center
       :width: 400px
       :alt: Image of the Lumavate Add Version page
       
       ..
-
+   
+   The Add Version page is split into four to five sections:
+    
+   * First section allows the user to use a previous version as a template
+   * Second section asks for basic version information
+   * Third and fourth sections allow the user to add additional variables
+   * Last section asks the user to upload his/her version image
    * To make a version from scratch:
    
       a. Go to the second section of fields in the Version Add form. Fill out the port, version number, and label field.
-      
-         * Port asks which programing language is used in the image
-	 * Version number aks for the version major, minor, and patch 
-	 * Label asks if the version is in development (dev), ready for production (prod), or deprecated (old)
       
          .. figure:: ../images/versioninfofields.PNG
 	    :align: center
@@ -269,8 +265,10 @@ Uploading A Tool
 	   
 	    The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version.
 
-         .. note::
-		The :ref:`port numbers <port>` and corresponding programing languages can be found :ref:`here <port>`. 
+         The requared fields are:
+         * Port, which is the :ref:`port <port number>` number for the  programing language used in the image
+	 * Version number, which is the version's major, minor, and patch 
+	 * Label, which lables the verison in development (dev), ready for production (prod), or deprecated (old)
 
       b. Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
       
@@ -298,7 +296,7 @@ Uploading A Tool
       b. All fields other than the version number field should have updated with the previous version’s information. Fill out the Version Number field with the new version’s version number. 
 
          .. note::
-		Component-sets will also need a new image uploaded as the previous version’s image will not carry over. 
+		Component-sets will need a new image uploaded as the previous version’s image will not carry over. 
 
 #. Fill-out any additional fields that your tool requires. 
 
@@ -397,8 +395,7 @@ Sharing A Tool
       The share section pop-up will allow users to share or unshare a container with any child studio or command center. However, the user cannot unshare from a studio or command center that is currently using the tool in an experience. 
 	
    .. note::
-	The platform shares containers so any versions added to the container will automatically be shared with the selected child command centers and studios. To restrict studio access to versions, label the version dev or old. Most studios will be unable to add or publish old or dev versions of tools.
-
+	The platform shares containers so any version added to the container will automatically be shared with the selected child command centers and studios. To restrict studio access to versions, label the version dev or old. Most studios will be unable to add or publish old or dev versions of tools.
 
 #. Click Save. The share section on the container page should update to show the command centers and studios you are currently 		sharing your container with. 
 	
