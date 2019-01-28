@@ -11,10 +11,11 @@ Implementing API Endpoints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Any widget developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
-Each endpoint will contain dynamic parts that correspond to both the type of widget uploaded (denoted as widget_type), along with the logical location of the widget (denoted as integration_cloud). Both of these URI parts are in the form of a string & should be handled dynamically.
+
+Each endpoint will contain dynamic parts that correspond to both the type of widget uploaded (denoted as widget_type) and the logical location of the widget (denoted as integration_cloud). Both of these URI parts are in the form of a string and should be handled dynamically.
 
 Required Endpoints
-^^^^^^^^^^^^^^^^^^
+++++++++++++++++++
 
 All widgets require the following API endpoints:
 
@@ -24,7 +25,7 @@ All widgets require the following API endpoints:
 
   /<string:integration_cloud>/<string:widget_type>/discover/properties
 
-This endpoint informs the platform which properties exist for the widget, via a JSON payload of an array of properties. The platform automatically adds a few platform level properties outside of this endpoint. However, a majority of a widget's properties are contained in the endpoint. An empty set should be sent if the widget does not require any properties.
+This endpoint informs the platform which properties exist for the widget, via a JSON payload of an array of properties. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the widget does not require any properties.
 
 **Sample Response**
 
@@ -63,11 +64,11 @@ This endpoint informs the platform which properties exist for the widget, via a 
 
   /<string:integration_cloud>/<string:widget_type>
 
-This endpoint is called when the widget renders itself either for preview or production. This is the core endpoint that produces the UI for the widget.
+This endpoint is called when the widget renders itself either for preview or production. This is the core endpoint that produces the end user UI for the widget.
 
 
 Optional Endpoints
-^^^^^^^^^^^^^^^^^^
+++++++++++++++++++
 
 * ON_CREATE_VERSION
 
