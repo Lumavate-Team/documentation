@@ -18,8 +18,8 @@ Command center users can:
 * Share tools with associated studios and command centers
 * :ref:`Create CLI accounts <CLI>`
 
-Why you should care
-^^^^^^^^^^^^^^^^^^^
+Why it matters
+^^^^^^^^^^^^^^
 The command center will be the main access point for developers. The functions it provides will allow command center users to create, manage, and distribute the various :ref:`tools <tools>` he/she wishes to make.
 
 .. _tools:
@@ -36,8 +36,8 @@ Tools can provide:
 * Reusable pieces that can be moved from experience to experience
 * Data-collection that can dynamically alter or produce content for the user
 
-Why you should care
-^^^^^^^^^^^^^^^^^^^
+Why it matters
+^^^^^^^^^^^^^^
 Tools will be the main way developers interact with the platform. It will allow developers to create specific functionality for their or other people's use within an :ref:`experience <experiences>`. To get started developing tools, consult :ref:`Developing Tools`.
 
 .. _studio:
@@ -60,8 +60,8 @@ Studios allow users to:
 * Set custom activation codes, numbers, etc.
 * Establish databases for data-collection and distribution
 
-Why you should care
-^^^^^^^^^^^^^^^^^^^
+Why it matters
+^^^^^^^^^^^^^^
 Studio users will be the audience for any :ref:`tool <tools>` a developer creates. Therefore, a firm grasp of what a studio looks like and how it functions will greatly increase the quality of any :ref:`tool <tools>`. In addition, studios will be the main area where :ref:`tools <tools>` are tested making them an essential part in any :ref:`tool's <tools>` development.
 
 .. _experiences:
@@ -78,8 +78,8 @@ Experiences allow a user to:
 * Publish PWAs 
 * Create pre-set activations for a PWA
 
-Why you should care
-^^^^^^^^^^^^^^^^^^^
+Why it matters
+^^^^^^^^^^^^^^
 Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component-sets <component-sets>` meet-up, and should always be kept in mind when developing an individual :ref:`tool <tools>`. At the end of the day, it is much more common that users will be fusing together a wide variety of :ref:`tools <tools>` to make one unified experience rather than using a single :ref:`tool <tools>` in isolation. 
 
 .. _activations:
@@ -97,8 +97,8 @@ Activations:
 * Collects contextual data for developers and studio users
 * Allows developers and studio users to create specific, contextualized experiences to the end user
 
-Why you should care
-^^^^^^^^^^^^^^^^^^^
+Why it matters
+^^^^^^^^^^^^^^
 Activation methods are how the end user connects with the :ref:`experience <experiences>`. However, activation methods can optionally pass additional contextual data during the activation of the :ref:`experience <experiences>`. This information can then be used by developers and :ref:`studio <studio>` users to create contextualized and directed :ref:`experiences <experiences>` for the end user. Developers have access to this activation data in the standard payload that is passed to each :ref:`tool <tools>` while :ref:`studio <studio>` users can look up the information in their databases. 
 
 However, a developer has to specifically design their tool to allow for contextual changes based on the data collected to take full advantage of the activation’s potential. 
@@ -111,12 +111,12 @@ Any :ref:`microservice <microservices>` registered within Lumavate will get its 
 
 What it does
 ^^^^^^^^^^^^
-Databased allow the user to:
+Databases allow users to:
 
 * Collect specified data from the end user or studio user
 * Communicate that data to other tools
 * Create individual environments for each studio
 
-Why you should care
-^^^^^^^^^^^^^^^^^^^
+Why it matters
+^^^^^^^^^^^^^^
 Anyone who is developing :ref:`microservices <microservices>` will need to understand how the databases work and what information they want to collect and distribute. However, people developing other :ref:`tools <tools>` should keep in mind what these databases offer them in terms of customizability and dynamic configuration as only compatible :ref:`microservices <microservices>` and :ref:`component-sets <component-sets>` will be able to use the :ref:`microservices <microservices>` database.  
