@@ -15,7 +15,7 @@ Any microservice developed for Lumavate must implement two key API endpoints, **
 Each endpoint will contain dynamic parts that correspond to both the type of microservice uploaded (denoted as service_type) and the logical location of the microservice (denoted as integration_cloud). Both of these URI parts are in the form of a string and should be handled dynamically.
 
 Required Endpoints
-^^^^^^^^^^^^^^^^^^
+++++++++++++++++++
 
 All microservices require the following API Endpoints:
 
@@ -68,7 +68,7 @@ This endpoint is called when the microservice renders itself for preview. If the
 
 
 Optional Endpoints
-^^^^^^^^^^^^^^^^^^
+++++++++++++++++++
 
 * ON_CREATE_VERSION
 
