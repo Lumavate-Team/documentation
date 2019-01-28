@@ -5,6 +5,8 @@ Component-Sets
 
 Component-sets are bundled web components that are registered to be used by widgets. Any web component, regardless of framework, upon upload can be used by any widget via supplementing the distributable with a metadata file and proper tags.
 
+.. _metadata:
+
 Metadata
 ^^^^^^^^
 
