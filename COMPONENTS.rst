@@ -32,4 +32,13 @@ A Component-set's metadata can be defined via the component-sets JSON file which
   ],
   'template': '<component-tag property1='{{componentData.property1}}'></component-tag>'
 
+The teamplate defined will be the HTML that is output to the page upon use.  The properties exposed can be substituted within the template using the
+templating syntax
+
+.. code-block:: javascript
+
+  {{ componentData.propertyName }}
+
+For instance, the template defined above will set the 'property1' attribute to the value set within the platform.
+
 The component-sets JSON file should be included within the root folder of the distributable that is uploaded to Lumavate.
