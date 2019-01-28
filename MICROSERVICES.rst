@@ -11,8 +11,8 @@ Implementing API Endpoints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Any microservice developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
-Each endpoint will contain dynamic parts that correspond to both the type of microservice uploaded (denoted as service_type), along with the logical location of the
-microservice (denoted as integration_cloud).  Both of these URI parts are in the form of a string & should be handled dynamically.
+
+Each endpoint will contain dynamic parts that correspond to both the type of microservice uploaded (denoted as service_type), along with the logical location of the microservice (denoted as integration_cloud). Both of these URI parts are in the form of a string and should be handled dynamically.
 
 Required Endpoints
 ^^^^^^^^^^^^^^^^^^
@@ -25,7 +25,7 @@ All microservices require the following API Endpoints:
 
   /<string:integration_cloud>/<string:service_type>/discover/properties
 
-This endpoint informs the platform of which properties exist for the microservice, via a JSON payload of an array of properties. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
+This endpoint informs the platform which properties exist for the microservice, via a JSON payload of an array of properties. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
 
 **Sample Response**
 
