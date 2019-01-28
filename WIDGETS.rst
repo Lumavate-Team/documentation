@@ -3,7 +3,7 @@
 Widgets
 -------
 
-A widget is a reusable web application component that can consist of one or more pages. It can be utilized across multiple Lumavate :ref: 'experiences'. For example, “Locator” is a standard widget. It provides a location service to its experiences.
+A widget is a reusable web application component that can consist of one or more pages. It can be utilized across multiple Lumavate :ref:`experiences <experiences>`. For example, Locator is a standard widget. It provides a location service to experiences.
 
 .. _API Endpoints W:
 
@@ -75,7 +75,7 @@ Optional Endpoints
 
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/on-create-version
 
-This endpoint is called BEFORE the properties are saved within the Lumavate :ref: 'studio'. This allows the developer to modify and/or override property data before saving.
+This endpoint is called BEFORE the properties are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to modify and/or override property data before saving.
 
 
 * AFTER_CREATE_VERSION
@@ -84,4 +84,4 @@ This endpoint is called BEFORE the properties are saved within the Lumavate :ref
 
   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/after-create-version
 
-This endpoint is called AFTER the properties are saved within the Lumavate :ref: 'studio'. This allows the developer to adjust property data after saving.
+This endpoint is called AFTER the properties are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to adjust property data after saving.
