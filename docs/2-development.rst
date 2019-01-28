@@ -3,13 +3,13 @@
 Developing Tools
 ================
 
-  There are three types of tools that the Lumavate platform uses :ref:`widgets <widgets>`, :ref:`microservice <microservices>`, & :ref:`component-sets <component-sets>`. 
+  There are three types of tools that the Lumavate platform uses: :ref:`widgets <widgets>`, :ref:`microservice <microservices>`, & :ref:`component-sets <component-sets>`. 
 
-  :ref:`Widgets` make-up the base :ref:`tools <tools>` that the other tools add on to and build off of. The tool should always provide a function that allows the :ref:`studio <studio>` user to set-up a UI for a function that is unique to that widget. 
+  :ref:`Widgets` make-up the base :ref:`tools <tools>` that the other tools add on to and build off of. The tool should always provide a function that allows the :ref:`studio <studio>` user to customize the UI for the function that is unique to that widget. 
 
-  :ref:`Microservices` are the data-driven portion of :ref:`experiences <experiences>`. The tools take information that the :ref:`studio <studio>` user provides to create a recurring service or data-set that the rest of the tools can use. Microservices never have their own UI, but it can add UI functionality to a :ref:`widget <widgets>`.
+  :ref:`Microservices` are the data-driven portion of :ref:`experiences <experiences>`. The tools take information that the :ref:`studio <studio>` user provides to create a recurring service or data-set that the rest of the tools can use. Microservices almost never have their own UI but can add UI functionality to a :ref:`widget <widgets>`.
 
-  :ref:`Component-sets` are elements that will be reused by multiple :ref:`widgets <widgets>` or :ref:`microservices <microservices>`. The :ref:`tool <tools>` allows :ref:`studio <studio>` user to redistribute information collected in one widget or microservice to another or to provide identical functionality across multiple widgets or microservices. Component-sets will never have its own UI, but it will frequently add UI elements to compatible widgets and microservices.  
+  :ref:`Component-sets` are elements that will be reused by multiple :ref:`widgets <widgets>` or :ref:`microservices <microservices>`. The :ref:`tool <tools>` allows :ref:`studio <studio>` users to redistribute information collected in one widget or microservice to another or to provide identical functionality across multiple widgets or microservices. Component-sets will never have its own UI, but it will frequently add UI elements to compatible widgets and microservices.  
 
 All Tools consist of four primary parts:
 
@@ -43,24 +43,22 @@ In the following sections, we will explain how to:
 Installing Locally
 ^^^^^^^^^^^^^^^^^^
 
-Docker must be installed on your development machine in order to upload the :ref:`tool <tools>` you are creating to lumavate. Uploading Docker to your local envrioment will also give you acces to the :ref:`Lumavate Test Harness <thor>`.
+Docker must be installed on your development machine in order to upload to lumavate the :ref:`tool <tools>` you are creating. Docker must be added to your local envrioment for you to acces the :ref:`Lumavate Test Harness <thor>`.
 
-To set-up Docker on your local machine, download at least the Community Edition of Docker. 
-
-The community edition is free and can be downloaded at this site: https://www.docker.com/community-edition.
+To set-up Docker on your local machine, download at least the Community Edition of Docker. The community edition is free and can be downloaded from the `Docker site: <https://www.docker.com/community-edition>`_.
 
 Instructions on how to install Docker are avalible through `the Docker help documentation <https://docs.docker.com/get-started/>`_.
 
-Docker provides troubleshooring information for both `Windows <https://docs.docker.com/docker-for-windows/troubleshoot/>`_ and `Mac <https://docs.docker.com/docker-for-mac/troubleshoot/>`_ if you encounter issues with your download.
+Docker provides troubleshooting information for both `Windows <https://docs.docker.com/docker-for-windows/troubleshoot/>`_ and `Mac <https://docs.docker.com/docker-for-mac/troubleshoot/>`_ if you encounter issues with your download.
 
 .. note::
-  Lumavate relies heavily on Docker for its tool develpoment. Many of the commands, options, and syntax that are requared when devloping   a tool will come from Docker. Therfore, we recomand that you learn more about Docker and how it works at: https://docs.docker.com.
+  Lumavate relies heavily on Docker for its tool develpoment. Many of the commands, options, and syntax that are required when devloping   a tool will come from Docker. Therfore, we recommend that you learn more about Docker and how it works at: https://docs.docker.com.
 
 .. _Setup Lumavate Containers:
 
 Setup Lumavate Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-Lumavate provides three base containers to help devlopers start devloping tools with the Lumavate platform. The following explanation uses Go. Additional sample containers are provided for :ref:`python <python sample>` and :ref:`C# <C# sample>`.
+Lumavate provides three base containers to help devlopers start devloping tools with the Lumavate platform. The following explanation uses Go, for the full Go container please see the `Go Github repository <https://github.com/Lumavate-Team/widget-base-go>`_. Additional sample containers are provided for :ref:`Python <python sample>` and :ref:`C# <C# sample>`.
 
 Build the container
 +++++++++++++++++++
@@ -109,7 +107,7 @@ Check the logs
  
  	docker ps
 
-#. The command will return a list of containers, shown below. Collect the Container ID for the tool who's logs you wish to stream.
+#. The command will return a list of containers, shown below. Collect the Container ID for the tool whose logs you wish to stream.
 
    .. code-block:: go
  
@@ -123,6 +121,8 @@ Check the logs
  	docker logs -f 676f62d88565
 
 #. The selected container's logs will now be streaming directly to your terminal.
+
+.. _Thor:
 
 Run Inside Thor
 ++++++++++++++
@@ -204,19 +204,19 @@ Uploading A Tool
 	   
 	   The tool Library pages have an add container button in the bottom right corner.
 
-      b. A pop-up will appear asking for the tool container name, urlref, and icon. Fill out all the fields, and click the add button.
+      b. A pop-up will appear asking for the tool container name, URL ref, and icon. Fill out all the fields, and click the add button.
 
         .. figure:: ../images/addcontainerpopup.PNG
 	   :align: center
 	   :width: 400px
 	   :alt: Image of the Lumavate Add Container pop-up
 	   
-	   The Add Container pop-up requires a name, urlref, and an icon be added for each container.
+	   The Add Container pop-up requires a name, URL ref, and an icon be added for each container.
         
-	The requared fields are:
-	* Name, what the container will be called in the platform.
-	* Urlref, what the tool will be called in the experience URL.
-	* Icon, the image shown alongside the tool in the platform.
+        The required fields are:
+	  * Name: what the container will be called in the platform.
+	  * URL ref: what the tool will be called in the experience URL.
+	  * Icon: the image shown alongside the tool in the platform.
 
    * To edit an existing container, click on the info card for the container you wish to edit. 
       
@@ -249,11 +249,11 @@ Uploading A Tool
       ..
    
    The Add Version page is split into four to five sections:
+     * First section allows the user to use a previous version as a template
+     * Second section asks for basic version information
+     * Third and fourth sections allow the user to add additional variables
+     * Last section asks the user to upload his/her version image
     
-   * First section allows the user to use a previous version as a template
-   * Second section asks for basic version information
-   * Third and fourth sections allow the user to add additional variables
-   * Last section asks the user to upload his/her version image
    * To make a version from scratch:
    
       a. Go to the second section of fields in the Version Add form. Fill out the port, version number, and label field.
@@ -265,10 +265,10 @@ Uploading A Tool
 	   
 	    The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version.
 
-         The requared fields are:
-         * Port, which is the :ref:`port <port number>` number for the  programing language used in the image
-	 * Version number, which is the version's major, minor, and patch 
-	 * Label, which lables the verison in development (dev), ready for production (prod), or deprecated (old)
+         The required fields are:
+           * Port: which is the :ref:`port <port number>` number for the  programing language used in the image
+	   * Version number: which is the version's major, minor, and patch 
+	   * Label: which lables the verison in development (dev), ready for production (prod), or deprecated (old)
 
       b. Scroll to the bottom of the page, and click the upload button to upload your new Docker container.
       
@@ -293,7 +293,7 @@ Uploading A Tool
 	   
 	    The version template field is the first section of the Add Version page. The page will automatically update when a version is selected from the drop-down clearing any previously filled-out fields.
 
-      b. All fields other than the version number field should have updated with the previous version’s information. Fill out the Version Number field with the new version’s version number. 
+      b. All fields other than the version number field should have updated with the previous version’s information. Fill out the Version Number field with the new version number. 
 
          .. note::
 		Component-sets will need a new image uploaded as the previous version’s image will not carry over. 
@@ -366,7 +366,7 @@ Start A Version
 
 #. To start the version, click the green arrow on the rightmost edge of the version info card.
 
-#. The status of the version will change from stopped to a spinning icon. You can refresh the status by click the refresh status button. The tool will take a minute or two to finish validating. The larger the tool the longer the validation period.     
+#. The status of the version will change from stopped to a spinning icon. You can refresh the status by clicking the refresh status button. The tool will take a minute or two to finish validating. The larger the tool the longer the validation period.     
 
 #. After finishing validating, the status will change to either started or error. If the status is error, the version was unable to connect with the platform.  
 
