@@ -186,7 +186,7 @@ Uploading A Tool
 
    .. figure:: ../images/sidebarcc.PNG
       :align: center
-      :height: 400px
+      :width: 450px
       :alt: Image of the Lumavate command center navigation sidebar
       
       The navigation sidebar links to the Widget, Microservice, or Component-set Library page.
