@@ -14,6 +14,7 @@ A property is defined by denoting the tab, section, help text, name, label, & ty
     'help': 'Help text for the property.  Use Markdown to provide additional help to the studio user',
     'name': 'Property name which will be used to reference this property',
     'label': 'Property label',
+    'default': 'Default value'
     'type': 'Property type - see below'
   }
 
