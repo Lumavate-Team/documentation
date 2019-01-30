@@ -40,7 +40,6 @@ As an Admin run:
 
 From source
 ^^^^^^^^^^^
-
 Installing the CLI as a non-admin:
 #. Clone this repo.
 #. CD into the CLI dir
