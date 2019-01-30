@@ -206,6 +206,9 @@ Options:
 * ``-p, --profile “STRING”``
 * ``--help``
 
+.. note:
+   API paths cannot include sort criteria.
+
 .. _API Get:
 
 Get
@@ -220,6 +223,9 @@ Example:
 Options: 
 * ``-p, --profile “STRING”``
 * ``--help``
+
+.. note:
+   API paths cannot include sort criteria.
 
 .. _API Post:
 
@@ -237,6 +243,9 @@ Options:
 * ``-d, --data "{JSON}, {JSON}"``
 * ``--help``
 
+.. note:
+   API paths cannot include sort criteria.
+
 .. _API Put:
 
 Put
@@ -252,6 +261,9 @@ Options:
 * ``-p, --profile “STRING”``
 * ``-d, --data "{JSON}, {JSON}"``
 * ``--help``
+
+.. note:
+   API paths cannot include sort criteria.
 
 .. _Component-set:
 
@@ -475,6 +487,9 @@ Options:
 
 .. deprecated:: ``--table``
      Use ``--format`` to see the JSON values organized in table format.
+
+.. note:
+   Version number is filtered as “major=*&minor=*&patch=*”
 
 .. _Component-set-version Rm:
 
@@ -838,6 +853,9 @@ Options:
 .. deprecated:: ``--table``
      Use ``--format`` to see the JSON values organized in table format.
 
+.. note:
+   Version number is filtered as “major=*&minor=*&patch=*”
+
 .. _Microservice-version Rm:
 
 Rm
@@ -854,7 +872,7 @@ Example:
 Options: 
 * ``-p, --profile “STRING”``
 * ``-ms, --microservice ID``
-* ``-vm, --version-mask INTAGER (major=*&minor=*&patch=*)``
+* ``-vm, --version-mask INTAGER (*.*.*)``
 * ``-v, --version INTAGER (*.*.*)``
 * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
 * ``--json``
@@ -1061,6 +1079,8 @@ Widget
 ------
 Commands that add, modify, share, and delete widget containers.
 
+.. _Widget Access:
+
 Access
 ^^^^^^
 Shares and/or Unshares a widget container with the specified child organizations.
@@ -1092,85 +1112,112 @@ Add
 Adds a widget container.
 
 Example:
-  :$ luma widget add
+.. code-block:: python
+   $ luma widget add
      Profile: dragon-sib
      Name: example1
      Url Ref: example1
 
 Options: 
-*	-p, --profile “STRING”
-*	--name “STRING”
-*	--url-ref “LOWERCASE STRING”
-*	-path, --icon-file “FILE PATH”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}” 
-*	--json 
-*	--table (will be depricated) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``--name “STRING”``
+* ``--url-ref “LOWERCASE STRING”``
+* ``-path, --icon-file “FILE PATH”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
+* ``--json`` 
+* ``--table`` 
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget Ls:
 
 Ls
 ^^
 Lists all the widget containers in a specified profile's organization. 
 
 Example:
-  :$ luma widget ls
+.. code-block:: python
+   $ luma widget ls
      Profile: drag-sib
 
 Options: 
-*	-p, --profile “STRING”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}” 
-*	--filter “{JSON VALUE=SPECIFIC VALUE}” 
-*	--page INTAGER
-*	--pagesize INTAGER
-*	--json 
-*	--table (will be depricated) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
+* ``--filter “{JSON VALUE=SPECIFIC VALUE}”`` 
+* ``--page INTAGER``
+* ``--pagesize INTAGER``
+* ``--json`` 
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget Rm:
 
 Rm
 ^^
 Removes a widget container.
 
 Example:
-  :$ luma widget rm
+.. code-block:: python
+   $ luma widget rm
      Profile: drag-sib
      Widget: 890
 
 Options: 
-*	-p, --profile “STRING”
-*	-w, --widget ID
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json 
-*	--table (will be depricated) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``-w, --widget ID``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table`` 
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget Update:
 
 Update
 ^^^^^^
 Updates a widget container’s name or image.
 
 Example:
-  :$ luma widget update --name example1
+.. code-block:: python
+   $ luma widget update --name example1
      Profile: drag-sib
      Widget: 893
 
 Options: 
-*	-p, --profile “STRING”
-*	-w, --widget ID
-*	--name “STRING”
-*	-path, --icon-file “FILE PATH” 
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”  
-*	--json 
-*	--table (will be removed) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``-w, --widget ID``
+* ``--name “STRING”``
+* ``-path, --icon-file “FILE PATH”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``  
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget-version:
 
 Widget-version
 --------------
 Commands that add, modify, and delete widget versions.
+
+.. _Widget Add:
 
 Add
 ^^^
 Adds a version to a specified widget container.
 
 Example:
-  :$ luma widget-version add
+.. code-block:: python
+   $ luma widget-version add
      Profile: drag-sib
      Widget: 899
      Label: prod 
@@ -1179,29 +1226,37 @@ Example:
      Port: 8080 
 
 Options: 
-*	-p, --profile “STRING”
-*	--port INTAGER
-*	-w, --widget ID
-*	-path, --widget-file-path “FILE PATH”
-*	 -image, --docker-image “FILE PATH”
-*	-fv, --from-version INTAGER (*.*.*)
-*	-v, --version INTAGER (*.*.*)
-*	--patch INTAGER
-*	--minor INTAGER
-*	--major INTAGER
-*	--env-var ‘{“STRING”:”KEY”}’ 
-*	-l, --label “[dev, old, prod]”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”  
-*	--json 
-*	--table (will be removed) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``--port INTAGER``
+* ``-w, --widget ID``
+* ``-path, --widget-file-path “FILE PATH”``
+* ``-image, --docker-image “FILE PATH”``
+* ``-fv, --from-version INTAGER (*.*.*)``
+* ``-v, --version INTAGER (*.*.*)``
+* ``--patch INTAGER``
+* ``--minor INTAGER``
+* ``--major INTAGER``
+* ``--env-var "{“STRING”:”KEY”}"``
+* ``-l, --label “[dev, old, prod]”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget-version Exec:
 
 Exec
 ^^^^
-Sends commands directly to Docker. For more information, consult the 'Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>'.
+Sends commands directly to Docker. 
+
+For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
 
 Example:
-  :$ luma widget-version exec “Docker command”
+.. code-block:: python
+   $ luma widget-version exec “Docker command”
      Profile: drag-sib
      Widget: 899
      Version Number: 1.0.6
@@ -1215,191 +1270,268 @@ Options:
 *	--table (will be depricated) 
 *	--help
 
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget-version Logs:
+
 Logs
 ^^^^
 Returns the logs for a widget version.
 
 Example:
-  :$ luma widget-version logs
+.. code-block:: python
+   $ luma widget-version logs
      Profile: drag-sib
      Widget: 899
      Version Number: 1.0.6
 
 Options: 
-*	-p, --profile “STRING”
-*	-w, --widget ID
-*	-v, --version INTAGER (*.*.*)
-*	--json 
-*	--table (will be depricated) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``-w, --widget ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget-version Ls:
 
 Ls
 ^^
 Lists all the version for a specified widget container.
 
 Example:
-  :$ luma widget-version ls
+.. code-block:: python
+   $ luma widget-version ls
      Profile: drag-sib
      Widget: 899
 
 Options: 
-*	-p, --profile “STRING”
-*	-w, --widget ID
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--filter “{JSON VALUE=SPECIFIC VALUE}”
-*	--page INTAGER
-*	--pagesize INTAGER
-*	--json 
-*	--table (will be depricated) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``-w, --widget ID``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+* ``--page INTAGER``
+* ``--pagesize INTAGER``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. note:
+   Version number is filtered as “major=*&minor=*&patch=*”
+
+.. _Widget-version Rm:
 
 Rm
 ^^
 Deletes a widget version. This cannot be done if a widget version is being used in an experience.
 
 Example:
-  :$ luma widget version rm
+.. code-block:: python
+   $ luma widget version rm
      Profile: drag-sib
      Widget: 899
      Version Number: 1.0.7
 
 Options: 
-*	-p, --profile “STRING”
-*	-w, --widget ID
-*	-vm, --version-mask INTAGER (*.*.*)
-*	-v, --version INTAGER (*.*.*)
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json 
-*	--table (will be depricated) 
-*	--help
-	
+* ``-p, --profile “STRING”``
+* ``-w, --widget ID``
+* ``-vm, --version-mask INTAGER (*.*.*)``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table`` 
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget-version Start:
+
 Start
 ^^^^^
 Starts a widget version.
 
 Example:
-  :$ luma widget-version start
+.. code-block:: python
+   $ luma widget-version start
      Profile: drag-sib
      Widget: 899
      Version Number: 1.0.0
 
 Options: 
-*	-p, --profile “STRING”
-*	-w, --widget ID
-*	-v, --version INTAGER (*.*.*)
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json 
-*	--table (will be depricated) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``-w, --widget ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget-version Stop:
 
 Stop
 ^^^^
 Stops a widget version. This cannot be done if a widget version is being used in an experience.
 
 Example:
-  :$ luma widget-version stop
+.. code-block:: python
+   $ luma widget-version stop
      Profile: drag-sib
      Widget: 899
      Version Number: 1.0.0
 
 Options: 
-*	-p, --profile “STRING”
-*	-w, --widget ID
-*	-v, --version INTAGER (*.*.*)
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json 
-*	--table (will be depricated) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``-w, --widget ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget-version Update:
 
 Update
 ^^^^^^
 Updates a widget version’s label.
 
 Example:
-  :$ luma widget-version update -l dev
+.. code-block:: python
+   $ luma widget-version update -l dev
      Profile: drag-sib
      Widget: 899
      Version Number: 1.0.0
 
 Options: 
-*	-p, --profile “STRING”
-*	-w, --widget ID
-*	-v, --version INTAGER (*.*.*)
-*	-l, --label “[dev, old, prod]”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json 
-*	--table (will be depricated) 
-*	–help
+* ``-p, --profile “STRING”``
+* ``-w, --widget ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-l, --label “[dev, old, prod]”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``–help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Ls Commands:
 
 Ls Commands
 -----------
-If you want to limit your ls results use:
+Limits Ls search results by:
+
+* Greater Than
+* Less Than
+* Greater Than or Equal To
+* Less Than or Equal To
+* Containing
+
+.. _Ls Commands gt:
 
 gt
 ^^
 Looks for anything that contains more than the specified value. 
 
 example:
-  :$ luma org ls --filter “name=gt:dragon”
+.. code-block:: python
+   $ luma org ls --filter “name=gt:dragon”
+
+.. _Ls Commands lt:
 
 lt
 ^^
 Looks for anything that contains less than the specified value.
 
 example:
-  :$ luma org ls --filter “name=lt:dragon”
+.. code-block:: python
+   $ luma org ls --filter “name=lt:dragon”
+
+.. _Ls Commands gte:
 
 gte
 ^^^
 Looks for anything that contains either the specified value or more than the specified value.
 
 example:
-  :$ luma org ls --filter “name=gte:dragon”
+.. code-block:: python
+   $ luma org ls --filter “name=gte:dragon”
+
+.. _Ls Commands lte:
 
 lte
 ^^^
 Looks for anything that contains either the specified value or less than the specified value.
 
 example:
-  :$ luma org ls --filter “name=lte:dragon”
+.. code-block:: python
+   $ luma org ls --filter “name=lte:dragon”
+
+.. _Ls Commands ct:
 
 ct
 ^^
 Looks for anything that contains the specified value.
 
 example:
-  :$ luma org ls --filter “name=ct:dragon”
+.. code-block:: python
+   $ luma org ls --filter “name=ct:dragon”
+
+.. _Version Commands:
 
 Version Commands
 ----------------
+Commands that modify your CLI or version.
 
-install
+.. _Version Commands Install:
+
+Install
 ^^^^^^^
 Installs luma.
 
 example: 
-  :$ pip3 install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple luma
+.. code-block:: python
+   $ pip3 install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple luma
 
-upgrade
+.. _Version Commands Upgrade:
+
+Upgrade
 ^^^^^^^
 Updates the version of luma on the current machine. 
 
 example:
-  :$ pip3 install luma --upgrade
-  
-help
+.. code-block:: python
+   $ pip3 install luma --upgrade
+
+.. _Version Commands Help:
+
+Help
 ^^^^
-Describes and lists the possible sub-commands for any command. This can be done by running any command without passing in any options or by passing in the --help flag.
+Describes and lists the possible sub-commands for any command. This can be done by running any command without passing in any options or by passing in the ``--help`` flag.
 
 example:
-  :$ luma --help
-Or
-  :$ luma ls --help
+.. code-block:: python
+    $ luma --help
+   
+    $ luma ls --help
+
+.. _Additional Info:
 
 Additional Info
 ---------------
 * Dates must be in the format: year-month-day
 * Must include “” around all arguments
 * Must include “&” between arguments when using multiple arguments 
-* Widget, microservice, and component-set version number is filtered as “major=*&minor=*&patch=*”
-* API paths cannot include sort criteria
