@@ -17,12 +17,12 @@ The following documentation will explain:
 
 Requirements
 -----------
-You will need to install 'Python 3.1.1 <https://www.python.org/downloads/>' or higher in order to use the CLI. 
+You will need to install `Python 3.1.1 <https://www.python.org/downloads/>`_ or higher in order to use the CLI. 
 
-It is recommended that you install 'Gitbash <https://git-scm.com/downloads>' as the CLI is written for and tested in a BASH shell. 
+It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
 
 .. Note:
-  To get the most out of the CLI, use it with 'ZSH <https://sourceforge.net/projects/zsh/files/>'. This enables extra features such as showing help text during autocompletion. 
+  To get the most out of the CLI, use it with `ZSH <https://sourceforge.net/projects/zsh/files/>`_. This enables extra features such as showing help text during autocompletion. 
 
 Installation
 ------------
@@ -30,30 +30,36 @@ The CLI can be installed two different ways: through Pip or from the source.
 
 From pip
 ^^^^^^^^
-As a Non-admin:
-  :$ sudo pip3 install luma
+As a Non-admin run:
+  .. code-block:: python
+     $ sudo pip3 install luma
 
-As an Admin:
-  :$ pip3 install luma
+As an Admin run:
+  .. code-block:: python
+     $ pip3 install luma
 
 From source
 ^^^^^^^^^^^
 
 Installing the CLI as a non-admin:
-1) Clone this repo.
-2) CD into the CLI dir
-3) Run:
-  :$ pip3 install luma --user
-4) Add the returned path URL to the path 
-  (Example Response): 
-  :$ The script luma.exe is installed in 'C:\ComputerName\UserName\AppData\Roaming\Python\Python37\Scripts' which is not on PATH.
+#. Clone this repo.
+#. CD into the CLI dir
+#. Run:
+  .. code-block:: python
+     $ pip3 install luma --user
+ 
+#. Add the returned path URL to the path 
+   An Example Response: 
+   .. code-block:: python
+      $ The script luma.exe is installed in 'C:\ComputerName\UserName\AppData\Roaming\Python\Python37\Scripts' which is not on PATH.
   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
   
-As an Admin
-1) Clone this repo.
-2) CD into the CLI dir
-3) Run:
-  :$ sudo pip3 install luma
+As an Admin:
+#. Clone this repo.
+#. CD into the CLI dir
+#. Run:
+   .. code-block:: python
+      $ sudo pip3 install luma
 
 .. Note:
   To activate autocompletion after install, restart your terminal or source your shell config (Either .zshrc or .bash_profile).  
@@ -68,67 +74,83 @@ Setting-Up Environments:
 ^^^^^^^^^^^^^^^^^^^^^^^
 You can use either the Lumavate pre-configured enviroment or you can setup your own enviorment configuration.
 
-Using the pre-set configuration:
-1) Log into the command center you want to modify with the CLI
-2) Go to the CLI tab located in the side menue bar
-3) Copy the information from the Configure an Environment field. It should look like this:
-  :$ luma env config --env-name prod --app https://not-a-real-realm.dragonfly.lumavate-type.com --audience https://dragonfly.lumavate-type.com/notarealapp --token dragonfly-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
-4) Past the command into your Bash window 
+Using the preset configuration:
+#. Log into the command center you want to modify with the CLI
+#. Go to the CLI tab located in the side menue bar
+#. Copy the information from the Configure an Environment field. It should look like this:
+   .. code-block:: python
+      $ luma env config --env-name prod --app https://not-a-real-realm.dragonfly.lumavate-type.com --audience https://dragonfly.lumavate-type.com/notarealapp --token dragonfly-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
+      
+#. Past the command into your Bash window 
 
 Using your own configuration:
-1) Log into the command center you want to modify with the CLI
-2) Go to the CLI tab located in the side menue bar
-3) Take note of the app, audience, token, client-id, and client-secret information from the Configure an Environment field
-4) In your Bash window, run:
-  : $ luma env config
-5) Fill out the prompts as they appear on the screen with the appropriate information. It should look like this when you are done:
-  :$ Env Name: <<what you want to call your envrioment>>
-  App: <<enviroment Url>>
-  Token: <<enviroment token>>
-  Audience: <<envitoment audience>>
-  Client id: <<user clientId>>
-  Client secret: <<user clientSecret>>
+#. Log into the command center you want to modify with the CLI
+#. Go to the CLI tab located in the side menue bar
+#. Take note of the app, audience, token, client-id, and client-secret information from the Configure an Environment field
+#. In your Bash window, run:
+   .. code-block:: python
+      $ luma env config
+
+#. Fill out the prompts as they appear on the screen with the appropriate information. It should look like this when you are done:
+   .. code-block:: python
+      $ Env Name: <<what you want to call your envrioment>>
+        App: <<enviroment Url>>
+        Token: <<enviroment token>>
+        Audience: <<envitoment audience>>
+        Client id: <<user clientId>>
+        Client secret: <<user clientSecret>>
 
 .. Note: 
   The CLI uses Client id and Client secret to asscociate a users context to a machine. From this point forward, user will refer to the client id and client secreate information used to setup the envroment in the CLI. 
   
 Setting up Profiles:
 ^^^^^^^^^^^^^^^^^^^
-Profiles can be set-up using the Lumavate pre-set command or using your own configuration. You will need to have :ref: 'configured an envrioment' on your machine through the CLI before you configure a profile.  
+Profiles can be set-up using the Lumavate preset command or using your own configuration. You will need to have configured an envrioment on your machine through the CLI before you configure a profile.  
 
-Using a pre-set configuration:
-1) Log into a Lumavate command center
-2) Navigate to the CLI  tab located in the side menue bar
-2) Copy the information from the Add a Profile field. It should look like this:
-  :$ luma profile add --env prod
-3) Past the command into your Bash window
-4) You will be prompted to name your profile. It should look like this:
-   :$ Profile Name: <<what you want to call your profile>>
-5) You will then be presented with a list of organizations. Pick the one you want to edit with this profile. It should look like this:
-  :$ id Org Name                 Org Type Test Org
-     35 Sample command center     dev      None
-     49 Sample Studio             studio   False
+Using a preset configuration:
+#. Log into a Lumavate command center
+#. Navigate to the CLI  tab located in the side menue bar
+#. Copy the information from the Add a Profile field. It should look like this:
+   .. code-block:: python
+      $ luma profile add --env prod
 
-    Org ID you want to associate with this profile: <<org id>>
+#. Past the command into your Bash window
+#. You will be prompted to name your profile. It should look like this:
+   .. code-block:: python
+      $ Profile Name: <<what you want to call your profile>>
+
+#. You will then be presented with a list of organizations. Pick the one you want to edit with this profile. It should look like this:
+   .. code-block:: python
+      $ id Org Name                 Org Type Test Org
+        35 Sample command center     dev      None
+        49 Sample Studio             studio   False
+
+        Org ID you want to associate with this profile: <<org id>>
 
      
 Using your own configuration:
-1) In your Bash window, run:
-  :$ luma profile add
-2) You will be prompted to name your profile. It should look like this:
-   :$ Profile Name: <<what you want to call your profile>>
-3) A list of environments will appear. Select which environment you wish to associate with your profile:
-    
-    Env Name            App                                         Audience                               Token
+#. In your Bash window, run:
+   .. code-block:: python
+      $ luma profile add
+
+#. You will be prompted to name your profile. It should look like this:
+   .. code-block:: python
+      $ Profile Name: <<what you want to call your profile>>
+
+#. A list of environments will appear. Select which environment you wish to associate with your profile:
+    .. code-block:: python
+       Env Name            App                                         Audience                               Token
      Name      https://not-a-realm.place.lumavate-type.com https://place.lumavate-type.com/notaapp place-lumavate-dev.notatokey.com
      
-     Env: <<envrioment name you want your profile associated with>>
-4) A list of organizations will appear. Pick the one you want to edit with this profile. It should look like this:
-     :$ id Org Name                 Org Type Test Org
-     35 Sample command center     dev      None
-     49 Sample Studio             studio   False
+       Env: <<envrioment name you want your profile associated with>>
 
-     Org ID you want to associate with this profile: <<org id>>
+#. A list of organizations will appear. Pick the one you want to edit with this profile. It should look like this:
+   .. code-block:: python
+      $ id Org Name                 Org Type Test Org
+        35 Sample command center     dev      None
+        49 Sample Studio             studio   False
+
+        Org ID you want to associate with this profile: <<org id>>
 
 .. Warning:
   If there are two profiles or environments with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
@@ -141,26 +163,31 @@ Using your own configuration:
 CLI Syntax
 ==========
 
-This CLI will allow users to interact with the Lumavate platform from a terminal. For setup instructions, look at the 'Github readme <>' or the :ref: 'CLI documentation <CLI>'. All the main commands can be found in the side navigation pane. Each of these main commands has their subcommands listed below them. Pass the --help flag with the command for more information on how to use them and how to use their subcommands.
+This CLI will allow users to interact with the Lumavate platform from a terminal. For setup instructions, look at the `Github readme <https://github.com/Lumavate-Team/documentation/blob/master/CLI.rst>`_ or the :ref:`CLI documentation <CLI>`. All the main commands can be found in the side navigation pane. Each of the main commands has their subcommands listed below them. 
 
-All commands sent to bash will start with::$ luma
+Pass the ``--help`` flag with the command for more information on how to use them and how to use their subcommands.
+
+All commands sent to bash will start with ``luma``.
 
 Index: 
-1.	API
-2.	Component-set
-3.	Component-set-version
-4.	Env
-5.	Microservice
-6.	Microservice-version
-7.	Org
-8.	Profile
-9.	Version
-10.	Widget
-11.	Widget-version
-12.	Ls Commands
-13.     Version Commands
-14.	Additional Info
+#. API
+#. Component-set
+#. Component-set-version
+#. Env
+#. Experience
+#. Experience-collection
+#. Microservice
+#. Microservice-version
+#. Org
+#. Profile
+#. Version
+#. Widget
+#. Widget-version
+#. Ls Commands
+#. Version Commands
+#. Additional Info
 
+.. _API:
 
 API
 ---
@@ -171,159 +198,206 @@ Delete
 Calls a delete command in order to remove something through the API. 
 
 Example:
-:$ luma api delete /iot/v1/containers/898?expand=all
-    profile: dragon-sib
+ .. code-block:: python
+    $ luma api delete /iot/v1/containers/898?expand=all
+      profile: dragon-sib
 
 Options:
-* -p, --profile “STRING”
-* --help
+* ``-p, --profile “STRING”``
+* ``--help``
+
+.. _API Get:
 
 Get
 ^^^
 Calls a get command in order to return information from the API.
 
 Example:
-:$ luma api get /iot/v1/containers?expand=all
-    profile: dragon-sib
+.. code-block:: python
+   $ luma api get /iot/v1/containers?expand=all
+     profile: dragon-sib
 
 Options: 
-* -p, --profile “STRING”
-* --help
+* ``-p, --profile “STRING”``
+* ``--help``
+
+.. _API Post:
 
 Post
 ^^^^
 Calls a post command in order to add something through the API. 
 
 Example:
-:$ luma api post /iot/v1/containers?expand=all -d ‘{“id:0, ”type”:”widget”, ”name”:”examplepost2”, ”urlRef”:”examplepost2”, ”ephemeralKey”: "67/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
-  profile: dragon-sib
+.. code-block:: python
+   $ luma api post /iot/v1/containers?expand=all -d ‘{“id:0, ”type”:”widget”, ”name”:”examplepost2”, ”urlRef”:”examplepost2”, ”ephemeralKey”: "67/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
+     profile: dragon-sib
 
 Options: 
-* -p, --profile “STRING”
-* -d, --data ‘{JSON}’
-* --help
+* ``-p, --profile “STRING”``
+* ``-d, --data "{JSON}, {JSON}"``
+* ``--help``
+
+.. _API Put:
 
 Put
 ^^^
 Calls a put command in order to change something through the API.
 
 Example:
-:$ luma api post /iot/v1/containers?expand=all -d ‘{“id:0, ”type”:”widget”, ”name”:”examplepost2”, ”urlRef”:”exaplepost2”,                 ”ephemeralKey”: "67/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
-  profile: dragon-sib
+.. code-block:: python
+   $ luma api post /iot/v1/containers?expand=all -d ‘{“id:0, ”type”:”widget”, ”name”:”examplepost2”, ”urlRef”:”exaplepost2”,                 ”ephemeralKey”: "67/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
+     profile: dragon-sib
 
 Options: 
-* -p, --profile “STRING”
-* -d, --data ‘{JSON}’
-* --help
+* ``-p, --profile “STRING”``
+* ``-d, --data "{JSON}, {JSON}"``
+* ``--help``
+
+.. _Component-set:
 
 Component-set
 -------------
 Commands that create, modify, share, and delete component-set containers.
+
+.. _Component-set Access:
 
 Access
 ^^^^^^
 Shares and Unshares component-set containers with child organizations.
 
 Example:
-:$ luma component-set access --add 68
-  profile: drag-sib
-  component set: 273
+.. code-block:: python
+   $ luma component-set access --add 68
+     profile: drag-sib
+     component set: 273
 
 Options: 
-*	-p, --profile “STRING”
-*	-cs, --component-set ID
-*	--add ID
-*	--rm ID
-*	--absolute ID
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-cs, --component-set ID``
+* ``--add ID``
+* ``--rm ID``
+* ``--absolute ID``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+ .. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Component-set Add:
 
 Add
 ^^^
 Adds a component-set container to the command center your profile is associated with. 
 
 Example:
-:$ luma component-set add
-  Profile: drag-sib
-  Name: example1
-  Url Ref: example1
+.. code-block:: python
+   $ luma component-set add
+     Profile: drag-sib
+     Name: example1
+     Url Ref: example1
 
 Options: 
-*	-p, --profile “STRING”
-*	--name “STRING”
-*	--url-ref “STRING”
-*	-path, --icon-file “FILE PATH”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json 
-*	–table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``--name “STRING”``
+* ``--url-ref “STRING”``
+* ``-path, --icon-file “FILE PATH”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json`` 
+* ``--table``
+* ``--help``
+
+ .. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Component-set Ls:
 
 Ls
 ^^
 Lists all component-set containers in the specified profile environment. 
 
 Example:
-:$ luma component-set ls
-   Profile: drag-sib
+.. code-block:: python
+   $ luma component-set ls
+     Profile: drag-sib
 
 Options:
-*	-p, --profile “STRING”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}” 
-*	--filter “{JSON VALUE=SPECIFIC VALUE}”
-*	--page INTAGER 
-*	--pagesize INTAGER
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
+* ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+* ``--page INTAGER`` 
+* ``--pagesize INTAGER``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Component-set Rm:
 
 Rm
 ^^
 Deletes a component-set container. This can only be done after all versions in the container have been deleted.
 
 Example:
-  :$ luma component-set rm
-    Profile: drag-sib
-    Component set: 463
+.. code-block:: python
+   $ luma component-set rm
+     Profile: drag-sib
+     Component set: 463
 
 Options: 
-*	-p, --profile “STRING”
-*	-cs, --component-set ID
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help 
+* ``-p, --profile “STRING”``
+* ``-cs, --component-set ID``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help`` 
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Component-set Update:
 
 Update
 ^^^^^^
 Updates the name or image of a component-set container. 
 
 Example:
-  :$ luma component-set update --name ExampleUpdateName1
+.. code-block:: python
+   $ luma component-set update --name ExampleUpdateName1
      Profile: drag-sib
      Component set: 246
 
 Options: 
-*	-p, --profile “STRING”
-*	-cs, --component-set ID
-*	--name “STRING”
-*	-path, --icon-file “FILE PATH”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-cs, --component-set ID``
+* ``--name “STRING”``
+* ``-path, --icon-file “FILE PATH”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Component-set-version:
 
 Component-set-version
 ---------------------
 Commands that create, modify, and delete component-set versions.
+
+.. _Component-set-version Add:
 
 Add
 ^^^
 Adds a version to a specified component-set container.  
 
 Example:
-  :$ luma component-set-version add 
+.. code-block:: python
+   $ luma component-set-version add 
      Profile: drag-sib
      Component set: 272
      Label: prod
@@ -331,112 +405,144 @@ Example:
      Component set file: “C:\Tests\Auto\WidgetFiles\Archive.zip”
 
 Options: 
-*	-p, --profile “STRING”
-*	-cs, --component-set ID
-*	-path, --component-set-file-path “FILE PATH”
-*	-fv, --from-version ID
-*	-v, --version INTAGER (*.*.*)
-*	--patch INTAGER
-*	--minor INTAGER
-*	--major INTAGER
-*	--css-includes “STRING”
-*	--direct-includes “STRING”
-*	-l, --label “[prod, dev, old]”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-cs, --component-set ID``
+* ``-path, --component-set-file-path “FILE PATH”``
+* ``-fv, --from-version ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``--patch INTAGER``
+* ``--minor INTAGER``
+* ``--major INTAGER``
+* ``--css-includes “STRING”``
+* ``--direct-includes “STRING”``
+* ``-l, --label “[prod, dev, old]”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
 
 .. Warning:
-  File paths with spaces in them may need to be specified in the main command using the :$ -path option as some computers do not accept these paths any other way.
-  
+  File paths with spaces in them may need to be specified in the main command using the ``$ -path`` option as some computers do not accept these paths any other way.
+
+.. _Component-set-version Components:
+
 Components
 ^^^^^^^^^^
 Returns the JSON of a component-set version. 
 
 Example:
-  :$ luma component-set-version components
+.. code-block:: python
+   $ luma component-set-version components
      Profile: drag-sib
      Component set: 272
 
 Options: 
-*	-p, --profile “STRING”
-*	-cs, --component-set ID
-*	-v, --version INTAGER (*.*.*)
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-cs, --component-set ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table`` and ``--json``
+     The CLI will return the JSON file by default. The file cannot be organized by the CLI.
+
+.. _Component-set-version Ls:
 
 Ls
 ^^
 Lists all versions in a specified component-set container.
 
 Example:
-  :$ luma component-set-version ls
+.. code-block:: python
+   $ luma component-set-version ls
      Profile: drag-sib
      Component-set: 274
 
 Options: 
-*	-p, --profile “STRING”
-*	-cs, --component-set ID
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--filter “{JSON VALUE=SPECIFIC VALUE}”
-*	--page INTAGER
-*	--pagesize INTAGER
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-cs, --component-set ID``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+* ``--page INTAGER``
+* ``--pagesize INTAGER``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Component-set-version Rm:
 
 Rm
 ^^
 Deletes a version from a specified component-set container.
 
 Example:
-  :$ luma component-set-version rm
+.. code-block:: python
+   $ luma component-set-version rm
      Profile: drag-sib
      Component set: 272
      Version number: 1.0.11 
 
 Options: 
-*	-p, --profile “STRING”
-*	-cs, --component-set ID
-*	-vm, --version-mask INTAGER (*.*.*)
-*	-v, --version INTAGER (*.*.*)
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-cs, --component-set ID``
+* ``-vm, --version-mask INTAGER (*.*.*)``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Component-set-version Update:
 
 Update
 ^^^^^^
 Updates the label of a specified component-set version.
 
 Example:
-  :$ luma component-set-version update -l dev 
+.. code-block:: python
+   $ luma component-set-version update -l dev 
      Profile: drag-sib 
      Component set: 272 
      Version number: 3.0.0
 
 Options: 
-*	-p, --profile “STRING”
-*	-cs, --component-set ID
-*	-v, --version INTAGER (*.*.*)
-*	-l, --label “[prod, dev, old]”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-cs, --component-set ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-l, --label “[prod, dev, old]”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Env:
 
 Env
 ---
 Commands that create, modify, and delete environments.
+
+.. _Env Config:
 
 Config
 ^^^^^^
 Creates an environment. 
 
 Example:
-  :$ luma env config
+.. code-block:: python
+   $ luma env config
      Env name: Dragonfly
      App: https://example-realm.dragonfly.lumavate-type.com
      Token: dragonfly-lumavate-type.not-a-real-token.com
@@ -445,147 +551,190 @@ Example:
      Client id: NotARealId1234j2eIxKILomCdA
 
 Options: 
-*	--env-name “STRING”
-*	--app “LINK”
-*	--token “LINK”
-*	--audience “LINK”
-*	--client-id ID
-*	--client-secret SECRET
-*	--json
-*	--help
+* ``--env-name “STRING”``
+* ``--app “LINK”``
+* ``--token “LINK”``
+* ``--audience “LINK”``
+* ``--client-id ID``
+* ``--client-secret SECRET``
+* ``--json``
+* ``--help``
+
+.. _Env Ls:
 
 Ls
 ^^
 Lists all the environments the user has access to.
 
 Example:
-  :$ luma env ls
+.. code-block:: python
+   $ luma env ls
 
 Options: 
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--help
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--help``
+
+.. _Env Rm:
 
 Rm
 ^^
 Removes a specified environment. 
 
 Example:
-  :$ luma env rm
-     Name: Environment I Want To Remove
+.. code-block:: python
+   $ luma env rm
+     Name: dragon-realm
 
 Options: 
-*	--env-name “STRING”
-*	--help
+* ``--env-name “STRING”``
+* ``--help``
+
+.. _Microservice:
 
 Microservice
 ------------
 Commands that create, modify, share, and delete microservice containers.
+
+.. _Microservice Access:
 
 Access
 ^^^^^^
 Shares and/or unshares a microservice container with the specified child organizations. 
 
 Example:
-  :$ luma microservice access --add 68
+.. code-block:: python
+   $ luma microservice access --add 68
      Profile: drag-sib
      Microservice: 851
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, --microservice ID
-*	--add ID
-*	--rm ID
-*	--absolute ID
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated) 
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, --microservice ID``
+* ``--add ID``
+* ``--rm ID``
+* ``--absolute ID``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table`` 
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microservice Add:
 
 Add
 ^^^
 Adds a microservice container to the command center associated with the specified profile.
 
 Example:
-  :$ luma microservice add 
+.. code-block:: python
+   $ luma microservice add 
      Profile: drag-sib
      Name: example1
      Url Ref: example1
 
 Options: 
-*	-p, --profile “STRING”
-*	--name “STRING”
-*	--url-ref “STRING”
-*	-path, --icon-file “FILE PATH”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``--name “STRING”``
+* ``--url-ref “STRING”``
+* ``-path, --icon-file “FILE PATH”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microsevice Ls:
 
 Ls
 ^^
 Lists all microservices containers in the command center associated with the specified profile.
 
 Example:
-  :$ luma microservice ls 
+.. code-block:: python
+   $ luma microservice ls 
      Profile: drag-sib
 
 Options: 
-*	-p, --profile “STRING”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--filter “{JSON VALUE=SPECIFIC VALUE}”
-*	--page INTAGER
-*	--pagesize INTAGER
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+* ``--page INTAGER``
+* ``--pagesize INTAGER``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microservice Rm:
 
 Rm
 ^^
 Removes a microservice container from the command center associated with the specified profile. 
 
 Example:
-  :$ luma microservice rm 
+.. code-block:: python
+   $ luma microservice rm 
      Profile: drag-sib 
      Microservice: 916
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, --microservice ID
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, --microservice ID``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microserivce Update:
 
 Update
 ^^^^^^
 Updates the name or image of a microservice container from the command center associated with the specified profile.
 
 Example:
-  :$ luma microservice update --name wdupdate1  
+.. code-block:: python
+   $ luma microservice update --name wdupdate1  
      Profile: drag-sib 
      Microservice: 916 
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, --microservice ID
-*	--name “STRING”
-*	-path, --icon-file “FILE PATH”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, --microservice ID``
+* ``--name “STRING”``
+* ``-path, --icon-file “FILE PATH”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microserivce-version:
 
 Microservice-version
 --------------------
 Commands that add, modify, and delete microservice versions.
+
+.. _Microservice-version Add:
 
 Add
 ^^^
 Adds a version to a specified microservice.
 
 Example:
-  :$ luma microservice-version add 
+.. code-block:: python
+   $ luma microservice-version add 
      Profile: drag-sib 
      Microservice: 916
      Label: prod
@@ -594,234 +743,302 @@ Example:
      Microservice-file-path: “C:\Tests\ProtractorAuto\WidgetFiles\magic.tar.gz”
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, --microservice ID
-*	--port INTAGER
-*	-image, --docker-image “FILE PATH”
-*	-path, --microservice-file-path “FILE PATH”
-*	-fv, --from-version INTAGER (*.*.*)
-*	-v, --version INTAGER (*.*.*)
-*	--patch INTAGER
-*	--minor INTAGER
-*	--major INTAGER
-*	--env-var ‘{“STRING”:”KEY”}’
-*	-l, --label “[dev, old, prod]”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, --microservice ID``
+* ``--port INTAGER``
+* ``-image, --docker-image “FILE PATH”``
+* ``-path, --microservice-file-path “FILE PATH”``
+* ``-fv, --from-version INTAGER (*.*.*)``
+* ``-v, --version INTAGER (*.*.*)``
+* ``--patch INTAGER``
+* ``--minor INTAGER``
+* ``--major INTAGER``
+* ``--env-var "{“STRING”:”KEY”}"``
+* ``-l, --label "[dev, old, prod]"``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microservice-version Exec:
 
 Exec
 ^^^^
 Sends commands directly to Docker. For more information, consult the 'Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>'
 
 Example:
-  :$ luma microservice-version exec “Docker command” 
+.. code-block:: python
+   $ luma microservice-version exec “Docker command” 
      Profile: drag-sib 
      Mirocservice: 916 
      Version Number: 1.0.8
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, --microservice ID
-*	-v, --version VERSION NUMBER
-*	--target [one, all] 
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, --microservice ID``
+* ``-v, --version VERSION NUMBER``
+* ``--target [one, all]`` 
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microservice-version Logs:
 
 Logs
 ^^^^
 Returns the logs for a specified microservice version.
 
 Example:
-  :$ luma microservice-version logs 
+.. code-block:: python
+   $ luma microservice-version logs 
      Profile: drag-sib 
      Microservice: 916
      Version Number: 1.0.8
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, --microservice ID
-*	-v, --version INTAGER (*.*.*)
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, --microservice ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microservice-version Ls:
 
 Ls
 ^^
 Lists all versions of a specified microservice container.
 
 Example:
-  :$ luma microservice-version ls 
+.. code-block:: python
+   $ luma microservice-version ls 
      Profile: drag-sib 
      Microservice: 916
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, --microservice ID
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--filter “{JSON VALUE=SPECIFIC VALUE}”
-*	--page INTAGER
-*	--pagesize INTAGER
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, --microservice ID``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+* ``--page INTAGER``
+* ``--pagesize INTAGER``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microservice-version Rm:
 
 Rm
 ^^
 Removes a version from a specified microservice container.
 
 Example:
-  :$ luma microservice-version rm
+.. code-block:: python
+   $ luma microservice-version rm
      Profile: drag-sib
      Microservice: 916
      Version: 1.0.9
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, --microservice ID
-*	-vm, --version-mask INTAGER (*.*.*)
-*	-v, --version (will be removed)
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, --microservice ID``
+* ``-vm, --version-mask INTAGER (major=*&minor=*&patch=*)``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microservice-version Start:
 
 Start
 ^^^^^
 Starts a microservice version.
 
 Example:
-  :$ luma microservice-version start
+.. code-block:: python
+   $ luma microservice-version start
      Profile: drag-sib
      Microservice: 916
      Version: 1.0.8
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, --microservice ID
-*	-v, --version INTAGER (*.*.*)
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, --microservice ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microservice-version Stop:
 
 Stop
 ^^^^
 Stops a microservice version. A microservice version cannot be stopped if it is being used in an experience.
 
 Example:
-  :$ luma microservice-version stop
+.. code-block:: python
+   $ luma microservice-version stop
      Profile: drag-sib
      Microservice: 916
      Version: 1.0.8
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, -- microservice ID
-*	-v, --version INTAGER (*.*.*)
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, -- microservice ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Microservice-version Update:
 
 Update
 ^^^^^^
 Updates the label of a microservice version.
 
 Example:
-  :$ luma microservice-version update --label dev
+.. code-block:: python
+   $ luma microservice-version update --label dev
      Profile: drag-sib
      Microservice: 916
      Version: 1.0.8
 
 Options: 
-*	-p, --profile “STRING”
-*	-ms, -- microservice ID
-*	-v, --version INTAGER (*.*.*)
-*	-l, --label “[dev, old, prod]”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-ms, -- microservice ID``
+* ``-v, --version INTAGER (*.*.*)``
+* ``-l, --label “[dev, old, prod]”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Org:
 
 Org
 ---
 Commands that list the organizations associated with a specified environment or organization.
+
+.. _Org Child-orgs:
 
 Child-orgs
 ^^^^^^^^^^
 Lists the child organizations that a specified profile’s organization can share with.
 
 Example:
-  :$ luma org child-orgs
+.. code-block:: python
+   $ luma org child-orgs
      Profile: drag-sib
 
 Options: 
-*	-p, --profile “STRING”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--filter “{JSON VALUE=SPECIFIC VALUE}”
-*	--json
-*	--help
+* ``-p, --profile “STRING”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+* ``--json``
+* ``--help``
+
+.. _Org Ls:
 
 Ls
 ^^
 Lists the organizations inside a specified environment.
 
 Example:
-  :$ luma org ls
+.. code-block:: python
+   $ luma org ls
      Env: Dragonfly
 
 Options: 
-*	--env “STRING”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--filter “{JSON VALUE=SPECIFIC VALUE}”
-*	--json
-*	--help
+* ``--env “STRING”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+* ``--json``
+* ``--help``
+
+.. _Profile:
 
 Profile
 -------
 Commands that add, modify, or delete profiles.
+
+.. _Profile Add:
 
 Add
 ^^^
 Adds a profile to a specified enviroment, and associates the profile to a specific organization.
 
 Example:
-  :$ luma profile add
+.. code-block:: python
+   $ luma profile add
      Profile name: dragon-sib
+     
      Name of Env you want to use with this profile: Dragonfly
+     
      Org ID you want to associate with this profile: 67
 
 Options: 
-*	--profile-name “STRING”
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--help
+* ``--profile-name “STRING”``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--help``
+
+.. _Profile Ls:
 
 Ls
 ^^
 Lists all profiles associated with the client id and secrete.
 
 Example:
-  :$ luma profile ls
+.. code-block:: python
+   $ luma profile ls
 
 Options: 
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--help
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--help``
+
+.. _Profile Rm:
 
 Rm
 ^^
-Deletes a profile'
+Deletes a profile.
 
 Example:
-  :$ luma profile rm
+.. code-block:: python
+   $ luma profile rm
      Profile: drag-sib
 
 Options: 
-*	-p, --profile “STRING”
-*	--help
+* ``-p, --profile “STRING”``
+* ``--help``
+
+.. _Version:
 
 Version
 -------
@@ -832,10 +1049,13 @@ Version
 Lists the luma version that the current machine is on.
 
 Example:
-  :$ luma version
+.. code-block:: python
+   $ luma version
 
 Options: 
-*	--help
+* ``--help``
+
+.. _Widget:
 
 Widget
 ------
@@ -846,20 +1066,26 @@ Access
 Shares and/or Unshares a widget container with the specified child organizations.
 
 Example:
-  :$ luma widget access --add 68
+.. code-block:: python
+   $ luma widget access --add 68
      Profile: drag-sib
      Widget: 834
 
 Options: 
-*	-p, --profile “STRING”
-*	-w, --widget ID
-*	--add ID
-*	--rm ID
-*	--absolute ID
-*	-f, --format “{JSON VALUE}, {JSON VALUE}”
-*	--json
-*	--table (will be depricated)
-*	--help
+* ``-p, --profile “STRING”``
+* ``-w, --widget ID``
+* ``--add ID``
+* ``--rm ID``
+* ``--absolute ID``
+* ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+* ``--json``
+* ``--table``
+* ``--help``
+
+.. deprecated:: ``--table``
+     Use ``--format`` to see the JSON values organized in table format.
+
+.. _Widget Add:
 
 Add
 ^^^
