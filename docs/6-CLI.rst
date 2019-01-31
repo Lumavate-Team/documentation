@@ -39,7 +39,7 @@ As a Non-admin run:
 
 As an Admin run:
   
-  .. code-block:: python
+  .. code-block:: bash
      
      $ pip3 install luma
 
@@ -52,15 +52,15 @@ Installing the CLI as a non-admin:
  #. CD into the CLI dir
  #. Run:
   
-   .. code-block:: python
+    .. code-block:: bash
       
-      $ pip3 install luma --user
+       $ pip3 install luma --user
  
  #. Add the returned path URL to the path 
    
     An Example Response: 
    
-    .. code-block:: python
+    .. code-block:: bash
        
        The script luma.exe is installed in 'C:\ComputerName\UserName\AppData\Roaming\Python\Python37\Scripts' which is not on PATH. 
        Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
@@ -71,7 +71,7 @@ Installing the CLI as an Admin:
  #. CD into the CLI dir
  #. Run:
    
-    .. code-block:: python
+    .. code-block:: bash
        
        $ sudo pip3 install luma
 
@@ -97,7 +97,7 @@ Using the preset configuration:
  #. Go to the CLI tab located in the side menue bar
  #. Copy the information from the Configure an Environment field. It should look like this:
    
-    .. code-block:: python
+    .. code-block:: bash
        
        $ luma env config --env-name prod --app https://not-a-real-realm.dragonfly.lumavate-type.com --audience https://dragonfly.lumavate-type.com/notarealapp --token dragonfly-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
       
@@ -110,13 +110,13 @@ Using your own configuration:
  #. Take note of the app, audience, token, client-id, and client-secret information from the Configure an Environment field
  #. In your Bash window, run:
    
-    .. code-block:: python
+    .. code-block:: bash
        
        $ luma env config
 
  #. Fill out the prompts as they appear on the screen with the appropriate information. It should look like this when you are done:
    
-    .. code-block:: python
+    .. code-block:: bash
        
        $ Env Name: <<what you want to call your envrioment>>
          App: <<enviroment Url>>
@@ -139,20 +139,20 @@ Using a preset configuration:
  #. Navigate to the CLI  tab located in the side menue bar
  #. Copy the information from the Add a Profile field. It should look like this:
    
-    .. code-block:: python
+    .. code-block:: bash
        
        $ luma profile add --env prod
 
  #. Past the command into your Bash window
  #. You will be prompted to name your profile. It should look like this:
    
-    .. code-block:: python
+    .. code-block:: bash
        
         profile Name: <<what you want to call your profile>>
 
  #. You will then be presented with a list of organizations. Pick the one you want to edit with this profile. It should look like this:
    
-    .. code-block:: python
+    .. code-block:: bash
        
          id Org Name                  Org Type Test Org
          35 Sample command center     dev      None
@@ -165,28 +165,28 @@ Using your own configuration:
 
  #. In your Bash window, run:
    
-    .. code-block:: python
+    .. code-block:: bash
        
        $ luma profile add
 
  #. You will be prompted to name your profile. It should look like this:
    
-    .. code-block:: python
+    .. code-block:: bash
        
         profile Name: <<what you want to call your profile>>
 
  #. A list of environments will appear. Select which environment you wish to associate with your profile:
    
-    .. code-block:: python
+    .. code-block:: bash
        
-       Env Name                                    App                                                  Audience                                 Token                                         Name
+       Env Name                                    App                                                  Audience                                 Token                                     Name
        https://not-a-realm.place.lumavate-type.com https://not-a-real-realm.dragonfly.lumavate-type.com https://place.lumavate-type.com/notanapp dragonfly-lumavate-type.notarealtoken.com prod
      
         Env: <<envrioment name you want your profile associated with>>
 
  #. A list of organizations will appear. Pick the one you want to edit with this profile. It should look like this:
    
-    .. code-block:: python
+    .. code-block:: bash
        
         id Org Name                  Org Type Test Org
         35 Sample command center     dev      None
