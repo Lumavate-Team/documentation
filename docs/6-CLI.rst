@@ -13,7 +13,7 @@ The following documentation will explain:
 * :ref:`Requirements`
 * :ref:`Installation`
 * :ref:`Provisioning Credentials`
-* :ref:`Configuration`
+* :ref:`CLI Syntax`
 
 .. _Requirements:
 
