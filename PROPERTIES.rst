@@ -100,7 +100,7 @@ Dropdown presents studio users with a list of options. The user is able to selec
   type: 'dropdown',
   options: {
     'value1': 'Display Value',
-    'value2': 'Display Value Too'
+    'value2': 'Display Value Two'
   }
 
 Numeric
