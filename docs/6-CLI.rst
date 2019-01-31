@@ -33,7 +33,7 @@ From pip
 
 As a Non-admin run:
   
-  .. code-block:: python
+  .. code-block:: bash
      
      $ sudo pip3 install luma
 
