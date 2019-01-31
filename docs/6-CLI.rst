@@ -213,22 +213,22 @@ All commands sent to bash will start with ``luma``.
 
 Command Index:
 
- #. `API`
- #. `Component-set`
- #. `Component-set-version`
- #. `Env`
- #. `Experience`
- #. `Experience-collection`
- #. `Microservice`
- #. `Microservice-version`
- #. `Org`
- #. `Profile`
- #. `Version`
- #. `Widget`
- #. `Widget-version`
- #. `Ls Commands`
- #. `Version Commands`
- #. `Additional Info`
+ #. :ref:`API`
+ #. :ref:`Component-set`
+ #. :ref:`Component-set-version`
+ #. :ref:`Env`
+ #. :ref:`Experience`
+ #. :ref:`Experience-collection`
+ #. :ref:`Microservice`
+ #. :ref:`Microservice-version`
+ #. :ref:`Org`
+ #. :ref:`Profile`
+ #. :ref:`Version`
+ #. :ref:`Widget`
+ #. :ref:`Widget-version`
+ #. :ref:`Ls Commands`
+ #. :ref:`Version Commands`
+ #. :ref:`Additional Info`
 
 .. _API:
 
@@ -1045,7 +1045,7 @@ Options:
 Exec
 ++++
 
-Sends commands directly to Docker. For more information, consult the 'Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>'
+Sends commands directly to Docker. For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
 
 Example:
 
@@ -1821,11 +1821,11 @@ Ls Commands
 
 Limits Ls search results by:
 
- * `Greater Than <Ls Commands gt>`
- * `Less Than <Ls Commands lt>`
- * `Greater Than or Equal To <Ls Commands gte>`
- * `Less Than or Equal To <Ls Commands lte>`
- * `Containing <Ls Commands ct>`
+ * :ref:`Greater Than <Ls Commands gt>`
+ * :ref:`Less Than <Ls Commands lt>`
+ * :ref:`Greater Than or Equal To <Ls Commands gte>`
+ * :ref:`Less Than or Equal To <Ls Commands lte>`
+ * :ref:`Containing <Ls Commands ct>`
 
 .. _Ls Commands gt:
 
