@@ -16,7 +16,7 @@ The following documentation will explain:
 * Configuration
 
 Requirements
------------
+-------------
 You will need to install `Python 3.1.1 <https://www.python.org/downloads/>`_ or higher in order to use the CLI. 
 
 It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
@@ -154,7 +154,7 @@ Using a preset configuration:
    
     .. code-block:: python
        
-         id Org Name                 Org Type Test Org
+         id Org Name                  Org Type Test Org
          35 Sample command center     dev      None
          49 Sample Studio             studio   False
 
@@ -179,8 +179,8 @@ Using your own configuration:
    
     .. code-block:: python
        
-       Env Name                                    App                                                  Audience                                         Token                                                                      Name
-       https://not-a-realm.place.lumavate-type.com https://not-a-real-realm.dragonfly.lumavate-type.com https://place.lumavate-type.com/notanapp dragonfly-lumavate-type.notarealtoken.com place-lumavate-dev.notatokey.com prod
+       Env Name                                    App                                                  Audience                                 Token                                         Name
+       https://not-a-realm.place.lumavate-type.com https://not-a-real-realm.dragonfly.lumavate-type.com https://place.lumavate-type.com/notanapp dragonfly-lumavate-type.notarealtoken.com prod
      
         Env: <<envrioment name you want your profile associated with>>
 
@@ -188,7 +188,7 @@ Using your own configuration:
    
     .. code-block:: python
        
-        id Org Name                 Org Type Test Org
+        id Org Name                  Org Type Test Org
         35 Sample command center     dev      None
         49 Sample Studio             studio   False
 
