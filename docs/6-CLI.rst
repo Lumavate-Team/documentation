@@ -2,7 +2,7 @@
 CLI
 ============
 
-The Lumavate Commandline Line Interface (CLI) can be used to streamline many administrative tasks, such as adding & updating widgets, microservices, and/or component sets.
+The Lumavate Commandline Line Interface (CLI) can be used to streamline many administrative tasks, such as adding and updating widgets, microservices, and/or component sets.
 
 .. The CLI uses the native REST APIs available via the Platform. To learn more about Lumavate's REST APIs, please go here: <link to come>.
 
@@ -10,10 +10,12 @@ The Lumavate Commandline Line Interface (CLI) can be used to streamline many adm
 
 The following documentation will explain:
 
-* Requirements
-* Installation
-* Provisioning Credentials
-* Configuration
+* :ref:`Requirements`
+* :ref:`Installation`
+* :ref:`Provisioning Credentials`
+* :ref:`Configuration`
+
+.. _Requirements:
 
 Requirements
 -------------
@@ -21,14 +23,20 @@ You will need to install `Python 3.1.1 <https://www.python.org/downloads/>`_ or 
 
 It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
 
-.. note::
-   To get the most out of the CLI, use it with `ZSH <https://sourceforge.net/projects/zsh/files/>`_. This enables extra features such as showing help text during autocompletion. 
+.. tip::
+   Use `ZSH <https://sourceforge.net/projects/zsh/files/>`_ to get the most out of the CLI. This enables extra features such as showing help text during autocompletion. 
+
+.. _Installation:
 
 Installation
 ------------
-The CLI can be installed two different ways: through Pip or from the source.
+The CLI can be installed two different ways: 
+ #. Through Pip
+#. From the source.
 
-From pip
+.. _Installation Pip:
+
+From Pip
 ^^^^^^^^
 
 As a Non-admin run:
@@ -43,10 +51,12 @@ As an Admin run:
      
      $ pip3 install luma
 
-From source
+.. _Installation Source:
+
+From Source
 ^^^^^^^^^^^
 
-Installing the CLI as a non-admin:
+Installing the CLI as a Non-admin:
 
  #. Clone this repo.
  #. CD into the CLI dir
@@ -58,7 +68,7 @@ Installing the CLI as a non-admin:
  
  #. Add the returned path URL to the path 
    
-    An Example Response: 
+    Example Response: 
    
     .. code-block:: bash
        
@@ -76,26 +86,30 @@ Installing the CLI as an Admin:
        $ sudo pip3 install luma
 
 .. note::
-   To activate autocompletion after install, restart your terminal or source your shell config (Either .zshrc or .bash_profile).  
+   To activate autocompletion after install, restart your terminal or source your shell configuration (Either .zshrc or .bash_profile).  
+
+.. _Provisioning Credentials:
   
 Provisioning Credentials
 -------------------------
 
 There are two types of configuration in the CLI: configuring environments and configuring profiles.
     
-    * **Environments** know how to get and refresh tokens so you stay authorized with the platform as a user, and set what command centers or studios you have access to.
-    * **Profiles** give the user a company context in a specific environment which is required by most of the platform API.
+    * **Environments** know how to get and refresh tokens so the user stays authorized with the platform. They also set what command centers or studios you have access to.
+    * **Profiles** give the user a company context in a specific environment which is required by most of the platform API. They set what studio or command center the user is modifying.  
+
+.. _Provisioning Environments:
 
 Setting-Up Environments:
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-You can use either the Lumavate pre-configured enviroment or you can setup your own enviorment configuration.
+You can use either the Lumavate pre-configured environment or you can setup your own environment configuration.
 
 Using the preset configuration:
 
  #. Log into the command center you want to modify with the CLI
- #. Go to the CLI tab located in the side menue bar
- #. Copy the information from the Configure an Environment field. It should look like this:
+ #. Go to the CLI tab located in the side menu bar
+ #. Copy the information from the Configure An Environment field. It should look like this:
    
     .. code-block:: bash
        
@@ -106,8 +120,8 @@ Using the preset configuration:
 Using your own configuration:
 
  #. Log into the command center you want to modify with the CLI
- #. Go to the CLI tab located in the side menue bar
- #. Take note of the app, audience, token, client-id, and client-secret information from the Configure an Environment field
+ #. Go to the CLI tab located in the side menu bar
+ #. Take note of the app, audience, token, client-id, and client-secret information from the Configure An Environment field
  #. In your Bash window, run:
    
     .. code-block:: bash
@@ -118,7 +132,7 @@ Using your own configuration:
    
     .. code-block:: bash
        
-       $ Env Name: <<what you want to call your envrioment>>
+       $ Env Name: <<name of environment in CLI>>
          App: <<enviroment Url>>
          Token: <<enviroment token>>
          Audience: <<envitoment audience>>
@@ -126,18 +140,21 @@ Using your own configuration:
          Client secret: <<user clientSecret>>
 
 .. note:: 
-   The CLI uses Client id and Client secret to asscociate a users context to a machine. From this point forward, user will refer to the client id and client secreate information used to setup the envroment in the CLI. 
+   The CLI uses Client id and Client secret to associate a user’s context to a machine. From this point forward, user will refer to the client id and client secret information used to setup the environment in the CLI. 
+
+.. _Provisioning Profiles:
   
 Setting up Profiles:
 ^^^^^^^^^^^^^^^^^^^
 
-Profiles can be set-up using the Lumavate preset command or using your own configuration. You will need to have configured an envrioment on your machine through the CLI before you configure a profile.  
+Profiles can be set-up using the Lumavate preset command or using your own configuration. 
+You will need to have configured an environment on your machine through the CLI before you can configure a profile.  
 
 Using a preset configuration:
 
  #. Log into a Lumavate command center
- #. Navigate to the CLI  tab located in the side menue bar
- #. Copy the information from the Add a Profile field. It should look like this:
+ #. Navigate to the CLI tab located in the side menu bar
+ #. Copy the information from the Add A Profile field. It should look like this:
    
     .. code-block:: bash
        
@@ -148,14 +165,14 @@ Using a preset configuration:
    
     .. code-block:: bash
        
-        profile Name: <<what you want to call your profile>>
+        Profile Name: <<name of profile in CLI>>
 
  #. You will then be presented with a list of organizations. Pick the one you want to edit with this profile. It should look like this:
    
     .. code-block:: bash
        
          id Org Name                  Org Type Test Org
-         35 Sample command center     dev      None
+         35 Sample Command Center     dev      None
          49 Sample Studio             studio   False
 
          Org ID you want to associate with this profile: <<org id>>
@@ -173,23 +190,23 @@ Using your own configuration:
    
     .. code-block:: bash
        
-        profile Name: <<what you want to call your profile>>
+        Profile Name: <<name of profile in CLI>>
 
- #. A list of environments will appear. Select which environment you wish to associate with your profile:
+ #. A list of environments will appear. Select which environment you wish to associate with the profile:
    
     .. code-block:: bash
        
        Env Name                                    App                                                  Audience                                 Token                                     Name
        https://not-a-realm.place.lumavate-type.com https://not-a-real-realm.dragonfly.lumavate-type.com https://place.lumavate-type.com/notanapp dragonfly-lumavate-type.notarealtoken.com prod
      
-        Env: <<envrioment name you want your profile associated with>>
+        Env: <<name of environment you want the profile associated with>>
 
  #. A list of organizations will appear. Pick the one you want to edit with this profile. It should look like this:
    
     .. code-block:: bash
        
         id Org Name                  Org Type Test Org
-        35 Sample command center     dev      None
+        35 Sample Command Center     dev      None
         49 Sample Studio             studio   False
 
         Org ID you want to associate with this profile: <<org id>>
@@ -198,18 +215,18 @@ Using your own configuration:
    If there are two profiles or environments with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
 
 .. note::
-   While running the profile command, you will have the option to associate the new profile to any organization your user has access to   regardless of the command center you are currently in.
+   While running the profile command, you will have the option to associate the new profile to any organization the user has access to regardless of the command center you are currently in.
 
 .. _CLI Syntax:
 
 CLI Syntax
 ----------
 
-This CLI will allow users to interact with the Lumavate platform from a terminal. For setup instructions, look at the `Github readme <https://github.com/Lumavate-Team/documentation/blob/master/CLI.rst>`_ or the :ref:`CLI documentation <CLI>`. All the main commands can be found in the side navigation pane. Each of the main commands has their subcommands listed below them. 
+The CLI will allow users to interact with the Lumavate platform from a terminal. For setup instructions, look at the `Github readme <https://github.com/Lumavate-Team/documentation/blob/master/CLI.rst>`_ or the :ref:`CLI setup documentation <CLI>`. All the main commands are listed in the Command Index below. Each of the main commands has their subcommands listed in their section. 
 
-Pass the ``--help`` flag with the command for more information on how to use them and how to use their subcommands.
+In Bash, pass the ``--help`` flag with the command for more information on how to use them and how to use their subcommands.
 
-All commands sent to bash will start with ``luma``.
+All commands sent to Bash will start with ``luma``.
 
 Command Index:
 
@@ -220,7 +237,7 @@ Command Index:
  #. :ref:`Experience`
  #. :ref:`Experience-collection`
  #. :ref:`Microservice`
- #. :ref:`Microserivce-version`
+ #. :ref:`Microservice-version`
  #. :ref:`Org`
  #. :ref:`Profile`
  #. :ref:`Version`
@@ -242,14 +259,14 @@ Commands that directly query the API.
 Delete
 ++++++
 
-Calls a delete command in order to remove something through the API. 
+Calls a delete command in order to remove a tool through the API. 
 
 Example:
  
  .. code-block:: bash
     
     $ luma api delete /iot/v1/containers/999?expand=all
-      profile: dragon
+      Profile: dragon
 
 Options:
 
@@ -271,7 +288,7 @@ Example:
 .. code-block:: bash
    
    $ luma api get /iot/v1/containers?expand=all
-     profile: dragon
+     Profile: dragon
 
 Options: 
 
@@ -286,14 +303,14 @@ Options:
 Post
 ++++
 
-Calls a post command in order to add something through the API. 
+Calls a post command in order to add a tool through the API. 
 
 Example:
 
 .. code-block:: bash
    
-   $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”firebreathing”, ”urlRef”:”fireball”, ”ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
-     profile: dragon
+   $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”Fire Breathing”, ”urlRef”:”fireball”, ”ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
+     Profile: dragon
 
 Options: 
 
@@ -309,14 +326,14 @@ Options:
 Put
 +++
 
-Calls a put command in order to change something through the API.
+Calls a put command in order to change a tool through the API.
 
 Example:
 
 .. code-block:: bash
    
-   $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”firebreathing”, ”urlRef”:"fireball", "ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
-     profile: dragon
+   $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”Fire Breathing”, ”urlRef”:"fireball", "ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
+     Profile: dragon
 
 Options: 
 
@@ -346,8 +363,8 @@ Example:
 .. code-block:: bash
    
    $ luma component-set access --add 99
-     profile: dragon
-     component set: 999
+     Profile: dragon
+     Component set: 999
 
 Options: 
 
@@ -363,14 +380,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set Add:
 
 Add
 +++
 
-Adds a component-set container to the command center your profile is associated with. 
+Adds a component-set container. 
 
 Example:
 
@@ -379,13 +396,13 @@ Example:
    $ luma component-set add
      Profile: dragon
      Name: Fire Breathing
-     Url Ref: Fireball
+     Url Ref: fireball
 
 Options: 
 
  * ``-p, --profile “STRING”``
  * ``--name “STRING”``
- * ``--url-ref “STRING”``
+ * ``--url-ref “LOWERCASE STRING”``
  * ``-path, --icon-file “FILE PATH”``
  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
  * ``--json`` 
@@ -394,14 +411,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set Ls:
 
 Ls
 ++
 
-Lists all component-set containers in the specified profile environment. 
+Lists all component-set containers in the command center associated with the specified profile. 
 
 Example:
 
@@ -423,7 +440,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set Rm:
 
@@ -451,7 +468,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set Update:
 
@@ -464,7 +481,7 @@ Example:
 
 .. code-block:: bash
    
-   $ luma component-set update --name frostybreath
+   $ luma component-set update --name “Frosty Breath”
      Profile: dragon
      Component set: 999
 
@@ -480,8 +497,8 @@ Options:
  * ``--help``
 
 .. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   ``--table`` is deprecated. 
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set-version:
 
@@ -495,7 +512,7 @@ Commands that create, modify, and delete component-set versions.
 Add
 +++
 
-Adds a version to a specified component-set container.  
+Adds a version to a component-set container.  
 
 Example:
 
@@ -528,10 +545,10 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated. 
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. warning::
-   File paths with spaces in them may need to be specified in the main command using the ``-path`` option as some computers do not accept these paths any other way.
+   File paths with spaces in them may need to be specified in the main command using the ``-path`` option so as to preserve the spaces.
 
 .. _Component-set-version Components:
 
@@ -566,7 +583,7 @@ Options:
 Ls
 ++
 
-Lists all versions in a specified component-set container.
+Lists all versions in a component-set container.
 
 Example:
 
@@ -590,17 +607,17 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. note::
-   Version number is filtered as “major=*&minor=*&patch=*”
+   Version number is filtered as “major=*&minor=*&patch=*”.
 
 .. _Component-set-version Rm:
 
 Rm
 ++
 
-Deletes a version from a specified component-set container.
+Deletes a version from a component-set container.
 
 Example:
 
@@ -624,14 +641,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set-version Update:
 
 Update
 ++++++
 
-Updates the label of a specified component-set version.
+Updates the label of a component-set version.
 
 Example:
 
@@ -655,7 +672,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Env:
 
@@ -718,7 +735,7 @@ Options:
 Rm
 ++
 
-Removes a specified environment. 
+Removes an environment. 
 
 Example:
 
@@ -744,7 +761,7 @@ Commands that move and list experiences.
 Export
 ++++++
 
-Exports a JSON file for an experience form a studio.
+Exports an experience as a JSON file form a studio.
 
 Example:
 
@@ -753,7 +770,7 @@ Example:
    $ luma experience export
      Profile: dragon
      Export file: “C:\fantasy\creatures\dragons\firebreather.json”
-     Label: firebreather
+     Label: Fire Breather
 
 Options:
 
@@ -776,10 +793,10 @@ Example:
 .. code-block:: bash
    $ luma experience import
      Profile: dragon
-     Label: firebreather
+     Label: Fire Breather
      Activation code: fireball
      Import file: “C:\fantasy\creatures\dragons\firebreather.json”
-     Collection Name: creatures
+     Collection Name: Dragons
 
 Options:
 
@@ -800,13 +817,14 @@ Options:
 Ls
 ++
 
-Lists all the experience in the specified studio.
+Lists all the experiences in the studio associated with the specified profile.
 
 Example:
 
 .. code-block:: bash
+   
    $ luma experience ls
-     Profile: dragon
+      Profile: dragon
 
 Options:
 
@@ -823,11 +841,12 @@ Options:
 Experience-collection
 ^^^^^^^^^^^^^^^^^^^^^
 
-List experienes inside a studio.
+List experience collections in the studio associated with the specified profile.
 
 Example:
 
 .. code-block:: bash
+
    $ luma experience-collection ls
      Profile: dragon
 
@@ -847,7 +866,7 @@ Commands that create, modify, share, and delete microservice containers.
 Access
 ++++++
 
-Shares and/or unshares a microservice container with the specified child organizations. 
+Shares and/or unshares a microservice container with child organizations. 
 
 Example:
 
@@ -871,14 +890,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice Add:
 
 Add
 +++
 
-Adds a microservice container to the command center associated with the specified profile.
+Adds a microservice container to a command center.
 
 Example:
 
@@ -886,7 +905,7 @@ Example:
    
    $ luma microservice add 
      Profile: dragon
-     Name: firebreather
+     Name: Fire Breather
      Url Ref: fireball
 
 Options: 
@@ -902,9 +921,9 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
-.. _Microsevice Ls:
+.. _Microservice Ls:
 
 Ls
 ++
@@ -931,14 +950,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice Rm:
 
 Rm
 ++
 
-Removes a microservice container from the command center associated with the specified profile. 
+Removes a microservice container. 
 
 Example:
 
@@ -959,20 +978,20 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
-.. _Microserivce Update:
+.. _Microservice Update:
 
 Update
 +++++++
 
-Updates the name or image of a microservice container from the command center associated with the specified profile.
+Updates the name or image of a microservice container.
 
 Example:
 
 .. code-block:: bash
    
-   $ luma microservice update --name frostybreath  
+   $ luma microservice update --name “Frosty Breath”  
      Profile: dragon 
      Microservice: 999 
 
@@ -989,9 +1008,9 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
-.. _Microserivce-version:
+.. _Microservice-version:
 
 Microservice-version
 ^^^^^^^^^^^^^^^^^^^^
@@ -1003,7 +1022,7 @@ Commands that add, modify, and delete microservice versions.
 Add
 +++
 
-Adds a version to a specified microservice.
+Adds a version to a microservice container.
 
 Example:
 
@@ -1038,7 +1057,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated. 
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Exec:
 
@@ -1068,14 +1087,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Logs:
 
 Logs
 ++++
 
-Returns the logs for a specified microservice version.
+Returns the logs for a microservice version.
 
 Example:
 
@@ -1097,14 +1116,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Ls:
 
 Ls
 ++
 
-Lists all versions of a specified microservice container.
+Lists all versions of a microservice container.
 
 Example:
 
@@ -1128,17 +1147,17 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. note::
-   Version number is filtered as “major=*&minor=*&patch=*”
+   Version number is filtered as “major=*&minor=*&patch=*”.
 
 .. _Microservice-version Rm:
 
 Rm
 ++
 
-Removes a version from a specified microservice container.
+Removes a version from a microservice container.
 
 Example:
 
@@ -1162,7 +1181,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Start:
 
@@ -1192,7 +1211,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated. 
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to the JSON values organized in table format.
 
 .. _Microservice-version Stop:
 
@@ -1222,7 +1241,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Update:
 
@@ -1253,21 +1272,21 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Org:
 
 Org
 ^^^
 
-Commands that list the organizations associated with a specified environment or organization.
+Commands that list the organizations associated with an environment or organization.
 
 .. _Org Child-orgs:
 
 Child-orgs
 ++++++++++
 
-Lists the child organizations that a specified profile’s organization can share with.
+Lists the child organizations that a profile’s associated organization can share with.
 
 Example:
 
@@ -1289,7 +1308,7 @@ Options:
 Ls
 ++
 
-Lists the organizations inside a specified environment.
+Lists the organizations inside an environment.
 
 Example:
 
@@ -1318,7 +1337,7 @@ Commands that add, modify, or delete profiles.
 Add
 +++
 
-Adds a profile to a specified enviroment, and associates the profile to a specific organization.
+Adds a profile to an environment and associates the profile to a specific organization.
 
 Example:
 
@@ -1326,9 +1345,9 @@ Example:
    
    $ luma profile add
      Profile name: dragon
-     
+     <<lists of envs user has access to>>
      Name of Env you want to use with this profile: Fantasy
-     
+     <<lists of orgs in the selected env>>
      Org ID you want to associate with this profile: 99
 
 Options: 
@@ -1404,7 +1423,7 @@ Commands that add, modify, share, and delete widget containers.
 Access
 ++++++
 
-Shares and/or Unshares a widget container with the specified child organizations.
+Shares and/or Unshares a widget container with child organizations.
 
 Example:
 
@@ -1428,7 +1447,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget Add:
 
@@ -1442,8 +1461,8 @@ Example:
 .. code-block:: bash
    
    $ luma widget add
-     Profile: dragonon
-     Name: firebreathing
+     Profile: dragon
+     Name: Fire Breathing
      Url Ref: fireball
 
 Options: 
@@ -1459,14 +1478,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget Ls:
 
 Ls
 ++
 
-Lists all the widget containers in a specified profile's organization. 
+Lists all the widget containers in an organization associated with the specified profile. 
 
 Example:
 
@@ -1488,7 +1507,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget Rm:
 
@@ -1516,7 +1535,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget Update:
 
@@ -1529,7 +1548,7 @@ Example:
 
 .. code-block:: bash
    
-   $ luma widget update --name frostrybreath
+   $ luma widget update --name “Frosty Breath”
      Profile: dragon
      Widget: 999
 
@@ -1546,7 +1565,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version:
 
@@ -1560,7 +1579,7 @@ Commands that add, modify, and delete widget versions.
 Add
 +++
 
-Adds a version to a specified widget container.
+Adds a version to a widget container.
 
 Example:
 
@@ -1595,16 +1614,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Exec:
 
 Exec
 ++++
 
-Sends commands directly to Docker. 
-
-For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
+Sends commands directly to Docker. For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
 
 Example:
 
@@ -1627,7 +1644,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Logs:
 
@@ -1656,14 +1673,14 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Ls:
 
 Ls
 ++
 
-Lists all the version for a specified widget container.
+Lists all the version for a widget container.
 
 Example:
 
@@ -1687,10 +1704,10 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. note::
-   Version number is filtered as “major=*&minor=*&patch=*”
+   Version number is filtered as “major=*&minor=*&patch=*”.
 
 .. _Widget-version Rm:
 
@@ -1721,7 +1738,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Start:
 
@@ -1751,7 +1768,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Stop:
 
@@ -1781,7 +1798,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Update:
 
@@ -1812,7 +1829,7 @@ Options:
 
 .. warning:: 
    ``--table`` is deprecated.
-   Use ``--format`` to see the JSON values organized in table format.
+   Use ``--format`` to see JSON values organized in table format.
 
 .. _Ls Commands:
 
@@ -1838,7 +1855,7 @@ example:
 
 .. code-block:: bash
    
-   $ luma org ls --filter “name=gt:dragon”
+   $ luma profile ls --filter “name=gt:dragon”
 
 .. _Ls Commands lt:
 
@@ -1851,7 +1868,7 @@ example:
 
 .. code-block:: bash
    
-   $ luma org ls --filter “name=lt:dragon”
+   $ luma profile ls --filter “name=lt:dragon”
 
 .. _Ls Commands gte:
 
@@ -1864,7 +1881,7 @@ example:
 
 .. code-block:: bash
    
-   $ luma org ls --filter “name=gte:dragon”
+   $ luma profile ls --filter “name=gte:dragon”
 
 .. _Ls Commands lte:
 
@@ -1877,7 +1894,7 @@ example:
 
 .. code-block:: bash
    
-   $ luma org ls --filter “name=lte:dragon”
+   $ luma profile ls --filter “name=lte:dragon”
 
 .. _Ls Commands ct:
 
@@ -1890,14 +1907,14 @@ example:
 
 .. code-block:: bash
    
-   $ luma org ls --filter “name=ct:dragon”
+   $ luma profile ls --filter “name=ct:dragon”
 
 .. _Version Commands:
 
 Version Commands
 ^^^^^^^^^^^^^^^^
 
-Commands that modify your CLI or version.
+Commands that modify the CLI or luma version.
 
 .. _Version Commands Install:
 
@@ -1930,12 +1947,14 @@ example:
 Help
 ++++
 
-Describes and lists the possible sub-commands for any command. This can be done by running any command without passing in any options or by passing in the ``--help`` flag.
+Describes and lists the possible subcommands for any command. This can be done by running any command without passing in any options or by passing in the ``--help`` flag.
 
 example:
 
 .. code-block:: bash
     
+    $ luma
+
     $ luma --help
    
     $ luma ls --help
@@ -1947,4 +1966,4 @@ Additional Info
 
 * Dates must be in the format: year-month-day
 * Must include “” around all arguments
-* Must include “&” between arguments when using multiple arguments 
+* Must include “&” between arguments when using multiple arguments
