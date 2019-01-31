@@ -220,7 +220,7 @@ Command Index:
  #. :ref:`Experience`
  #. :ref:`Experience-collection`
  #. :ref:`Microservice`
- #. :ref:`Microservice-version`
+ #. :ref:`Microserivce-version`
  #. :ref:`Org`
  #. :ref:`Profile`
  #. :ref:`Version`
