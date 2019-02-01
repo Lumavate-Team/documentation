@@ -32,7 +32,7 @@ Installation
 ------------
 The CLI can be installed two different ways: 
  #. Through Pip
-#. From the source.
+ #. From the source.
 
 .. _Installation Pip:
 
@@ -86,7 +86,7 @@ Installing the CLI as an Admin:
        $ sudo pip3 install luma
 
 .. note::
-   To activate autocompletion after install, restart your terminal or source your shell configuration (Either .zshrc or .bash_profile).  
+   To activate autocompletion after install, restart your terminal or source your shell configuration (either .zshrc or .bash_profile).  
 
 .. _Provisioning Credentials:
   
@@ -140,15 +140,16 @@ Using your own configuration:
          Client secret: <<user clientSecret>>
 
 .. note:: 
-   The CLI uses Client id and Client secret to associate a user’s context to a machine. From this point forward, user will refer to the client id and client secret information used to setup the environment in the CLI. 
+   The CLI uses Client Id and Client Secret to associate a user’s context to a machine. From this point forward, user will refer to the client id and client secret information used to setup the environment in the CLI. 
 
 .. _Provisioning Profiles:
   
 Setting up Profiles:
 ^^^^^^^^^^^^^^^^^^^
 
-Profiles can be set-up using the Lumavate preset command or using your own configuration. 
-You will need to have configured an environment on your machine through the CLI before you can configure a profile.  
+Profiles can be setup using the Lumavate pre-set command or using your own configuration. 
+
+You will need to have configured an environment on your machine through the CLI to configure a profile.  
 
 Using a preset configuration:
 
