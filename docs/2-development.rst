@@ -419,9 +419,3 @@ Sharing A Tool
 .. include:: ../MICROSERVICES.rst
 
 .. include:: ../COMPONENTS.rst
-
-.. _Lumavate tools:
-
-Lumavate Tools
-==============
-Coming soon.
