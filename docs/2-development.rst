@@ -122,43 +122,15 @@ Check the logs
 
 #. The selected container's logs will now be streaming directly to your terminal.
 
-.. _thor:
-
-Run Inside Thor
-++++++++++++++
-
-.. code-block:: go
-
-   DOCKER_IP=`ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'`
-   docker run --rm -d \
-    -e "PUBLIC_KEY=mIhuoMJh0jbA5W4pUUNK" \
-    -e "PRIVATE_KEY=LXycaMpw5BzgfhsS4ydNxGzJ36qMnPrQHI8u2x3wQCZCZyGtZ4sOQbkEWnHmVchZEa79a0Y3xK7IKCymSLkugyabbJUGuXfyuoKL" \
-    -e "HOST_IP=$DOCKER_IP" \
-    -e "WIDGET_PORT=8091" \
-    -e "HOST_PORT=80" \
-    --name=thor \
-    -p 80:4201 \
-    quay.io/lumavate/thor:latest
-
-   docker run -d --rm \
-    --volume "$(pwd)"/widget:/go/src/widget:rw \
-    -e "PUBLIC_KEY=mIhuoMJh0jbA5W4pUUNK" \
-    -e "PRIVATE_KEY=LXycaMpw5BzgfhsS4ydNxGzJ36qMnPrQHI8u2x3wQCZCZyGtZ4sOQbkEWnHmVchZEa79a0Y3xK7IKCymSLkugyabbJUGuXfyuoKL" \
-    -e "BASE_URL=http://$DOCKER_IP" \
-    -e "WIDGET_URL_PREFIX=/ic/widget/" \
-    -e "PROTO=http://" \
-    --name=widget-base-go \
-    -p 8091:8080 \
-    quay.io/lumavate/widget-base-go:latest
 
 .. _Setup Custom Docker Containers:
 
 Setup Custom Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This section will explain how to setup custom stacks and containers to work with the Lumavate platform. It will not explain what stacks are, how to create one, or how they relate to containers. Stack and container information can be found in the `Docker help documentation <https://docs.docker.com/get-started/part5/>`_. 
-
-Coming Soon!
+Any Docker container may be used as a Tool within Lumavate.  Custom Docker containers can be used to create the precise runtime environment needed for a given tool.
+The `Docker Hub <https://hub.docker.com/>` contains all publicly available registered Docker images for use with a variety of technologies.  Base Lumavate
+containers all start with a base image from the `Docker Hub <https://hub.docker.com/>`.
 
 .. _Uploading Docker:
 
