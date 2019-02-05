@@ -3,7 +3,7 @@
 Component-Sets
 --------------
 
-Component-sets are bundled web components that are registered to be used by :ref:`widgets <widgets>` and :ref:`microserivces <microservices>`. Any web component upon upload, regardless of framework, can be used by any widget via supplementing the distributable with a metadata file and proper tags.
+Component-sets are bundled web components that are registered to be used by :ref:`widgets <widgets>` and :ref:`microserivces <microservices>`. Any web component upon upload, regardless of framework, can be used by any widget via supplementing the distributable with a metadata file and proper tags. Component-sets can also compile and redistribute microservice information when properly configured. 
 
 .. _metadata:
 

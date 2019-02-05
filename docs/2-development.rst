@@ -9,7 +9,7 @@ Developing Tools
 
   :ref:`Microservices` are the data-driven portion of :ref:`experiences <experiences>`. This :ref:`tool <tools>` takes information that the :ref:`studio <studio>` user provides to create a recurring service or data-set that the rest of the tools can use. Microservices almost never have their own end user UI, instead they add specific functionality to a :ref:`widget <widgets>`.
 
-  :ref:`Component-sets` are elements that are used by :ref:`widgets <widgets>` or :ref:`microservices <microservices>`. This :ref:`tool <tools>` has two primary functions. They allow :ref:`studio <studio>` users to redistribute information collected in one widget or microservice to another. They also provide identical functionality across multiple widgets or microservices. Component-sets will never have their own UI, but they frequently add UI elements to compatible widgets and microservices.  
+  :ref:`Component-sets` are elements that are used by :ref:`widgets <widgets>` or :ref:`microservices <microservices>`. This :ref:`tool <tools>` has two primary functions. They allow :ref:`studio <studio>` users to redistribute information collected in one widget or microservice to another. They also provide identical functionality across multiple widgets. Component-sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
 
 All Tools consist of four primary parts:
 
