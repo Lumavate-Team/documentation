@@ -30,7 +30,8 @@ It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as
 
 Installation
 ------------
-The CLI can be installed two different ways: 
+The CLI can be installed two different ways:
+
  #. Through Pip
  #. From the source.
 
