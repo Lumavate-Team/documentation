@@ -6,7 +6,6 @@
 
 .. toctree::
    :hidden:
-   :maxdepth: 5
    :glob:
    
    *
