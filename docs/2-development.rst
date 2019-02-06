@@ -249,6 +249,9 @@ Uploading A Tool
            * Port: which is the :ref:`port <port number>` number for the  programing language used in the image
 	   * Version number: which is the version's major, minor, and patch 
 	   * Label: which lables the verison in development (dev), ready for production (prod), or deprecated (old)
+	 
+	 .. note:
+	    The port number will either be the port number set in the tool’s code or the tool’s programming language’s standard port number. The port number must match the tool code’s port number. The tool will error while starting up if they do not match. 
 
       b. Scroll to the bottom of the page, and click the upload button to upload your new Docker container image.
       
