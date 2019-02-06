@@ -1,3 +1,6 @@
+.. toctree::
+   :hidden:
+
 .. _Developing tools:
 
 Developing Tools
