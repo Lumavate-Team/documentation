@@ -14,7 +14,7 @@ Component-sets should be used when an application:
  * Provides frequently used UI/UX tasks
  * Communicates information between multiple tools
 
-.. _Accepted File Typesc:
+.. _Accepted File Types C:
 
 Accepted File Types
 ^^^^^^^^^^^^^^^^^^^
