@@ -14,7 +14,7 @@ Widgets should be used when the application:
  * Implements multilabel pages
  * Contains stand-alone function with accompanying UI 
 
-.. _Accepted File Typesw:
+.. _Accepted File Types W:
 
 Accepted File Types
 ^^^^^^^^^^^^^^^^^^^ 
