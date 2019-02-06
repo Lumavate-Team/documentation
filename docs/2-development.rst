@@ -134,9 +134,9 @@ Check The Logs
 Setup Custom Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Any Docker container may be used as a Tool within Lumavate.  Custom Docker containers can be used to create the precise runtime environment needed for a given tool.
-The `Docker Hub <https://hub.docker.com/>`_ contains all publicly available registered Docker images for use with a variety of technologies.  Base Lumavate
-containers all start with a base image from the `Docker Hub <https://hub.docker.com/>`_.
+Any Docker container may be used as a Tool within Lumavate. Custom Docker containers can be used to create the precise runtime environment needed for a given tool.
+
+The `Docker Hub <https://hub.docker.com/>`_ contains all publicly available registered Docker images for use with a variety of technologies. Base Lumavate containers all start with a base image from the `Docker Hub <https://hub.docker.com/>`_.
 
 .. _Uploading Docker Containers:
 
@@ -263,7 +263,7 @@ Uploading A Tool
 	    The upload image field is the fourth section located at the bottom of the Add Version page. 	
 
          .. warning::
-		Different tools accept different file types. Check that the correct file type for the tool being created is used, if you are experiencing problems finding the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Typesw>`, :ref:`microservice <Accepted File Typesm>`, or :ref:`component-set <Accepted File Typesc>` pages. 
+		Different tools accept different file types. Check that the correct file type for the tool being created is used, if you are experiencing problems finding the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Types W>`, :ref:`microservice <Accepted File Types M>`, or :ref:`component-set <Accepted File Types C>` pages. 
 
    * To use an existing version:
       
