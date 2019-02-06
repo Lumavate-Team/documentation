@@ -11,3 +11,5 @@ Resources
 .. include:: ../HISTORY.rst
 
 .. include:: 4-samples
+
+.. include:: ../GLOSSARY.rst
