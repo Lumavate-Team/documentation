@@ -5,7 +5,7 @@
 .. include:: ../README.rst
 
 .. toctree::
-   :includehidden:
+   :hidden:
    :glob:
    
    *
