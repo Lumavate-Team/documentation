@@ -3,7 +3,25 @@
 Component-Sets
 --------------
 
-Component-sets are bundled web components that are registered to be used by :ref:`widgets <widgets>` and :ref:`microserivces <microservices>`. Any web component upon upload, regardless of framework, can be used by any widget via supplementing the distributable with a metadata file and proper tags. Component-sets can also compile and redistribute microservice information when properly configured. 
+Component-sets are bundled web components that are registered to be used by :ref:`widgets <widgets>` and :ref:`microserivces <microservices>` within :ref:`experiences<experiences>`. For more information on web components, please consult the `webcompoents.org <https://www.webcomponents.org/introduction>`_.  
+
+Component-sets upon upload, regardless of framework, can be used by any widget or microservice via supplementing the distributable with a metadata file and proper tags. For widgets, these tags allow extra UI features and functionality to be distributed to a variety of different widgets. For microservices, these tags allow the component-set to compile and redistribute microservice information to other tools.
+
+Component-sets cannot be used to create an experience without the presence of a widget. Instead, component-sets help widgets by adding additional UI and functions that can be used by multiple tools.
+
+Component-sets should be used when an application:
+ * Provides client-side rendering and logic
+ * Provides frequently used UI/UX tasks
+ * Communicates information between multiple tools
+
+.. _Accepted File Typesc:
+
+Accepted File Types
+^^^^^^^^^^^^^^^^^^^
+
+Component-sets must be a compressed zip file in order to be uploaded to the Lumavate platform. The compressed file needs to contain a schema file defined in JSON that defines what the component-sets properties are and the actual distributable web component. 
+For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
+
 
 .. _metadata:
 
