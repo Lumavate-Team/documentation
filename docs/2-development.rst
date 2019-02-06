@@ -60,7 +60,9 @@ Setup Lumavate Prebuilt Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Lumavate provides three base containers to help devlopers start devloping tools for the Lumavate platform. The following explanation uses Go. For the full Go container, please see the `Go Github repository <https://github.com/Lumavate-Team/widget-base-go>`_. Additional sample containers are provided for :ref:`Python <python sample>` and :ref:`C# <C# sample>`.
 
-Build the container
+.. _Build The Container:
+
+Build The Container
 +++++++++++++++++++
 
 #. Clone the `Lumavate sample repo <https://github.com/Lumavate-Team/widget-base-go>`_. 
@@ -78,7 +80,9 @@ Build the container
 .. note::
  	Additional Docker build options are avaliable at: https://docs.docker.com/engine/reference/commandline/build/
 
-Run the container
+.. _Run The Container:
+
+Run The Container
 +++++++++++++++++
 
 A container must finish building before it can be run. 
@@ -98,7 +102,9 @@ A container must finish building before it can be run.
 .. note::
 	Additional Docker run options can be found here: https://docs.docker.com/engine/reference/commandline/run/
 
-Check the logs
+.. _Check The Logs:
+
+Check The Logs
 ++++++++++++++
 
 #. Run the following command to collect container info.
@@ -132,7 +138,7 @@ Any Docker container may be used as a Tool within Lumavate.  Custom Docker conta
 The `Docker Hub <https://hub.docker.com/>`_ contains all publicly available registered Docker images for use with a variety of technologies.  Base Lumavate
 containers all start with a base image from the `Docker Hub <https://hub.docker.com/>`_.
 
-.. _Uploading Docker:
+.. _Uploading Docker Containers:
 
 Uploading Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -141,6 +147,8 @@ Docker containers can be uploaded to the Lumavate platform in two different ways
 
 .. note::
 	The developer must be a user in the command center in order to upload containers through the platform. Developers only need a CLI profile in order to upload containers through the CLI.
+
+.. _Uploading A Tool:
 
 Uploading A Tool
 ++++++++++++++++
@@ -326,6 +334,8 @@ Uploading A Tool
       
       The version card displays the version number, label, created at date, number of experiences using the version, and status. 
 
+.. _Start A Version:
+
 Start A Version
 +++++++++++++++
 
@@ -344,6 +354,8 @@ Start A Version
 #. The status of the version will change from stopped to a spinning icon. You can refresh the status by clicking the refresh status button. The tool will take a minute or two to finish validating. The larger the tool the longer the validation period.     
 
 #. After finishing validating, the status will change to either started or error. If the status is error, the version was unable to connect with the platform.  
+
+.. _Sharing A Tool:
 
 Sharing A Tool
 ++++++++++++++
