@@ -250,7 +250,7 @@ Uploading A Tool
 	   * Version number: which is the version's major, minor, and patch 
 	   * Label: which lables the verison in development (dev), ready for production (prod), or deprecated (old)
 	 
-	 .. note:
+	 .. note::
 	    The port number will either be the port number set in the tool’s code or the tool’s programming language’s standard port number. The port number must match the tool code’s port number. The tool will error while starting up if they do not match. 
 
       b. Scroll to the bottom of the page, and click the upload button to upload your new Docker container image.
@@ -263,7 +263,7 @@ Uploading A Tool
 	    The upload image field is the fourth section located at the bottom of the Add Version page. 	
 
          .. warning::
-		Different tools accept different file types. Check that the correct file type for the tool being created is used, if you are experiencing problems finding the image file. For more information on accepted file types, please visit the :ref:`widget <widget port>`, :ref:`microservice <microservice port>`, or :ref:`component-set <component-set port>` page. 
+		Different tools accept different file types. Check that the correct file type for the tool being created is used, if you are experiencing problems finding the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Typesw>`, :ref:`microservice <Accepted File Typesm>`, or :ref:`component-set <Accepted File Typesc>` pages. 
 
    * To use an existing version:
       
