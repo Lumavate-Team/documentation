@@ -1,3 +1,9 @@
+
+.. _Resources:
+
+=========
+Resources
+=========
 .. include:: ../API.rst
 
 .. include:: ../CONTRIBUTING.rst
