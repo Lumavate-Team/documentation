@@ -1,4 +1,5 @@
 .. toctree::
+   :maxdepth: 4
    :hidden:
 
 .. _Developing tools:
