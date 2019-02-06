@@ -14,7 +14,7 @@ Microservices should be used when an application:
  * Provides authentication or authorization to a widget
  * Uses or provides access to a database 
 
-.. _Accepted File Typesm:
+.. _Accepted File Types M:
 
 Accepted File Types
 ^^^^^^^^^^^^^^^^^^^
