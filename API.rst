@@ -1,5 +1,8 @@
+
+.. _APU Reference:
+
 API Reference
-=============
+^^^^^^^^^^^^^
 
 API Documentation can currently be found here:
 
