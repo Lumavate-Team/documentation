@@ -19,7 +19,7 @@ Component-sets should be used when an application:
 Accepted File Types
 ^^^^^^^^^^^^^^^^^^^
 
-Component-sets must be a compressed zip file in order to be uploaded to the Lumavate platform. The compressed file needs to contain a schema file defined in JSON that defines what the component-sets properties are and the actual distributable web component. 
+Component-sets must be a **compressed zip file** in order to be uploaded to the Lumavate platform. The compressed file needs to contain a schema file defined in JSON that defines what the component-sets properties are and the actual distributable web component. 
 
 For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
 
