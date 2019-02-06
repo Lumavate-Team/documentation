@@ -3,7 +3,25 @@
 Microservices
 -------------
 
-Microservices are container-based applications used within :ref:`experiences <experiences>`. A microservice is intended to be a behind-the-scenes addition to an experience, providing additional logic and/or data access to an experience.
+Microservices are container-based applications hosted inside a Docker container. 
+
+Microservices provided additional behind-the-scenes functions within :ref:`experiences <experiences>`. However, microservices rarely have their own UI. Instead, they add UI functionality to :ref:`widgets<widgets>` through the use of :ref:`component-sets<component-sets>`. 
+
+Microservices cannot be used to create a unique experience without the addition of a widget. They, instead, assist widgets by adding additional logic and/or data access to an experience. 
+
+Microservices should be used when an application:
+ * Delivers access to an external API
+ * Provides authentication or authorization to a widget
+ * Uses or provides access to a database 
+
+.. _Accepted File Typesm:
+
+Accepted File Types
+^^^^^^^^^^^^^^^^^^^
+
+Microservices need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
+
+For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
 
 .. _API Endpoints M:
 
