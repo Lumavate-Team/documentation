@@ -12,7 +12,10 @@ An experience cannot be created without the presence of at least one widget. Wid
 Widgets should be used when the application:
  * Requires server-side hosted code
  * Implements multilabel pages
- * Contains stand-alone function with accompanying UI 
+ * Contains a stand-alone function with accompanying UI
+ 
+ .. note::
+    Widgets can function as shells for microservices or component-sets providing a convenient place for the studio user to customize the UI. These widgets can then be used to create basic web or data display pages.
 
 .. _Accepted File Types W:
 
@@ -32,75 +35,90 @@ Any widget developed for Lumavate must implement two key API endpoints, **Discov
 
 Each endpoint will contain dynamic parts that correspond to both the type of widget uploaded (denoted as widget_type) and the logical location of the widget (denoted as integration_cloud). Both of these URI parts are in the form of a string and should be handled dynamically.
 
+.. code-block:: python
+   
+   /<string:integration_cloud>/<string:widget_type>/<route>
+   
+   OR
+   
+   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/<route>
+
+
+
 Required Endpoints
 ++++++++++++++++++
 
 All widgets require the following API endpoints:
 
-1. DISCOVER
+#. DISCOVER
 
-.. code-block:: python
+   This endpoint informs the platform via a JSON payload of an array of properties which properties exist for the widget. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the widget does not require any properties.
 
-  /<string:integration_cloud>/<string:widget_type>/discover/properties
+   Sent:
 
-This endpoint informs the platform which properties exist for the widget, via a JSON payload of an array of properties. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the widget does not require any properties.
+    .. code-block:: python
 
-**Sample Response**
+      /<string:integration_cloud>/<string:widget_type>/discover/properties
 
-.. code-block::  rest
+   Response:
 
-  METHOD: GET
-  CONTENT-TYPE: application/json
-  RESPONSE:
-    {
-      "payload": {
-        "data": [
-          {
-            "classification": "General",
-            "default": false,
-            "helpText": "",
-            "label": "Display Background Image",
-            "name": "displayBackgroundImage",
-            "section": "Settings",
-            "type": "toggle"
-          },
-          {
-            "classification": "General",
-            "helpText": "",
-            "label": "Background Image",
-            "name": "backgroundImage",
-            "section": "Settings",
-            "type": "image-upload"
-          }
-        ]
-      }
-    }
+    .. code-block::  rest
 
-2. RENDER
+       METHOD: GET
+       CONTENT-TYPE: application/json
+       RESPONSE:
+         {
+           "payload": {
+             "data": [
+               {
+                 "classification": "General",
+                 "default": false,
+                 "helpText": "",
+                 "label": "Display Background Image",
+                 "name": "displayBackgroundImage",
+                 "section": "Settings",
+                 "type": "toggle"
+               },
+               {
+                 "classification": "General",
+                 "helpText": "",
+                 "label": "Background Image",
+                 "name": "backgroundImage",
+                 "section": "Settings",
+                 "type": "image-upload"
+               }
+             ]
+           }
+         }
 
-.. code-block:: python
+#. RENDER
 
-  /<string:integration_cloud>/<string:widget_type>
+   This endpoint is called when the widget renders itself for preview and production. This is the core endpoint that produces the end user UI for the widget.
 
-This endpoint is called when the widget renders itself either for preview or production. This is the core endpoint that produces the end user UI for the widget.
+   Sent:
+   
+    .. code-block:: python
+
+       /<string:integration_cloud>/<string:widget_type>
 
 
 Optional Endpoints
 ++++++++++++++++++
 
 * ON_CREATE_VERSION
+  
+  This endpoint is called BEFORE the properties are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to modify and/or override property data before saving.
 
-.. code-block:: python
+  .. code-block:: python
 
-  /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/on-create-version
-
-This endpoint is called BEFORE the properties are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to modify and/or override property data before saving.
+     /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/on-create-version
 
 
 * AFTER_CREATE_VERSION
+  
+  This endpoint is called AFTER the properties are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to adjust property data after saving.
 
-.. code-block:: python
+  .. code-block:: python
 
-  /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/after-create-version
-
-This endpoint is called AFTER the properties are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to adjust property data after saving.
+     /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/after-create-version
+     
