@@ -15,8 +15,7 @@
 import sys
 import os
 
-def setup(app):
-    app.add_stylesheet('_templates/custom.css')
+app.add_stylesheet('_templates/custom.css')
     
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
