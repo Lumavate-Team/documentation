@@ -113,10 +113,6 @@ html_theme_options = {
     'collapse_navigation': False
 }
 
-html_context = {
-    'css_files': ['_templates/custom.css'],
-}
-
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = ["_themes"]
 
