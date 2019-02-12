@@ -22,16 +22,16 @@ A property is defined by denoting the tab, section, help text, name, label, and 
 The following list of types can be implemented by including the appropriate JSON in the Discover endpoint.
 
 Properties Index:
-#. :ref:`Translatable Text`
-#. :ref:`Text`
-#. :ref:`Color`
-#. :ref:`Image`
-#. :ref:`Checkbox`
-#. :ref:`Toggle`
-#. :ref:`Dropdown`
-#. :ref:`Numeric`
-#. :ref:`Multiple Selection`
-#. :ref:`Page Link`
+ #. :ref:`Translatable Text`
+ #. :ref:`Text`
+ #. :ref:`Color`
+ #. :ref:`Image`
+ #. :ref:`Checkbox`
+ #. :ref:`Toggle`
+ #. :ref:`Dropdown`
+ #. :ref:`Numeric`
+ #. :ref:`Multiple Selection`
+ #. :ref:`Page Link`
 
 ________________________________________________________________________________________________________________________________________
 
