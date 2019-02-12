@@ -4,6 +4,7 @@ Properties
 ----------
 
 The Discover endpoint enables the ability to expose configurable settings through the Lumavate studio, by returning an array of properties via JSON.
+
 A property is defined by denoting the tab, section, help text, name, label, & type using the following JSON structure:
 
 .. code-block:: javascript
@@ -20,117 +21,156 @@ A property is defined by denoting the tab, section, help text, name, label, & ty
 
 The following list of types are available & can be implemented by including the appropriate JSON in the Discover endpoint.
 
-* Translatable Text
-* Text
-* Color
-* Image
-* Checkbox
-* Toggle
-* Dropdown
-* Numeric
-* Multiple Selection
-* Page Link
+* :ref:`Translatable Text`
+* :ref:`Text`
+* :ref:`Color`
+* :ref:`Image`
+* :ref:`Checkbox`
+* :ref:`Toggle`
+* :ref:`Dropdown`
+* :ref:`Numeric`
+* :ref:`Multiple Selection`
+* :ref:`Page Link`
+
+________________________________________________________________________________________________________________________________________
+
+.. _Translatable Text:
 
 Translatable Text
 ^^^^^^^^^^^^^^^^^
 
-Translatable Text allows the studio user to set a lanugage specific property value.  The application will then render the proper text
+ Translatable Text allows the studio user to set a lanugage specific property value.  The application will then render the proper text
 based on the end user's language settings.
 
-.. code-block:: javascript
+ .. code-block:: javascript
 
-  type: 'translatable-text'
+    type: 'translatable-text'
+
+________________________________________________________________________________________________________________________________________
+
+.. _Text:
 
 Text
 ^^^^
 
-Text allows studio users to set a text-only value.
+ Text allows studio users to set a text-only value.
 
-.. code-block:: javascript
+ .. code-block:: javascript
 
-  type: 'text',
-  options: {
-    'readonly': true || false - defaults to true,
-    'rows': 0 - Modify the text box to a text area
-  }
+   type: 'text',
+   options: {
+     'readonly': true || false - defaults to true,
+     'rows': 0 - Modify the text box to a text area
+   }
+
+________________________________________________________________________________________________________________________________________
+
+.. _Color:
 
 Color
 ^^^^^
 
-Color allows studio users to set a color via a color picker rather than setting a HEX or RGB color value.
+ Color allows studio users to set a color via a color picker rather than setting a HEX or RGB color value.
 
-.. code-block:: javascript
+ .. code-block:: javascript
 
-  type: 'color'
+    type: 'color'
+
+________________________________________________________________________________________________________________________________________
+
+.. _Image:
 
 Image
 ^^^^^
 
-Image allows a studio user to upload an image.
+ Image allows a studio user to upload an image.
 
-.. code-block:: javascript
+ .. code-block:: javascript
 
-  type: 'image-upload'
+    type: 'image-upload'
+
+________________________________________________________________________________________________________________________________________
+
+.. _Checkbox:
 
 Checkbox
 ^^^^^^^^
 
-Checkbox allows studio users to set a boolean value by checking a checkbox
+ Checkbox allows studio users to set a boolean value by checking a checkbox
 
-.. code-block:: javascript
+ .. code-block:: javascript
 
-  type: 'checkbox'
+    type: 'checkbox'
+
+________________________________________________________________________________________________________________________________________
+
+.. _Toggle:
 
 Toggle
 ^^^^^^
 
-Toggle allows studio users to set a boolean value between "on" and "off".
+ Toggle allows studio users to set a boolean value between "on" and "off".
 
-.. code-block:: javascript
+ .. code-block:: javascript
 
-  type: 'toggle'
+    type: 'toggle'
+
+________________________________________________________________________________________________________________________________________
+
+.. _Dropdown:
 
 Dropdown
 ^^^^^^^^
 
-Dropdown presents studio users with a list of options. The user is able to select a single value.
+ Dropdown presents studio users with a list of options. The user is able to select a single value.
 
-.. code-block:: javascript
+ .. code-block:: javascript
 
-  type: 'dropdown',
-  options: {
-    'value1': 'Display Value',
-    'value2': 'Display Value Two'
-  }
+   type: 'dropdown',
+   options: {
+     'value1': 'Display Value',
+     'value2': 'Display Value Two'
+   }
+
+________________________________________________________________________________________________________________________________________
+
+.. _Numberic:
 
 Numeric
 ^^^^^^^
 
-Numeric allows studio user to enter numeric values.  Numeric properties can be represented as a decimal and a min & max range can be set.
+ Numeric allows studio user to enter numeric values.  Numeric properties can be represented as a decimal and a min and max range can be set.
 
-.. code-block:: javascript
+ .. code-block:: javascript
 
-  type: 'numeric',
-  options: {
-    'min': 0,
-    'max': 99999
-  }
+   type: 'numeric',
+   options: {
+     'min': 0,
+     'max': 99999
+   }
+
+________________________________________________________________________________________________________________________________________
+
+.. _Multiple Selection:
 
 Multiple Selection
 ^^^^^^^^^^^^^^^^^^
 
-Multiple selection presents studio users with a list of options. The user is able to select multiple options.
+ Multiple selection presents studio users with a list of options. The user is able to select multiple options.
 
-.. code-block:: python
+ .. code-block:: python
 
-  type: 'multi-select'
+    type: 'multi-select'
+
+________________________________________________________________________________________________________________________________________
+
+.. _Page Link:
 
 Page Link
 ^^^^^^^^^
 
-Page Link allows studio users to link to another URL by either selecting a Widget from the current Experience or typing in an external URL.
+ Page Link allows studio users to link to another URL by either selecting a Widget from the current Experience or typing in an external URL.
 
-.. code-block:: python
+ .. code-block:: python
 
-  type: 'page-link'
-
+    type: 'page-link'
