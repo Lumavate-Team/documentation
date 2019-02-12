@@ -38,16 +38,18 @@ Implementing API Endpoints
    
      /<string:integration_cloud>/<string:widget_type>/<route>
 
- Some endpoints may also contain the specific instance of the widget (instance_id).
+  Some endpoints may also contain the specific instance of the microservice (instance_id).
    
   .. code-block:: python
    
      /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/<route>
+ 
+ Any microservice developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
 
 Required Endpoints
 ++++++++++++++++++
 
- Any microservice developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
+ All microservices require the following API endpoints:
 
  #. DISCOVER
 
