@@ -5,20 +5,20 @@
 Developing Tools
 ================
 
-  There are three types of :ref:`tools <tools>` that the Lumavate platform uses: :ref:`widgets <widgets>`, :ref:`microservice <microservices>`, and :ref:`component-sets <component-sets>`. 
+There are three types of :ref:`tools <tools>` that the Lumavate platform uses: :ref:`widgets <widgets>`, :ref:`microservice <microservices>`, and :ref:`component-sets <component-sets>`. 
 
-  :ref:`Widgets` are the base that the other :ref:`tools <tools>` add on to and build off of. This tool should always allow :ref:`studio <studio>` users to customize part of the end user UI an functionality. 
+ :ref:`Widgets` are the base that the other :ref:`tools <tools>` add on to and build off of. This tool should always allow :ref:`studio <studio>` users to customize part of the end user UI an functionality. 
 
-  :ref:`Microservices` are the data-driven portion of :ref:`experiences <experiences>`. This :ref:`tool <tools>` takes information that the :ref:`studio <studio>` user provides to create a recurring service or data-set that the rest of the tools can use. Microservices almost never have their own end user UI, instead they add specific functionality to a :ref:`widget <widgets>`.
+ :ref:`Microservices` are the data-driven portion of :ref:`experiences <experiences>`. This :ref:`tool <tools>` takes information that the :ref:`studio <studio>` user provides to create a recurring service or data-set that the rest of the tools can use. Microservices almost never have their own end user UI, instead they add specific functionality to a :ref:`widget <widgets>`.
 
-  :ref:`Component-sets` are elements that are used by :ref:`widgets <widgets>` or :ref:`microservices <microservices>`. This :ref:`tool <tools>` has two primary functions. They allow :ref:`studio <studio>` users to redistribute information collected in one widget or microservice to another. They also provide identical functionality across multiple widgets. Component-sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
+ :ref:`Component-sets` are elements that are used by :ref:`widgets <widgets>` or :ref:`microservices <microservices>`. This :ref:`tool <tools>` has two primary functions. They allow :ref:`studio <studio>` users to redistribute information collected in one widget or microservice to another. They also provide identical functionality across multiple widgets. Component-sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
 
 All Tools consist of four primary parts:
 
-1. The :ref:`Docker container <Setting-up Docker>` that provides the operating environment needed to fully execute and render the tool.
-2. A standard set of REST APIs for :ref:`widgets <API Endpoints W>` and :ref:`microservices <API Endpoints M>` as well as a metadata file for :ref:`component-sets <metadata>` that simplifies common tasks and provides key capabilities to efficiently integrate the tool into the broader Lumavate platform.
-3. A list of :ref:`properties <properties>` studio users can set to adopt the tool functionality to their specific experience
-4. The :ref:`code` that implements the tool's specific logic & capability (back-end processing, web page(s) rendering, etc.)
+#. The :ref:`Docker container <Setting-up Docker>` that provides the operating environment needed to fully execute and render the tool.
+#. A standard set of REST APIs for :ref:`widgets <API Endpoints W>` and :ref:`microservices <API Endpoints M>` as well as a metadata file for :ref:`component-sets <metadata>` that simplifies common tasks and provides key capabilities to efficiently integrate the tool into the broader Lumavate platform.
+#. A list of :ref:`properties <properties>` studio users can set to adopt the tool functionality to their specific experience
+#. The :ref:`code` that implements the tool's specific logic & capability (back-end processing, web page(s) rendering, etc.)
 
 ________________________________________________________________________________________________________________________________________
 
@@ -27,7 +27,7 @@ ________________________________________________________________________________
 Setting-up Docker
 -----------------
 
-  To build a :ref:`tool <tools>`, a dedicated Docker container for the tool needs to be uploaded & registered with the Lumavate platform. The platform provides pre-built Docker containers for a starting point as part of our total solution. However, a developer can use any preferred web development technology stack. The developer will need to build his/her own Docker container if the preferred stack is not listed as a pre-built Docker template.
+To build a :ref:`tool <tools>`, a dedicated Docker container for the tool needs to be uploaded & registered with the Lumavate platform. The platform provides pre-built Docker containers for a starting point as part of our total solution. However, a developer can use any preferred web development technology stack. The developer will need to build his/her own Docker container if the preferred stack is not listed as a pre-built Docker template.
 
 We currently provide the following Docker container types as a template:
 
