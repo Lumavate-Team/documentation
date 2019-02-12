@@ -19,8 +19,9 @@ A property is defined by denoting the tab, section, help text, name, label, and 
     'type': 'Property type - for a complete list of supported properties see below'
   }
 
-The following list of types are available and can be implemented by including the appropriate JSON in the Discover endpoint.
+The following list of types can be implemented by including the appropriate JSON in the Discover endpoint.
 
+Properties Index:
 * :ref:`Translatable Text`
 * :ref:`Text`
 * :ref:`Color`
