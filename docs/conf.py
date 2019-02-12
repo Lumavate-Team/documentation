@@ -16,7 +16,7 @@ import sys
 import os
 
 def setup(app):
-    app.add_css_file('custom.css')
+    app.add_stylesheet('custom.css')
 # => <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     
 # If extensions (or modules to document with autodoc) are in another directory,
