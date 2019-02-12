@@ -29,6 +29,8 @@ It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as
 .. tip::
    Use `ZSH <https://sourceforge.net/projects/zsh/files/>`_ to get the most out of the CLI. This enables extra features such as showing help text during autocompletion. 
 
+_______________________________________________________________________________________________________________________________________
+
 .. _Installation:
 
 Installation
@@ -238,7 +240,6 @@ In Bash, pass the ``--help`` flag with the command for more information on how t
 All commands sent to Bash will start with ``luma``.
 
 Command Index:
-
  #. :ref:`API`
  #. :ref:`Component-set`
  #. :ref:`Component-set-version`
@@ -515,167 +516,165 @@ Commands that create, modify, and delete component-set versions.
 Add
 +++
 
-Adds a version to a component-set container.  
+ Adds a version to a component-set container.  
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set-version add 
-     Profile: dragon
-     Component set: 999
-     Label: prod
-     Version: 9.9.99
-     Component set file: “C:\fantasy\creatures\dragons\firebreather.zip”
+    $ luma component-set-version add 
+      Profile: dragon
+      Component set: 999
+      Label: prod
+      Version: 9.9.99
+      Component set file: “C:\fantasy\creatures\dragons\firebreather.zip”
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-cs, --component-set ID``
+  * ``-path, --component-set-file-path “FILE PATH”``
+  * ``-fv, --from-version (*.*.*)``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``--patch INTAGER``
+  * ``--minor INTAGER``
+  * ``--major INTAGER``
+  * ``--css-includes “STRING”``
+  * ``--direct-includes “STRING”``
+  * ``-l, --label “[prod, dev, old]”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-cs, --component-set ID``
- * ``-path, --component-set-file-path “FILE PATH”``
- * ``-fv, --from-version (*.*.*)``
- * ``-v, --version INTAGER (*.*.*)``
- * ``--patch INTAGER``
- * ``--minor INTAGER``
- * ``--major INTAGER``
- * ``--css-includes “STRING”``
- * ``--direct-includes “STRING”``
- * ``-l, --label “[prod, dev, old]”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
+ .. warning:: 
+    ``--table`` is deprecated. 
+    Use ``--format`` to see JSON values organized in table format.
 
-.. warning:: 
-   ``--table`` is deprecated. 
-   Use ``--format`` to see JSON values organized in table format.
-
-.. warning::
-   File paths with spaces in them may need to be specified in the main command using the ``-path`` option so as to preserve the spaces.
+ .. warning::
+    File paths with spaces in them may need to be specified in the main command using the ``-path`` option so as to preserve the spaces.
 
 .. _Component-set-version Components:
 
 Components
 ++++++++++
 
-Returns the JSON of a component-set version. 
+ Returns the JSON of a component-set version. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set-version components
-     Profile: dragon
-     Component set: 999
+    $ luma component-set-version components
+      Profile: dragon
+      Component set: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-cs, --component-set ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-cs, --component-set ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` and ``--json`` are deprecated.
-   The CLI will return the JSON file by default. The file cannot be organized by the CLI.
+ .. warning:: 
+    ``--table`` and ``--json`` are deprecated.
+    The CLI will return the JSON file by default. The file cannot be organized by the CLI.
 
 .. _Component-set-version Ls:
 
 Ls
 ++
 
-Lists all versions in a component-set container.
+ Lists all versions in a component-set container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set-version ls
-     Profile: dragon
-     Component-set: 999
+    $ luma component-set-version ls
+      Profile: dragon
+      Component-set: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-cs, --component-set ID``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``--page INTAGER``
+  * ``--pagesize INTAGER``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-cs, --component-set ID``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
- * ``--page INTAGER``
- * ``--pagesize INTAGER``
- * ``--json``
- * ``--table``
- * ``--help``
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
-
-.. note::
-   Version number is filtered as “major=*&minor=*&patch=*”.
+ .. note::
+    Version number is filtered as “major=*&minor=*&patch=*”.
 
 .. _Component-set-version Rm:
 
 Rm
 ++
 
-Deletes a version from a component-set container.
+ Deletes a version from a component-set container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set-version rm
-     Profile: dragon
-     Component set: 999
-     Version number: 9.9.99 
+    $ luma component-set-version rm
+      Profile: dragon
+      Component set: 999
+      Version number: 9.9.99 
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-cs, --component-set ID``
+  * ``-vm, --version-mask INTAGER (*.*.*)``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-cs, --component-set ID``
- * ``-vm, --version-mask INTAGER (*.*.*)``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set-version Update:
 
 Update
 ++++++
 
-Updates the label of a component-set version.
+ Updates the label of a component-set version.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set-version update -l dev 
-     Profile: dragon
-     Component set: 999 
-     Version number: 9.9.9
+    $ luma component-set-version update -l dev 
+      Profile: dragon
+      Component set: 999 
+      Version number: 9.9.9
 
-Options: 
+ Options: 
 
- * ``-p, --profile “STRING”``
- * ``-cs, --component-set ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-l, --label “[prod, dev, old]”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
+  * ``-p, --profile “STRING”``
+  * ``-cs, --component-set ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-l, --label “[prod, dev, old]”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+_______________________________________________________________________________________________________________________________________
 
 .. _Env:
 
@@ -689,68 +688,68 @@ Commands that create, modify, and delete environments.
 Config
 ++++++
 
-Creates an environment. 
+ Creates an environment. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma env config
-     Env name: Fantasy
-     App: https://example-realm.fantasy.lumavate-type.com
-     Token: fantasy-lumavate-type.not-a-real-token.com
-     Audience: https://fantasy.lumavate-type.com/notarealaudience
-     Client secret: NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
-     Client id: NotARealId1234j2eIxKILomCdA
+    $ luma env config
+      Env name: Fantasy
+      App: https://example-realm.fantasy.lumavate-type.com
+      Token: fantasy-lumavate-type.not-a-real-token.com
+      Audience: https://fantasy.lumavate-type.com/notarealaudience
+      Client secret: NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
+      Client id: NotARealId1234j2eIxKILomCdA
 
-Options: 
-
- * ``--env-name “STRING”``
- * ``--app “LINK”``
- * ``--token “LINK”``
- * ``--audience “LINK”``
- * ``--client-id ID``
- * ``--client-secret SECRET``
- * ``--json``
- * ``--help``
+ Options: 
+  * ``--env-name “STRING”``
+  * ``--app “LINK”``
+  * ``--token “LINK”``
+  * ``--audience “LINK”``
+  * ``--client-id ID``
+  * ``--client-secret SECRET``
+  * ``--json``
+  * ``--help``
 
 .. _Env Ls:
 
 Ls
 ++
 
-Lists all the environments the user has access to.
+ Lists all the environments the user has access to.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma env ls
+    $ luma env ls
 
-Options: 
-
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--help``
+ Options: 
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--help``
 
 .. _Env Rm:
 
 Rm
 ++
 
-Removes an environment. 
+ Removes an environment. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma env rm
-     Name: Fantasy
+    $ luma env rm
+      Name: Fantasy
 
-Options: 
+ Options: 
 
- * ``--env-name “STRING”``
- * ``--help``
+  * ``--env-name “STRING”``
+  * ``--help``
+
+_______________________________________________________________________________________________________________________________________
 
 .. _Experience:
 
@@ -764,81 +763,81 @@ Commands that move and list experiences.
 Export
 ++++++
 
-Exports an experience as a JSON file form a studio.
+ Exports an experience as a JSON file form a studio.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma experience export
-     Profile: dragon
-     Export file: “C:\fantasy\creatures\dragons\firebreather.json”
-     Label: Fire Breather
+    $ luma experience export
+      Profile: dragon
+      Export file: “C:\fantasy\creatures\dragons\firebreather.json”
+      Label: Fire Breather
 
-Options:
-
- * ``-p, --profile "STRING"``
- * ``-l, --label "STRING"``
- * ``-n, --name "STRING"``
- * ``-path, --export-file "FILE PATH"``
- * ``--json``
- * ``--help``
+ Options:
+  * ``-p, --profile "STRING"``
+  * ``-l, --label "STRING"``
+  * ``-n, --name "STRING"``
+  * ``-path, --export-file "FILE PATH"``
+  * ``--json``
+  * ``--help``
 
 .. _Experience Import:
 
 Import
 ++++++
 
-Imports an experience JSON file to a studio.
+ Imports an experience JSON file to a studio.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma experience import
-     Profile: dragon
-     Label: Fire Breather
-     Activation code: fireball
-     Import file: “C:\fantasy\creatures\dragons\firebreather.json”
-     Collection Name: Dragons
+    $ luma experience import
+      Profile: dragon
+      Label: Fire Breather
+      Activation code: fireball
+      Import file: “C:\fantasy\creatures\dragons\firebreather.json”
+      Collection Name: Dragons
 
-Options:
-
- * ``-p, --profile "STRING"``
- * ``-l, --label "STRING"``
- * ``-d, --description "STRING"``
- * ``-ci, --collection-id ID``
- * ``-cn, --collection-name "STRING"``
- * ``-ac, --activation-code "STRING"``
- * ``-t, --template``
- * ``-ru, --redirect-url "URL"``
- * ``-path, --import-file "FILE PATH"``
- * ``--json``
- * ``--help``
+ Options:
+  * ``-p, --profile "STRING"``
+  * ``-l, --label "STRING"``
+  * ``-d, --description "STRING"``
+  * ``-ci, --collection-id ID``
+  * ``--device "[mobile, tablet, web]"``
+  * ``-cn, --collection-name "STRING"``
+  * ``-ac, --activation-code "STRING"``
+  * ``-t, --template``
+  * ``-ru, --redirect-url "URL"``
+  * ``-path, --import-file "FILE PATH"``
+  * ``--json``
+  * ``--help``
 
 .. _Experience Ls:
 
 Ls
 ++
 
-Lists all the experiences in the studio associated with the specified profile.
+ Lists all the experiences in the studio associated with the specified profile.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma experience ls
-      Profile: dragon
+    $ luma experience ls
+       Profile: dragon
 
-Options:
+ Options:
+  * ``-p, --profile "STRING"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
+  * ``--page INTEGER``
+  * ``--pagesize INTEGER``
+  * ``--json``
+  * ``--help``
 
- * ``-p, --profile "STRING"``
- * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
- * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
- * ``--page INTEGER``
- * ``--pagesize INTEGER``
- * ``--json``
- * ``--help``
+_______________________________________________________________________________________________________________________________________
 
 .. _Experience-collection:
 
@@ -854,9 +853,10 @@ Example:
    $ luma experience-collection ls
      Profile: dragon
 
-Options:
- 
+Options: 
  * ``--help``
+
+_______________________________________________________________________________________________________________________________________
 
 .. _Microservice:
 
@@ -870,149 +870,146 @@ Commands that create, modify, share, and delete microservice containers.
 Access
 ++++++
 
-Shares and/or unshares a microservice container with child organizations. 
+ Shares and/or unshares a microservice container with child organizations. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice access --add 99
-     Profile: dragon
-     Microservice: 999
+    $ luma microservice access --add 99
+      Profile: dragon
+      Microservice: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, --microservice ID``
+  * ``--add ID``
+  * ``--rm ID``
+  * ``--absolute ID``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table`` 
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, --microservice ID``
- * ``--add ID``
- * ``--rm ID``
- * ``--absolute ID``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table`` 
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice Add:
 
 Add
 +++
 
-Adds a microservice container to a command center.
+ Adds a microservice container to a command center.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice add 
-     Profile: dragon
-     Name: Fire Breather
-     Url Ref: fireball
+    $ luma microservice add 
+      Profile: dragon
+      Name: Fire Breather
+      Url Ref: fireball
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``--name “STRING”``
+  * ``--url-ref “STRING”``
+  * ``-path, --icon-file “FILE PATH”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``--name “STRING”``
- * ``--url-ref “STRING”``
- * ``-path, --icon-file “FILE PATH”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice Ls:
 
 Ls
 ++
 
-Lists all microservices containers in the command center associated with the specified profile.
+ Lists all microservices containers in the command center associated with the specified profile.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice ls 
-     Profile: dragon
+    $ luma microservice ls 
+      Profile: dragon
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``--page INTAGER``
+  * ``--pagesize INTAGER``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
- * ``--page INTAGER``
- * ``--pagesize INTAGER``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice Rm:
 
 Rm
 ++
 
-Removes a microservice container. 
+ Removes a microservice container. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice rm 
-     Profile: dragon 
-     Microservice: 999
+    $ luma microservice rm 
+      Profile: dragon 
+      Microservice: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, --microservice ID``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, --microservice ID``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice Update:
 
 Update
 +++++++
 
-Updates the name or image of a microservice container.
+ Updates the name or image of a microservice container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice update --name “Frosty Breath”  
-     Profile: dragon 
-     Microservice: 999 
+    $ luma microservice update --name “Frosty Breath”  
+      Profile: dragon 
+      Microservice: 999 
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, --microservice ID``
+  * ``--name “STRING”``
+  * ``-path, --icon-file “FILE PATH”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, --microservice ID``
- * ``--name “STRING”``
- * ``-path, --icon-file “FILE PATH”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+_______________________________________________________________________________________________________________________________________
 
 .. _Microservice-version:
 
@@ -1026,257 +1023,251 @@ Commands that add, modify, and delete microservice versions.
 Add
 +++
 
-Adds a version to a microservice container.
+ Adds a version to a microservice container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice-version add 
-     Profile: dragon 
-     Microservice: 999
-     Label: prod
-     Version: 9.9.9 
-     Port: 5000
-     Microservice-file-path: “C:\fantasy\creatures\dragons\firebreather.tar.gz”
+    $ luma microservice-version add 
+      Profile: dragon 
+      Microservice: 999
+      Label: prod
+      Version: 9.9.9 
+      Port: 5000
+      Microservice-file-path: “C:\fantasy\creatures\dragons\firebreather.tar.gz”
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, --microservice ID``
+  * ``--port INTAGER``
+  * ``-image, --docker-image “FILE PATH”``
+  * ``-path, --microservice-file-path “FILE PATH”``
+  * ``-fv, --from-version INTAGER (*.*.*)``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``--patch INTAGER``
+  * ``--minor INTAGER``
+  * ``--major INTAGER``
+  * ``--env-var "{“STRING”:”KEY”}"``
+  * ``-l, --label "[dev, old, prod]"``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, --microservice ID``
- * ``--port INTAGER``
- * ``-image, --docker-image “FILE PATH”``
- * ``-path, --microservice-file-path “FILE PATH”``
- * ``-fv, --from-version INTAGER (*.*.*)``
- * ``-v, --version INTAGER (*.*.*)``
- * ``--patch INTAGER``
- * ``--minor INTAGER``
- * ``--major INTAGER``
- * ``--env-var "{“STRING”:”KEY”}"``
- * ``-l, --label "[dev, old, prod]"``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated. 
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated. 
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Exec:
 
 Exec
 ++++
 
-Sends commands directly to Docker. For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
+ Sends commands directly to Docker. For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice-version exec “Docker command” 
-     Profile: dragon 
-     Mirocservice: 999 
-     Version Number: 9.9.9
+    $ luma microservice-version exec “Docker command” 
+      Profile: dragon 
+      Mirocservice: 999 
+      Version Number: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, --microservice ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``--target [one, all]`` 
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, --microservice ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``--target [one, all]`` 
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Logs:
 
 Logs
 ++++
 
-Returns the logs for a microservice version.
+ Returns the logs for a microservice version.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice-version logs 
-     Profile: dragon 
-     Microservice: 999
-     Version Number: 9.9.9
+    $ luma microservice-version logs 
+      Profile: dragon 
+      Microservice: 999
+      Version Number: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, --microservice ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, --microservice ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Ls:
 
 Ls
 ++
 
-Lists all versions of a microservice container.
+ Lists all versions of a microservice container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice-version ls 
-     Profile: dragon
-     Microservice: 999
+    $ luma microservice-version ls 
+      Profile: dragon
+      Microservice: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, --microservice ID``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``--page INTAGER``
+  * ``--pagesize INTAGER``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, --microservice ID``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
- * ``--page INTAGER``
- * ``--pagesize INTAGER``
- * ``--json``
- * ``--table``
- * ``--help``
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
-
-.. note::
-   Version number is filtered as “major=*&minor=*&patch=*”.
+ .. note::
+    Version number is filtered as “major=*&minor=*&patch=*”.
 
 .. _Microservice-version Rm:
 
 Rm
 ++
 
-Removes a version from a microservice container.
+ Removes a version from a microservice container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice-version rm
-     Profile: dragon
-     Microservice: 999
-     Version: 9.9.9
+    $ luma microservice-version rm
+      Profile: dragon
+      Microservice: 999
+      Version: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, --microservice ID``
+  * ``-vm, --version-mask INTAGER (*.*.*)``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, --microservice ID``
- * ``-vm, --version-mask INTAGER (*.*.*)``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Start:
 
 Start
 +++++
 
-Starts a microservice version.
+ Starts a microservice version.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice-version start
-     Profile: dragon
-     Microservice: 999
-     Version: 9.9.9
+    $ luma microservice-version start
+      Profile: dragon
+      Microservice: 999
+      Version: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, --microservice ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, --microservice ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated. 
-   Use ``--format`` to the JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated. 
+    Use ``--format`` to the JSON values organized in table format.
 
 .. _Microservice-version Stop:
 
 Stop
 ++++
 
-Stops a microservice version. A microservice version cannot be stopped if it is being used in an experience.
+ Stops a microservice version. A microservice version cannot be stopped if it is being used in an experience.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice-version stop
-     Profile: dragon
-     Microservice: 999
-     Version: 9.9.9
+    $ luma microservice-version stop
+      Profile: dragon
+      Microservice: 999
+      Version: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, -- microservice ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, -- microservice ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Microservice-version Update:
 
 Update
 ++++++
 
-Updates the label of a microservice version.
+ Updates the label of a microservice version.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma microservice-version update --label dev
-     Profile: dragon
-     Microservice: 999
-     Version: 9.9.9
+    $ luma microservice-version update --label dev
+      Profile: dragon
+      Microservice: 999
+      Version: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-ms, -- microservice ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-l, --label “[dev, old, prod]”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-ms, -- microservice ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-l, --label “[dev, old, prod]”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+_______________________________________________________________________________________________________________________________________
 
 .. _Org:
 
@@ -1290,44 +1281,44 @@ Commands that list the organizations associated with an environment or organizat
 Child-orgs
 ++++++++++
 
-Lists the child organizations that a profile’s associated organization can share with.
+ Lists the child organizations that a profile’s associated organization can share with.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma org child-orgs
-     Profile: dragon
+    $ luma org child-orgs
+      Profile: dragon
 
-Options: 
-
- * ``-p, --profile “STRING”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
- * ``--json``
- * ``--help``
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``--json``
+  * ``--help``
 
 .. _Org Ls:
 
 Ls
 ++
 
-Lists the organizations inside an environment.
+ Lists the organizations inside an environment.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma org ls
-     Env: Fantasy
+    $ luma org ls
+      Env: Fantasy
 
-Options: 
+ Options: 
+  * ``--env “STRING”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``--json``
+  * ``--help``
 
- * ``--env “STRING”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
- * ``--json``
- * ``--help``
+_______________________________________________________________________________________________________________________________________
 
 .. _Profile:
 
@@ -1341,62 +1332,61 @@ Commands that add, modify, or delete profiles.
 Add
 +++
 
-Adds a profile to an environment and associates the profile to a specific organization.
+ Adds a profile to an environment and associates the profile to a specific organization.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma profile add
-     Profile name: dragon
-     <<lists of envs user has access to>>
-     Name of Env you want to use with this profile: Fantasy
-     <<lists of orgs in the selected env>>
-     Org ID you want to associate with this profile: 99
+    $ luma profile add
+      Profile name: dragon
+      <<lists of envs user has access to>>
+      Name of Env you want to use with this profile: Fantasy
+      <<lists of orgs in the selected env>>
+      Org ID you want to associate with this profile: 99
 
-Options: 
-
- * ``--profile-name “STRING”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--help``
+ Options: 
+  * ``--profile-name “STRING”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--help``
 
 .. _Profile Ls:
 
 Ls
 ++
 
-Lists all profiles associated with the client id and secrete.
+ Lists all profiles associated with the client id and secrete.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma profile ls
+    $ luma profile ls
 
-Options: 
-
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--help``
+ Options: 
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--help``
 
 .. _Profile Rm:
 
 Rm
 ++
 
-Deletes a profile.
+ Deletes a profile.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma profile rm
-     Profile: dragon
+    $ luma profile rm
+      Profile: dragon
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``--help``
+_______________________________________________________________________________________________________________________________________
 
 .. _Version:
 
@@ -1412,8 +1402,9 @@ Example:
    $ luma version
 
 Options: 
-
  * ``--help``
+
+_______________________________________________________________________________________________________________________________________
 
 .. _Widget:
 
@@ -1427,149 +1418,146 @@ Commands that add, modify, share, and delete widget containers.
 Access
 ++++++
 
-Shares and/or Unshares a widget container with child organizations.
+ Shares and/or Unshares a widget container with child organizations.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget access --add 99
-     Profile: dragon
-     Widget: 999
+    $ luma widget access --add 99
+      Profile: dragon
+      Widget: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-w, --widget ID``
+  * ``--add ID``
+  * ``--rm ID``
+  * ``--absolute ID``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-w, --widget ID``
- * ``--add ID``
- * ``--rm ID``
- * ``--absolute ID``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget Add:
 
 Add
 +++
 
-Adds a widget container.
+ Adds a widget container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget add
-     Profile: dragon
-     Name: Fire Breathing
-     Url Ref: fireball
+    $ luma widget add
+      Profile: dragon
+      Name: Fire Breathing
+      Url Ref: fireball
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``--name “STRING”``
+  * ``--url-ref “LOWERCASE STRING”``
+  * ``-path, --icon-file “FILE PATH”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
+  * ``--json`` 
+  * ``--table`` 
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``--name “STRING”``
- * ``--url-ref “LOWERCASE STRING”``
- * ``-path, --icon-file “FILE PATH”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
- * ``--json`` 
- * ``--table`` 
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget Ls:
 
 Ls
 ++
 
-Lists all the widget containers in an organization associated with the specified profile. 
+ Lists all the widget containers in an organization associated with the specified profile. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget ls
-     Profile: dragon
+    $ luma widget ls
+      Profile: dragon
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
+  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”`` 
+  * ``--page INTAGER``
+  * ``--pagesize INTAGER``
+  * ``--json`` 
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
- * ``--filter “{JSON VALUE=SPECIFIC VALUE}”`` 
- * ``--page INTAGER``
- * ``--pagesize INTAGER``
- * ``--json`` 
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget Rm:
 
 Rm
 ++
 
-Removes a widget container.
+ Removes a widget container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget rm
-     Profile: dragon
-     Widget: 999
+    $ luma widget rm
+      Profile: dragon
+      Widget: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-w, --widget ID``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table`` 
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-w, --widget ID``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table`` 
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget Update:
 
 Update
 ++++++
 
-Updates a widget container’s name or image.
+ Updates a widget container’s name or image.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget update --name “Frosty Breath”
-     Profile: dragon
-     Widget: 999
+    $ luma widget update --name “Frosty Breath”
+      Profile: dragon
+      Widget: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-w, --widget ID``
+  * ``--name “STRING”``
+  * ``-path, --icon-file “FILE PATH”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``  
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-w, --widget ID``
- * ``--name “STRING”``
- * ``-path, --icon-file “FILE PATH”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``  
- * ``--json``
- * ``--table``
- * ``--help``
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+_______________________________________________________________________________________________________________________________________
 
 .. _Widget-version:
 
@@ -1583,261 +1571,256 @@ Commands that add, modify, and delete widget versions.
 Add
 +++
 
-Adds a version to a widget container.
+ Adds a version to a widget container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget-version add
-     Profile: dragon
-     Widget: 999
-     Label: prod 
-     Version Number: 9.9.9
-     Widget File Path: “C:\fantasy\creatures\dragons\firebreather.tar.gz”
-     Port: 8080 
+    $ luma widget-version add
+      Profile: dragon
+      Widget: 999
+      Label: prod 
+      Version Number: 9.9.9
+      Widget File Path: “C:\fantasy\creatures\dragons\firebreather.tar.gz”
+      Port: 8080 
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``--port INTAGER``
+  * ``-w, --widget ID``
+  * ``-path, --widget-file-path “FILE PATH”``
+  * ``-image, --docker-image “FILE PATH”``
+  * ``-fv, --from-version INTAGER (*.*.*)``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``--patch INTAGER``
+  * ``--minor INTAGER``
+  * ``--major INTAGER``
+  * ``--env-var "{“STRING”:”KEY”}"``
+  * ``-l, --label “[dev, old, prod]”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``--port INTAGER``
- * ``-w, --widget ID``
- * ``-path, --widget-file-path “FILE PATH”``
- * ``-image, --docker-image “FILE PATH”``
- * ``-fv, --from-version INTAGER (*.*.*)``
- * ``-v, --version INTAGER (*.*.*)``
- * ``--patch INTAGER``
- * ``--minor INTAGER``
- * ``--major INTAGER``
- * ``--env-var "{“STRING”:”KEY”}"``
- * ``-l, --label “[dev, old, prod]”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Exec:
 
 Exec
 ++++
 
-Sends commands directly to Docker. For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
+ Sends commands directly to Docker. For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget-version exec “Docker command”
-     Profile: dragon
-     Widget: 999
-     Version Number: 9.9.9
+    $ luma widget-version exec “Docker command”
+      Profile: dragon
+      Widget: 999
+      Version Number: 9.9.9
 
-Options: 
+ Options: 
+  *	-p, --profile “STRING”
+  *	-w, --widget ID
+  *	-v, --version INTAGER (*.*.*)
+  *	--target [one, all]
+  *	--json 
+  *	--table
+  *	--help
 
- *	-p, --profile “STRING”
- *	-w, --widget ID
- *	-v, --version INTAGER (*.*.*)
- *	--target [one, all]
- *	--json 
- *	--table
- *	--help
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Logs:
 
 Logs
 ++++
 
-Returns the logs for a widget version.
+ Returns the logs for a widget version.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget-version logs
-     Profile: dragon
-     Widget: 999
-     Version Number: 9.9.9
+    $ luma widget-version logs
+      Profile: dragon
+      Widget: 999
+      Version Number: 9.9.9
 
-Options: 
+ Options: 
 
- * ``-p, --profile “STRING”``
- * ``-w, --widget ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``--json``
- * ``--table``
- * ``--help``
+  * ``-p, --profile “STRING”``
+  * ``-w, --widget ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Ls:
 
 Ls
 ++
 
-Lists all the version for a widget container.
+ Lists all the version for a widget container.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget-version ls
-     Profile: dragon
-     Widget: 999
+    $ luma widget-version ls
+      Profile: dragon
+      Widget: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-w, --widget ID``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``--page INTAGER``
+  * ``--pagesize INTAGER``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-w, --widget ID``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
- * ``--page INTAGER``
- * ``--pagesize INTAGER``
- * ``--json``
- * ``--table``
- * ``--help``
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
-
-.. note::
-   Version number is filtered as “major=*&minor=*&patch=*”.
+ .. note::
+    Version number is filtered as “major=*&minor=*&patch=*”.
 
 .. _Widget-version Rm:
 
 Rm
 ++
 
-Deletes a widget version. This cannot be done if a widget version is being used in an experience.
+ Deletes a widget version. This cannot be done if a widget version is being used in an experience.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget version rm
-     Profile: dragon
-     Widget: 999
-     Version Number: 9.9.9
+    $ luma widget version rm
+      Profile: dragon
+      Widget: 999
+      Version Number: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-w, --widget ID``
+  * ``-vm, --version-mask INTAGER (*.*.*)``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table`` 
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-w, --widget ID``
- * ``-vm, --version-mask INTAGER (*.*.*)``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table`` 
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Start:
 
 Start
 +++++
 
-Starts a widget version.
+ Starts a widget version.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget-version start
-     Profile: dragon
-     Widget: 999
-     Version Number: 9.9.9
+    $ luma widget-version start
+      Profile: dragon
+      Widget: 999
+      Version Number: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-w, --widget ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-w, --widget ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Stop:
 
 Stop
 ++++
 
-Stops a widget version. This cannot be done if a widget version is being used in an experience.
+ Stops a widget version. This cannot be done if a widget version is being used in an experience.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget-version stop
-     Profile: dragon
-     Widget: 999
-     Version Number: 9.9.9
+    $ luma widget-version stop
+      Profile: dragon
+      Widget: 999
+      Version Number: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-w, --widget ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-w, --widget ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Widget-version Update:
 
 Update
 ++++++
 
-Updates a widget version’s label.
+ Updates a widget version’s label.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma widget-version update -l dev
-     Profile: dragon
-     Widget: 999
-     Version Number: 9.9.9
+    $ luma widget-version update -l dev
+      Profile: dragon
+      Widget: 999
+      Version Number: 9.9.9
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-w, --widget ID``
+  * ``-v, --version INTAGER (*.*.*)``
+  * ``-l, --label “[dev, old, prod]”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``–help``
 
- * ``-p, --profile “STRING”``
- * ``-w, --widget ID``
- * ``-v, --version INTAGER (*.*.*)``
- * ``-l, --label “[dev, old, prod]”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``–help``
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+_______________________________________________________________________________________________________________________________________
 
-.. _Ls Commands:
+.. _Ls Filters:
 
-Ls Commands
+Ls Filters
 ^^^^^^^^^^^
 
 Limits Ls search results by:
@@ -1850,68 +1833,70 @@ Limits Ls search results by:
 
 .. _Ls Commands gt:
 
-gt
-++
+Greater Than (gt)
++++++++++++++++++
 
-Looks for anything that contains more than the specified value. 
+ Looks for anything that contains more than the specified value. 
 
-example:
+ example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma profile ls --filter “name=gt:dragon”
+    $ luma profile ls --filter “name=gt:dragon”
 
 .. _Ls Commands lt:
 
-lt
-++
+Less Than (lt)
+++++++++++++++
 
-Looks for anything that contains less than the specified value.
+ Looks for anything that contains less than the specified value.
 
-example:
+ example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma profile ls --filter “name=lt:dragon”
+    $ luma profile ls --filter “name=lt:dragon”
 
 .. _Ls Commands gte:
 
-gte
-+++
+Greater Than Or Equal To (gte)
+++++++++++++++++++++++++++++++
 
-Looks for anything that contains either the specified value or more than the specified value.
+ Looks for anything that contains either the specified value or more than the specified value.
 
-example:
+ example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma profile ls --filter “name=gte:dragon”
+    $ luma profile ls --filter “name=gte:dragon”
 
 .. _Ls Commands lte:
 
-lte
-+++
+Less Than Or Equal To (lte)
++++++++++++++++++++++++++++
 
-Looks for anything that contains either the specified value or less than the specified value.
+ Looks for anything that contains either the specified value or less than the specified value.
 
-example:
+ example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma profile ls --filter “name=lte:dragon”
+    $ luma profile ls --filter “name=lte:dragon”
 
 .. _Ls Commands ct:
 
-ct
-++
+Containing (ct)
++++++++++++++++
 
-Looks for anything that contains the specified value.
+ Looks for anything that contains the specified value.
 
-example:
+ example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma profile ls --filter “name=ct:dragon”
+    $ luma profile ls --filter “name=ct:dragon”
+
+_______________________________________________________________________________________________________________________________________
 
 .. _Version Commands:
 
@@ -1925,43 +1910,49 @@ Commands that modify the CLI or luma version.
 Install
 +++++++
 
-Installs luma.
+ Installs luma.
 
-example: 
+ example: 
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ pip3 install luma
+    $ pip3 install luma
 
 .. _Version Commands Upgrade:
 
 Upgrade
 +++++++
 
-Updates the version of luma on the current machine. 
+ Updates the version of luma on the current machine. 
 
-example:
+ example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ pip3 install luma --upgrade
+    $ pip3 install luma --upgrade
 
 .. _Version Commands Help:
 
 Help
 ++++
 
-Describes and lists the possible subcommands for any command. This can be done by running any command without passing in any options or by passing in the ``--help`` flag.
+ Describes and lists the possible subcommands for any command. This can be done by running any command without passing in any options or by passing in the ``--help`` flag.
 
-example:
+ example:
 
-.. code-block:: bash
+ .. code-block:: bash
     
-    $ luma
+     $ luma
+     
+     OR 
+     
+     $ luma <<Command>> --help
+     
+     OR
+     
+     $ luma <<Command>> <<Sub-Command>> --help
 
-    $ luma --help
-   
-    $ luma ls --help
+_______________________________________________________________________________________________________________________________________
 
 .. _Additional Info:
 
