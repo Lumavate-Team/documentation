@@ -5,19 +5,52 @@
 Resources
 =========
 
-__________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________
 
 .. include:: ../API.rst
 
-__________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________
 
-.. include:: ../CONTRIBUTING.rst
+.. _Code Samples:
 
-.. include:: ../HISTORY.rst
+Code Samples
+------------
 
-.. include:: 4-samples
+Code samples can be found at https://github.com/Lumavate-Team
 
-__________________________________________________________________________________________________________________________________________
+.. _Net Sample:
+
+.NET
+^^^^
+
+ A pre-built Docker container using .NET Core with a lightweight shell for use with C#.
+
+ Base widget container: https://github.com/Lumavate-Team/widget-base-csharp
+
+.. _Go Sample:
+
+GO
+^^
+
+ Common libraries and scaffolding code for use with Golang.
+
+ Go common container: https://github.com/Lumavate-Team/lumavate-go-common
+
+ Base widget container: https://github.com/Lumavate-Team/widget-base-go
+
+.. Python Sample:
+
+Python
+^^^^^^
+
+ Common libraries and scaffolding code for use with Python.
+
+ Python signer container: https://github.com/Lumavate-Team/python-signer
+
+ Base widget container: https://github.com/Lumavate-Team/python-hello
+
+________________________________________________________________________________________________________________________________________
 
 .. include:: ../GLOSSARY.rst
-__________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________
