@@ -21,11 +21,12 @@
         {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}{% endtrans %}
       {%- endif %}
     {%- endif %}
-    {%- if last_updated %}
-      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}{% endtrans %}
-    {%- endif %}
     </p>
   </div>
+  
+  {%- if last_updated %}
+      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated_fmt }}{% endtrans %}
+  {%- endif %}
   
   {%- if show_sphinx %}
   {% trans %}Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>{% endtrans %}.
