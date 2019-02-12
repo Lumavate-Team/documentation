@@ -187,6 +187,10 @@ html_show_copyright = True
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'ReadtheDocsTemplatedoc'
 
+html_context = {
+"last_updated": True,
+"commit": False,
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 
