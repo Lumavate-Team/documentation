@@ -43,57 +43,59 @@ The CLI can be installed two different ways:
 From Pip
 ^^^^^^^^
 
-As a Non-admin run:
+ As a Non-admin run:
   
-  .. code-block:: bash
+   .. code-block:: bash
      
-     $ sudo pip3 install luma
+      $ sudo pip3 install luma
 
-As an Admin run:
+ As an Admin run:
   
-  .. code-block:: bash
+   .. code-block:: bash
      
-     $ pip3 install luma
+      $ pip3 install luma
 
 .. _Installation Source:
 
 From Source
 ^^^^^^^^^^^
 
-Installing the CLI as a Non-admin:
+ Installing the CLI as a Non-admin:
 
- #. Clone this repo.
- #. CD into the CLI dir
- #. Run:
+  #. Clone this repo.
+  #. CD into the CLI dir
+  #. Run:
   
-    .. code-block:: bash
+     .. code-block:: bash
       
-       $ pip3 install luma --user
+        $ pip3 install luma --user
  
- #. Add the returned path URL to the path 
+  #. Add the returned path URL to the path 
    
-    Example Response: 
+     Example Response: 
    
-    .. code-block:: bash
+     .. code-block:: bash
        
-       The script luma.exe is installed in 'C:\ComputerName\UserName\AppData\Roaming\Python\Python37\Scripts' which is not on PATH. 
-       Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+        The script luma.exe is installed in 'C:\ComputerName\UserName\AppData\Roaming\Python\Python37\Scripts' which is not on PATH. 
+        Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
   
-Installing the CLI as an Admin:
+ Installing the CLI as an Admin:
 
- #. Clone this repo.
- #. CD into the CLI dir
- #. Run:
+  #. Clone this repo.
+  #. CD into the CLI dir
+  #. Run:
    
-    .. code-block:: bash
+     .. code-block:: bash
        
-       $ sudo pip3 install luma
+        $ sudo pip3 install luma
 
-.. note::
-   To activate autocompletion after install, restart your terminal or source your shell configuration (either .zshrc or .bash_profile).  
+ .. note::
+    To activate autocompletion after install, restart your terminal or source your shell configuration (either .zshrc or .bash_profile).  
+
+_______________________________________________________________________________________________________________________________________
 
 .. _Provisioning Credentials:
-  
+
 Provisioning Credentials
 -------------------------
 
@@ -107,74 +109,108 @@ There are two types of configuration in the CLI: configuring environments and co
 Setting-Up Environments:
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-You can use either the Lumavate pre-configured environment or you can setup your own environment configuration.
+ You can use either the Lumavate pre-configured environment or you can setup your own environment configuration.
 
-Using the preset configuration:
+ Using the preset configuration:
 
- #. Log into the command center you want to modify with the CLI
- #. Go to the CLI tab located in the side menu bar
- #. Copy the information from the Configure An Environment field. It should look like this:
+  #. Log into the command center you want to modify with the CLI
+  #. Go to the CLI tab located in the side menu bar
+  #. Copy the information from the Configure An Environment field. It should look like this:
    
-    .. code-block:: bash
+     .. code-block:: bash
        
-       $ luma env config --env-name prod --app https://not-a-real-realm.dragonfly.lumavate-type.com --audience https://dragonfly.lumavate-type.com/notarealapp --token dragonfly-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
+        $ luma env config --env-name prod --app https://not-a-real-realm.dragonfly.lumavate-type.com --audience https://dragonfly.lumavate-type.com/notarealapp --token dragonfly-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
       
- #. Past the command into your Bash window 
+  #. Past the command into your Bash window 
 
-Using your own configuration:
+ Using your own configuration:
 
- #. Log into the command center you want to modify with the CLI
- #. Go to the CLI tab located in the side menu bar
- #. Take note of the app, audience, token, client-id, and client-secret information from the Configure An Environment field
- #. In your Bash window, run:
+  #. Log into the command center you want to modify with the CLI
+  #. Go to the CLI tab located in the side menu bar
+  #. Take note of the app, audience, token, client-id, and client-secret information from the Configure An Environment field
+  #. In your Bash window, run:
    
-    .. code-block:: bash
+     .. code-block:: bash
        
-       $ luma env config
+        $ luma env config
 
- #. Fill out the prompts as they appear on the screen with the appropriate information. It should look like this when you are done:
+  #. Fill out the prompts as they appear on the screen with the appropriate information. It should look like this when you are done:
    
-    .. code-block:: bash
+     .. code-block:: bash
        
-       $ Env Name: <<name of environment in CLI>>
-         App: <<enviroment Url>>
-         Token: <<enviroment token>>
-         Audience: <<envitoment audience>>
-         Client id: <<user clientId>>
-         Client secret: <<user clientSecret>>
+        $ Env Name: <<name of environment in CLI>>
+          App: <<enviroment Url>>
+          Token: <<enviroment token>>
+          Audience: <<envitoment audience>>
+          Client id: <<user clientId>>
+          Client secret: <<user clientSecret>>
 
-.. note:: 
-   The CLI uses Client Id and Client Secret to associate a user’s context to a machine. From this point forward, user will refer to the client id and client secret information used to setup the environment in the CLI. 
+ .. note:: 
+    The CLI uses Client Id and Client Secret to associate a user’s context to a machine. From this point forward, user will refer to the client id and client secret information used to setup the environment in the CLI. 
 
 .. _Provisioning Profiles:
   
 Setting up Profiles:
 ^^^^^^^^^^^^^^^^^^^
 
-Profiles can be setup using the Lumavate pre-set command or using your own configuration. 
+ Profiles can be setup using the Lumavate pre-set command or using your own configuration. 
 
-You will need to have configured an environment on your machine through the CLI to configure a profile.  
+ You will need to have configured an environment on your machine through the CLI to configure a profile.  
 
-Using a preset configuration:
+ Using a preset configuration:
 
- #. Log into a Lumavate command center
- #. Navigate to the CLI tab located in the side menu bar
- #. Copy the information from the Add A Profile field. It should look like this:
+  #. Log into a Lumavate command center
+  #. Navigate to the CLI tab located in the side menu bar
+  #. Copy the information from the Add A Profile field. It should look like this:
    
-    .. code-block:: bash
+     .. code-block:: bash
        
-       $ luma profile add --env prod
+        $ luma profile add --env prod
 
- #. Past the command into your Bash window
- #. You will be prompted to name your profile. It should look like this:
+  #. Past the command into your Bash window
+  #. You will be prompted to name your profile. It should look like this:
    
-    .. code-block:: bash
+     .. code-block:: bash
        
-        Profile Name: <<name of profile in CLI>>
+         Profile Name: <<name of profile in CLI>>
 
- #. You will then be presented with a list of organizations. Pick the one you want to edit with this profile. It should look like this:
+  #. You will then be presented with a list of organizations. Pick the one you want to edit with this profile. It should look like this:
    
-    .. code-block:: bash
+     .. code-block:: bash
+       
+          id Org Name                  Org Type Test Org
+          35 Sample Command Center     dev      None
+          49 Sample Studio             studio   False
+
+          Org ID you want to associate with this profile: <<org id>>
+
+     
+ Using your own configuration:
+
+  #. In your Bash window, run:
+   
+     .. code-block:: bash
+       
+        $ luma profile add
+
+  #. You will be prompted to name your profile. It should look like this:
+   
+     .. code-block:: bash
+       
+         Profile Name: <<name of profile in CLI>>
+
+  #. A list of environments will appear. Select which environment you wish to associate with the profile:
+   
+     .. code-block:: bash
+       
+        Env Name                                    App                                                  Audience                                  Token                                     Name
+       https://not-a-realm.place.lumavate-type.com https://not-a-real-realm.dragonfly.lumavate-type.com https://place.lumavate-type.com/notanapp dragonfly-lumavate-type.notarealtoken.com prod
+     
+         Env: <<name of environment you want the profile associated with>>
+
+  #. A list of organizations will appear. Pick the one you want to edit with this profile. It should look like this:
+   
+     .. code-block:: bash
        
          id Org Name                  Org Type Test Org
          35 Sample Command Center     dev      None
@@ -182,45 +218,13 @@ Using a preset configuration:
 
          Org ID you want to associate with this profile: <<org id>>
 
-     
-Using your own configuration:
+ .. warning::
+    If there are two profiles or environments with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
 
- #. In your Bash window, run:
-   
-    .. code-block:: bash
-       
-       $ luma profile add
+ .. note::
+    While running the profile command, you will have the option to associate the new profile to any organization the user has access to regardless of the command center you are currently in.
 
- #. You will be prompted to name your profile. It should look like this:
-   
-    .. code-block:: bash
-       
-        Profile Name: <<name of profile in CLI>>
-
- #. A list of environments will appear. Select which environment you wish to associate with the profile:
-   
-    .. code-block:: bash
-       
-       Env Name                                    App                                                  Audience                                 Token                                     Name
-       https://not-a-realm.place.lumavate-type.com https://not-a-real-realm.dragonfly.lumavate-type.com https://place.lumavate-type.com/notanapp dragonfly-lumavate-type.notarealtoken.com prod
-     
-        Env: <<name of environment you want the profile associated with>>
-
- #. A list of organizations will appear. Pick the one you want to edit with this profile. It should look like this:
-   
-    .. code-block:: bash
-       
-        id Org Name                  Org Type Test Org
-        35 Sample Command Center     dev      None
-        49 Sample Studio             studio   False
-
-        Org ID you want to associate with this profile: <<org id>>
-
-.. warning::
-   If there are two profiles or environments with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
-
-.. note::
-   While running the profile command, you will have the option to associate the new profile to any organization the user has access to regardless of the command center you are currently in.
+_______________________________________________________________________________________________________________________________________
 
 .. _CLI Syntax:
 
@@ -252,6 +256,7 @@ Command Index:
  #. :ref:`Version Commands`
  #. :ref:`Additional Info`
 _______________________________________________________________________________________________________________________________________
+
 .. _API:
 
 API
@@ -261,8 +266,8 @@ Commands that directly query the API.
 
 .. _API Delete:
 
- Delete
- ++++++
+Delete
+++++++
 
  Calls a delete command in order to remove a tool through the API. 
 
@@ -282,8 +287,8 @@ Commands that directly query the API.
 
 .. _API Get:
 
- Get
- +++
+Get
++++
 
  Calls a get command in order to return information from the API.
 
@@ -303,8 +308,8 @@ Commands that directly query the API.
 
 .. _API Post:
 
- Post
- ++++
+Post
+++++
 
  Calls a post command in order to add a tool through the API. 
 
@@ -325,8 +330,8 @@ Commands that directly query the API.
 
 .. _API Put:
 
- Put
- +++
+Put
++++
 
  Calls a put command in order to change a tool through the API.
 
@@ -355,8 +360,8 @@ Commands that create, modify, share, and delete component-set containers.
 
 .. _Component-set Access:
 
- Access
- ++++++
+Access
+++++++
 
  Shares and Unshares component-set containers with child organizations.
 
@@ -385,8 +390,8 @@ Commands that create, modify, share, and delete component-set containers.
 
 .. _Component-set Add:
 
- Add
- +++
+Add
++++
 
  Adds a component-set container. 
 
@@ -415,8 +420,8 @@ Commands that create, modify, share, and delete component-set containers.
 
 .. _Component-set Ls:
 
- Ls
- ++
+Ls
+++
 
  Lists all component-set containers in the command center associated with the specified profile. 
 
@@ -443,8 +448,8 @@ Commands that create, modify, share, and delete component-set containers.
 
 .. _Component-set Rm:
 
- Rm
- ++
+Rm
+++
 
  Deletes a component-set container. This can only be done after all versions in the container have been deleted.
 
@@ -470,8 +475,8 @@ Commands that create, modify, share, and delete component-set containers.
 
 .. _Component-set Update:
 
- Update
- ++++++
+Update
+++++++
 
  Updates the name or image of a component-set container. 
 
