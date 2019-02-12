@@ -402,10 +402,18 @@ Sharing A Tool
  .. note::
     There are three types of child organizations shown in the share section list, command centers, dev/prod studios, and prod studios. Dev/prod studios can add and publish dev versions. Prod studios can only add or publish prod versions.  
 
+________________________________________________________________________________________________________________________________________
+
 .. include:: ../PROPERTIES.rst
+
+________________________________________________________________________________________________________________________________________
 
 .. include:: ../WIDGETS.rst
 
+________________________________________________________________________________________________________________________________________
+
 .. include:: ../MICROSERVICES.rst
+
+________________________________________________________________________________________________________________________________________
 
 .. include:: ../COMPONENTS.rst
