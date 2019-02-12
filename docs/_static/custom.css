@@ -1,3 +1,11 @@
-div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(3, 4, 5) {
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(5) {
+    display: none;
+}
+
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(4) {
+    display: none;
+}
+
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(3) {
     display: none;
 }
