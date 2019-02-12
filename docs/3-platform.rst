@@ -1,7 +1,11 @@
 .. _platform:
 
+========
 Platform
 ========
+
+________________________________________________________________________________________________________________________________________
+
 .. _command center:
 
 Command Center
@@ -22,6 +26,8 @@ Why it matters
 ^^^^^^^^^^^^^^
 The command center will be the main access point for developers. The functions it provides will allow command center users to create, manage, and distribute the various :ref:`tools <tools>` they wishe to make.
 
+________________________________________________________________________________________________________________________________________
+
 .. _tools:
 
 Tools
@@ -39,6 +45,8 @@ Tools can provide:
 Why it matters
 ^^^^^^^^^^^^^^
 Tools are the main way developers interact with the platform. They allow developers to create specific functionality for their or other users' use within an :ref:`experience <experiences>`. To get started developing tools, consult :ref:`Developing Tools`.
+
+________________________________________________________________________________________________________________________________________
 
 .. _studio:
 
@@ -64,6 +72,8 @@ Why it matters
 ^^^^^^^^^^^^^^
 Studio users will be the audience for any :ref:`tool <tools>` a developer creates. Therefore, a firm grasp of what a studio looks like and how it functions will greatly increase the quality of any tool. In addition, studios will be the main area where tools are tested making them an essential part in any tool's development.
 
+________________________________________________________________________________________________________________________________________
+
 .. _experiences:
 
 Experiences
@@ -81,6 +91,8 @@ Experiences allow a user to:
 Why it matters
 ^^^^^^^^^^^^^^
 Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component-sets <component-sets>` meet-up, and should always be kept in mind when developing an individual :ref:`tool <tools>`. At the end of the day, it is much more common for users to fuse together a wide variety of tools to make one unified experience than for them to use a single tool in isolation. 
+
+________________________________________________________________________________________________________________________________________
 
 .. _activations:
 
@@ -103,6 +115,8 @@ Activation methods are how the end user connects with the :ref:`experience <expe
  
  .. note:
   A developer has to specifically design their tool to allow for contextual changes based on the data collected to take full advantage of the activation’s potential. 
+
+________________________________________________________________________________________________________________________________________
 
 .. _databases:
 
