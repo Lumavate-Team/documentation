@@ -40,8 +40,7 @@ ________________________________________________________________________________
 Translatable Text
 ^^^^^^^^^^^^^^^^^
 
- Translatable Text allows studio users to set a lanugage specific text value. The application will then render the proper text
-based on the end user's language settings.
+ Translatable Text allows studio users to set a lanugage specific text value. The application will then render the proper text based on the end user's language settings.
 
  .. code-block:: javascript
 
