@@ -5,21 +5,21 @@ Properties
 
 The Discover endpoint enables the ability to expose configurable settings through the Lumavate studio, by returning an array of properties via JSON.
 
-A property is defined by denoting the tab, section, help text, name, label, & type using the following JSON structure:
+A property is defined by denoting the tab, section, help text, name, label, and type using the following JSON structure:
 
 .. code-block:: javascript
 
   var property = {
     'classification': 'Tab name',
     'section': 'Section name',
-    'help': 'Help text for the property.  Use Markdown to provide additional help to the studio user',
-    'name': 'Property name which will be used to reference this property',
+    'help': 'Help text for the property. Use Markdown to provide additional formatting.',
+    'name': 'Property name. This will be used to reference this property.',
     'label': 'Property label',
     'default': 'Default value'
-    'type': 'Property type - see below'
+    'type': 'Property type - for a complete list of supported properties see below'
   }
 
-The following list of types are available & can be implemented by including the appropriate JSON in the Discover endpoint.
+The following list of types are available and can be implemented by including the appropriate JSON in the Discover endpoint.
 
 * :ref:`Translatable Text`
 * :ref:`Text`
@@ -39,7 +39,7 @@ ________________________________________________________________________________
 Translatable Text
 ^^^^^^^^^^^^^^^^^
 
- Translatable Text allows the studio user to set a lanugage specific property value.  The application will then render the proper text
+ Translatable Text allows studio users to set a lanugage specific text value. The application will then render the proper text
 based on the end user's language settings.
 
  .. code-block:: javascript
@@ -53,7 +53,7 @@ ________________________________________________________________________________
 Text
 ^^^^
 
- Text allows studio users to set a text-only value.
+ Text allows studio users to set a text value.
 
  .. code-block:: javascript
 
@@ -70,7 +70,7 @@ ________________________________________________________________________________
 Color
 ^^^^^
 
- Color allows studio users to set a color via a color picker rather than setting a HEX or RGB color value.
+ Color allows studio users to set a color via a color picker.
 
  .. code-block:: javascript
 
@@ -83,7 +83,7 @@ ________________________________________________________________________________
 Image
 ^^^^^
 
- Image allows a studio user to upload an image.
+ Image allows studio users to upload an image.
 
  .. code-block:: javascript
 
@@ -96,7 +96,7 @@ ________________________________________________________________________________
 Checkbox
 ^^^^^^^^
 
- Checkbox allows studio users to set a boolean value by checking a checkbox
+ Checkbox allows studio users to set a boolean value by checking a checkbox.
 
  .. code-block:: javascript
 
@@ -109,7 +109,7 @@ ________________________________________________________________________________
 Toggle
 ^^^^^^
 
- Toggle allows studio users to set a boolean value between "on" and "off".
+ Toggle allows studio users to set a boolean value using a toggle. The toggle is labled "on" and "off".
 
  .. code-block:: javascript
 
@@ -139,7 +139,7 @@ ________________________________________________________________________________
 Numeric
 ^^^^^^^
 
- Numeric allows studio user to enter numeric values.  Numeric properties can be represented as a decimal and a min and max range can be set.
+ Numeric allows studio user to enter numeric values. Numeric properties accept decimals as input. A min and max range can be set.
 
  .. code-block:: javascript
 
@@ -161,6 +161,10 @@ Multiple Selection
  .. code-block:: python
 
     type: 'multi-select'
+    options: {
+     'value1': 'Display Value',
+     'value2': 'Display Value Two'
+   }
 
 ________________________________________________________________________________________________________________________________________
 
@@ -169,7 +173,7 @@ ________________________________________________________________________________
 Page Link
 ^^^^^^^^^
 
- Page Link allows studio users to link to another URL by either selecting a Widget from the current Experience or typing in an external URL.
+ Page Link allows studio users to link to another URL by either selecting a widget from the current experience or typing in an external URL.
 
  .. code-block:: python
 
