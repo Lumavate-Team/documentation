@@ -251,7 +251,7 @@ Command Index:
  #. :ref:`Ls Commands`
  #. :ref:`Version Commands`
  #. :ref:`Additional Info`
-
+_______________________________________________________________________________________________________________________________________
 .. _API:
 
 API
@@ -261,93 +261,90 @@ Commands that directly query the API.
 
 .. _API Delete:
 
-Delete
-++++++
+ Delete
+ ++++++
 
-Calls a delete command in order to remove a tool through the API. 
+ Calls a delete command in order to remove a tool through the API. 
 
-Example:
+ Example:
  
- .. code-block:: bash
+  .. code-block:: bash
     
-    $ luma api delete /iot/v1/containers/999?expand=all
-      Profile: dragon
+     $ luma api delete /iot/v1/containers/999?expand=all
+       Profile: dragon
 
-Options:
+ Options:
+  * ``-p, --profile "STRING"``
+  * ``--help``
 
- * ``-p, --profile "STRING"``
- * ``--help``
-
-.. note::
-   API paths cannot include sort criteria.
+ .. note::
+    API paths cannot include sort criteria.
 
 .. _API Get:
 
-Get
-+++
+ Get
+ +++
 
-Calls a get command in order to return information from the API.
+ Calls a get command in order to return information from the API.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma api get /iot/v1/containers?expand=all
-     Profile: dragon
+    $ luma api get /iot/v1/containers?expand=all
+      Profile: dragon
 
-Options: 
+ Options: 
+  * ``-p, --profile "STRING"``
+  * ``--help``
 
- * ``-p, --profile "STRING"``
- * ``--help``
-
-.. note::
-   API paths cannot include sort criteria.
+ .. note::
+    API paths cannot include sort criteria.
 
 .. _API Post:
 
-Post
-++++
+ Post
+ ++++
 
-Calls a post command in order to add a tool through the API. 
+ Calls a post command in order to add a tool through the API. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”Fire Breathing”, ”urlRef”:”fireball”, ”ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
-     Profile: dragon
+    $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”Fire Breathing”, ”urlRef”:”fireball”, ”ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
+      Profile: dragon
 
-Options: 
+ Options: 
+  * ``-p, --profile "STRING"``
+  * ``-d, --data "{JSON}, {JSON}"``
+  * ``--help``
 
- * ``-p, --profile "STRING"``
- * ``-d, --data "{JSON}, {JSON}"``
- * ``--help``
-
-.. note::
-   API paths cannot include sort criteria.
+ .. note::
+    API paths cannot include sort criteria.
 
 .. _API Put:
 
-Put
-+++
+ Put
+ +++
 
-Calls a put command in order to change a tool through the API.
+ Calls a put command in order to change a tool through the API.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”Fire Breathing”, ”urlRef”:"fireball", "ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
-     Profile: dragon
+    $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”Fire Breathing”, ”urlRef”:"fireball", "ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
+      Profile: dragon
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-d, --data "{JSON}, {JSON}"``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-d, --data "{JSON}, {JSON}"``
- * ``--help``
-
-.. note::
-   API paths cannot include sort criteria.
+ .. note::
+    API paths cannot include sort criteria.
+_______________________________________________________________________________________________________________________________________
 
 .. _Component-set:
 
@@ -358,152 +355,148 @@ Commands that create, modify, share, and delete component-set containers.
 
 .. _Component-set Access:
 
-Access
-++++++
+ Access
+ ++++++
 
-Shares and Unshares component-set containers with child organizations.
+ Shares and Unshares component-set containers with child organizations.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set access --add 99
-     Profile: dragon
-     Component set: 999
+    $ luma component-set access --add 99
+      Profile: dragon
+      Component set: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-cs, --component-set ID``
+  * ``--add ID || Name``
+  * ``--rm ID || Name``
+  * ``--absolute ID || Name``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-cs, --component-set ID``
- * ``--add ID || Name``
- * ``--rm ID || Name``
- * ``--absolute ID || Name``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set Add:
 
-Add
-+++
+ Add
+ +++
 
-Adds a component-set container. 
+ Adds a component-set container. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set add
-     Profile: dragon
-     Name: Fire Breathing
-     Url Ref: fireball
+    $ luma component-set add
+      Profile: dragon
+      Name: Fire Breathing
+      Url Ref: fireball
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``--name “STRING”``
+  * ``--url-ref “LOWERCASE STRING”``
+  * ``-path, --icon-file “FILE PATH”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json`` 
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``--name “STRING”``
- * ``--url-ref “LOWERCASE STRING”``
- * ``-path, --icon-file “FILE PATH”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json`` 
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set Ls:
 
-Ls
-++
+ Ls
+ ++
 
-Lists all component-set containers in the command center associated with the specified profile. 
+ Lists all component-set containers in the command center associated with the specified profile. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set ls
-     Profile: dragon
+    $ luma component-set ls
+      Profile: dragon
 
-Options:
+ Options:
+  * ``-p, --profile “STRING”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
+  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``--page INTAGER`` 
+  * ``--pagesize INTAGER``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
- * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
- * ``--page INTAGER`` 
- * ``--pagesize INTAGER``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set Rm:
 
-Rm
-++
+ Rm
+ ++
 
-Deletes a component-set container. This can only be done after all versions in the container have been deleted.
+ Deletes a component-set container. This can only be done after all versions in the container have been deleted.
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set rm
-     Profile: dragon
-     Component set: 999
+    $ luma component-set rm
+      Profile: dragon
+      Component set: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-cs, --component-set ID``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help`` 
 
- * ``-p, --profile “STRING”``
- * ``-cs, --component-set ID``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help`` 
-
-.. warning:: 
-   ``--table`` is deprecated.
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 
 .. _Component-set Update:
 
-Update
-++++++
+ Update
+ ++++++
 
-Updates the name or image of a component-set container. 
+ Updates the name or image of a component-set container. 
 
-Example:
+ Example:
 
-.. code-block:: bash
+ .. code-block:: bash
    
-   $ luma component-set update --name “Frosty Breath”
-     Profile: dragon
-     Component set: 999
+    $ luma component-set update --name “Frosty Breath”
+      Profile: dragon
+      Component set: 999
 
-Options: 
+ Options: 
+  * ``-p, --profile “STRING”``
+  * ``-cs, --component-set ID``
+  * ``--name “STRING”``
+  * ``-path, --icon-file “FILE PATH”``
+  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--json``
+  * ``--table``
+  * ``--help``
 
- * ``-p, --profile “STRING”``
- * ``-cs, --component-set ID``
- * ``--name “STRING”``
- * ``-path, --icon-file “FILE PATH”``
- * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
- * ``--json``
- * ``--table``
- * ``--help``
-
-.. warning:: 
-   ``--table`` is deprecated. 
-   Use ``--format`` to see JSON values organized in table format.
+ .. warning:: 
+    ``--table`` is deprecated. 
+    Use ``--format`` to see JSON values organized in table format.
+_______________________________________________________________________________________________________________________________________
 
 .. _Component-set-version:
 
