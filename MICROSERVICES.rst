@@ -19,31 +19,35 @@ Microservices should be used when an application:
 Accepted File Types
 ^^^^^^^^^^^^^^^^^^^
 
-Microservices need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
+ Microservices need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
 
-For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
+ For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
 
 .. _API Endpoints M:
 
 Implementing API Endpoints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Any microservice developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
+ All endpoints will contain two dynamic parts and a route: 
+ 
+  The first part corresponds to the type of microservice uploaded denoted as service_type. 
+ 
+  The second part corresponds to the logical location of the microservice denoted as integration_cloud. 
 
-Each endpoint will contain dynamic parts that correspond to both the type of microservice uploaded (denoted as service_type) and the logical location of the microservice (denoted as integration_cloud). Both of these URI parts are in the form of a string and should be handled dynamically.
+  .. code-block:: python
+   
+     /<string:integration_cloud>/<string:widget_type>/<route>
 
-.. code-block:: python
+ Some endpoints may also contain the specific instance of the widget (instance_id).
    
-   /<string:integration_cloud>/<string:widget_type>/<route>
+  .. code-block:: python
    
-   OR
-   
-   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/<route>
+     /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/<route>
 
 Required Endpoints
 ++++++++++++++++++
 
- All microservices require the following API Endpoints:
+ Any microservice developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
 
  #. DISCOVER
 
