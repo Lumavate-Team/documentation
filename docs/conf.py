@@ -131,7 +131,7 @@ html_short_title = 'Lumavate Dev Portal'
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = None
+html_favicon = ../images/icon.PNG
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -145,7 +145,7 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-html_last_updated_fmt = None
+html_last_updated_fmt = '%b, d%, Y%'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
