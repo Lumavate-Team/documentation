@@ -65,9 +65,9 @@ language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
-#today = ''
+today = ''
 # Else, today_fmt is used as the format for a strftime call.
-today_fmt = '%M, %Y'
+#today_fmt = ''
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -145,7 +145,7 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-html_last_updated_fmt = ' %Y '
+html_last_updated_fmt = ''
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
