@@ -126,7 +126,7 @@ html_short_title = 'Lumavate Dev Portal'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = '../images/icon.ico'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -145,7 +145,7 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-html_last_updated_fmt = '%B %d, %Y'
+html_last_updated_fmt = '| %B %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -165,7 +165,7 @@ html_last_updated_fmt = '%B %d, %Y'
 #html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
-html_split_index = True
+html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
 html_show_sourcelink = False
@@ -210,7 +210,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = '../images/logo.PNG'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -220,7 +220,7 @@ latex_documents = [
 #latex_show_pagerefs = False
 
 # If true, show URL addresses after external links.
-#latex_show_urls = False
+latex_show_urls = True
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
@@ -239,7 +239,7 @@ man_pages = [
 ]
 
 # If true, show URL addresses after external links.
-#man_show_urls = False
+man_show_urls = True
 
 
 # -- Options for Texinfo output -------------------------------------------
@@ -260,7 +260,7 @@ texinfo_documents = [
 #texinfo_domain_indices = True
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
-#texinfo_show_urls = 'footnote'
+texinfo_show_urls = 'no'
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
