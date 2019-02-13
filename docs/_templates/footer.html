@@ -1,5 +1,3 @@
-{%- extends "sphinx_rtd_theme/footer.html" %}
-
 <footer>
   {% if (theme_prev_next_buttons_location == 'bottom' or theme_prev_next_buttons_location == 'both') and (next or prev) %}
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
@@ -23,8 +21,10 @@
           {% trans copyright=copyright|e %}&#169; Copyright {{ copyright }}.{% endtrans %}
         {%- endif %}
       {%- endif %}
-      {%- if last_updated %}
+      {%- elif last_updated %}
+       <span class="lastupdated">
         {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+       </span>
       {%- endif %}
       {%- if show_sphinx %}
         {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
