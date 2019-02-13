@@ -18,7 +18,8 @@ import os
 def setup(app):
     app.add_stylesheet('custom.css')
 # => <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-    
+
+style_nav_header_background = '#A5C3D6'
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
