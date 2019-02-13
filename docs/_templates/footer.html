@@ -22,9 +22,9 @@
       {%- endif %}
     {%- endif %}
 
-    {%- if last_updated %}
+    {%- if last_updated_fmt != None %}
        <span class="lastupdated">
-        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}{% endtrans %}
        </span>
     {%- endif %}
     </p>
