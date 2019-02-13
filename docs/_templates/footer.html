@@ -22,7 +22,7 @@
       {%- endif %}
     {%- endif %}
 
-    {%- elif last_updated %}
+    {%- if last_updated %}
        <span class="lastupdated">
         {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
        </span>
