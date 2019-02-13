@@ -40,7 +40,7 @@ In the following sections, we will explain how to:
 * Install :ref:`Docker locally <Installing Locally>`
 * Setup the Lumavate :ref:`prebuilt containers <Setup Lumavate Containers>`
 * Create your :ref:`own web-devlopment stack <Setup Custom Docker Containers>` 
-* :ref:`Upload your web-devlopment stack <Uploading Docker>` to Lumavate
+* :ref:`Upload your web-devlopment stack <Uploading Docker Containers>` to Lumavate
 
 .. _Installing Locally:
 
