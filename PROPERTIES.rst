@@ -3,9 +3,9 @@
 Properties
 ----------
 
-The Discover endpoint enables the ability to expose configurable settings through the Lumavate studio, by returning an array of properties via JSON.
+The Discover endpoint enables the developer to expose configurable settings through the Lumavate :ref:`studio <studio>`, by returning an array of properties via JSON.
 
-A property is defined by denoting the tab, section, help text, name, label, and type using the following JSON structure:
+A property is defined by denoting the tab name, section name, help text, property name, property label, default value, and property type using the following JSON structure:
 
 .. code-block:: javascript
 
@@ -13,10 +13,10 @@ A property is defined by denoting the tab, section, help text, name, label, and 
     'classification': 'Tab name',
     'section': 'Section name',
     'help': 'Help text for the property. Use Markdown to provide additional formatting.',
-    'name': 'Property name. This will be used to reference this property.',
-    'label': 'Property label',
+    'name': 'Property name. Use this when referencing the property.',
+    'label': 'Property label. The name of the field shown in the studio.',
     'default': 'Default value'
-    'type': 'Property type - for a complete list of supported properties see below'
+    'type': 'Property type. For a complete list of supported properties, see below.'
   }
 
 The following list of types can be implemented by including the appropriate JSON in the Discover endpoint.
@@ -40,7 +40,7 @@ ________________________________________________________________________________
 Translatable Text
 ^^^^^^^^^^^^^^^^^
 
- Translatable Text allows studio users to set a lanugage specific text value. The application will then render the proper text based on the end user's language settings.
+ Translatable Text allows :ref:`studio <studio>` users to set a lanugage specific text value. The application will then render the proper text based on the end user's language settings.
 
  .. code-block:: javascript
 
@@ -53,7 +53,7 @@ ________________________________________________________________________________
 Text
 ^^^^
 
- Text allows studio users to set a text value.
+ Text allows :ref:`studio <studio>` users to set a text value.
 
  .. code-block:: javascript
 
@@ -70,7 +70,7 @@ ________________________________________________________________________________
 Color
 ^^^^^
 
- Color allows studio users to set a color via a color picker.
+ Color allows :ref:`studio <studio>` users to set a color value via a color picker.
 
  .. code-block:: javascript
 
@@ -83,7 +83,7 @@ ________________________________________________________________________________
 Image
 ^^^^^
 
- Image allows studio users to upload an image.
+ Image allows :ref:`studio <studio>` users to upload an image.
 
  .. code-block:: javascript
 
@@ -96,7 +96,7 @@ ________________________________________________________________________________
 Checkbox
 ^^^^^^^^
 
- Checkbox allows studio users to set a boolean value by checking a checkbox.
+ Checkbox allows :ref:`studio <studio>` users to set a boolean value by checking a checkbox.
 
  .. code-block:: javascript
 
@@ -109,7 +109,7 @@ ________________________________________________________________________________
 Toggle
 ^^^^^^
 
- Toggle allows studio users to set a boolean value using a toggle. The toggle is labled "on" and "off".
+ Toggle allows :ref:`studio <studio>` users to set a boolean value by toggling a toggle on or off.
 
  .. code-block:: javascript
 
@@ -122,14 +122,14 @@ ________________________________________________________________________________
 Dropdown
 ^^^^^^^^
 
- Dropdown presents studio users with a list of options. The user is able to select a single value.
+ Dropdown allows :ref:`studio <studio>` users to select a **single** value from a list of options.
 
  .. code-block:: javascript
 
    type: 'dropdown',
    options: {
-     'value1': 'Display Value',
-     'value2': 'Display Value Two'
+     'value1': 'Option One',
+     'value2': 'Option Two'
    }
 
 ________________________________________________________________________________________________________________________________________
@@ -139,7 +139,7 @@ ________________________________________________________________________________
 Numeric
 ^^^^^^^
 
- Numeric allows studio user to enter numeric values. Numeric properties accept decimals as input. A min and max range can be set.
+ Numeric allows :ref:`studio <studio>` users to enter a numeric value. Numeric accepts decimals as input. A min and max range can be set.
 
  .. code-block:: javascript
 
@@ -156,14 +156,14 @@ ________________________________________________________________________________
 Multiple Selection
 ^^^^^^^^^^^^^^^^^^
 
- Multiple selection presents studio users with a list of options. The user is able to select multiple options.
+ Multiple selection allows :ref:`studio <studio>` users to select **multiple** values from a list of options.
 
  .. code-block:: python
 
     type: 'multi-select'
     options: {
-     'value1': 'Display Value',
-     'value2': 'Display Value Two'
+     'value1': 'Option One',
+     'value2': 'Option Two'
    }
 
 ________________________________________________________________________________________________________________________________________
@@ -173,7 +173,7 @@ ________________________________________________________________________________
 Page Link
 ^^^^^^^^^
 
- Page Link allows studio users to link to another URL by either selecting a widget from the current experience or typing in an external URL.
+ Page Link allows :ref:`studio <studio>` users to link to another URL by either selecting a :ref:`widget <widgets>` from the current :ref:`experience <experiences>` or by typing in a URL.
 
  .. code-block:: python
 
