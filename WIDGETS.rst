@@ -120,7 +120,7 @@ Optional Endpoints
 
  * AFTER_CREATE_VERSION
   
-   This endpoint is called AFTER the `properties <properties>` are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to adjust property data after saving.
+   This endpoint is called AFTER the :ref:`properties <properties>` are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to adjust property data after saving.
 
    .. code-block:: python
 
