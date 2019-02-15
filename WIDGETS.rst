@@ -7,15 +7,15 @@ A widget is a reusable web application hosted within a Docker container.
 
 Widgets can consist of one or more pages that perform a specific function. There are times when a widget will require another :ref:`tool<tools>` to provide any solid functionality, but they should always strive to be self-contained, stand-alone applications. 
 
-An experience cannot be created without the presence of at least one widget. Widgets are the backbone of an :ref:`experience<experiences>` allowing the user to create customizable experiences with specific functionality.  
+Widgets are the backbone of an :ref:`experience<experiences>` providing :ref:`studio <studio>` users with a customizable UI that performs a specific function. An experience cannot be created without the presence of at least one widget.  
  
 Widgets should be used when the application:
  * Requires server-side hosted code
- * Implements multilabel pages
+ * Implements multiple pages
  * Contains a stand-alone function with accompanying UI
  
  .. note::
-    Widgets can function as shells for microservices or component-sets providing a convenient place for the studio user to customize the UI. These widgets can then be used to create basic web or data display pages.
+    Widgets can function as shells for microservices or component-sets providing a convenient place for the studio user to customize the UI. These widgets can then be used to create basic web pages or data displays.
 
 .. _Accepted File Types W:
 
@@ -24,7 +24,7 @@ Accepted File Types
 
  Widgets need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
 
- For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
+ For more information about uploading :ref:`tools <tools>` to the platform, consult :ref:`Uploading A Tool`. 
 
 .. _API Endpoints W:
 
@@ -56,7 +56,7 @@ Required Endpoints
 
  #. DISCOVER
 
-    This endpoint informs the platform via a JSON payload of an array of properties which properties exist for the widget. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the widget does not require any properties.
+    This endpoint informs the platform via a JSON payload which :ref:`properties <properties>` exist for the widget. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the widget does not require any properties.
 
     Sent:
 
@@ -111,7 +111,7 @@ Optional Endpoints
 
  * ON_CREATE_VERSION
   
-   This endpoint is called BEFORE the properties are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to modify and/or override property data before saving.
+   This endpoint is called BEFORE the :ref:`properties <properties>` are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to modify and/or override property data before saving.
 
    .. code-block:: python
 
@@ -120,7 +120,7 @@ Optional Endpoints
 
  * AFTER_CREATE_VERSION
   
-   This endpoint is called AFTER the properties are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to adjust property data after saving.
+   This endpoint is called AFTER the `properties <properties>` are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to adjust property data after saving.
 
    .. code-block:: python
 
