@@ -5,9 +5,9 @@ Component-Sets
 
 Component-sets are bundled web components that can be registered for use by :ref:`widgets <widgets>` and :ref:`microserivces <microservices>` within :ref:`experiences<experiences>`. For more information on web components, please consult `webcompoents.org <https://www.webcomponents.org/introduction>`_.  
 
-Any component-set upon upload, regardless of framework, can be used by any widget or microservice via supplementing the distributable with a metadata file and proper tags. For widgets, these tags allow extra UI features and functionality to be distributed to a variety of different widgets. For microservices, these tags allow the component-set to compile and redistribute microservice information to other tools.
+Any component-set upon upload, regardless of framework, can be used by any :ref:`widget <widgets>` or :ref:`microservice <microservices>` via supplementing the distributable with a metadata file and proper tags. For widgets, these tags allow extra UI features and functionality to be distributed acrosse multiple widgets. For microservices, these tags allow the component-set to compile and redistribute microservice information to other :ref:`tools <tools>`.
 
-Component-sets cannot be used to create an experience without the presence of a widget. Instead, component-sets help by adding additional UI and functions that can be used by multiple tools.
+Component-sets cannot be used to create an experience without the presence of a :ref:`widget <widgets>`. Instead, component-sets help by adding additional UI and functions that can be used by multiple :ref:`tools <tools>`.
 
 Component-sets should be used when an application:
  * Provides client-side rendering and logic
@@ -19,9 +19,9 @@ Component-sets should be used when an application:
 Accepted File Types
 ^^^^^^^^^^^^^^^^^^^
 
- Component-sets must be a **compressed zip file** in order to be uploaded to the Lumavate platform. The compressed file needs to contain a schema file defined in JSON that defines what the component-sets properties are and the actual distributable web component. 
+ Component-sets must be a **compressed zip file** in order to be uploaded to the Lumavate platform. The compressed file needs to contain a schema file written in JSON that defines what the component-sets :ref:`properties <properties>` are and a fiel with the actual distributable web component. 
 
- For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
+ For more information about uploading :ref:`tools <tools>` to the platform, consult :ref:`Uploading A Tool`. 
 
 .. _metadata:
 
