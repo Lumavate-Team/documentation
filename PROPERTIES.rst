@@ -1,5 +1,3 @@
-.. _properties:
-
 Properties
 ----------
 
@@ -40,7 +38,7 @@ ________________________________________________________________________________
 Translatable Text
 ^^^^^^^^^^^^^^^^^
 
- Translatable Text allows :ref:`studio <studio>` users to set a lanugage specific text value. The application will then render the proper text based on the end user's language settings.
+ Translatable Text allows :ref:`studio <studio>` users to set a language specific text value. The application will then render the proper text based on the end user's language settings.
 
  .. code-block:: javascript
 
@@ -177,4 +175,4 @@ Page Link
 
  .. code-block:: python
 
-    type: 'page-link'
+    type: 'page-link' 
