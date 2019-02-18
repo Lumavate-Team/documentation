@@ -19,7 +19,6 @@ def setup(app):
     app.add_stylesheet('custom.css')
 # => <link rel="stylesheet" href="_static/custom.css" type="text/css" />
 
-style_nav_header_background = '#A5C3D6'
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -120,7 +119,7 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Lumavate Developer Portal'
+html_title = 'Lumavate Development Portal'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = 'Lumavate Dev Portal'
@@ -166,7 +165,7 @@ html_last_updated_fmt = '%B %d, %Y'
 #html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
-html_split_index = False
+html_split_index = True
 
 # If true, links to the reST sources are added to the pages.
 html_show_sourcelink = False
