@@ -39,8 +39,8 @@ Installation
 ------------
 The CLI can be installed two different ways:
 
- #. Through Pip
- #. From the source.
+ #. :ref:`Through Pip<Installation Pip>`
+ #. :ref:`From the source<Installation Source>`.
 
 .. _Installation Pip:
 
@@ -67,7 +67,7 @@ From Source
  Installing the CLI as a Non-admin:
 
   #. Clone this repo.
-  #. CD into the CLI dir
+  #. CD into the CLI directory
   #. Run:
   
      .. code-block:: bash
@@ -86,7 +86,7 @@ From Source
  Installing the CLI as an Admin:
 
   #. Clone this repo.
-  #. CD into the CLI dir
+  #. CD into the CLI directory
   #. Run:
    
      .. code-block:: bash
@@ -103,7 +103,7 @@ ________________________________________________________________________________
 Provisioning Credentials
 -------------------------
 
-There are two types of configuration in the CLI: configuring environments and configuring profiles.
+There are two types of configuration in the CLI: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
     
     * **Environments** know how to get and refresh tokens so the user stays authorized with the platform. They also set what command centers or studios you have access to.
     * **Profiles** give the user a company context in a specific environment which is required by most of the platform API. They set what studio or command center the user is modifying.  
@@ -113,7 +113,7 @@ There are two types of configuration in the CLI: configuring environments and co
 Setting-Up Environments:
 ^^^^^^^^^^^^^^^^^^^^^^^
 
- You can use either the Lumavate pre-configured environment or you can setup your own environment configuration.
+ You can use either the Lumavate pre-configured environment or you can set up your own environment configuration.
 
  Using the preset configuration:
 
@@ -150,14 +150,14 @@ Setting-Up Environments:
           Client secret: <<user clientSecret>>
 
  .. note:: 
-    The CLI uses Client Id and Client Secret to associate a user’s context to a machine. From this point forward, user will refer to the client id and client secret information used to setup the environment in the CLI. 
+    The CLI uses Client Id and Client Secret to associate a user’s context to a machine. From this point forward, user will refer to the client id and client secret information used to set up the environment in the CLI. 
 
 .. _Provisioning Profiles:
   
 Setting up Profiles:
 ^^^^^^^^^^^^^^^^^^^
 
- Profiles can be setup using the Lumavate pre-set command or using your own configuration. 
+ Profiles can be set up using the Lumavate pre-set command or using your own configuration. 
 
  You will need to have configured an environment on your machine through the CLI to configure a profile.  
 
@@ -176,7 +176,7 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-         Profile Name: <<name of profile in CLI>>
+         Profile Name: <<profile’s name in the CLI>>
 
   #. You will then be presented with a list of organizations. Pick the one you want to edit with this profile. It should look like this:
    
@@ -201,7 +201,7 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-         Profile Name: <<name of profile in CLI>>
+         Profile Name: <<profile’s name in the CLI>>
 
   #. A list of environments will appear. Select which environment you wish to associate with the profile:
    
@@ -1357,7 +1357,7 @@ Add
 Ls
 ++
 
- Lists all profiles associated with the client id and secrete.
+ Lists all profiles associated with the Client Id and Secrete.
 
  Example:
 
