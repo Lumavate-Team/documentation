@@ -49,7 +49,7 @@ Installing Locally
 
  Docker must be installed on your development machine in order to upload to lumavate the :ref:`tool <tools>` you are creating. Docker must be added to your local envrioment for you to acces the :ref:`Lumavate Test Harness <thor>`.
 
- To set-up Docker on your local machine, download at least the Community Edition of Docker. The community edition is free and can be downloaded from the `Docker site: <https://www.docker.com/community-edition>`_.
+ To set-up Docker on your local machine, download at least the Community Edition of Docker. The community edition is free and can be downloaded from the `Docker site <https://www.docker.com/community-edition>`_.
 
  Instructions on how to install Docker are avalible through `the Docker help documentation <https://docs.docker.com/get-started/>`_.
 
