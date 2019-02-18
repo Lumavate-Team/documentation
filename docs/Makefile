@@ -1,12 +1,5 @@
 # Makefile for Sphinx documentation
-# Emily's attempt to make sphinx docs on Github (I will remove if it does not work)
-.PHONY: gh-pages
-.ONESHELL:
-gh-pages:
-   rm -rf /tmp/gh-pages
-   cp -r $(BUILDDIR)/html /tmp/gh-pages
-   git checkout gh-pages
-   cd .. && rm -rf * && cp -r /tmp/gh-pages/* . && git add . && git commit -m "Updated gh-pages" && git push && git checkout master
+# 
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
