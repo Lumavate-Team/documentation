@@ -255,7 +255,7 @@ Command Index:
  #. :ref:`Version`
  #. :ref:`Widget`
  #. :ref:`Widget-version`
- #. :ref:`Ls Commands`
+ #. :ref:`Ls Filters`
  #. :ref:`Version Commands`
  #. :ref:`Additional Info`
 _______________________________________________________________________________________________________________________________________
