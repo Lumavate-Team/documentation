@@ -56,7 +56,7 @@
        display: block;
        font-size: .8em;
        line-height: 1.6em;
-       color: #333;
+       color: #000;
      }
      
      /* List level background colors */
@@ -109,8 +109,11 @@
      .wy-menu-vertical li.toctree-l3 a:hover span.toctree-expand {
        color: #FD9B00;
      }
-     .wy-menu-vertical li.toctree-l2 a:hover span.toctree-expand{
+     .wy-menu-vertical li.toctree-l2 span.toctree-expand{
         color: #FFFFFF;
+     }
+     .wy-menu-vertical li.on a:hover span.toctree-expand, .wy-menu-vertical li.current>a:hover span.toctree-expand {
+           color: #000;
      }
    </style>
   {% endblock %}
