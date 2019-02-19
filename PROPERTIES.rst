@@ -1,3 +1,5 @@
+.. _Properties:
+
 Properties
 ----------
 
