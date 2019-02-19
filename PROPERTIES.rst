@@ -5,6 +5,7 @@ Properties
 
 The Discover endpoint enables the developer to expose configurable settings through the Lumavate :ref:`studio <studio>`, by returning an array of properties via JSON.
 
+
 A property is defined by denoting the tab name, section name, help text, property name, property label, default value, and property type using the following JSON structure:
 
 .. code-block:: javascript
