@@ -10,51 +10,61 @@
 
    <style>
     
-     /* Sidebar header (and topbar for mobile) Colors */
+/* Sidebar header (and topbar for mobile) Colors */
      
     .wy-side-nav-search, .wy-nav-top {
       background: #A5C3D6;
     }
     
-     /* Main Sidebar Colors */
-     
+/* Main Sidebar Colors */
+    
+     /* Background/First Level */ 
     .wy-nav-side {
       background: #29516D;
     }
-     .wy-menu-vertical li span.toctree-expand{
-       color: #A5C3D6;
-     }
-     .wy-menu-vertical li span.toctree-expand, .wy-menu-vertical li.on a span.toctree-expand, .wy-menu-vertical li.current>a span.toctree-expand {
-       color:#A5C3D6;
-     }
      
-     /*Selected Value Colors */
+/*Selected Value Colors */
+     
+     /* All Levels Background And Text */
      .wy-menu-vertical li.on a, .wy-menu-vertical li.current>a {
        color: #070007 !important;
        background-color: #fff !important;
      }
+     
+     /* First Level Background */
      /*.wy-menu-vertical li.toctree-l2.current>a{
-       background: #FFFFFF;
-     }
-     .wy-menu-vertical li.toctree-l1.current>a {
-       border-bottom: solid 1px #FFFFFF;
-       border-top: solid 1px #FFFFFF;
-     }
-     .wy-menu-vertical li.toctree-l3.current>a{
-       background: #FFFFFF !important;
-     }
-     .wy-menu-vertical li.on a, .wy-menu-vertical li.current>a{
        background: #FFFFFF;
      }*/
      
-     /* + Button Colors */
+     /* Fist Level Boarders */
+     /*.wy-menu-vertical li.toctree-l1.current>a {
+       border-bottom: solid 1px #FFFFFF;
+       border-top: solid 1px #FFFFFF;
+     }*/
      
+     /* Second Level Background */
+     /*.wy-menu-vertical li.toctree-l3.current>a{
+       background: #FFFFFF !important;
+     }*/
+     
+     /* Third Level Backgound */
+     /*.wy-menu-vertical li.on a, .wy-menu-vertical li.current>a{
+       background: #FFFFFF;
+     }*/
+     
+/* + Button Colors */
+     
+     /* First Level Buttons */
      .wy-menu-vertical li.toctree-l2 span.toctree-expand{
        color: #F0F0F0;
      }
+     
+     /* All Other Level Buttons */
      .wy-menu-vertical li span.toctree-expand, .wy-menu-vertical li.on a span.toctree-expand, .wy-menu-vertical li.current>a span.toctree-expand.current>a{
        color: #F0F0F0; 
      }
+     
+     /* Selected Item Buttons */
      .wy-menu-vertical li.on a span.toctree-expand, .wy-menu-vertical li.current>a span.toctree-expand {
        display: block;
        font-size: .8em;
@@ -62,19 +72,26 @@
        color: #000;
      }
      
-     /* List level background colors */
+/* List level background colors */
      
+     /* Second Level */
      .wy-menu-vertical li.toctree-l2 a{
        background-color: #305f80;
      }
+     
+     /* Third Level */
      .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a{
        background: #376d92;
      }
+     
+     /* Forth Level */
      .wy-menu-vertical li.toctree-l3.current li.toctree-l4>a{
        background: #3e7aa5;
      }
      
-     /* Text Color */
+/* Text Color */
+     
+     /* First Level */
      .wy-menu-vertical a {
        display: inline-block;
        line-height: 18px;
@@ -84,42 +101,59 @@
        font-size: 90%;
        color: #f3f6f6;
      }
+     
+     /* All Lower Levels */
      .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a {
        color: #f3f6f6 !important;
      }
-     .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a{
-       color: #d9d9d9;
-     }
+     
+     /* All Lower Levels Selected Item Text Color */
      .wy-menu-vertical li.on a, .wy-menu-vertical li.current>a{
        color: #070007 !important;
      }
 
-     /* Hover */
+/* Hover */
+     
+     /* First Level */
      .wy-menu-vertical a:hover {
        background-color: #FD9B00;
      }
+     
+     /* All Other Levels */
      .wy-menu-vertical li.current a:hover {
        background-color: #FD9B00;
      }
+     
+     /* First Level Selected*/
      .wy-menu-vertical li.toctree-l1.current>a {
        background: #FFFFFF !important;
        border-bottom: solid 1px #FFFFFF;
        border-top: solid 1px #FFFFFF;
      }
+     
+     /* All Other Levels Selected */
      .wy-menu-vertical li.toctree-l2.current>a {
        background: #FFFFFF !important;
      }
      
-     /* Hover Button */
+/* Hover Button */
+     
+     /* First Level */
      .wy-menu-vertical a:hover span.toctree-expand {
        color: #FFFFFF;
      }
+     
+     /* All Levels Selected */
      .wy-menu-vertical li.on a:hover span.toctree-expand, .wy-menu-vertical li.current>a:hover span.toctree-expand {
            color: #000 !important;
      }
+     
+     /* Second Level */
      .wy-menu-vertical li.toctree-l2 a:hover span.toctree-expand{
         color: #FFFFFF;
      }
+     
+     /* Third Level */
      .wy-menu-vertical li.toctree-l3 a:hover span.toctree-expand {
        color: #FD9B00;
      }
