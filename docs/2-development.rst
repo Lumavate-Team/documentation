@@ -5,7 +5,7 @@
 Developing Tools
 ================
 
-There are three types of :ref:`tools <tools>` that the Lumavate platform uses: widgets, microservice, and component-sets. 
+There are three types of tools that the Lumavate platform uses: widgets, microservice, and component-sets. 
 
  :ref:`Widgets` are the base that the other tools add on to and build off of. This tool should always allow studio users to customize part of the end user UI. 
 
@@ -18,7 +18,7 @@ All Tools consist of four primary parts:
 #. The :ref:`Docker container <Setting-up Docker>` that provides the operating environment needed to fully execute and render the tool.
 #. A standard set of :ref:`widget REST APIs <API Endpoints W>`, :ref:`microservice REST APIs <API Endpoints M>`, and :ref:`component-set metadata file <metadata>` that simplifies common tasks and provides key capabilities to efficiently integrate the tool into the broader Lumavate platform.
 #. A :ref:`list of properties <properties>` studio users can set to adopt the tool functionality to their specific experience.
-#. The :ref:`code <sample code>` that implements the tool's specific logic and capability (back-end processing, web page(s) rendering, etc.).
+#. The :ref:`code <Code Samples>` that implements the tool's specific logic and capability (back-end processing, web page(s) rendering, etc.).
 
 ________________________________________________________________________________________________________________________________________
 
