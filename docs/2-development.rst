@@ -7,18 +7,18 @@ Developing Tools
 
 There are three types of :ref:`tools <tools>` that the Lumavate platform uses: :ref:`widgets <widgets>`, :ref:`microservice <microservices>`, and :ref:`component-sets <component-sets>`. 
 
- :ref:`Widgets` are the base that the other :ref:`tools <tools>` add on to and build off of. This tool should always allow :ref:`studio <studio>` users to customize part of the end user UI an functionality. 
+ :ref:`Widgets` are the base that the other tools add on to and build off of. This tool should always allow studio users to customize part of the end user UI. 
 
- :ref:`Microservices` are the data-driven portion of :ref:`experiences <experiences>`. This :ref:`tool <tools>` takes information that the :ref:`studio <studio>` user provides to create a recurring service or data-set that the rest of the tools can use. Microservices almost never have their own end user UI, instead they add specific functionality to a :ref:`widget <widgets>`.
+ :ref:`Microservices` are the data-driven portion of experiences. This tool takes information that studio users provide to create a recurring service or data-set that the rest of the tools can use. Microservices almost never have their own end user UI, instead they add functionality to widgets.
 
- :ref:`Component-sets` are elements that are used by :ref:`widgets <widgets>` or :ref:`microservices <microservices>`. This :ref:`tool <tools>` has two primary functions. They allow :ref:`studio <studio>` users to redistribute information collected in one widget or microservice to another. They also provide identical functionality across multiple widgets. Component-sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
+ :ref:`Component-sets` are elements that are used by widgets or microservices. This tool has two primary functions. It allows studio users to redistribute information collected in one widget or microservice to another. It also provides identical functionality across multiple widgets. Component-sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
 
 All Tools consist of four primary parts:
 
 #. The :ref:`Docker container <Setting-up Docker>` that provides the operating environment needed to fully execute and render the tool.
-#. A standard set of REST APIs for :ref:`widgets <API Endpoints W>` and :ref:`microservices <API Endpoints M>` as well as a metadata file for :ref:`component-sets <metadata>` that simplifies common tasks and provides key capabilities to efficiently integrate the tool into the broader Lumavate platform.
-#. A list of :ref:`properties <properties>` studio users can set to adopt the tool functionality to their specific experience
-#. The :ref:`code` that implements the tool's specific logic & capability (back-end processing, web page(s) rendering, etc.)
+#. A standard set of :ref:`widget REST APIs <API Endpoints W>`, :ref:`microservice REST APIs <API Endpoints M>`, and :ref:`component-set metadata file <metadata>` that simplifies common tasks and provides key capabilities to efficiently integrate the tool into the broader Lumavate platform.
+#. A :ref:`list of properties <properties>` studio users can set to adopt the tool functionality to their specific experience.
+#. The :ref:`code <sample code>` that implements the tool's specific logic and capability (back-end processing, web page(s) rendering, etc.).
 
 ________________________________________________________________________________________________________________________________________
 
@@ -27,7 +27,9 @@ ________________________________________________________________________________
 Setting-up Docker
 -----------------
 
-To build a :ref:`tool <tools>`, a dedicated Docker container for the tool needs to be uploaded & registered with the Lumavate platform. The platform provides pre-built Docker containers for a starting point as part of our total solution. However, a developer can use any preferred web development technology stack. The developer will need to build his/her own Docker container if the preferred stack is not listed as a pre-built Docker template.
+To build a tool, a dedicated Docker container for the tool needs to be uploaded and registered with the Lumavate platform. 
+
+The platform provides pre-built Docker containers to help developers get started as part of our total solution. However, a developer can use any preferred web development technology stack. The developer will need to build his/her own Docker container if the preferred stack is not listed as a pre-built Docker template.
 
 We currently provide the following Docker container types as a template:
 
@@ -47,16 +49,16 @@ In the following sections, we will explain how to:
 Installing Locally
 ^^^^^^^^^^^^^^^^^^
 
- Docker must be installed on your development machine in order to upload to lumavate the :ref:`tool <tools>` you are creating. Docker must be added to your local envrioment for you to acces the :ref:`Lumavate Test Harness <thor>`.
+ Docker must be installed on your development machine in order to upload a tool to the Lumavate platform. Docker must be added to your local envrioment for you to acces the :ref:`Lumavate Test Harness <thor>`.
 
- To set-up Docker on your local machine, download at least the Community Edition of Docker. The community edition is free and can be downloaded from the `Docker site <https://www.docker.com/community-edition>`_.
+ To setup Docker on your local machine, download at least the Community Edition of Docker. The community edition is free and can be downloaded from the `Docker site <https://www.docker.com/community-edition>`_.
 
  Instructions on how to install Docker are avalible through `the Docker help documentation <https://docs.docker.com/get-started/>`_.
 
- Docker provides troubleshooting information for both `Windows <https://docs.docker.com/docker-for-windows/troubleshoot/>`_ and `Mac <https://docs.docker.com/docker-for-mac/troubleshoot/>`_ if you encounter issues with your download.
+ Docker provides troubleshooting information for both `Windows <https://docs.docker.com/docker-for-windows/troubleshoot/>`_ and `Macs <https://docs.docker.com/docker-for-mac/troubleshoot/>`_ if you encounter issues with your download.
 
- .. note::
-   Lumavate relies heavily on Docker for its tool develpoment. Many of the commands, options, and syntax that are required when devloping   a tool will come from Docker. Therfore, we recommend that you learn more about Docker and how it works at: https://docs.docker.com.
+ .. tip::
+   Lumavate relies heavily on Docker for its tool develpoment. Many of the commands, options, and syntax that are required when devloping a tool will come from Docker. Therfore, we recommend that you learn more about Docker and how it works at: https://docs.docker.com.
 
 .. _Setup Lumavate Containers:
 
@@ -70,6 +72,8 @@ Build The Container
 +++++++++++++++++++
 
  #. Clone the `Lumavate sample repo <https://github.com/Lumavate-Team/widget-base-go>`_. 
+ 
+ #. Open a command window, and CD into the directory where you downloaded the sample repo.
 
  #. Run the following command from the root directory of the repo.
  
@@ -77,7 +81,8 @@ Build The Container
  
   	docker build --no-cache --rm -t gobasewidget:1.0 .
 
-    The ``--no-cache`` command specifies that cache will not be used when building containers. The ``--rm`` command removes intermediate containers after a successful builld.
+    The ``--no-cache`` command specifies that cache will not be used when building containers. 
+    The ``--rm`` command removes intermediate containers after a successful builld.
 
  #. An image will be built with the sample Docker file. 
 
@@ -91,15 +96,15 @@ Run The Container
 
  A container must finish building before it can be run. 
 
- #. To start the container, run the following command.
+ #. Run the following command in a command window.
  
     .. code-block:: go
 	
 	docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
 
-    The ``-d`` option puts the container in detached mode. while, the ``-p 5000:8080`` command maps port 5000 on the machine to port 8080 on the container. Finally, the widget directory is maped to /go/src/widget directory inside the container through the ``--volume "$(pwd)"/widget:/go/src/widget`` command. 
- 
-    Mapping to the widget directory allows the developer to modify files in his/her local widget directory, and it will reload the process when the files change. 
+    The ``-d`` option puts the container in detached mode.
+    The ``-p 5000:8080`` command maps port 5000 on the machine to port 8080 on the container.
+    The ``--volume "$(pwd)"/widget:/go/src/widget`` command mapes the widget directory to /go/src/widget directory inside the container. Mapping to the widget directory allows the developer to modify files in his/her local widget directory, and it will reload the process when the files change. 
 
  #. The container will now be running in detached mode. A sample of the tool will be running on http://localhost:5000.
 
@@ -111,7 +116,7 @@ Run The Container
 Check The Logs
 ++++++++++++++
 
- #. Run the following command to collect container info.
+ #. Open a command window, and Run the following command to collect container info.
 
     .. code-block:: go
  
@@ -138,7 +143,7 @@ Check The Logs
 Setup Custom Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- Any Docker container may be used as a Tool within Lumavate. Custom Docker containers can be used to create the precise runtime environment needed for a given tool.
+ Any Docker container may be used to create Tools within Lumavate. Custom Docker containers can be used to create the precise runtime environment needed for a given tool.
 
  The `Docker Hub <https://hub.docker.com/>`_ contains all publicly available registered Docker images for use with a variety of technologies. Base Lumavate containers all start with a base image from the `Docker Hub <https://hub.docker.com/>`_.
 
@@ -147,7 +152,7 @@ Setup Custom Docker Containers
 Uploading Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- Docker containers can be uploaded to the Lumavate platform in two different ways, through the platform and through the CLI. This section will explain how to manually upload containers using the Lumavate platform. The CLI documentation explains how to :ref:`upload containers using the CLI <CLI Syntax>`.
+ Docker containers can be uploaded to the Lumavate platform in two different ways, through the platform and through the CLI. This section will explain how to manually upload containers using the Lumavate platform. The CLI documentation explains how to :ref:`upload containers using the CLI <CLI>`.
 
  .. note::
     The developer must be a user in the command center in order to upload containers through the platform. Developers only need a CLI profile in order to upload containers through the CLI.
@@ -250,9 +255,9 @@ Uploading A Tool
 	     The version info fields are in the second section of the Add Version page. They ask for the port, version number, and label for the new version.
 
           The required fields are:
-            * Port: which is the :ref:`port <port number>` number for the  programing language used in the image
+            * Port: which is the port number for the  programing language used in the image
 	    * Version number: which is the version's major, minor, and patch 
-	    * Label: which lables the verison in development (dev), ready for production (prod), or deprecated (old)
+	    * Label: which lables the verison as in development (dev), ready for production (prod), or deprecated (old)
 	 
 	  .. note::
              The port number will either be the port number set in the tool’s code or the tool’s programming language’s standard port number. The port number must match the tool code’s port number. The tool will error while starting up if they do not match. 
@@ -267,18 +272,18 @@ Uploading A Tool
 	     The upload image field is the fourth section located at the bottom of the Add Version page. 	
 
           .. warning::
-             Different tools accept different file types. Check that the correct file type for the tool being created is used, if you are experiencing problems finding the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Types W>`, :ref:`microservice <Accepted File Types M>`, or :ref:`component-set <Accepted File Types C>` pages. 
+             Different tools accept different file types. Check that the correct file type for the tool was used if you are unable to find the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Types W>`, :ref:`microservice <Accepted File Types M>`, or :ref:`component-set <Accepted File Types C>` pages. 
 
     * To use an existing version:
       
-       a. Go to the first section, at the top of the Add Version form, and open the version template drop-down. Select the version you wish to use as your base. 
+       a. Go to the first section at the top of the Add Version form, and open the version template drop-down. Select the version you wish to use as your base. 
       
           .. figure:: ../images/versionfield.PNG
 	     :align: center
 	     :width: 450px
 	     :alt: Image of the version template field
 	   
-	     The version template field is the first section of the Add Version page. The page will automatically update when a version is selected from the drop-down clearing any previously filled-out fields.
+	     The version template field is the first section of the Add Version page. The page will automatically update when a version is selected from the dropdown clearing any previously filled-out fields.
 
        b. All fields other than the Version Number field should have updated with the previous version’s information. Fill out the Version Number field with the new version number. 
 
@@ -359,7 +364,7 @@ Start A Version
 
  #. The status of the version will change from stopped to a spinning icon. You can refresh the status by clicking the refresh status button. The tool will take a minute or two to finish validating. The larger the tool the longer the validation period.     
 
- #. After finishing validating, the status will change to either started or error. If the status is error, the version was unable to connect with the platform.  
+ #. After finishing validating, the status will change to either started or error. If the status is error, the image uploaded had an error in it that prevented it from running in the platform.  
 
 .. _Sharing A Tool:
 
@@ -400,7 +405,7 @@ Sharing A Tool
        The share section will list out the names of the studios and command centers that you have shared your tool with. 
 	
  .. note::
-    There are three types of child organizations shown in the share section list, command centers, dev/prod studios, and prod studios. Dev/prod studios can add and publish dev versions. Prod studios can only add or publish prod versions.  
+    There are three types of child organizations shown in the share section list, command centers, dev/prod studios, and prod studios. Dev/prod studios can add and publish prod, dev, and old versions. Prod studios can only add or publish prod versions.  
 
 ________________________________________________________________________________________________________________________________________
 
