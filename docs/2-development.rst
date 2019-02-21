@@ -5,7 +5,7 @@
 Developing Tools
 ================
 
-There are three types of :ref:`tools <tools>` that the Lumavate platform uses: :ref:`widgets <widgets>`, :ref:`microservice <microservices>`, and :ref:`component-sets <component-sets>`. 
+There are three types of :ref:`tools <tools>` that the Lumavate platform uses: widgets, microservice, and component-sets. 
 
  :ref:`Widgets` are the base that the other tools add on to and build off of. This tool should always allow studio users to customize part of the end user UI. 
 
