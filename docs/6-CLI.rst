@@ -24,7 +24,7 @@ ________________________________________________________________________________
 
 Requirements
 -------------
-You will need to install `Python 3.1.1<https://www.python.org/downloads/>`_ or higher in order to use the CLI. 
+You will need to install `Python 3.1.1 <https://www.python.org/downloads/>`_ or higher in order to use the CLI. 
 
 It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
 
@@ -247,9 +247,10 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-         id Org Name                  Org Type Test Org
-         9  Dragon Command Center     dev      None
-         99 Dragon Studio             studio   False
+         id  Org Name                  Org Type Test Org
+         99  Dragon Command Center     dev      None
+         999 Child Command Center      dev      None
+         9   Dragon Studio             studio   False
 
           Org ID you want to associate with this profile: <<org id>>
          
@@ -318,9 +319,11 @@ Delete
  
  Response:
  
- .. code-block::
+ .. code-block:: bash
     
-     {"payload": {"data": {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
+     {"payload": {"data": {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, 
+     "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", 
+     "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  Options:
   * ``-p, --profile "STRING"``
@@ -347,7 +350,12 @@ Get
   
   .. code-block:: bash
   
-      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/darkseid.bumblebee.labelnexusdev.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=SignaturevX%2FHg8xyp8cnhE%3D&Expires=1550853222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
+      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}},
+      "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/darkseid.bumblebee.labelnexusdev.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=SignaturevX%2FHg8xyp8cnhE%3D&Expires=1550853222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", 
+      "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"},
+      "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, 
+      "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", 
+      "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
 
  Options: 
   * ``-p, --profile "STRING"``
@@ -437,7 +445,7 @@ Access
 
  Response:
  
- .. code-block::
+ .. code-block:: bash
  
      failed sharedWith          unsharedFrom resultingGrantees
      []     [{'granteeId': 9}]  []           ['Dragon Studio']
@@ -475,7 +483,7 @@ Add
 
  Response:
 
- .. code-block::
+ .. code-block:: bash
    
      id  name        urlRef      createdAt
      999 Fire Breath firebreath  02/22/19 16:36:09
@@ -580,7 +588,7 @@ Update
  
  Response:
  
- ..code-block:: bash
+ .. code-block:: bash
  
     id  name          urlRef      createdAt
     999 Frosty Breath firebreath  02/22/19 16:36:09
@@ -627,7 +635,7 @@ Add
  
  Response:
  
- .. code-block:: 
+ .. code-block:: bash
     
      Image Size: 6.91 KB
      Uploading Component Set Version to Lumavate
@@ -1683,7 +1691,7 @@ Ls
      profileName       env    orgName                      orgId
      dragon            dragon Dragon Command Center        99
      dragon-two        dragon Dragon Studio                9
-     profile           prod   Sample Command Center        80
+     profile           prod   Sample Command Center        35
 
  Options: 
   * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
