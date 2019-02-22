@@ -312,10 +312,10 @@ Delete
 
  Example:
  
-  .. code-block:: bash
+ .. code-block:: bash
     
-      $ luma api delete /iot/v1/containers/999?expand=all
-        Profile: dragon
+     $ luma api delete /iot/v1/containers/999?expand=all
+       Profile: dragon
  
  Response:
  
@@ -346,7 +346,7 @@ Get
      $ luma api get /iot/v1/containers?expand=all
        Profile: dragon
 
-  Response:
+ Response:
   
   .. code-block:: bash
   
