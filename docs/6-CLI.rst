@@ -5,7 +5,7 @@
 CLI
 ============
 
-The Lumavate Commandline Line Interface (CLI) can be used to streamline many administrative tasks, such as adding and updating widgets, microservices, and/or component sets.
+The Lumavate Commandline Line Interface (CLI) can be used to streamline many administrative tasks.
 
 .. The CLI uses the native REST APIs available via the Platform. To learn more about Lumavate's REST APIs, please go here: <link to come>.
 
@@ -24,7 +24,7 @@ ________________________________________________________________________________
 
 Requirements
 -------------
-You will need to install `Python 3.1.1 <https://www.python.org/downloads/>`_ or higher in order to use the CLI. 
+You will need to install `Python 3.1.1<https://www.python.org/downloads/>`_ or higher in order to use the CLI. 
 
 It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
 
@@ -39,8 +39,8 @@ Installation
 ------------
 The CLI can be installed two different ways:
 
- #. :ref:`Through Pip<Installation Pip>`
- #. :ref:`From the source<Installation Source>`.
+ #. :ref:`From Pip<Installation Pip>`
+ #. :ref:`From Source<Installation Source>`.
 
 .. _Installation Pip:
 
@@ -67,14 +67,14 @@ From Source
  Installing the CLI as a Non-admin:
 
   #. Clone this repo.
-  #. CD into the CLI directory
+  #. CD into the CLI directory.
   #. Run:
   
      .. code-block:: bash
       
         $ pip3 install luma --user
  
-  #. Add the returned path URL to the path 
+  #. Add the returned path URL to your system environment variables. 
    
      Example Response: 
    
@@ -86,7 +86,7 @@ From Source
  Installing the CLI as an Admin:
 
   #. Clone this repo.
-  #. CD into the CLI directory
+  #. CD into the CLI directory.
   #. Run:
    
      .. code-block:: bash
@@ -94,7 +94,7 @@ From Source
         $ sudo pip3 install luma
 
  .. note::
-    To activate autocompletion after install, restart your terminal or source your shell configuration (either .zshrc or .bash_profile).  
+    To activate autocompletion after install, restart your terminal or source your shell configuration (either ``source ~/.zshrc`` or ``$ source ~/.bash_profile``).  
 
 _______________________________________________________________________________________________________________________________________
 
@@ -103,9 +103,9 @@ ________________________________________________________________________________
 Provisioning Credentials
 -------------------------
 
-There are two types of configuration in the CLI: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
+The CLI requares two variables to be configured in order to talk to the platform: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
     
-    * **Environments** know how to get and refresh tokens so the user stays authorized with the platform. They also set what command centers or studios you have access to.
+    * **Environments** know how to get and refresh tokens so the user stays authorized with the platform. They also set what command centers or studios the user has access to.
     * **Profiles** give the user a company context in a specific environment which is required by most of the platform API. They set what studio or command center the user is modifying.  
 
 .. _Provisioning Environments:
@@ -113,25 +113,35 @@ There are two types of configuration in the CLI: :ref:`configuring environments<
 Setting-Up Environments:
 ^^^^^^^^^^^^^^^^^^^^^^^
 
- You can use either the Lumavate pre-configured environment or you can set up your own environment configuration.
+ You can use either the Lumavate pre-configured environment or you can setup your own environment configuration.
 
  Using the preset configuration:
 
-  #. Log into the command center you want to modify with the CLI
-  #. Go to the CLI tab located in the side menu bar
+  #. Log into the command center you want to modify with the CLI.
+  #. Go to the CLI tab located in the side menu bar.
+  
   #. Copy the information from the Configure An Environment field. It should look like this:
    
      .. code-block:: bash
        
-        $ luma env config --env-name prod --app https://not-a-real-realm.dragonfly.lumavate-type.com --audience https://dragonfly.lumavate-type.com/notarealapp --token dragonfly-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
+        $ luma env config --env-name prod --app https://not-a-real-realm.dragon.lumavate-type.com --audience https://dragon.lumavate-type.com/notarealapp --token dragon-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
       
-  #. Past the command into your Bash window 
+  #. Past the command into your Bash window and click enter. 
+  #. The CLI should return the following showing that the new enviroment Prod has been created.
+     
+     .. code-block:: bash
+     
+        envName app                                                  audience                                 token
+        prod    https://not-a-real-realm.dragon.lumavate-type.com    https://place.lumavate-type.com/notanapp dragon-lumavate-type.notarealtoken.com
 
+     .. warning::
+        If there are two environments with the same name, the newer version will overwrite the older version.
+ 
  Using your own configuration:
 
-  #. Log into the command center you want to modify with the CLI
-  #. Go to the CLI tab located in the side menu bar
-  #. Take note of the app, audience, token, client-id, and client-secret information from the Configure An Environment field
+  #. Log into the command center you want to modify with the CLI.
+  #. Go to the CLI tab located in the side menu bar.
+  #. Take note of the app, audience, token, client-id, and client-secret information from the Configure An Environment field.
   #. In your Bash window, run:
    
      .. code-block:: bash
@@ -148,37 +158,47 @@ Setting-Up Environments:
           Audience: <<envitoment audience>>
           Client id: <<user clientId>>
           Client secret: <<user clientSecret>>
+          
+  #. The CLI should return the following with the env name you specified listed with the other enviroments showing that the new enviroment has been created. 
+  
+     .. code-block:: bash
+     
+        envName app                                                   audience                                  token
+        dragon  https://not-a-real-realm2.dragon.lumavate-type.com    https://place.lumavate-type.com/notanapp2 dragon-lumavate-type.notarealtoken2.com
 
- .. note:: 
-    The CLI uses Client Id and Client Secret to associate a user’s context to a machine. From this point forward, user will refer to the client id and client secret information used to set up the environment in the CLI. 
+  .. note:: 
+     The CLI uses Client Id and Client Secret to associate a user context to a machine. From this point forward, user will refer to the Client Id and Client Secret information used to setup the environment in the CLI. 
 
 .. _Provisioning Profiles:
   
 Setting up Profiles:
 ^^^^^^^^^^^^^^^^^^^
 
- Profiles can be set up using the Lumavate pre-set command or using your own configuration. 
+ Profiles can be setup using the Lumavate pre-set command or using your own configuration. 
 
- You will need to have configured an environment on your machine through the CLI to configure a profile.  
+ You will need to have :ref:`configured an environment<Provisioning Environments>` on your machine through the CLI to configure a profile.  
 
  Using a preset configuration:
 
-  #. Log into a Lumavate command center
-  #. Navigate to the CLI tab located in the side menu bar
+  #. Log into a Lumavate command center.
+  #. Navigate to the CLI tab located in the side menu bar.
   #. Copy the information from the Add A Profile field. It should look like this:
    
      .. code-block:: bash
        
         $ luma profile add --env prod
 
-  #. Past the command into your Bash window
-  #. You will be prompted to name your profile. It should look like this:
+  #. Past the command into your Bash window and click enter.
+  #. You will be prompted to name the profile. It should look like this:
    
      .. code-block:: bash
        
          Profile Name: <<profile’s name in the CLI>>
 
-  #. You will then be presented with a list of organizations. Pick the one you want to edit with this profile. It should look like this:
+     .. warning::
+        If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
+    
+  #. You will then be presented with a list of organizations associated with the preset Lumavate enviroment. Pick the one you want to edit with this profile, and enter its id number. It should look like this:
    
      .. code-block:: bash
        
@@ -187,8 +207,15 @@ Setting up Profiles:
           49 Sample Studio             studio   False
 
           Org ID you want to associate with this profile: <<org id>>
+  
+  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created.
+  
+    .. code-block:: bash
+    
+       Environment Org Name              Org ID
+       prod        Sample Command Center 35
 
-     
+ 
  Using your own configuration:
 
   #. In your Bash window, run:
@@ -201,29 +228,37 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-         Profile Name: <<profile’s name in the CLI>>
+        Profile Name: <<profile’s name in the CLI>>
+     
+     .. warning::
+        If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
 
-  #. A list of environments will appear. Select which environment you wish to associate with the profile:
+  #. A list of environments will appear. Select which environment you wish to associate with the profile, and enter its Name:
    
      .. code-block:: bash
        
-        Env Name                                    App                                                  Audience                                  Token                                     Name
-       https://not-a-realm.place.lumavate-type.com https://not-a-real-realm.dragonfly.lumavate-type.com https://place.lumavate-type.com/notanapp dragonfly-lumavate-type.notarealtoken.com prod
-     
-         Env: <<name of environment you want the profile associated with>>
+        Env Name App                                             Audience                                   Token
+        dragon   https://not-a-realm2.dragon.lumavate-type.com   https://dragon.lumavate-type.com/notanapp2 dragon-lumavate-type.notarealtoken2.com
+        prod     https://not-a-realm.dragon.lumavate-type.com    https://dragon.lumavate-type.com/notanapp  dragon-lumavate-type.notarealtoken.com
 
-  #. A list of organizations will appear. Pick the one you want to edit with this profile. It should look like this:
+         Env: <<Env Name>>
+
+  #. A list of organizations will appear. Pick the one you want to edit with this profile, and enter its id number. It should look like this:
    
      .. code-block:: bash
        
          id Org Name                  Org Type Test Org
-         35 Sample Command Center     dev      None
-         49 Sample Studio             studio   False
+         9  Dragon Command Center     dev      None
+         99 Dragon Studio             studio   False
 
          Org ID you want to associate with this profile: <<org id>>
-
- .. warning::
-    If there are two profiles or environments with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
+         
+  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created.
+  
+    .. code-block:: bash
+    
+       Environment Org Name              Org ID
+       dragon      Dragon Command Center 9 
 
  .. note::
     While running the profile command, you will have the option to associate the new profile to any organization the user has access to regardless of the command center you are currently in.
@@ -280,6 +315,12 @@ Delete
     
      $ luma api delete /iot/v1/containers/999?expand=all
        Profile: dragon
+ 
+ Response:
+ 
+ .. code-block::
+    
+    {"payload": {"data": {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  Options:
   * ``-p, --profile "STRING"``
@@ -302,6 +343,12 @@ Get
     $ luma api get /iot/v1/containers?expand=all
       Profile: dragon
 
+  Response:
+  
+  .. code-block:: bash
+  
+     {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/darkseid.bumblebee.labelnexusdev.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=SignaturevX%2FHg8xyp8cnhE%3D&Expires=1550853222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
+
  Options: 
   * ``-p, --profile "STRING"``
   * ``--help``
@@ -320,8 +367,14 @@ Post
 
  .. code-block:: bash
    
-    $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”Fire Breathing”, ”urlRef”:”fireball”, ”ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
+    $ luma api post /iot/v1/containers?expand=all -d '{"id":0,"type":"widget","name":"Dragon","urlRef":"dragon"}'
       Profile: dragon
+ 
+ Response:
+ 
+ .. code-block:: bash
+    
+    {"payload": {"data": {"createdAt": "2019-02-22T15:56:21.722668", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9, "image": {"key": "containers/dragon/icons/af7ef4a6", "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T15:56:21.722632", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  Options: 
   * ``-p, --profile "STRING"``
@@ -342,8 +395,14 @@ Put
 
  .. code-block:: bash
    
-    $ luma api post /iot/v1/containers?expand=all -d ‘{“id:9, ”type”:”widget”, ”name”:”Fire Breathing”, ”urlRef”:"fireball", "ephemeralKey”: "99/temp/c287aaecab1840bc8bd6e52132409c30__adobe.svg”}’
+    $ luma api post /iot/v1/containers?expand=all -d '{"id":9,"type":"widget","name":"Fire Breathing","urlRef":"fireball"}'
       Profile: dragon
+  
+ Response:
+ 
+ .. code-block:: bash
+ 
+    {"payload": {"data": {"createdAt": "2019-02-22T16:03:22.950331", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 1675, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:03:22.950312", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fireball", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -372,9 +431,16 @@ Access
 
  .. code-block:: bash
    
-    $ luma component-set access --add 99
+    $ luma component-set access --add 9
       Profile: dragon
       Component set: 999
+
+ Response:
+ 
+ .. code-block::
+ 
+    failed sharedWith          unsharedFrom resultingGrantees
+    []     [{'granteeId': 9}]  []           ['Dragon Studio']
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -404,8 +470,15 @@ Add
    
     $ luma component-set add
       Profile: dragon
-      Name: Fire Breathing
-      Url Ref: fireball
+      Name: Fire Breath
+      Url Ref: firebreath
+
+ Response:
+
+ .. code-block::
+   
+    id  name        urlRef      createdAt
+    999 Fire Breath firebreath  02/22/19 16:36:09
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -434,6 +507,13 @@ Ls
    
     $ luma component-set ls
       Profile: dragon
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+    id  name        urlRef      createdAt
+    999 Fire Breath firebreath  02/22/19 16:36:09
 
  Options:
   * ``-p, --profile “STRING”``
@@ -463,6 +543,13 @@ Rm
     $ luma component-set rm
       Profile: dragon
       Component set: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+    id  name        urlRef      createdAt
+    999 Fire Breath firebreath  02/22/19 16:36:09
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -487,9 +574,16 @@ Update
 
  .. code-block:: bash
    
-    $ luma component-set update --name “Frosty Breath”
+    $ luma component-set update --name "Frosty Breath"
       Profile: dragon
       Component set: 999
+ 
+ Response:
+ 
+ ..code-block:: bash
+ 
+   id  name          urlRef      createdAt
+   999 Frosty Breath firebreath  02/22/19 16:36:09
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -527,9 +621,18 @@ Add
     $ luma component-set-version add 
       Profile: dragon
       Component set: 999
+      Component set file: “C:\fantasy\creatures\dragons\firebreather.zip”
       Label: prod
       Version: 9.9.99
-      Component set file: “C:\fantasy\creatures\dragons\firebreather.zip”
+ 
+ Response:
+ 
+ .. code-block:: 
+    
+    Image Size: 6.91 KB
+    Uploading Component Set Version to Lumavate
+    id   versionNumber directIncludes directCssIncludes label createdAt
+    9999 9.9.9         0              0                 prod  02/22/19 16:54:00
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -569,6 +672,13 @@ Components
     $ luma component-set-version components
       Profile: dragon
       Component set: 999
+      Version: 9.9.9
+      
+ Response:
+ 
+ .. code-block:: bash
+ 
+     {"payload": {"data": {"componentSetId": 573, "createdAt": "2019-02-22T16:54:00.511074+00:00", "createdBy": 30, "directCssIncludes": [], "directIncludes": [], "distribution": "/iot/v1/dynamic-component-sets/firebreath/9.9.9", "expand": {"components": [{"icon": "/iot/v1/dynamic-component-sets/firebreath/9.9.9/icons/material.svg", "label": "No Template", "properties": [{"label": "No Template", "name": "selectOptions", "options": {"readonly": null}, "type": "text"}], "section": "Fire Breath (v9.9.9)", "tags": ["material", "body"], "template": "<div class=\"mdc-select\"><i class=\"mdc-select__dropdown-icon\"></i><select id=\"{{ componentData.Id }}\" class=\"mdc-select__native-control\"></div>", "type": "material-input-select"}]}, "id": 2260, "label": "prod", "lastModifiedAt": "2019-02-22T16:54:00.511040+00:00", "lastModifiedBy": 30, "major": 9, "minor": 9, "patch": 9, "state": "available", "versionNumber": "9.9.9"}}}
 
  Options: 
   * ``-p, --profile “STRING”``
