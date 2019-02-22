@@ -124,15 +124,15 @@ Setting-Up Environments:
    
      .. code-block:: bash
        
-        $ luma env config --env-name prod --app https://not-a-real-realm.dragon.lumavate-type.com --audience https://dragon.lumavate-type.com/notarealapp --token dragon-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
+         $ luma env config --env-name prod --app https://not-a-real-realm.place.lumavate-type.com --audience https://place.lumavate-type.com/notarealapp --token place-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
       
   #. Past the command into your Bash window and click enter. 
   #. The CLI should return the following showing that the new enviroment Prod has been created.
      
      .. code-block:: bash
      
-        envName app                                                  audience                                 token
-        prod    https://not-a-real-realm.dragon.lumavate-type.com    https://place.lumavate-type.com/notanapp dragon-lumavate-type.notarealtoken.com
+         envName app                                                  audience                                 token
+         prod    https://not-a-real-realm.place.lumavate-type.com     https://place.lumavate-type.com/notanapp place-lumavate-type.notarealtoken.com
 
      .. warning::
         If there are two environments with the same name, the newer version will overwrite the older version.
@@ -146,25 +146,25 @@ Setting-Up Environments:
    
      .. code-block:: bash
        
-        $ luma env config
+         $ luma env config
 
   #. Fill out the prompts as they appear on the screen with the appropriate information. It should look like this when you are done:
    
      .. code-block:: bash
        
-        $ Env Name: <<name of environment in CLI>>
-          App: <<enviroment Url>>
-          Token: <<enviroment token>>
-          Audience: <<envitoment audience>>
-          Client id: <<user clientId>>
-          Client secret: <<user clientSecret>>
+         $ Env Name: <<name of environment in CLI>>
+           App: <<enviroment Url>>
+           Token: <<enviroment token>>
+           Audience: <<envitoment audience>>
+           Client id: <<user clientId>>
+           Client secret: <<user clientSecret>>
           
   #. The CLI should return the following with the env name you specified listed with the other enviroments showing that the new enviroment has been created. 
   
      .. code-block:: bash
      
-        envName app                                                   audience                                  token
-        dragon  https://not-a-real-realm2.dragon.lumavate-type.com    https://place.lumavate-type.com/notanapp2 dragon-lumavate-type.notarealtoken2.com
+         envName app                                                    audience                                    token
+         Fantasy https://not-a-real-realm2.fantasy.lumavate-type.com    https://fantasy.lumavate-type.com/notanapp2 fantasy-lumavate-type.notarealtoken2.com
 
   .. note:: 
      The CLI uses Client Id and Client Secret to associate a user context to a machine. From this point forward, user will refer to the Client Id and Client Secret information used to setup the environment in the CLI. 
@@ -186,7 +186,7 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-        $ luma profile add --env prod
+         $ luma profile add --env prod
 
   #. Past the command into your Bash window and click enter.
   #. You will be prompted to name the profile. It should look like this:
@@ -212,8 +212,8 @@ Setting up Profiles:
   
     .. code-block:: bash
     
-       Environment Org Name              Org ID
-       prod        Sample Command Center 35
+        Environment Org Name              Org ID
+        prod        Sample Command Center 35
 
  
  Using your own configuration:
@@ -222,13 +222,13 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-        $ luma profile add
+         $ luma profile add
 
   #. You will be prompted to name your profile. It should look like this:
    
      .. code-block:: bash
        
-        Profile Name: <<profile’s name in the CLI>>
+         Profile Name: <<profile’s name in the CLI>>
      
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
@@ -237,11 +237,11 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-        Env Name App                                             Audience                                   Token
-        dragon   https://not-a-realm2.dragon.lumavate-type.com   https://dragon.lumavate-type.com/notanapp2 dragon-lumavate-type.notarealtoken2.com
-        prod     https://not-a-realm.dragon.lumavate-type.com    https://dragon.lumavate-type.com/notanapp  dragon-lumavate-type.notarealtoken.com
+         Env Name App                                              Audience                                    Token
+         Fantasy  https://not-a-realm2.fantasy.lumavate-type.com   https://fantasy.lumavate-type.com/notanapp2 fantasy-lumavate-type.notarealtoken2.com
+         prod     https://not-a-realm.place.lumavate-type.com      https://place.lumavate-type.com/notanapp    place-lumavate-type.notarealtoken.com
 
-         Env: <<Env Name>>
+          Env: <<Env Name>>
 
   #. A list of organizations will appear. Pick the one you want to edit with this profile, and enter its id number. It should look like this:
    
@@ -251,14 +251,14 @@ Setting up Profiles:
          9  Dragon Command Center     dev      None
          99 Dragon Studio             studio   False
 
-         Org ID you want to associate with this profile: <<org id>>
+          Org ID you want to associate with this profile: <<org id>>
          
   #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created.
   
     .. code-block:: bash
     
-       Environment Org Name              Org ID
-       dragon      Dragon Command Center 9 
+        Environment Org Name              Org ID
+        Fantasy     Dragon Command Center 9 
 
  .. note::
     While running the profile command, you will have the option to associate the new profile to any organization the user has access to regardless of the command center you are currently in.
@@ -313,14 +313,14 @@ Delete
  
   .. code-block:: bash
     
-     $ luma api delete /iot/v1/containers/999?expand=all
-       Profile: dragon
+      $ luma api delete /iot/v1/containers/999?expand=all
+        Profile: dragon
  
  Response:
  
  .. code-block::
     
-    {"payload": {"data": {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
+     {"payload": {"data": {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  Options:
   * ``-p, --profile "STRING"``
@@ -340,14 +340,14 @@ Get
 
  .. code-block:: bash
    
-    $ luma api get /iot/v1/containers?expand=all
-      Profile: dragon
+     $ luma api get /iot/v1/containers?expand=all
+       Profile: dragon
 
   Response:
   
   .. code-block:: bash
   
-     {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/darkseid.bumblebee.labelnexusdev.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=SignaturevX%2FHg8xyp8cnhE%3D&Expires=1550853222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
+      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/darkseid.bumblebee.labelnexusdev.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=SignaturevX%2FHg8xyp8cnhE%3D&Expires=1550853222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
 
  Options: 
   * ``-p, --profile "STRING"``
@@ -367,14 +367,14 @@ Post
 
  .. code-block:: bash
    
-    $ luma api post /iot/v1/containers?expand=all -d '{"id":0,"type":"widget","name":"Dragon","urlRef":"dragon"}'
-      Profile: dragon
+     $ luma api post /iot/v1/containers?expand=all -d '{"id":0,"type":"widget","name":"Dragon","urlRef":"dragon"}'
+       Profile: dragon
  
  Response:
  
  .. code-block:: bash
     
-    {"payload": {"data": {"createdAt": "2019-02-22T15:56:21.722668", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9, "image": {"key": "containers/dragon/icons/af7ef4a6", "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T15:56:21.722632", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
+     {"payload": {"data": {"createdAt": "2019-02-22T15:56:21.722668", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9, "image": {"key": "containers/dragon/icons/af7ef4a6", "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T15:56:21.722632", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  Options: 
   * ``-p, --profile "STRING"``
@@ -395,14 +395,14 @@ Put
 
  .. code-block:: bash
    
-    $ luma api post /iot/v1/containers?expand=all -d '{"id":9,"type":"widget","name":"Fire Breathing","urlRef":"fireball"}'
-      Profile: dragon
+     $ luma api post /iot/v1/containers?expand=all -d '{"id":9,"type":"widget","name":"Fire Breathing","urlRef":"fireball"}'
+       Profile: dragon
   
  Response:
  
  .. code-block:: bash
  
-    {"payload": {"data": {"createdAt": "2019-02-22T16:03:22.950331", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 1675, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:03:22.950312", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fireball", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
+     {"payload": {"data": {"createdAt": "2019-02-22T16:03:22.950331", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 1675, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:03:22.950312", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fireball", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -431,16 +431,16 @@ Access
 
  .. code-block:: bash
    
-    $ luma component-set access --add 9
-      Profile: dragon
-      Component set: 999
+     $ luma component-set access --add 9
+       Profile: dragon
+       Component set: 999
 
  Response:
  
  .. code-block::
  
-    failed sharedWith          unsharedFrom resultingGrantees
-    []     [{'granteeId': 9}]  []           ['Dragon Studio']
+     failed sharedWith          unsharedFrom resultingGrantees
+     []     [{'granteeId': 9}]  []           ['Dragon Studio']
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -468,17 +468,17 @@ Add
 
  .. code-block:: bash
    
-    $ luma component-set add
-      Profile: dragon
-      Name: Fire Breath
-      Url Ref: firebreath
+     $ luma component-set add
+       Profile: dragon
+       Name: Fire Breath
+       Url Ref: firebreath
 
  Response:
 
  .. code-block::
    
-    id  name        urlRef      createdAt
-    999 Fire Breath firebreath  02/22/19 16:36:09
+     id  name        urlRef      createdAt
+     999 Fire Breath firebreath  02/22/19 16:36:09
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -505,15 +505,15 @@ Ls
 
  .. code-block:: bash
    
-    $ luma component-set ls
-      Profile: dragon
+     $ luma component-set ls
+       Profile: dragon
  
  Response:
  
  .. code-block:: bash
  
-    id  name        urlRef      createdAt
-    999 Fire Breath firebreath  02/22/19 16:36:09
+     id  name        urlRef      createdAt
+     999 Fire Breath firebreath  02/22/19 16:36:09
 
  Options:
   * ``-p, --profile “STRING”``
@@ -540,16 +540,16 @@ Rm
 
  .. code-block:: bash
    
-    $ luma component-set rm
-      Profile: dragon
-      Component set: 999
+     $ luma component-set rm
+       Profile: dragon
+       Component set: 999
  
  Response:
  
  .. code-block:: bash
  
-    id  name        urlRef      createdAt
-    999 Fire Breath firebreath  02/22/19 16:36:09
+     id  name        urlRef      createdAt
+     999 Fire Breath firebreath  02/22/19 16:36:09
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -574,16 +574,16 @@ Update
 
  .. code-block:: bash
    
-    $ luma component-set update --name "Frosty Breath"
-      Profile: dragon
-      Component set: 999
+     $ luma component-set update --name "Frosty Breath"
+       Profile: dragon
+       Component set: 999
  
  Response:
  
  ..code-block:: bash
  
-   id  name          urlRef      createdAt
-   999 Frosty Breath firebreath  02/22/19 16:36:09
+    id  name          urlRef      createdAt
+    999 Frosty Breath firebreath  02/22/19 16:36:09
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -618,21 +618,21 @@ Add
 
  .. code-block:: bash
    
-    $ luma component-set-version add 
-      Profile: dragon
-      Component set: 999
-      Component set file: “C:\fantasy\creatures\dragons\firebreather.zip”
-      Label: prod
-      Version: 9.9.99
+     $ luma component-set-version add 
+       Profile: dragon
+       Component set: 999
+       Component set file: “C:\fantasy\creatures\dragons\firebreather.zip”
+       Label: prod
+       Version: 9.9.99
  
  Response:
  
  .. code-block:: 
     
-    Image Size: 6.91 KB
-    Uploading Component Set Version to Lumavate
-    id   versionNumber directIncludes directCssIncludes label createdAt
-    9999 9.9.9         0              0                 prod  02/22/19 16:54:00
+     Image Size: 6.91 KB
+     Uploading Component Set Version to Lumavate
+     id   versionNumber directIncludes directCssIncludes label createdAt
+     9999 9.9.9         0              0                 prod  02/22/19 16:54:00
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -669,10 +669,10 @@ Components
 
  .. code-block:: bash
    
-    $ luma component-set-version components
-      Profile: dragon
-      Component set: 999
-      Version: 9.9.9
+     $ luma component-set-version components
+       Profile: dragon
+       Component set: 999
+       Version: 9.9.9
       
  Response:
  
@@ -703,9 +703,16 @@ Ls
 
  .. code-block:: bash
    
-    $ luma component-set-version ls
-      Profile: dragon
-      Component-set: 999
+     $ luma component-set-version ls
+       Profile: dragon
+       Component-set: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   versionNumber # Inc # Css Inc label # Exp createdAt
+     9999 9.9.9         0     0         prod  0     02/22/19 16:54:00
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -736,11 +743,18 @@ Rm
 
  .. code-block:: bash
    
-    $ luma component-set-version rm
-      Profile: dragon
-      Component set: 999
-      Version number: 9.9.99 
-
+     $ luma component-set-version rm
+       Profile: dragon
+       Component set: 999
+       Version number: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   versionNumber directIncludes directCssIncludes label createdAt
+     9999 9.9.9         0              0                 prod  02/22/19 16:54:00
+ 
  Options: 
   * ``-p, --profile “STRING”``
   * ``-cs, --component-set ID``
@@ -766,11 +780,19 @@ Update
 
  .. code-block:: bash
    
-    $ luma component-set-version update -l dev 
-      Profile: dragon
-      Component set: 999 
-      Version number: 9.9.9
+     $ luma component-set-version update -l dev 
+       Profile: dragon
+       Component set: 999 
+       Version number: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+    
+     id   versionNumber directIncludes directCssIncludes label createdAt
+     9999 9.9.9         0              0                 dev   02/22/19 16:54:00
 
+    
  Options: 
 
   * ``-p, --profile “STRING”``
@@ -806,14 +828,21 @@ Config
 
  .. code-block:: bash
    
-    $ luma env config
-      Env name: Fantasy
-      App: https://example-realm.fantasy.lumavate-type.com
-      Token: fantasy-lumavate-type.not-a-real-token.com
-      Audience: https://fantasy.lumavate-type.com/notarealaudience
-      Client secret: NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
-      Client id: NotARealId1234j2eIxKILomCdA
-
+     $ luma env config
+       Env name: Fantasy
+       App: https://example-realm.fantasy.lumavate-type.com
+       Token: fantasy-lumavate-type.not-a-real-token.com
+       Audience: https://fantasy.lumavate-type.com/notarealaudience
+       Client secret: NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
+       Client id: NotARealId1234j2eIxKILomCdA
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     envName app                                                    audience                                    token
+     Fantasy https://not-a-real-realm2.fantasy.lumavate-type.com    https://fantasy.lumavate-type.com/notanapp2 fantasy-lumavate-type.notarealtoken2.com
+     
  Options: 
   * ``--env-name “STRING”``
   * ``--app “LINK”``
@@ -835,8 +864,17 @@ Ls
 
  .. code-block:: bash
    
-    $ luma env ls
+     $ luma env ls
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     envName  app                                           audience                                   token       
+     Fantasy  https://not-a-realm.fantasy.lumavate-type.com https://fantasy.lumavate-type.com/notanapp fantasy-lumavate-type.NotAToken.com
+     prod     https://not-a-realm.place.lumavate-type.com   https://place.lumavate-type.com/notanapp   place-lumavate-type.notatoken.com
 
+    
  Options: 
   * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
   * ``--json``
@@ -853,8 +891,14 @@ Rm
 
  .. code-block:: bash
    
-    $ luma env rm
-      Name: Fantasy
+     $ luma env rm
+       Name: Fantasy
+ 
+ Response: 
+ 
+ .. code-block:: bash
+ 
+     {"app": "https://not-a-realm.fantasy.lumavate-type.com", "audience": "https://fantasy.lumavate-type.com/notanapp", "clientId": "NotAClientIdELhuj2eIxKILomCdA", "clientSecret": "NotAClientSecretCbhNEgmEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK", "envName": "Fantasy", "token": "fantasy-lumavate-type.notatoken.com"}
 
  Options: 
 
@@ -881,11 +925,17 @@ Export
 
  .. code-block:: bash
    
-    $ luma experience export
-      Profile: dragon
-      Export file: “C:\fantasy\creatures\dragons\firebreather.json”
-      Label: Fire Breather
-
+     $ luma experience export
+       Profile: dragon
+       Export file: “C:\fantasy\creatures\dragon\egg.json”
+       Label: Creatures
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     Saved to C:\fantasy\creatures\dragons\egg.json
+ 
  Options:
   * ``-p, --profile "STRING"``
   * ``-l, --label "STRING"``
@@ -894,6 +944,9 @@ Export
   * ``--json``
   * ``--help``
 
+ .. warning::
+    File paths with spaces in them may need to be specified in the main command using the ``-path`` option so as to preserve the spaces.
+    
 .. _Experience Import:
 
 Import
@@ -907,11 +960,20 @@ Import
    
     $ luma experience import
       Profile: dragon
-      Label: Fire Breather
-      Activation code: fireball
-      Import file: “C:\fantasy\creatures\dragons\firebreather.json”
-      Collection Name: Dragons
+      Label: Dragon Hatchlings
+      Activation code: hatch
+      Import file: “C:\fantasy\creatures\dragons\egg.json”
+      Collection Name: Creatures
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     Uploading file...
+     File uploaded.
 
+     Successfully imported experience.
+     
  Options:
   * ``-p, --profile "STRING"``
   * ``-l, --label "STRING"``
@@ -925,7 +987,10 @@ Import
   * ``-path, --import-file "FILE PATH"``
   * ``--json``
   * ``--help``
-
+ 
+  .. warning::
+    File paths with spaces in them may need to be specified in the main command using the ``-path`` option so as to preserve the spaces.
+    
 .. _Experience Ls:
 
 Ls
@@ -937,8 +1002,16 @@ Ls
 
  .. code-block:: bash
    
-    $ luma experience ls
+     $ luma experience ls
        Profile: dragon
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   label               name createdAt
+     99   Dragons             drag 08/27/18 15:57:16
+     999  Dragon Hatchlings   drha 09/12/18 17:22:11
 
  Options:
   * ``-p, --profile "STRING"``
@@ -962,9 +1035,16 @@ Example:
 
 .. code-block:: bash
 
-   $ luma experience-collection ls
-     Profile: dragon
+     $ luma experience-collection ls
+       Profile: dragon
 
+Response:
+
+.. code-block:: bash
+
+    id  name      createdAt
+    99  Creatures 02/27/18 20:08:10
+   
 Options: 
  * ``--help``
 
@@ -988,10 +1068,17 @@ Access
 
  .. code-block:: bash
    
-    $ luma microservice access --add 99
-      Profile: dragon
-      Microservice: 999
-
+     $ luma microservice access --add 99
+       Profile: dragon
+       Microservice: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     failed sharedWith          unsharedFrom resultingGrantees
+     []     [{'granteeId': 99}] []           ['Dragon Studio']
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-ms, --microservice ID``
@@ -1018,10 +1105,17 @@ Add
 
  .. code-block:: bash
    
-    $ luma microservice add 
-      Profile: dragon
-      Name: Fire Breather
-      Url Ref: fireball
+     $ luma microservice add 
+       Profile: dragon
+       Name: Dragon Fact Sheet
+       Url Ref: factsheet
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   name              urlRef    createdAt
+     9999 Dragon Fact Sheet factsheet 02/22/19 19:21:49
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1048,8 +1142,16 @@ Ls
 
  .. code-block:: bash
    
-    $ luma microservice ls 
-      Profile: dragon
+     $ luma microservice ls 
+       Profile: dragon
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   name              urlRef    createdAt
+     999  World Building    world     10/12/18 20:05:40
+     9999 Dragon Fact Sheet factsheet 02/22/19 19:21:49
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1076,10 +1178,17 @@ Rm
 
  .. code-block:: bash
    
-    $ luma microservice rm 
-      Profile: dragon 
-      Microservice: 999
-
+     $ luma microservice rm 
+       Profile: dragon 
+       Microservice: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   name              urlRef    createdAt
+     9999 Dragon Fact Sheet factsheet 02/22/19 19:21:49
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-ms, --microservice ID``
@@ -1103,9 +1212,16 @@ Update
 
  .. code-block:: bash
    
-    $ luma microservice update --name “Frosty Breath”  
-      Profile: dragon 
-      Microservice: 999 
+     $ luma microservice update --name "World Building" 
+       Profile: dragon 
+       Microservice: 999 
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   name           urlRef    createdAt
+     9999 World Building factsheet 02/22/19 19:31:05
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1141,14 +1257,24 @@ Add
 
  .. code-block:: bash
    
-    $ luma microservice-version add 
-      Profile: dragon 
-      Microservice: 999
-      Label: prod
-      Version: 9.9.9 
-      Port: 5000
-      Microservice-file-path: “C:\fantasy\creatures\dragons\firebreather.tar.gz”
+     $ luma microservice-version add 
+       Profile: dragon 
+       Microservice: 999
+       Label: prod
+       Version: 9.9.9 
+       Port: 5000
+       Microservice-file-path: "C:\fantasy\creatures\dragons\DragonFactSheet.gz"
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     Uploading image to Lumavate:
+     Image Size: 59.43 MB
+     id   actualState versionNumber label createdAt
+     9999 created     9.9.9         prod  02/22/19 19:40:59
 
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-ms, --microservice ID``
@@ -1182,10 +1308,10 @@ Exec
 
  .. code-block:: bash
    
-    $ luma microservice-version exec “Docker command” 
-      Profile: dragon 
-      Mirocservice: 999 
-      Version Number: 9.9.9
+     $ luma microservice-version exec '<<Docker command>>' 
+       Profile: dragon 
+       Mirocservice: 999 
+       Version Number: 9.9.9
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1211,11 +1337,23 @@ Logs
 
  .. code-block:: bash
    
-    $ luma microservice-version logs 
-      Profile: dragon 
-      Microservice: 999
-      Version Number: 9.9.9
+     $ luma microservice-version logs 
+       Profile: dragon 
+       Microservice: 999
+       Version Number: 9.9.9
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     [2019-02-22 19:58:00 +0000] [1] [INFO] Starting gunicorn 19.9.0
+     [2019-02-22 19:58:00 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+     [2019-02-22 19:58:00 +0000] [1] [INFO] Using worker: eventlet
+     [2019-02-22 19:58:00 +0000] [7] [INFO] Booting worker with pid: 7
+     [2019-02-22 19:58:00 +0000] [9] [INFO] Booting worker with pid: 9
+     [2019-02-22 19:58:00 +0000] [11] [INFO] Booting worker with pid: 11
+     [2019-02-22 19:58:00 +0000] [13] [INFO] Booting worker with pid: 13
+    
  Options: 
   * ``-p, --profile “STRING”``
   * ``-ms, --microservice ID``
@@ -1239,9 +1377,16 @@ Ls
 
  .. code-block:: bash
    
-    $ luma microservice-version ls 
-      Profile: dragon
-      Microservice: 999
+     $ luma microservice-version ls 
+       Profile: dragon
+       Microservice: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   actualState versionNumber label createdAt
+     9999 stopped     9.9.9         prod  02/22/19 19:57:16
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1272,11 +1417,18 @@ Rm
 
  .. code-block:: bash
    
-    $ luma microservice-version rm
-      Profile: dragon
-      Microservice: 999
-      Version: 9.9.9
-
+     $ luma microservice-version rm
+       Profile: dragon
+       Microservice: 999
+       Version: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   versionNumber label  createdAt
+     9999 9.9.9         prod   02/22/19 19:57:16
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-ms, --microservice ID``
@@ -1302,10 +1454,17 @@ Start
 
  .. code-block:: bash
    
-    $ luma microservice-version start
-      Profile: dragon
-      Microservice: 999
-      Version: 9.9.9
+     $ luma microservice-version start
+       Profile: dragon
+       Microservice: 999
+       Version: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   Current State Version # Created At
+     9999 running       9.9.9     02/22/19 19:57:16
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1331,10 +1490,17 @@ Stop
 
  .. code-block:: bash
    
-    $ luma microservice-version stop
-      Profile: dragon
-      Microservice: 999
-      Version: 9.9.9
+     $ luma microservice-version stop
+       Profile: dragon
+       Microservice: 999
+       Version: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   Current State Version # Created At
+     9999 stopped       9.9.9     02/22/19 19:57:16
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1365,6 +1531,13 @@ Update
       Microservice: 999
       Version: 9.9.9
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   versionNumber label createdAt
+     9999 9.9.9         dev   02/22/19 19:57:16
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-ms, -- microservice ID``
@@ -1399,9 +1572,17 @@ Child-orgs
 
  .. code-block:: bash
    
-    $ luma org child-orgs
-      Profile: dragon
+     $ luma org child-orgs
+       Profile: dragon
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  name                   instanceType isTest
+     999 Child Command Center   dev          None
+     9   Dragon Studio          studio       False
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
@@ -1420,9 +1601,18 @@ Ls
 
  .. code-block:: bash
    
-    $ luma org ls
-      Env: Fantasy
+     $ luma org ls
+       Env: Fantasy
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  name                  instanceType isTest
+     999 Child Command Center  dev          None
+     99  Dragon Command Center dev          None
+     9   Dragon Studio         studio       False
+     
  Options: 
   * ``--env “STRING”``
   * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
@@ -1450,13 +1640,24 @@ Add
 
  .. code-block:: bash
    
-    $ luma profile add
-      Profile name: dragon
-      <<lists of envs user has access to>>
-      Name of Env you want to use with this profile: Fantasy
-      <<lists of orgs in the selected env>>
-      Org ID you want to associate with this profile: 99
+     $ luma profile add
+       Profile name: dragon
+       
+       <<lists of envs user has access to>>
+       
+       Name of Env you want to use with this profile: Fantasy
+       
+       <<lists of orgs in the selected env>>
+       
+       Org ID you want to associate with this profile: 99
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     Environment Org Name              Org ID
+     Fantasy     Dragon Command Center 99
+     
  Options: 
   * ``--profile-name “STRING”``
   * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
@@ -1473,7 +1674,16 @@ Ls
 
  .. code-block:: bash
    
-    $ luma profile ls
+     $ luma profile ls
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     profileName       env    orgName                      orgId
+     dragon            dragon Dragon Command Center        99
+     dragon-two        dragon Dragon Studio                9
+     profile           prod   Sample Command Center        80
 
  Options: 
   * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
@@ -1491,8 +1701,14 @@ Rm
 
  .. code-block:: bash
    
-    $ luma profile rm
-      Profile: dragon
+     $ luma profile rm
+       Profile: dragon
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     {"accessToken": "NotAccessTokenOiJSUzI1NiIsImtpZCI6Ik5VSXhSVFpHTmpORU9FVkdNVVZHTlRGQk9FWXdRMNotAccessToken1RnME1FTTBOdyJ9.eyJodHRwczovL2x1bWF2YXRlLmNvbS91dWlkIjoiOGZjMGM1NTgtZmJkNS00MWRlLWFhOTUtN2FkMmJmNDAyOGM3IiwiaXNzIjoiaHR0cHM6Ly9kcmFnb25mbHktbHVtYXZhdGUtZGV2LmF1dGgwLmNvbS8iLCJzdWIiOiJreW8yZkQwMXgwd1JVM3RFTGh1ajJlSXhLSUxvbUNkQUBjbNotAccessTokenkcmFnb25mbHkubHVtYXZhdGUtZGV2LmNvbS9hcHAiLCJpYXQiOjE1NDg3MTA1MzUsImV4cCI6MTU0ODc5NjkzNSwiYXpwIjoia3lvMmZEMDF4MHdSVTN0RUxodWoyZUl4S0lMb21DZEEiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.oOWd0sd05uvMVnZZJDTpXA9pqbAsVsq2Je97nS3J7wy8c-o7LUuN_kNYeCyxZWZ2FEBhVl2galmUB_dvUxdnYOzRMNhiiIqxZhQHeNotAccessTokenjCHDqCmuQQvPg-yqZxlQL6xfHqcmh2-syTeCyHf5y_gCWdxsUhuMSj28vtH5_v76NotAccessTokenSyb5XktrdUobFuSdvy4fw-GU5eUAEFRgzlYbnRzq8ygB4SXONZvbcKqVqpBDFdbdcmo4jIWk4a2gK5-v51a49Sh798dSBxiNotAccessTokennCxD7f7VcCWuUW0wNX87YtIjHsAw", "env": "Fantasy", "orgId": 99, "orgName": "Dragon Command Center"}
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1511,7 +1727,13 @@ Example:
 
 .. code-block:: bash
    
-   $ luma version
+    $ luma version
+
+Response:
+
+.. code-block:: bash
+
+    Lumavate CLI Version: 0.8.9
 
 Options: 
  * ``--help``
@@ -1536,10 +1758,17 @@ Access
 
  .. code-block:: bash
    
-    $ luma widget access --add 99
-      Profile: dragon
-      Widget: 999
-
+     $ luma widget access --add 99
+       Profile: dragon
+       Widget: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     failed sharedWith          unsharedFrom resultingGrantees
+     []     [{'granteeId': 99}] []           ['Dragon Command Center']
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-w, --widget ID``
@@ -1566,11 +1795,18 @@ Add
 
  .. code-block:: bash
    
-    $ luma widget add
-      Profile: dragon
-      Name: Fire Breathing
-      Url Ref: fireball
-
+     $ luma widget add
+       Profile: dragon
+       Name: Hydra
+       Url Ref: hydra
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   name  urlRef createdAt
+     9999 Hydra hydra  02/22/19 20:28:17
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``--name “STRING”``
@@ -1596,8 +1832,15 @@ Ls
 
  .. code-block:: bash
    
-    $ luma widget ls
-      Profile: dragon
+     $ luma widget ls
+       Profile: dragon
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   name  urlRef createdAt
+     9999 Hydra hydra  02/22/19 20:28:17
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1624,9 +1867,16 @@ Rm
 
  .. code-block:: bash
    
-    $ luma widget rm
-      Profile: dragon
-      Widget: 999
+     $ luma widget rm
+       Profile: dragon
+       Widget: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   name  urlRef createdAt
+     9999 Hydra hydra  02/22/19 20:38:07
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1651,9 +1901,16 @@ Update
 
  .. code-block:: bash
    
-    $ luma widget update --name “Frosty Breath”
-      Profile: dragon
-      Widget: 999
+     $ luma widget update --name "European Dragon"
+       Profile: dragon
+       Widget: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   name            urlRef createdAt
+     9999 European Dragon hydra  02/22/19 20:38:07
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1689,14 +1946,23 @@ Add
 
  .. code-block:: bash
    
-    $ luma widget-version add
-      Profile: dragon
-      Widget: 999
-      Label: prod 
-      Version Number: 9.9.9
-      Widget File Path: “C:\fantasy\creatures\dragons\firebreather.tar.gz”
-      Port: 8080 
-
+     $ luma widget-version add
+       Profile: dragon
+       Widget: 999
+       Label: prod 
+       Version Number: 9.9.9
+       Widget File Path: "C:\fantasy\creatures\dragons\hydra.gz"
+       Port: 8080 
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     Uploading image to Lumavate
+     Image Size: 179.87 MB
+     id   actualState versionNumber label createdAt
+     9999 created     9.9.9         prod  02/22/19 20:46:08
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``--port INTAGER``
@@ -1730,10 +1996,10 @@ Exec
 
  .. code-block:: bash
    
-    $ luma widget-version exec “Docker command”
-      Profile: dragon
-      Widget: 999
-      Version Number: 9.9.9
+     $ luma widget-version exec '<<Docker Command>>'
+       Profile: dragon
+       Widget: 999
+       Version Number: 9.9.9
 
  Options: 
   *	-p, --profile “STRING”
@@ -1759,11 +2025,33 @@ Logs
 
  .. code-block:: bash
    
-    $ luma widget-version logs
-      Profile: dragon
-      Widget: 999
-      Version Number: 9.9.9
-
+     $ luma widget-version logs
+       Profile: dragon
+       Widget: 999
+       Version Number: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     | ___ \
+     | |_/ / ___ ___
+     | ___ \ / _ \ / _ \
+     | |_/ /| __/| __/
+     \____/ \___| \___| v1.10.0
+     [21m[0m2019/02/22 20:48:24 [34m[1mINFO [21m[0m ▶ 0001 Using 'widget' as 'appname'
+     2019/02/22 20:48:24 [34m[1mINFO [21m[0m ▶ 0002 Initializing watcher...
+     github.com/Place/Repository/File
+     widget/models
+     widget/controllers
+     widget/routers
+     widget
+     2019/02/22 20:48:26 [32m[1mSUCCESS [21m[0m ▶ 0003 Built Successfully!
+     2019/02/22 20:48:26 [34m[1mINFO [21m[0m ▶ 0004 Restarting 'widget'...
+     2019/02/22 20:48:26 [32m[1mSUCCESS [21m[0m ▶ 0005 './widget' is running...
+     2019/02/22 20:48:26.774 [1;34m[I] [asm_amd64.s:2197] http server Running on http://:8080[0m
+     2019/02/22 20:48:30.578 [1;44m[D] [server.go:2568] | 54.164.117.6|[42m 200 [0m| 127.084µs| match|[44m GET [0m /ic/hydra/discover/health r:/:ic/:url_ref/discover/health[0m
+     
  Options: 
 
   * ``-p, --profile “STRING”``
@@ -1788,10 +2076,17 @@ Ls
 
  .. code-block:: bash
    
-    $ luma widget-version ls
-      Profile: dragon
-      Widget: 999
+     $ luma widget-version ls
+       Profile: dragon
+       Widget: 999
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   actualState versionNumber label createdAt
+     9999 running     9.9.9         prod  02/22/19 20:46:08
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-w, --widget ID``
@@ -1821,11 +2116,18 @@ Rm
 
  .. code-block:: bash
    
-    $ luma widget version rm
-      Profile: dragon
-      Widget: 999
-      Version Number: 9.9.9
+     $ luma widget-version rm
+       Profile: dragon
+       Widget: 999
+       Version Number: 9.9.9
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   versionNumber label createdAt
+     9999 9.9.9         prod  02/22/19 20:46:08
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-w, --widget ID``
@@ -1851,10 +2153,17 @@ Start
 
  .. code-block:: bash
    
-    $ luma widget-version start
-      Profile: dragon
-      Widget: 999
-      Version Number: 9.9.9
+     $ luma widget-version start
+       Profile: dragon
+       Widget: 999
+       Version Number: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   Current State Version # Created At
+     9999 running       9.9.9     02/22/19 20:46:08
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -1880,11 +2189,18 @@ Stop
 
  .. code-block:: bash
    
-    $ luma widget-version stop
-      Profile: dragon
-      Widget: 999
-      Version Number: 9.9.9
+     $ luma widget-version stop
+       Profile: dragon
+       Widget: 999
+       Version Number: 9.9.9
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   Current State Version # Created At
+     9999 stopped       9.9.9     02/22/19 20:46:08
+     
  Options: 
   * ``-p, --profile “STRING”``
   * ``-w, --widget ID``
@@ -1909,11 +2225,18 @@ Update
 
  .. code-block:: bash
    
-    $ luma widget-version update -l dev
-      Profile: dragon
-      Widget: 999
-      Version Number: 9.9.9
+     $ luma widget-version update -l dev
+       Profile: dragon
+       Widget: 999
+       Version Number: 9.9.9
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id   versionNumber label createdAt
+     9999 9.9.9         dev   02/22/19 20:46:08
+  
  Options: 
   * ``-p, --profile “STRING”``
   * ``-w, --widget ID``
