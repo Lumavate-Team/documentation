@@ -51,7 +51,7 @@ Translatable Text
  
  .. figure:: ../images/translatabletextfield.PNG
        :align: center
-       :width: 400px
+       :width: 700px
        :alt: Image of a Translatable Text field
       
        ..
@@ -87,7 +87,7 @@ Text
 
  .. figure:: ../images/textfield.PNG
        :align: center
-       :width: 400px
+       :width: 700px
        :alt: Image of a Text field
       
        ..
@@ -123,7 +123,7 @@ Color
   
  .. figure:: ../images/colorfield.PNG
        :align: center
-       :width: 400px
+       :width: 700px
        :alt: Image of a color field
       
        ..
@@ -159,7 +159,7 @@ Image
  
  .. figure:: ../images/imagefield.PNG
        :align: center
-       :width: 400px
+       :width: 700px
        :alt: Image of a Image Upload field
       
        ..
@@ -193,7 +193,7 @@ Checkbox
  
  .. figure:: ../images/checkboxfield.PNG
        :align: center
-       :width: 400px
+       :width: 700px
        :alt: Image of a Checkbox field
       
        ..
@@ -226,7 +226,7 @@ Toggle
  
  .. figure:: ../images/togglefield.PNG
        :align: center
-       :width: 400px
+       :width: 700px
        :alt: Image of a Toggle field
       
        ..
@@ -264,7 +264,7 @@ Dropdown
  
  .. figure:: ../images/dropdownfield.PNG
        :align: center
-       :width: 400px
+       :width: 700px
        :alt: Image of a Dropdown field
       
        .. 
@@ -299,9 +299,9 @@ Numeric
     "options": {},
     "type": "numeric"
  
- .. figure:: ../images/numericfield.PNG
+ .. figure:: ../images/numricfield.PNG
        :align: center
-       :width: 400px
+       :width: 700px
        :alt: Image of a Numeric field
       
        ..
@@ -341,7 +341,7 @@ Multiple Selection
  
  .. figure:: ../images/multiselectfield.PNG
        :align: center
-       :width: 400px
+       :width: 700px
        :alt: Image of a Multiselect field
       
        ..
