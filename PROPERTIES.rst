@@ -158,7 +158,7 @@ Image
  .. code-block:: javascript
 
     "classification": "Classification",
-    "name": "buttonText",
+    "name": "Name",
     "type": "image-upload"
  
  .. figure:: ../images/imagefield.PNG
@@ -179,7 +179,8 @@ Image
   * ``"label": "STRING"``
   
  .. note::
-        The platform will set the default image to a No Image PNG file. 
+        The platform will set the default image to a No Image PNG file.
+        
         .. image:: no_image_available.PNG 
            :width: 50px
            :alt: No Image PNG
@@ -264,7 +265,7 @@ Dropdown
 
    
     "classification": "Classification",
-    "name": "Id",
+    "name": "Name",
     "options":{
          "option1 name":"label",
          "option2 name":"label"
