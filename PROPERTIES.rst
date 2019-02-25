@@ -49,7 +49,7 @@ Translatable Text
     "name": "Name",
     "type": "translated-text"
  
- .. figure:: ../images/translatabletextfield.PNG
+ .. figure:: ../images/translatedtextfield.PNG
        :align: center
        :width: 700px
        :alt: Image of a Translatable Text field
@@ -123,7 +123,7 @@ Color
   
  .. figure:: ../images/colorfield.PNG
        :align: center
-       :width: 700px
+       :width: 600px
        :alt: Image of a color field
       
        ..
@@ -159,7 +159,7 @@ Image
  
  .. figure:: ../images/imagefield.PNG
        :align: center
-       :width: 700px
+       :width: 600px
        :alt: Image of a Image Upload field
       
        ..
@@ -264,7 +264,7 @@ Dropdown
  
  .. figure:: ../images/dropdownfield.PNG
        :align: center
-       :width: 700px
+       :width: 600px
        :alt: Image of a Dropdown field
       
        .. 
