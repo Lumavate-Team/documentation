@@ -82,6 +82,7 @@ Build The Container
   	docker build --no-cache --rm -t gobasewidget:1.0 .
 
     The ``--no-cache`` command specifies that cache will not be used when building containers. 
+    
     The ``--rm`` command removes intermediate containers after a successful builld.
 
  #. An image will be built with the sample Docker file. 
@@ -103,10 +104,10 @@ Run The Container
 	docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasewidget:1.0
 
     The ``-d`` option puts the container in detached mode.
-    The ``-p 5000:8080`` command maps port 5000 on the machine to port 8080 on the container.
-    The ``--volume "$(pwd)"/widget:/go/src/widget`` command mapes the widget directory to /go/src/widget directory inside the container. 
     
-    Mapping to the widget directory allows the developer to modify files in his/her local widget directory, and it will reload the process when the files change. 
+    The ``-p 5000:8080`` command maps port 5000 on the machine to port 8080 on the container.
+    
+    The ``--volume "$(pwd)"/widget:/go/src/widget`` command mapes the widget directory to /go/src/widget directory inside the container. Mapping to the widget directory allows the developer to modify files in his/her local widget directory, and it will reload the process when the files change. 
 
  #. The container will now be running in detached mode. A sample of the tool will be running on http://localhost:5000.
 
