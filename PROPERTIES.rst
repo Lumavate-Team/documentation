@@ -57,18 +57,19 @@ Translatable Text
        ..
        
  Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"name": "STRING"``
-  - ``"type": "translated-text"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"type": "translated-text"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
-  - ``"deafult": "STRING" (defaults to "None")``
-  - ``"options": {OPTIONS}`` 
-    - ``"readonly": true || false`` (defaults to false)
-    - ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1)
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
+  * ``"deafult": "STRING"`` (defaults to "None")
+  * ``"options": {OPTIONS}`` 
+   * ``"readonly": true || false`` (defaults to false)
+   * ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1)
+    
 ________________________________________________________________________________________________________________________________________
 
 .. _Text:
@@ -93,18 +94,18 @@ Text
        ..
        
 Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"name": "STRING"``
-  - ``"options": {OPTIONS}`` (send an empty options field to use the default options)
-    - ``"readonly": true || false`` (defaults to false)
-    - ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1) 
-  - ``"type": "text"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
+   * ``"readonly": true || false`` (defaults to false)
+   * ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1) 
+  * ``"type": "text"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
-  - ``"deafult": "STRING"`` (does not have a default)
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
+  * ``"deafult": "STRING"`` (does not have a default)
 
 _______________________________________________________________________________________________________________________________________
 
@@ -129,15 +130,15 @@ Color
        ..
        
  Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"name": "STRING"``
-  - ``"type": "color"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"type": "color"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
-  - ``"deafult": "STRING" (defaults to #fff/white)``
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
+  * ``"deafult": "STRING"`` (defaults to #fff/white)
   
  .. warning::
     The tool will error when used in the studio if the default field contains an invalid value.
@@ -165,14 +166,14 @@ Image
        ..
        
  Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"name": "STRING"``
-  - ``"type": "image-upload"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"type": "image-upload"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
   
  .. note::
     The platform will set the default image to a NoImage.png file. At the current moment, there is no way to change this default image. 
@@ -199,15 +200,15 @@ Checkbox
        ..
        
  Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"name": "STRING"``
-  - ``"type": "checkbox"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"type": "checkbox"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
-  - ``"deafult": true || false`` (defaults to false)
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
+  * ``"deafult": true || false`` (defaults to false)
   
 ________________________________________________________________________________________________________________________________________
 
@@ -226,21 +227,21 @@ Toggle
  
  .. figure:: ../images/togglefield.PNG
        :align: center
-       :width: 700px
+       :width: 600px
        :alt: Image of a Toggle field
       
        ..
        
  Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"name": "STRING"``
-  - ``"type": "toggle"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"type": "toggle"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
-  - ``"deafult": true || false`` (defaults to false)
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
+  * ``"deafult": true || false`` (defaults to false)
   
 ________________________________________________________________________________________________________________________________________
 
@@ -270,17 +271,17 @@ Dropdown
        .. 
        
  Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"name": "STRING"``
-  - ``"options": {OPTIONS}`` (at least one option must be added to the options field)
-    - ``"NAME STRING":"LABEL STRING"`` (name is used to referance to the option, label is what studio users see in the dropdown field)
-  - ``"type": "dropdown"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
+   * ``"NAME STRING":"LABEL STRING"`` (name is used to referance to the option, label is what studio users see in the dropdown field)
+  * ``"type": "dropdown"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
-  - ``"deafult": "Option Name"`` (does not have a default)
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
+  * ``"deafult": "Option Name"`` (does not have a default)
 
 ________________________________________________________________________________________________________________________________________
 
@@ -307,18 +308,18 @@ Numeric
        ..
        
  Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"deafult": INTAGER`` (does not have a default)
-  - ``"name": "STRING"``
-  - ``"options": {OPTIONS}`` (send an empty options field to use the default options)
-    - ``"min": INTAGER`` (deafults to none)
-    - ``"max": INTAGER`` (defaults to none)
-  - ``"type": "numeric"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"deafult": INTAGER`` (does not have a default)
+  * ``"name": "STRING"``
+  * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
+   * ``"min": INTAGER`` (deafults to none)
+   * ``"max": INTAGER`` (defaults to none)
+  * ``"type": "numeric"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
   
 ________________________________________________________________________________________________________________________________________
 
@@ -347,16 +348,16 @@ Multiple Selection
        ..
        
  Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"name": "STRING"``
-  - ``"options": {OPTIONS}`` (at least one option must be added to the options field)
-    - ``{"value":"STRING","displayValue":"STRING"}`` (deafults to none)
-  - ``"type": "multiselect"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
+   * ``{"value":"STRING","displayValue":"STRING"}`` (deafults to none)
+  * ``"type": "multiselect"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
 
 ________________________________________________________________________________________________________________________________________
 
@@ -381,11 +382,11 @@ Page Link
        ..
        
  Requared Fields:
-  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  - ``"name": "STRING"``
-  - ``"type": "page-link"``
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"type": "page-link"``
   
  Optional Fields:
-  - ``"section" : "STRING"``
-  - ``"help": "STRING with Markdown"``
-  - ``"label": "STRING"``
+  * ``"section": "STRING"``
+  * ``"help": "STRING with Markdown"``
+  * ``"label": "STRING"``
