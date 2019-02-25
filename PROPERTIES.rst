@@ -357,7 +357,6 @@ Multiple Selection
   - ``"section" : "STRING"``
   - ``"help": "STRING with Markdown"``
   - ``"label": "STRING"``
-  - ``"deafult": ""value":"Name","displayValue":"Label""`` (does not have a default)
 
 ________________________________________________________________________________________________________________________________________
 
