@@ -60,4 +60,4 @@ Metadata
 
  The template field is special as it must be written in HTML. The template field defines what the component-set will do when it is displayed in the preview or in production. Properties that are exposed can be substituted with the studio users input within the template using the templating syntax. 
  
- For instance, a property field labeled ``property`` would send the studio users input for that property to the template by writing ``{{ componentData.propertyName }}``.
+ For instance, a property field labeled ``property`` would send the studio users input for that property to the template by writing ``{{ componentData.property }}``.
