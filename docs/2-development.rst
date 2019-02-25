@@ -104,7 +104,8 @@ Run The Container
 
     The ``-d`` option puts the container in detached mode.
     The ``-p 5000:8080`` command maps port 5000 on the machine to port 8080 on the container.
-    The ``--volume "$(pwd)"/widget:/go/src/widget`` command mapes the widget directory to /go/src/widget directory inside the container. Mapping to the widget directory allows the developer to modify files in his/her local widget directory, and it will reload the process when the files change. 
+    The ``--volume "$(pwd)"/widget:/go/src/widget`` command mapes the widget directory to /go/src/widget directory inside the container. 
+    Mapping to the widget directory allows the developer to modify files in his/her local widget directory, and it will reload the process when the files change. 
 
  #. The container will now be running in detached mode. A sample of the tool will be running on http://localhost:5000.
 
@@ -127,7 +128,7 @@ Check The Logs
     .. code-block:: go
  
   	CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                       NAMES
- 	676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000- >8080/tcp       dreamy_albattani
+ 	676f62d88565        gobasemac4:dev021418   "/bin/sh -c 'bee run'"   15 minutes ago      Up 16 minutes       0.0.0.0:5000- >8080/tcp    dragons
 
  #. Using the Container ID or Name, run the command:
 
