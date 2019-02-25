@@ -179,12 +179,7 @@ Image
   * ``"label": "STRING"``
   
  .. note::
-        The platform will set the default image to a No Image PNG file. 
-        
-        .. image:: ../images/no_image_available.png 
-                 :width: 5%
-                 :alt: No Image PNG
-       At the current moment, there is no way to change this default image.| 
+        The platform will set the default image to a No Image PNG file. At the current moment, there is no way to change this default image.
     _______________________________________________________________________________________________________________________________________
 
 .. _Checkbox:
