@@ -5,9 +5,9 @@ Microservices
 
 Microservices are container-based applications hosted inside a Docker container. 
 
-Microservices provide additional behind-the-scenes functions, such as services and data-processing, within :ref:`experiences <experiences>`. However, microservices rarely have their own UI. Instead, they add UI functionality to :ref:`widgets<widgets>` through the use of :ref:`component-sets<component-sets>`. 
+Microservices provide additional behind-the-scenes functions, such as services and data-processing, within experiences. However, microservices rarely have their own UI. Instead, they add UI functionality to widgets through the use of component-sets. 
 
-Microservices cannot be used to create an :ref:`experience <experiences>` without the addition of a :ref:`widget <widgets>`. They, instead, assist widgets by adding additional logic and/or data access to an experience. 
+Microservices cannot be used to create an experience without the addition of a widget. They, instead, assist widgets by adding additional logic and/or data access to an experience. 
 
 Microservices should be used when an application:
  * Delivers access to an external API
@@ -22,7 +22,7 @@ Accepted File Types
 
  Microservices need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
 
- For more information about uploading :ref:`tools <tools>` to the platform, consult :ref:`Uploading A Tool`. 
+ For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
 
 .. _API Endpoints M:
 
@@ -54,7 +54,7 @@ Required Endpoints
 
  #. DISCOVER
 
-    This endpoint informs the platform via a JSON payload which :ref:`properties <properties>` exist for the microservice. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
+    This endpoint informs the platform via a JSON payload which properties exist for the microservice. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
     
     Sent:
     
@@ -106,7 +106,7 @@ Optional Endpoints
 
  * ON_CREATE_VERSION
 
-   This endpoint is called BEFORE the :ref:`properties <properties>` are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to modify and/or override any property data before saving.
+   This endpoint is called BEFORE the properties are saved within the Lumavate studio. This allows the developer to modify and/or override any property data before saving.
 
    .. code-block:: python
 
@@ -115,7 +115,7 @@ Optional Endpoints
 
  * AFTER_CREATE_VERSION
 
-   This endpoint is called AFTER the :ref:`properties <properties>` are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to adjust any property data after saving.
+   This endpoint is called AFTER the properties are saved within the Lumavate studio. This allows the developer to adjust any property data after saving.
 
    .. code-block:: python
 
