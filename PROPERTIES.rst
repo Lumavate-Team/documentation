@@ -180,6 +180,7 @@ Image
   
  .. note::
         The platform will set the default image to a No Image PNG file. 
+        
         .. image:: ../images/no_image_available.png 
                  :width: 5%
                  :alt: No Image PNG
