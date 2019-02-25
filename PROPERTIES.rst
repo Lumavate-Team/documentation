@@ -3,7 +3,7 @@
 Properties
 ----------
 
-The Discover endpoint enables the developer to expose configurable settings through the Lumavate :ref:`studio <studio>`, by returning an array of properties via JSON.
+The Discover endpoint enables the developer to expose configurable settings through the Lumavate studio, by returning an array of properties via JSON.
 
 
 A property is defined by denoting the tab name, section name, help text, property name, property label, default value, and property type using the following JSON structure:
@@ -19,7 +19,7 @@ A property is defined by denoting the tab name, section name, help text, propert
     'default': 'Default value'
     'type': 'Property type. For a complete list of supported properties, see below.'
   }
-
+   
 The following list of types can be implemented by including the appropriate JSON in the Discover endpoint.
 
 Properties Index:
@@ -41,12 +41,34 @@ ________________________________________________________________________________
 Translatable Text
 ^^^^^^^^^^^^^^^^^
 
- Translatable Text allows :ref:`studio <studio>` users to set a language specific text value. The application will then render the proper text based on the end user's language settings.
+ Translatable Text allows studio users to set a language specific text value. The application will then render the proper text based on the end user's language settings.
 
  .. code-block:: javascript
 
-    type: 'translatable-text'
-
+    "classification": "Classification",
+    "name": "Name",
+    "type": "translated-text"
+ 
+ .. figure:: ../images/translatabletextfield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a Translatable Text field
+      
+       ..
+       
+ Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"name": "STRING"``
+  - ``"type": "translated-text"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
+  - ``"deafult": "STRING" (defaults to "None")``
+  - ``"options": {OPTIONS}`` 
+    - ``"readonly": true || false`` (defaults to false)
+    - ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1)
 ________________________________________________________________________________________________________________________________________
 
 .. _Text:
@@ -54,29 +76,72 @@ ________________________________________________________________________________
 Text
 ^^^^
 
- Text allows :ref:`studio <studio>` users to set a text value.
+ Text allows studio users to set a text value.
 
  .. code-block:: javascript
 
-   type: 'text',
-   options: {
-     'readonly': true || false - defaults to true,
-     'rows': 0 - Modify the text box to a text area
-   }
+      "classification": "Classification",
+      "name": "Name",
+      "options": {},
+      "type": “text"
 
-________________________________________________________________________________________________________________________________________
+ .. figure:: ../images/textfield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a Text field
+      
+       ..
+       
+Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"name": "STRING"``
+  - ``"options": {OPTIONS}`` (send an empty options field to use the default options)
+    - ``"readonly": true || false`` (defaults to false)
+    - ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1) 
+  - ``"type": "text"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
+  - ``"deafult": "STRING"`` (does not have a default)
+
+_______________________________________________________________________________________________________________________________________
 
 .. _Color:
 
 Color
 ^^^^^
 
- Color allows :ref:`studio <studio>` users to set a color value via a color picker.
+ Color allows studio users to set a color value via a color picker.
 
  .. code-block:: javascript
 
-    type: 'color'
-
+    "classification": "Classification",
+    "name": "Name",
+    "type": "color"
+  
+ .. figure:: ../images/colorfield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a color field
+      
+       ..
+       
+ Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"name": "STRING"``
+  - ``"type": "color"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
+  - ``"deafult": "STRING" (defaults to #fff/white)``
+  
+ .. warning::
+    The tool will error when used in the studio if the default field contains an invalid value.
+    
 ________________________________________________________________________________________________________________________________________
 
 .. _Image:
@@ -84,25 +149,66 @@ ________________________________________________________________________________
 Image
 ^^^^^
 
- Image allows :ref:`studio <studio>` users to upload an image.
+ Image allows studio users to upload an image.
 
  .. code-block:: javascript
 
-    type: 'image-upload'
-
-________________________________________________________________________________________________________________________________________
+    "classification": "Classification",
+    "name": "buttonText",
+    "type": "image-upload"
+ 
+ .. figure:: ../images/imagefield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a Image Upload field
+      
+       ..
+       
+ Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"name": "STRING"``
+  - ``"type": "image-upload"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
+  
+ .. note::
+    The platform will set the default image to a NoImage.png file. At the current moment, there is no way to change this default image. 
+    _______________________________________________________________________________________________________________________________________
 
 .. _Checkbox:
 
 Checkbox
 ^^^^^^^^
 
- Checkbox allows :ref:`studio <studio>` users to set a boolean value by checking a checkbox.
+ Checkbox allows studio users to set a boolean value by checking a checkbox.
 
  .. code-block:: javascript
 
-    type: 'checkbox'
-
+    "classification": "Classification",
+    "name": "Name",
+    "type": "checkbox"
+ 
+ .. figure:: ../images/checkboxfield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a Checkbox field
+      
+       ..
+       
+ Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"name": "STRING"``
+  - ``"type": "checkbox"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
+  - ``"deafult": true || false`` (defaults to false)
+  
 ________________________________________________________________________________________________________________________________________
 
 .. _Toggle:
@@ -110,12 +216,32 @@ ________________________________________________________________________________
 Toggle
 ^^^^^^
 
- Toggle allows :ref:`studio <studio>` users to set a boolean value by toggling a toggle on or off.
+ Toggle allows studio users to set a boolean value by toggling a toggle on or off. Toggle is the default property type if an invalid type is sent.
 
  .. code-block:: javascript
 
-    type: 'toggle'
-
+    "classification": "Classification",
+    "name": "Name",
+    "type": “toggle"
+ 
+ .. figure:: ../images/togglefield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a Toggle field
+      
+       ..
+       
+ Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"name": "STRING"``
+  - ``"type": "toggle"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
+  - ``"deafult": true || false`` (defaults to false)
+  
 ________________________________________________________________________________________________________________________________________
 
 .. _Dropdown:
@@ -123,15 +249,38 @@ ________________________________________________________________________________
 Dropdown
 ^^^^^^^^
 
- Dropdown allows :ref:`studio <studio>` users to select a **single** value from a list of options.
+ Dropdown allows studio users to select a **single** value from a list of options.
 
  .. code-block:: javascript
 
-   type: 'dropdown',
-   options: {
-     'value1': 'Option One',
-     'value2': 'Option Two'
-   }
+   
+    "classification": "Classification",
+    "name": "Id",
+    "options":{
+         "option1 name":"label",
+         "option2 name":"label"
+    },
+    "type": "dropdown"
+ 
+ .. figure:: ../images/dropdownfield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a Dropdown field
+      
+       .. 
+       
+ Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"name": "STRING"``
+  - ``"options": {OPTIONS}`` (at least one option must be added to the options field)
+    - ``"NAME STRING":"LABEL STRING"`` (name is used to referance to the option, label is what studio users see in the dropdown field)
+  - ``"type": "dropdown"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
+  - ``"deafult": "Option Name"`` (does not have a default)
 
 ________________________________________________________________________________________________________________________________________
 
@@ -140,16 +289,37 @@ ________________________________________________________________________________
 Numeric
 ^^^^^^^
 
- Numeric allows :ref:`studio <studio>` users to enter a numeric value. Numeric accepts decimals as input. A min and max range can be set.
+ Numeric allows studio users to enter a numeric value. Numeric accepts decimals as input.
 
  .. code-block:: javascript
 
-   type: 'numeric',
-   options: {
-     'min': 0,
-     'max': 99999
-   }
-
+    "classification": "Classification",
+    "default": 34,
+    "name": "Name",
+    "options": {},
+    "type": "numeric"
+ 
+ .. figure:: ../images/numericfield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a Numeric field
+      
+       ..
+       
+ Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"deafult": INTAGER`` (does not have a default)
+  - ``"name": "STRING"``
+  - ``"options": {OPTIONS}`` (send an empty options field to use the default options)
+    - ``"min": INTAGER`` (deafults to none)
+    - ``"max": INTAGER`` (defaults to none)
+  - ``"type": "numeric"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
+  
 ________________________________________________________________________________________________________________________________________
 
 .. _Multiple Selection:
@@ -157,15 +327,37 @@ ________________________________________________________________________________
 Multiple Selection
 ^^^^^^^^^^^^^^^^^^
 
- Multiple selection allows :ref:`studio <studio>` users to select **multiple** values from a list of options.
+ Multiple selection allows studio users to select **multiple** values from a list of options.
 
- .. code-block:: python
+ .. code-block:: javascript
 
-    type: 'multi-select'
-    options: {
-     'value1': 'Option One',
-     'value2': 'Option Two'
-   }
+    "classification": "Classification",
+    "name": "Name",
+    "options": [
+       {"value":"Name","displayValue":"Label"},
+       {"value":"Name","displayValue":"Label"}
+    ],
+    "type": "multiselect"
+ 
+ .. figure:: ../images/multiselectfield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a Multiselect field
+      
+       ..
+       
+ Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"name": "STRING"``
+  - ``"options": {OPTIONS}`` (at least one option must be added to the options field)
+    - ``{"value":"STRING","displayValue":"STRING"}`` (deafults to none)
+  - ``"type": "multiselect"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
+  - ``"deafult": ""value":"Name","displayValue":"Label""`` (does not have a default)
 
 ________________________________________________________________________________________________________________________________________
 
@@ -174,8 +366,27 @@ ________________________________________________________________________________
 Page Link
 ^^^^^^^^^
 
- Page Link allows :ref:`studio <studio>` users to link to another URL by either selecting a :ref:`widget <widgets>` from the current :ref:`experience <experiences>` or by typing in a URL.
+ Page Link allows studio users to link to another URL by either selecting a widget from the current experience or by typing in a URL.
 
- .. code-block:: python
+ .. code-block:: javascript
 
-    type: 'page-link' 
+    "classification": "Classification",
+    "name": "Name",
+    "type": "page-link"
+ 
+ .. figure:: ../images/pagelinkfield.PNG
+       :align: center
+       :width: 400px
+       :alt: Image of a Page-Link field
+      
+       ..
+       
+ Requared Fields:
+  - ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  - ``"name": "STRING"``
+  - ``"type": "page-link"``
+  
+ Optional Fields:
+  - ``"section" : "STRING"``
+  - ``"help": "STRING with Markdown"``
+  - ``"label": "STRING"``
