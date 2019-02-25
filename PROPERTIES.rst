@@ -67,6 +67,7 @@ Translatable Text
   * ``"label": "STRING"``
   * ``"deafult": "STRING"`` (defaults to "None")
   * ``"options": {OPTIONS}`` 
+  
    * ``"readonly": true || false`` (defaults to false)
    * ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1)
     
@@ -97,8 +98,10 @@ Requared Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
+  
    * ``"readonly": true || false`` (defaults to false)
-   * ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1) 
+   * ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1)
+   
   * ``"type": "text"``
   
  Optional Fields:
@@ -274,7 +277,9 @@ Dropdown
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
+  
    * ``"NAME STRING":"LABEL STRING"`` (name is used to referance to the option, label is what studio users see in the dropdown field)
+   
   * ``"type": "dropdown"``
   
  Optional Fields:
@@ -312,8 +317,10 @@ Numeric
   * ``"deafult": INTAGER`` (does not have a default)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
+  
    * ``"min": INTAGER`` (deafults to none)
    * ``"max": INTAGER`` (defaults to none)
+   
   * ``"type": "numeric"``
   
  Optional Fields:
@@ -351,7 +358,9 @@ Multiple Selection
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
+  
    * ``{"value":"STRING","displayValue":"STRING"}`` (deafults to none)
+   
   * ``"type": "multiselect"``
   
  Optional Fields:
