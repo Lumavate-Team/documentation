@@ -9,18 +9,25 @@
   {% block footer %} {{ super() }}
 
    <style>
-    
+		 :root {
+			--header-color: #28516D;
+			--top-nav-color: #4180A8;
+			--second-nav-color: #4A799A;
+			--third-nav-color: #6392B3;
+			--hover-nav-color: #A4C2D6;
+		}
+
 /* Sidebar header (and topbar for mobile) Colors */
      
     .wy-side-nav-search, .wy-nav-top {
-      background: #A5C3D6;
+      background: var(--header-color);
     }
     
 /* Main Sidebar Colors */
     
      /* Background/First Level */ 
     .wy-nav-side {
-      background: #29516D;
+      background: var(--top-nav-color);
     }
      
 /*Selected Value Colors */
@@ -76,12 +83,12 @@
      
      /* Second Level */
      .wy-menu-vertical li.toctree-l2 a{
-       background-color: #305f80;
+       background-color: var(--second-nav-color);
      }
      
      /* Third Level */
      .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a{
-       background: #376d92;
+       background: var(--third-nav-color);
      }
      
      /* Forth Level */
@@ -116,12 +123,12 @@
      
      /* First Level */
      .wy-menu-vertical a:hover {
-       background-color: #FD9B00;
+       background-color: var(--hover-color);
      }
      
      /* All Other Levels */
      .wy-menu-vertical li.current a:hover {
-       background-color: #FD9B00;
+       background-color: var(--hover-color);
      }
      
      /* First Level Selected*/
