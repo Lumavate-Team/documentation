@@ -51,7 +51,7 @@ Translatable Text
  
  .. figure:: ../images/translatedtextfield.PNG
        :align: center
-       :width: 700px
+       :width: 600px
        :alt: Image of a Translatable Text field
       
        ..
