@@ -59,7 +59,7 @@ Metadata
          'template': '<component-tag property1='{{componentData.property1}}'></component-tag>'
         }
       ],
-    "styleData": []  
+      "styleData": []  
      }
      
  The template defines the HTML that is output upon the component-sets use. The properties exposed can be substituted within the template using the templating syntax. For instance, the template defined above will set the ``property1`` attribute to the value set within the platform.
