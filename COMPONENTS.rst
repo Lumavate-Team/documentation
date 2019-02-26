@@ -33,6 +33,7 @@ Metadata
  The component-set file adheres to the following JSON structure:
 
   .. code-block:: javascript
+     
      {
        "components": [
         {
