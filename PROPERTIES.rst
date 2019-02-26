@@ -56,7 +56,7 @@ Translatable Text
       
        ..
        
- Requared Fields:
+ Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "translated-text"``
@@ -94,7 +94,7 @@ Text
       
        ..
        
-Requared Fields:
+Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
@@ -132,7 +132,7 @@ Color
       
        ..
        
- Requared Fields:
+ Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "color"``
@@ -168,7 +168,7 @@ Image
       
        ..
        
- Requared Fields:
+ Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "image-upload"``
@@ -202,7 +202,7 @@ Checkbox
       
        ..
        
- Requared Fields:
+ Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "checkbox"``
@@ -235,7 +235,7 @@ Toggle
       
        ..
        
- Requared Fields:
+ Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "toggle"``
@@ -273,7 +273,7 @@ Dropdown
       
        .. 
        
- Requared Fields:
+ Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
@@ -312,7 +312,7 @@ Numeric
       
        ..
        
- Requared Fields:
+ Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"deafult": INTAGER`` (does not have a default)
   * ``"name": "STRING"``
@@ -354,7 +354,7 @@ Multiple Selection
       
        ..
        
- Requared Fields:
+ Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
@@ -390,7 +390,7 @@ Page Link
       
        ..
        
- Requared Fields:
+ Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "page-link"``
