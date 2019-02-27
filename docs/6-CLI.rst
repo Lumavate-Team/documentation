@@ -94,7 +94,7 @@ From Source
         $ sudo pip3 install luma
 
  .. note::
-    To activate autocompletion after install, restart your terminal or source your shell configuration (either ``source ~/.zshrc`` or ``$ source ~/.bash_profile``).  
+    To activate autocompletion after install, restart your terminal or source your shell configuration (either ``source ~/.zshrc`` or ``source ~/.bash_profile``).  
 
 _______________________________________________________________________________________________________________________________________
 
@@ -351,11 +351,14 @@ Get
  .. code-block:: bash
   
       {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}},
-      "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/darkseid.bumblebee.labelnexusdev.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=SignaturevX%2FHg8xyp8cnhE%3D&Expires=1550853222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", 
-      "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"},
-      "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, 
-      "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", 
-      "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
+      "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/darkseid.bumblebee.labelnexusdev.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=SignaturevX%2FHg8xyp8cnhE%3D&Expires=1550853222"}, 
+      "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": 
+      {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, 
+      "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99,
+      "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc",
+      "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99,
+      "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null,
+      "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
 
  Options: 
   * ``-p, --profile "STRING"``
