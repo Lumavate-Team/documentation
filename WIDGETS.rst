@@ -5,9 +5,9 @@ Widgets
 
 A widget is a reusable web application hosted within a Docker container. 
 
-Widgets can consist of one or more pages that perform a specific function. There are times when a widget will require another :ref:`tool<tools>` to provide any solid functionality, but they should always strive to be self-contained, stand-alone applications. 
+Widgets can consist of one or more pages that perform a specific function. There are times when a widget will require another tool to provide any solid functionality, but they should always strive to be self-contained, stand-alone applications. 
 
-Widgets are the backbone of an :ref:`experience<experiences>` providing :ref:`studio <studio>` users with a customizable UI that performs a specific function. An experience cannot be created without the presence of at least one widget.  
+Widgets are the backbone of an experience providing studio users with a customizable UI that performs a specific function. An experience cannot be created without the presence of at least one widget.  
  
 Widgets should be used when the application:
  * Requires server-side hosted code
@@ -24,7 +24,7 @@ Accepted File Types
 
  Widgets need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
 
- For more information about uploading :ref:`tools <tools>` to the platform, consult :ref:`Uploading A Tool`. 
+ For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
 
 .. _API Endpoints W:
 
@@ -111,7 +111,7 @@ Optional Endpoints
 
  * ON_CREATE_VERSION
   
-   This endpoint is called BEFORE the :ref:`properties <properties>` are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to modify and/or override property data before saving.
+   This endpoint is called BEFORE the properties are saved within the Lumavate studio. This allows the developer to modify and/or override property data before saving.
 
    .. code-block:: python
 
@@ -120,7 +120,7 @@ Optional Endpoints
 
  * AFTER_CREATE_VERSION
   
-   This endpoint is called AFTER the :ref:`properties <properties>` are saved within the Lumavate :ref:`studio <studio>`. This allows the developer to adjust property data after saving.
+   This endpoint is called AFTER the properties are saved within the Lumavate studio. This allows the developer to adjust property data after saving.
 
    .. code-block:: python
 
