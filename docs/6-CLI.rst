@@ -113,7 +113,9 @@ The CLI requares two variables to be configured in order to talk to the platform
 Setting-Up Environments:
 ^^^^^^^^^^^^^^^^^^^^^^^
 
- You can use either the Lumavate pre-configured environment or you can setup your own environment configuration.
+ You can use either the :ref:`Lumavate pre-configured<enviroment preset configuration>` environment or you can :ref:`setup your own environment configuration<enviroment your own configuration>`.
+
+.. _enviroment preset configuration:
 
  Using the preset configuration:
 
@@ -136,6 +138,8 @@ Setting-Up Environments:
 
      .. warning::
         If there are two environments with the same name, the newer version will overwrite the older version.
+ 
+ .. _enviroment your own configuration:
  
  Using your own configuration:
 
@@ -174,9 +178,11 @@ Setting-Up Environments:
 Setting up Profiles:
 ^^^^^^^^^^^^^^^^^^^
 
- Profiles can be setup using the Lumavate pre-set command or using your own configuration. 
+ Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or using :ref:`your own configuration<profile your own configuraiton>`. 
 
  You will need to have :ref:`configured an environment<Provisioning Environments>` on your machine through the CLI to configure a profile.  
+
+.. _profile preset configuration:
 
  Using a preset configuration:
 
@@ -215,7 +221,8 @@ Setting up Profiles:
         Environment Org Name              Org ID
         prod        Sample Command Center 35
 
- 
+.. _profile your own configuraiton:
+
  Using your own configuration:
 
   #. In your Bash window, run:
@@ -350,8 +357,9 @@ Get
   
  .. code-block:: bash
   
-      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}},
-      "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/darkseid.bumblebee.labelnexusdev.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=SignaturevX%2FHg8xyp8cnhE%3D&Expires=1550853222"}, 
+      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc",
+      "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview":
+      "https://s3.amazonaws.com/darkseid.bumblebee.labelnexusdev.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=SignaturevX%2FHg8xyp8cnhE%3D&Expires=1550853222"}, 
       "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": 
       {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, 
       "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99,
@@ -2013,13 +2021,13 @@ Exec
        Version Number: 9.9.9
 
  Options: 
-  *	-p, --profile “STRING”
-  *	-w, --widget ID
-  *	-v, --version INTAGER (*.*.*)
-  *	--target [one, all]
-  *	--json 
-  *	--table
-  *	--help
+  *	``-p, --profile "STRING"``
+  *	``-w, --widget ID``
+  *	``-v, --version INTAGER (*.*.*)``
+  *	``--target [one, all]``
+  *	``--json``
+  *	``--table``
+  *	``--help``
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2406,5 +2414,5 @@ Additional Info
 ^^^^^^^^^^^^^^^
 
 * Dates must be in the format: year-month-day
-* Must include “” around all arguments
-* Must include “&” between arguments when using multiple arguments
+* Must include "" around all arguments
+* Must include "&" between arguments when using multiple arguments
