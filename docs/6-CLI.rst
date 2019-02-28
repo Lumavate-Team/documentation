@@ -333,11 +333,8 @@ Delete
      "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  Options:
- +-----------------------------+-------------+-------------------------------------------+
- | ``-p, --profile "STRING"``| the name of the profile you want to use with the command  |
- +-------------------------------------------+-------------------------------------------+
- | ``--help``                | list all possible options and subcommands for the command |
- +-------------------------------------------+-------------------------------------------+
+  * ``-p, --profile "STRING"``
+  * ``--help``
  
  .. note::
     API paths cannot include sort criteria.
