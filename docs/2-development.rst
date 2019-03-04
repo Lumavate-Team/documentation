@@ -174,7 +174,7 @@ Setup Custom Docker Containers
 
  Any Docker container may be used to create Tools within Lumavate. Custom Docker containers can be used to create the precise runtime environment needed for a given tool.
 
- The `Docker Hub <https://hub.docker.com/>`_ contains all publicly available registered Docker images for use with a variety of technologies. Base Lumavate containers all start with a _`base image from the Docker Hub <https://hub.docker.com/>`_.
+ The `Docker Hub <https://hub.docker.com/>`_ contains all publicly available registered Docker images for use with a variety of technologies. Base Lumavate containers all start with a _`base image from the Docker Hub <https://hub.docker.com/>`_ .
 
 .. _Uploading Docker Containers:
 
