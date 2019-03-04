@@ -24,7 +24,7 @@ ________________________________________________________________________________
 
 Requirements
 -------------
-You will need to install `Python 3.1.1 <https://www.python.org/downloads/>`_ or higher in order to use the CLI. 
+You will need to install `Python 3.1.1 or higher <https://www.python.org/downloads/>`_ in order to use the CLI. 
 
 It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
 
@@ -66,8 +66,16 @@ From Source
 
  Installing the CLI as a Non-admin:
 
-  #. Clone this repo.
+  #. Clone the `CLI repo <https://github.com/LabelNexus/lumavate-cli>`_.
+  
+  #. Unzip the file you just downloaded.
+  
   #. CD into the CLI directory.
+  
+     .. Code-block:: bash
+     
+        $ cd C:/User/DownloadLocation/lumavate-cli-master/cli
+        
   #. Run:
   
      .. code-block:: bash
@@ -85,8 +93,16 @@ From Source
   
  Installing the CLI as an Admin:
 
-  #. Clone this repo.
+  #. Clone the `CLI repo <https://github.com/LabelNexus/lumavate-cli>`_.
+  
+  #. Unzip the file you just downloaded.
+  
   #. CD into the CLI directory.
+  
+     .. Code-block:: bash
+     
+        $ cd C:/User/DownloadLocation/lumavate-cli-master/cli
+        
   #. Run:
    
      .. code-block:: bash
@@ -94,7 +110,7 @@ From Source
         $ sudo pip3 install luma
 
  .. note::
-    To activate autocompletion after install, restart your terminal or source your shell configuration (either ``source ~/.zshrc`` or ``source ~/.bash_profile``).  
+    To activate autocompletion after install, restart your terminal or source your shell configuration (either ``$ source ~/.zshrc`` or ``$ source ~/.bash_profile``).  
 
 _______________________________________________________________________________________________________________________________________
 
@@ -120,7 +136,22 @@ Setting-Up Environments:
  Using the preset configuration:
 
   #. Log into the command center you want to modify with the CLI.
+  
+     .. figure:: ../images/enviromentselect.PNG
+         :align: center
+         :width: 400px
+         :alt: Image of the Lumavate Organization Select Page.
+      
+         The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
+  
   #. Go to the CLI tab located in the side menu bar.
+  
+     .. figure:: ../images/sidebarforcli.PNG
+         :align: center
+         :width: 800px
+         :alt: Image of the sidebar with the CLI option highlighted.
+      
+         The CLI tab in the sidebar allows Admin users to create a CLI accounts.
   
   #. Copy the information from the Configure An Environment field. It should look like this:
    
@@ -128,7 +159,7 @@ Setting-Up Environments:
        
          $ luma env config --env-name prod --app https://not-a-real-realm.place.lumavate-type.com --audience https://place.lumavate-type.com/notarealapp --token place-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
       
-  #. Past the command into your Bash window and click enter. 
+  #. Paste the command into your Bash window and click enter. 
   #. The CLI should return the following showing that the new enviroment Prod has been created.
      
      .. code-block:: bash
@@ -144,15 +175,32 @@ Setting-Up Environments:
  Using your own configuration:
 
   #. Log into the command center you want to modify with the CLI.
-  #. Go to the CLI tab located in the side menu bar.
+     
+     .. figure:: ../images/enviromentselect.PNG
+         :align: center
+         :width: 400px
+         :alt: Image of the Lumavate Organization Select Page.
+      
+         The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
+ 
+ #. Go to the CLI tab located in the side menu bar.
+  
+     .. figure:: ../images/sidebarforcli.PNG
+         :align: center
+         :width: 800px
+         :alt: Image of the sidebar with the CLI option highlighted.
+      
+         The CLI tab in the sidebar allows Admin users to create a CLI accounts.
+       
   #. Take note of the app, audience, token, client-id, and client-secret information from the Configure An Environment field.
+  
   #. In your Bash window, run:
    
      .. code-block:: bash
        
          $ luma env config
 
-  #. Fill out the prompts as they appear on the screen with the appropriate information. It should look like this when you are done:
+  #. Fill out the prompts as they appear on the screen with the appropriate information. It should look like this:
    
      .. code-block:: bash
        
@@ -171,7 +219,7 @@ Setting-Up Environments:
          Fantasy https://not-a-real-realm2.fantasy.lumavate-type.com    https://fantasy.lumavate-type.com/notanapp2 fantasy-lumavate-type.notarealtoken2.com
 
   .. note:: 
-     The CLI uses Client Id and Client Secret to associate a user context to a machine. From this point forward, user will refer to the Client Id and Client Secret information used to setup the environment in the CLI. 
+     The CLI uses Client ID and Client Secret to associate a user context to a machine. From this point forward, user will refer to the Client ID and Client Secret information used to setup the environment in the CLI. 
 
 .. _Provisioning Profiles:
   
@@ -187,14 +235,31 @@ Setting up Profiles:
  Using a preset configuration:
 
   #. Log into a Lumavate command center.
+  
+     .. figure:: ../images/enviromentselect.PNG
+         :align: center
+         :width: 400px
+         :alt: Image of the Lumavate Organization Select Page.
+      
+         The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
+         
   #. Navigate to the CLI tab located in the side menu bar.
+     
+     .. figure:: ../images/sidebarforcli.PNG
+         :align: center
+         :width: 800px
+         :alt: Image of the sidebar with the CLI option highlighted.
+      
+         The CLI tab in the sidebar allows Admin users to create a CLI accounts.
+         
   #. Copy the information from the Add A Profile field. It should look like this:
    
      .. code-block:: bash
        
          $ luma profile add --env prod
 
-  #. Past the command into your Bash window and click enter.
+  #. Paste the command into your Bash window and click enter.
+  
   #. You will be prompted to name the profile. It should look like this:
    
      .. code-block:: bash
@@ -204,7 +269,7 @@ Setting up Profiles:
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
     
-  #. You will then be presented with a list of organizations associated with the preset Lumavate enviroment. Pick the one you want to edit with this profile, and enter its id number. It should look like this:
+  #. You will then be presented with a list of organizations associated with the preset Lumavate enviroment. Pick the one you want to edit with this profile, and enter its ID number. It should look like this:
    
      .. code-block:: bash
        
@@ -250,7 +315,7 @@ Setting up Profiles:
 
           Env: <<Env Name>>
 
-  #. A list of organizations will appear. Pick the one you want to edit with this profile, and enter its id number. It should look like this:
+  #. A list of organizations will appear. Pick the one you want to edit with this profile, and enter its ID number. It should look like this:
    
      .. code-block:: bash
        
@@ -280,9 +345,9 @@ CLI Syntax
 
 The CLI will allow users to interact with the Lumavate platform from a terminal. For setup instructions, look at the `Github readme <https://github.com/Lumavate-Team/documentation/blob/master/CLI.rst>`_ or the :ref:`CLI setup documentation <CLI>`. All the main commands are listed in the Command Index below. Each of the main commands has their subcommands listed in their section. 
 
-In Bash, pass the ``--help`` flag with the command for more information on how to use them and how to use their subcommands.
+Use the ``--help`` flag with the command for more information on how to use them and how to use their subcommands.
 
-All commands sent to Bash will start with ``luma``.
+All commands will start with ``luma``.
 
 Command Index:
  #. :ref:`API`
@@ -359,14 +424,14 @@ Get
   
       {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc",
       "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview":
-      "https://s3.amazonaws.com/from.through.to.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=notaSignaturev8xyp8cnhE%3D&Expires=999993222"}, 
-      "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": 
-      {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, 
-      "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99,
-      "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc",
-      "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99,
-      "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null,
-      "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
+      "https://s3.amazonaws.com/from.through.to.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=nota
+      Signaturev8xyp8cnhE%3D&Expires=999993222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false,
+      "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00",
+      "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", 
+      "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": 
+      {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true,
+      "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null,
+      "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
 
  Options: 
   * ``-p, --profile "STRING"``
@@ -450,7 +515,7 @@ Commands that create, modify, share, and delete component-set containers.
 Access
 ++++++
 
- Shares and Unshares component-set containers with child organizations.
+ Shares and unshares component-set containers with child organizations.
 
  Example:
 
@@ -537,8 +602,9 @@ Ls
  
  .. code-block:: bash
  
-     id  name        urlRef      createdAt
-     999 Fire Breath firebreath  02/22/19 16:36:09
+     id  name          urlRef       createdAt
+     999 Fire Breath   firebreath   02/22/19 16:36:09
+     99  Frosty Breath frostybreath 02/22/19 16:36:09
 
  Options:
   * ``-p, --profile “STRING”``
@@ -648,7 +714,7 @@ Add
        Component set: 999
        Component set file: “C:\fantasy\creatures\dragons\firebreather.zip”
        Label: prod
-       Version: 9.9.99
+       Version: 9.9.9
  
  Response:
  
@@ -656,8 +722,8 @@ Add
     
      Image Size: 6.91 KB
      Uploading Component Set Version to Lumavate
-     id   versionNumber directIncludes directCssIncludes label createdAt
-     9999 9.9.9         0              0                 prod  02/22/19 16:54:00
+     id  versionNumber directIncludes directCssIncludes label createdAt
+     999 9.9.9         0              0                 prod  02/22/19 16:54:00
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -703,7 +769,7 @@ Components
  
  .. code-block:: bash
  
-     {"payload": {"data": {"componentSetId": 573, "createdAt": "2019-02-22T16:54:00.511074+00:00", "createdBy": 30, "directCssIncludes": [], "directIncludes": [], "distribution": "/iot/v1/dynamic-component-sets/firebreath/9.9.9", "expand": {"components": [{"icon": "/iot/v1/dynamic-component-sets/firebreath/9.9.9/icons/material.svg", "label": "No Template", "properties": [{"label": "No Template", "name": "selectOptions", "options": {"readonly": null}, "type": "text"}], "section": "Fire Breath (v9.9.9)", "tags": ["material", "body"], "template": "<div class=\"mdc-select\"><i class=\"mdc-select__dropdown-icon\"></i><select id=\"{{ componentData.Id }}\" class=\"mdc-select__native-control\"></div>", "type": "material-input-select"}]}, "id": 2260, "label": "prod", "lastModifiedAt": "2019-02-22T16:54:00.511040+00:00", "lastModifiedBy": 30, "major": 9, "minor": 9, "patch": 9, "state": "available", "versionNumber": "9.9.9"}}}
+     {"payload": {"data": {"componentSetId": 999, "createdAt": "2019-02-22T16:54:00.511074+00:00", "createdBy": 30, "directCssIncludes": [], "directIncludes": [], "distribution": "/iot/v1/dynamic-component-sets/firebreath/9.9.9", "expand": {"components": [{"icon": "/iot/v1/dynamic-component-sets/firebreath/9.9.9/icons/material.svg", "label": "No Template", "properties": [{"label": "No Template", "name": "selectOptions", "options": {"readonly": null}, "type": "text"}], "section": "Fire Breath (v9.9.9)", "tags": ["material", "body"], "template": "<div class=\"mdc-select\"><i class=\"mdc-select__dropdown-icon\"></i><select id=\"{{ componentData.Id }}\" class=\"mdc-select__native-control\"></div>", "type": "material-input-select"}]}, "id": 999, "label": "prod", "lastModifiedAt": "2019-02-22T16:54:00.511040+00:00", "lastModifiedBy": 30, "major": 9, "minor": 9, "patch": 9, "state": "available", "versionNumber": "9.9.9"}}}
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -736,8 +802,9 @@ Ls
  
  .. code-block:: bash
  
-     id   versionNumber # Inc # Css Inc label # Exp createdAt
-     9999 9.9.9         0     0         prod  0     02/22/19 16:54:00
+     id  versionNumber # Inc # Css Inc label # Exp createdAt
+     999 9.9.9         0     0         prod  0     02/22/19 16:54:00
+     99  9.9.99        1     1         old   0     02/22/19 16:54:00
 
  Options: 
   * ``-p, --profile “STRING”``
@@ -777,8 +844,8 @@ Rm
  
  .. code-block:: bash
  
-     id   versionNumber directIncludes directCssIncludes label createdAt
-     9999 9.9.9         0              0                 prod  02/22/19 16:54:00
+     id  versionNumber directIncludes directCssIncludes label createdAt
+     999 9.9.9         0              0                 prod  02/22/19 16:54:00
  
  Options: 
   * ``-p, --profile “STRING”``
@@ -814,17 +881,17 @@ Update
  
  .. code-block:: bash
     
-     id   versionNumber directIncludes directCssIncludes label createdAt
-     9999 9.9.9         0              0                 dev   02/22/19 16:54:00
+     id  versionNumber directIncludes directCssIncludes label createdAt
+     999 9.9.9         0              0                 dev   02/22/19 16:54:00
 
     
  Options: 
 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-cs, --component-set ID``
   * ``-v, --version INTAGER (*.*.*)``
-  * ``-l, --label “[prod, dev, old]”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-l, --label "[prod, dev, old]"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -869,12 +936,12 @@ Config
      Fantasy https://not-a-real-realm2.fantasy.lumavate-type.com    https://fantasy.lumavate-type.com/notanapp2 fantasy-lumavate-type.notarealtoken2.com
      
  Options: 
-  * ``--env-name “STRING”``
-  * ``--app “LINK”``
-  * ``--token “LINK”``
-  * ``--audience “LINK”``
-  * ``--client-id ID``
-  * ``--client-secret SECRET``
+  * ``--env-name "STRING"``
+  * ``--app "LINK"``
+  * ``--token "LINK"``
+  * ``--audience "LINK"``
+  * ``--client-id "ID"``
+  * ``--client-secret "SECRET"``
   * ``--json``
   * ``--help``
 
@@ -901,7 +968,7 @@ Ls
 
     
  Options: 
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--help``
 
@@ -927,7 +994,7 @@ Rm
 
  Options: 
 
-  * ``--env-name “STRING”``
+  * ``--env-name "STRING"``
   * ``--help``
 
 _______________________________________________________________________________________________________________________________________
@@ -944,7 +1011,7 @@ Commands that move and list experiences.
 Export
 ++++++
 
- Exports an experience as a JSON file form a studio.
+ Exports an experience as a JSON file from a studio.
 
  Example:
 
@@ -985,9 +1052,9 @@ Import
    
     $ luma experience import
       Profile: dragon
-      Label: Dragon Hatchlings
+      Label: Dragon Hatchling
       Activation code: hatch
-      Import file: “C:\fantasy\creatures\dragons\egg.json”
+      Import file: "C:\fantasy\creatures\dragons\egg.json"
       Collection Name: Creatures
  
  Response:
@@ -1034,9 +1101,9 @@ Ls
  
  .. code-block:: bash
  
-     id   label               name createdAt
-     99   Dragons             drag 08/27/18 15:57:16
-     999  Dragon Hatchlings   drha 09/12/18 17:22:11
+     id  label            name createdAt
+     99  Dragons          drag 08/27/18 15:57:16
+     999 Dragon Hatchling drha 09/12/18 17:22:11
 
  Options:
   * ``-p, --profile "STRING"``
@@ -1087,7 +1154,7 @@ Commands that create, modify, share, and delete microservice containers.
 Access
 ++++++
 
- Shares and/or unshares a microservice container with child organizations. 
+ Shares and unshares a microservice container with child organizations. 
 
  Example:
 
@@ -1105,12 +1172,12 @@ Access
      []     [{'granteeId': 99}] []           ['Dragon Studio']
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, --microservice ID``
   * ``--add ID``
   * ``--rm ID``
   * ``--absolute ID``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table`` 
   * ``--help``
@@ -1139,15 +1206,15 @@ Add
  
  .. code-block:: bash
  
-     id   name              urlRef    createdAt
-     9999 Dragon Fact Sheet factsheet 02/22/19 19:21:49
+     id  name              urlRef    createdAt
+     999 Dragon Fact Sheet factsheet 02/22/19 19:21:49
 
  Options: 
-  * ``-p, --profile “STRING”``
-  * ``--name “STRING”``
-  * ``--url-ref “STRING”``
-  * ``-path, --icon-file “FILE PATH”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-p, --profile "STRING"``
+  * ``--name "STRING"``
+  * ``--url-ref "STRING"``
+  * ``-path, --icon-file "FILE PATH"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1174,14 +1241,14 @@ Ls
  
  .. code-block:: bash
  
-     id   name              urlRef    createdAt
-     999  World Building    world     10/12/18 20:05:40
-     9999 Dragon Fact Sheet factsheet 02/22/19 19:21:49
+     id  name              urlRef    createdAt
+     99  World Building    world     10/12/18 20:05:40
+     999 Dragon Fact Sheet factsheet 02/22/19 19:21:49
 
  Options: 
-  * ``-p, --profile “STRING”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``-p, --profile "STRING"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
   * ``--page INTAGER``
   * ``--pagesize INTAGER``
   * ``--json``
@@ -1211,13 +1278,13 @@ Rm
  
  .. code-block:: bash
  
-     id   name              urlRef    createdAt
-     9999 Dragon Fact Sheet factsheet 02/22/19 19:21:49
+     id  name              urlRef    createdAt
+     999 Dragon Fact Sheet factsheet 02/22/19 19:21:49
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, --microservice ID``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1245,15 +1312,15 @@ Update
  
  .. code-block:: bash
  
-     id   name           urlRef    createdAt
-     9999 World Building factsheet 02/22/19 19:31:05
+     id  name           urlRef    createdAt
+     999 World Building factsheet 02/22/19 19:31:05
 
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, --microservice ID``
-  * ``--name “STRING”``
-  * ``-path, --icon-file “FILE PATH”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--name "STRING"``
+  * ``-path, --icon-file "FILE PATH"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1296,24 +1363,24 @@ Add
  
      Uploading image to Lumavate:
      Image Size: 59.43 MB
-     id   actualState versionNumber label createdAt
-     9999 created     9.9.9         prod  02/22/19 19:40:59
+     id  actualState versionNumber label createdAt
+     999 created     9.9.9         prod  02/22/19 19:40:59
 
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, --microservice ID``
   * ``--port INTAGER``
-  * ``-image, --docker-image “FILE PATH”``
-  * ``-path, --microservice-file-path “FILE PATH”``
+  * ``-image, --docker-image "FILE PATH"``
+  * ``-path, --microservice-file-path "FILE PATH"``
   * ``-fv, --from-version INTAGER (*.*.*)``
   * ``-v, --version INTAGER (*.*.*)``
   * ``--patch INTAGER``
   * ``--minor INTAGER``
   * ``--major INTAGER``
-  * ``--env-var "{“STRING”:”KEY”}"``
+  * ``--env-var "{"STRING":"KEY"}"``
   * ``-l, --label "[dev, old, prod]"``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1327,7 +1394,7 @@ Add
 Exec
 ++++
 
- Sends commands directly to Docker. For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
+ Sends commands directly to Docker. For more information on Docker commands, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
 
  Example:
 
@@ -1339,7 +1406,7 @@ Exec
        Version Number: 9.9.9
 
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, --microservice ID``
   * ``-v, --version INTAGER (*.*.*)``
   * ``--target [one, all]`` 
@@ -1380,7 +1447,7 @@ Logs
      [2019-02-22 19:58:00 +0000] [13] [INFO] Booting worker with pid: 13
     
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, --microservice ID``
   * ``-v, --version INTAGER (*.*.*)``
   * ``--json``
@@ -1410,14 +1477,14 @@ Ls
  
  .. code-block:: bash
  
-     id   actualState versionNumber label createdAt
-     9999 stopped     9.9.9         prod  02/22/19 19:57:16
+     id  actualState versionNumber label createdAt
+     999 stopped     9.9.9         prod  02/22/19 19:57:16
 
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, --microservice ID``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
   * ``--page INTAGER``
   * ``--pagesize INTAGER``
   * ``--json``
@@ -1429,7 +1496,7 @@ Ls
     Use ``--format`` to see JSON values organized in table format.
 
  .. note::
-    Version number is filtered as “major=*&minor=*&patch=*”.
+    Version number is filtered as ``"major=*&minor=*&patch=*"``.
 
 .. _Microservice-version Rm:
 
@@ -1451,15 +1518,15 @@ Rm
  
  .. code-block:: bash
  
-     id   versionNumber label  createdAt
-     9999 9.9.9         prod   02/22/19 19:57:16
+     id  versionNumber label  createdAt
+     999 9.9.9         prod   02/22/19 19:57:16
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, --microservice ID``
   * ``-vm, --version-mask INTAGER (*.*.*)``
   * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1488,14 +1555,14 @@ Start
  
  .. code-block:: bash
  
-     id   Current State Version # Created At
-     9999 running       9.9.9     02/22/19 19:57:16
+     id  Current State Version # Created At
+     999 running       9.9.9     02/22/19 19:57:16
 
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, --microservice ID``
   * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1524,14 +1591,14 @@ Stop
  
  .. code-block:: bash
  
-     id   Current State Version # Created At
-     9999 stopped       9.9.9     02/22/19 19:57:16
+     id  Current State Version # Created At
+     999 stopped       9.9.9     02/22/19 19:57:16
 
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, -- microservice ID``
   * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1560,15 +1627,15 @@ Update
  
  .. code-block:: bash
  
-     id   versionNumber label createdAt
-     9999 9.9.9         dev   02/22/19 19:57:16
+     id  versionNumber label createdAt
+     999 9.9.9         dev   02/22/19 19:57:16
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-ms, -- microservice ID``
   * ``-v, --version INTAGER (*.*.*)``
-  * ``-l, --label “[dev, old, prod]”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-l, --label "[dev, old, prod]"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1609,9 +1676,9 @@ Child-orgs
      9   Dragon Studio          studio       False
      
  Options: 
-  * ``-p, --profile “STRING”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``-p, --profile "STRING"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
   * ``--json``
   * ``--help``
 
@@ -1639,9 +1706,9 @@ Ls
      9   Dragon Studio         studio       False
      
  Options: 
-  * ``--env “STRING”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``--env "STRING"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
   * ``--json``
   * ``--help``
 
@@ -1668,11 +1735,16 @@ Add
      $ luma profile add
        Profile name: dragon
        
-       <<lists of envs user has access to>>
+         Env Name App                                              Audience                                    Token
+         Fantasy  https://not-a-realm2.fantasy.lumavate-type.com   https://fantasy.lumavate-type.com/notanapp2 fantasy-lumavate-type.notarealtoken2.com
+         prod     https://not-a-realm.place.lumavate-type.com      https://place.lumavate-type.com/notanapp    place-lumavate-type.notarealtoken.com
        
        Name of Env you want to use with this profile: Fantasy
        
-       <<lists of orgs in the selected env>>
+       id  name                  Org Type Test Org
+       999 Child Command Center  dev      None
+       99  Dragon Command Center dev      None
+       9   Dragon Studio         studio   False
        
        Org ID you want to associate with this profile: 99
 
@@ -1684,8 +1756,8 @@ Add
      Fantasy     Dragon Command Center 99
      
  Options: 
-  * ``--profile-name “STRING”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--profile-name "STRING"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--help``
 
 .. _Profile Ls:
@@ -1693,7 +1765,7 @@ Add
 Ls
 ++
 
- Lists all profiles associated with the Client Id and Secrete.
+ Lists all profiles associated with the Client ID and Secret.
 
  Example:
 
@@ -1705,13 +1777,13 @@ Ls
  
  .. code-block:: bash
  
-     profileName       env    orgName                      orgId
-     dragon            dragon Dragon Command Center        99
-     dragon-two        dragon Dragon Studio                9
-     profile           prod   Sample Command Center        35
+     profileName       env     orgName                      orgId
+     dragon            Fantasy Dragon Command Center        99
+     dragon-two        Fantasy Dragon Studio                9
+     profile           prod    Sample Command Center        35
 
  Options: 
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--help``
 
@@ -1736,7 +1808,7 @@ Rm
      {"accessToken": "NotAccessTokenOiJSUzI1NiIsImtpZCI6Ik5VSXhSVFpHTmpORU9FVkdNVVZHTlRGQk9FWXdRMNotAccessToken1RnME1FTTBOdyJ9.eyJodHRwczovL2x1bWF2YXRlLmNvbS91dWlkIjoiOGZjMGM1NTgtZmJkNS00MWRlLWFhOTUtN2FkMmJmNDAyOGM3IiwiaXNzIjoiaHR0cHM6Ly9kcmFnb25mbHktbHVtYXZhdGUtZGV2LmF1dGgwLmNvbS8iLCJzdWIiOiJreW8yZkQwMXgwd1JVM3RFTGh1ajJlSXhLSUxvbUNkQUBjbNotAccessTokenkcmFnb25mbHkubHVtYXZhdGUtZGV2LmNvbS9hcHAiLCJpYXQiOjE1NDg3MTA1MzUsImV4cCI6MTU0ODc5NjkzNSwiYXpwIjoia3lvMmZEMDF4MHdSVTN0RUxodWoyZUl4S0lMb21DZEEiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.oOWd0sd05uvMVnZZJDTpXA9pqbAsVsq2Je97nS3J7wy8c-o7LUuN_kNYeCyxZWZ2FEBhVl2galmUB_dvUxdnYOzRMNhiiIqxZhQHeNotAccessTokenjCHDqCmuQQvPg-yqZxlQL6xfHqcmh2-syTeCyHf5y_gCWdxsUhuMSj28vtH5_v76NotAccessTokenSyb5XktrdUobFuSdvy4fw-GU5eUAEFRgzlYbnRzq8ygB4SXONZvbcKqVqpBDFdbdcmo4jIWk4a2gK5-v51a49Sh798dSBxiNotAccessTokennCxD7f7VcCWuUW0wNX87YtIjHsAw", "env": "Fantasy", "orgId": 99, "orgName": "Dragon Command Center"}
 
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``--help``
 
 _______________________________________________________________________________________________________________________________________
@@ -1777,7 +1849,7 @@ Commands that add, modify, share, and delete widget containers.
 Access
 ++++++
 
- Shares and/or Unshares a widget container with child organizations.
+ Shares and unshares a widget container with child organizations.
 
  Example:
 
@@ -1795,12 +1867,12 @@ Access
      []     [{'granteeId': 99}] []           ['Dragon Command Center']
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-w, --widget ID``
   * ``--add ID``
   * ``--rm ID``
   * ``--absolute ID``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1829,15 +1901,15 @@ Add
  
  .. code-block:: bash
  
-     id   name  urlRef createdAt
-     9999 Hydra hydra  02/22/19 20:28:17
+     id  name  urlRef createdAt
+     999 Hydra hydra  02/22/19 20:28:17
      
  Options: 
-  * ``-p, --profile “STRING”``
-  * ``--name “STRING”``
-  * ``--url-ref “LOWERCASE STRING”``
-  * ``-path, --icon-file “FILE PATH”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
+  * ``-p, --profile "STRING"``
+  * ``--name "STRING"``
+  * ``--url-ref "LOWERCASE STRING"``
+  * ``-path, --icon-file "FILE PATH"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"`` 
   * ``--json`` 
   * ``--table`` 
   * ``--help``
@@ -1864,13 +1936,14 @@ Ls
  
  .. code-block:: bash
  
-     id   name  urlRef createdAt
-     9999 Hydra hydra  02/22/19 20:28:17
+     id  name  urlRef    createdAt
+     999 Hydra hydra     02/22/19 20:28:17
+     99  European Dragon 02/22/19 20:28:17
 
  Options: 
-  * ``-p, --profile “STRING”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
-  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”`` 
+  * ``-p, --profile "STRING"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"`` 
+  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"`` 
   * ``--page INTAGER``
   * ``--pagesize INTAGER``
   * ``--json`` 
@@ -1900,13 +1973,13 @@ Rm
  
  .. code-block:: bash
  
-     id   name  urlRef createdAt
-     9999 Hydra hydra  02/22/19 20:38:07
+     id  name  urlRef createdAt
+     999 Hydra hydra  02/22/19 20:38:07
 
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-w, --widget ID``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table`` 
   * ``--help``
@@ -1934,15 +2007,15 @@ Update
  
  .. code-block:: bash
  
-     id   name            urlRef createdAt
-     9999 European Dragon hydra  02/22/19 20:38:07
+     id  name            urlRef createdAt
+     999 European Dragon hydra  02/22/19 20:38:07
 
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-w, --widget ID``
-  * ``--name “STRING”``
-  * ``-path, --icon-file “FILE PATH”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``  
+  * ``--name "STRING"``
+  * ``-path, --icon-file "FILE PATH"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``  
   * ``--json``
   * ``--table``
   * ``--help``
@@ -1985,23 +2058,23 @@ Add
  
      Uploading image to Lumavate
      Image Size: 179.87 MB
-     id   actualState versionNumber label createdAt
-     9999 created     9.9.9         prod  02/22/19 20:46:08
+     id  actualState versionNumber label createdAt
+     999 created     9.9.9         prod  02/22/19 20:46:08
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``--port INTAGER``
   * ``-w, --widget ID``
-  * ``-path, --widget-file-path “FILE PATH”``
-  * ``-image, --docker-image “FILE PATH”``
+  * ``-path, --widget-file-path "FILE PATH"``
+  * ``-image, --docker-image "FILE PATH"``
   * ``-fv, --from-version INTAGER (*.*.*)``
   * ``-v, --version INTAGER (*.*.*)``
   * ``--patch INTAGER``
   * ``--minor INTAGER``
   * ``--major INTAGER``
-  * ``--env-var "{“STRING”:”KEY”}"``
-  * ``-l, --label “[dev, old, prod]”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``--env-var "{"STRING":"KEY"}"``
+  * ``-l, --label "[dev, old, prod]"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -2015,7 +2088,7 @@ Add
 Exec
 ++++
 
- Sends commands directly to Docker. For more information, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
+ Sends commands directly to Docker. For more information about Docker commands, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
 
  Example:
 
@@ -2079,7 +2152,7 @@ Logs
      
  Options: 
 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-w, --widget ID``
   * ``-v, --version INTAGER (*.*.*)``
   * ``--json``
@@ -2109,14 +2182,15 @@ Ls
  
  .. code-block:: bash
  
-     id   actualState versionNumber label createdAt
-     9999 running     9.9.9         prod  02/22/19 20:46:08
+     id  actualState versionNumber label createdAt
+     999 running     9.9.9         prod  02/22/19 20:46:08
+     99  running     9.9.99        old   02/22/19 20:46:08
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-w, --widget ID``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
   * ``--page INTAGER``
   * ``--pagesize INTAGER``
   * ``--json``
@@ -2128,7 +2202,7 @@ Ls
     Use ``--format`` to see JSON values organized in table format.
 
  .. note::
-    Version number is filtered as “major=*&minor=*&patch=*”.
+    Version number is filtered as ``"major=*&minor=*&patch=*"``.
 
 .. _Widget-version Rm:
 
@@ -2150,15 +2224,15 @@ Rm
  
  .. code-block:: bash
  
-     id   versionNumber label createdAt
-     9999 9.9.9         prod  02/22/19 20:46:08
+     id  versionNumber label createdAt
+     999 9.9.9         prod  02/22/19 20:46:08
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-w, --widget ID``
   * ``-vm, --version-mask INTAGER (*.*.*)``
   * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table`` 
   * ``--help``
@@ -2187,14 +2261,14 @@ Start
  
  .. code-block:: bash
  
-     id   Current State Version # Created At
-     9999 running       9.9.9     02/22/19 20:46:08
+     id  Current State Version # Created At
+     999 running       9.9.9     02/22/19 20:46:08
 
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-w, --widget ID``
   * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -2223,14 +2297,14 @@ Stop
  
  .. code-block:: bash
  
-     id   Current State Version # Created At
-     9999 stopped       9.9.9     02/22/19 20:46:08
+     id  Current State Version # Created At
+     999 stopped       9.9.9     02/22/19 20:46:08
      
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-w, --widget ID``
   * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``--help``
@@ -2259,15 +2333,15 @@ Update
  
  .. code-block:: bash
  
-     id   versionNumber label createdAt
-     9999 9.9.9         dev   02/22/19 20:46:08
+     id  versionNumber label createdAt
+     999 9.9.9         dev   02/22/19 20:46:08
   
  Options: 
-  * ``-p, --profile “STRING”``
+  * ``-p, --profile "STRING"``
   * ``-w, --widget ID``
   * ``-v, --version INTAGER (*.*.*)``
-  * ``-l, --label “[dev, old, prod]”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+  * ``-l, --label "[dev, old, prod]"``
+  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
   * ``--json``
   * ``--table``
   * ``–help``
@@ -2303,6 +2377,13 @@ Greater Than (gt)
  .. code-block:: bash
    
     $ luma profile ls --filter “name=gt:dragon”
+    
+ Response:
+ 
+ .. code-block:: bash
+ 
+    profileName env     orgName       orgId
+    dragon-two  Fantasy Dragon Studio 9
 
 .. _Ls Commands lt:
 
@@ -2316,6 +2397,13 @@ Less Than (lt)
  .. code-block:: bash
    
     $ luma profile ls --filter “name=lt:dragon”
+    
+ Response:
+ 
+ .. code-block:: bash
+ 
+    profileName env     orgName       orgId
+    drag        prod    Other Studio  3
 
 .. _Ls Commands gte:
 
@@ -2329,6 +2417,14 @@ Greater Than Or Equal To (gte)
  .. code-block:: bash
    
     $ luma profile ls --filter “name=gte:dragon”
+    
+ Response:
+ 
+ .. code-block:: bash
+ 
+    profileName env     orgName                orgId
+    dragon      Fantasy Dragon Command Center  99
+    dragon-two  Fantasy Dragon Studio          9
 
 .. _Ls Commands lte:
 
@@ -2343,6 +2439,14 @@ Less Than Or Equal To (lte)
    
     $ luma profile ls --filter “name=lte:dragon”
 
+ Response:
+ 
+ .. code-block:: bash
+ 
+    profileName env     orgName                orgId
+    dragon      Fantasy Dragon Command Center  99
+    drag        prod    Other Studio           3
+    
 .. _Ls Commands ct:
 
 Containing (ct)
@@ -2355,6 +2459,14 @@ Containing (ct)
  .. code-block:: bash
    
     $ luma profile ls --filter “name=ct:dragon”
+    
+ Response:
+ 
+ .. code-block:: bash
+ 
+    profileName env     orgName                orgId
+    dragon      Fantasy Dragon Command Center  99
+    dragon-two  Fantasy Dragon Studio          9
 
 _______________________________________________________________________________________________________________________________________
 
@@ -2406,7 +2518,11 @@ Help
      
      OR 
      
-     $ luma <<Command>> --help
+     $ luma <<Command>>
+     
+     OR
+     
+     $ luma <<Command>> --help 
      
      OR
      
