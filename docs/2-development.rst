@@ -93,10 +93,10 @@ Build The Container
  
   	$ docker build --no-cache --rm -t gobasetool:1.0 .
 	
-    The ``docker build .`` command tells Docker you want to build the current file. You can specify the full path if you do not want to cd into the file.
-    The ``--no-cache`` command specifies that cache will not be used when building containers. 
-    The ``--rm`` command removes intermediate containers after a successful builld.
-    The ``-t gobasetool:1.0`` command names the tool gobasetool and tags the tool as 1.0. 
+    | The ``docker build .`` command tells Docker you want to build the current file. You can specify the full path if you do not want to cd into the file.
+    | The ``--no-cache`` command specifies that cache will not be used when building containers. 
+    | The ``--rm`` command removes intermediate containers after a successful builld.
+    | The ``-t gobasetool:1.0`` command names the tool gobasetool and tags the tool as 1.0. 
 
  #. An image will be built with the sample Docker file. 
 
@@ -122,10 +122,10 @@ Run The Container
 	
 	$ docker run -d -p 5000:8080 --volume "$(pwd)"/widget:/go/src/widget gobasetool:1.0
 	
-    The ``docker run gobasetool:1.0`` command tells Docker you want to run the gobasetool:1.0 container. 
-    The ``-d`` option puts the container in detached mode.
-    The ``-p 5000:8080`` command maps port 5000 on the machine to port 8080 on the container.
-    The ``--volume "$(pwd)"/widget:/go/src/widget`` command maps the widget directory to the path /go/src/widget inside the current directory. The absolute path can be specified instead of the current directory by replacing ``"$(pwd)"`` with the complete file path.
+    | The ``docker run gobasetool:1.0`` command tells Docker you want to run the gobasetool:1.0 container. 
+    | The ``-d`` option puts the container in detached mode.
+    | The ``-p 5000:8080`` command maps port 5000 on the machine to port 8080 on the container.
+    | The ``--volume "$(pwd)"/widget:/go/src/widget`` command maps the widget directory to the path /go/src/widget inside the current directory. The absolute path can be specified instead of the current directory by replacing ``"$(pwd)"`` with the complete file path.
     
     .. tip::
        Mapping to a directory allows the developer to modify files in his/her local tool directory. It also reloads the process by restarting Go when the files change allowing the developer to update the files inside the container in real time.  
