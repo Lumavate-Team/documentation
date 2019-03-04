@@ -17,10 +17,10 @@ Code Samples
 
 Code samples can be found at https://github.com/Lumavate-Team
 
-.. _Net Sample:
+.. _C# sample:
 
-.NET
-^^^^
+C#
+^^
 
  A pre-built Docker container using .NET Core with a lightweight shell for use with C#.
 
@@ -37,7 +37,7 @@ GO
 
  Base widget container: https://github.com/Lumavate-Team/widget-base-go
 
-.. Python Sample:
+.. python sample:
 
 Python
 ^^^^^^
