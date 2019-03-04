@@ -64,7 +64,7 @@ Installing Locally
 
 Setup Lumavate Prebuilt Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- Lumavate provides three base containers to help devlopers start devloping tools for the Lumavate platform. The following explanation uses Go. For the full Go container, please see the `Go Github repository <https://github.com/Lumavate-Team/widget-base-go>`_. Additional :ref:`Python sample <python sample>` and :ref:`C# sample<C# sample>` containers are provided.
+ Lumavate provides three base containers to help devlopers start devloping tools for the Lumavate platform. The following explanation uses Go. For the full Go container, please see the `Go Github repository <https://github.com/Lumavate-Team/widget-base-go>`_. Additional :ref:`Python sample <python sample>` and :ref:`C# sample <C# sample>` containers are provided.
 
 .. _Build The Container:
 
@@ -174,7 +174,7 @@ Setup Custom Docker Containers
 
  Any Docker container may be used to create Tools within Lumavate. Custom Docker containers can be used to create the precise runtime environment needed for a given tool.
 
- The `Docker Hub <https://hub.docker.com/>`_ contains all publicly available registered Docker images for use with a variety of technologies. Base Lumavate containers all start with a _`base image from the Docker Hub <https://hub.docker.com/>`_ .
+ The `Docker Hub <https://hub.docker.com/>`_ contains all publicly available registered Docker images for use with a variety of technologies. Base Lumavate containers all start with a `base image from the Docker Hub <https://hub.docker.com/>`_ .
 
 .. _Uploading Docker Containers:
 
