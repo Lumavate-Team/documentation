@@ -3,7 +3,7 @@
 Overview
 ========
 
- Lumavate is a delivery platform for cloud-based web applications. Its platform allows studio users to create fully compliant `Progressive Web Applications (PWAs) <https://developers.google.com/web/progressive-web-apps/>`_ using a WYSIWYG designer and a variety of reusable tools. These Lumavate PWAs are referred to as experiences throughout this guild.  
+ Lumavate is a delivery platform for cloud-based web applications. Its platform allows studio users to create fully compliant `Progressive Web Applications (PWAs) <https://developers.google.com/web/progressive-web-apps/>`_ using a WYSIWYG designer and a variety of reusable tools. These Lumavate PWAs are referred to as experiences throughout this guide.  
  	
  Lumavate provides a set of common tools as a standard feature of the platform to help users get the most out of our platform. These tools can be broken up into three different types: :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component-sets <component-sets>`. 
 
