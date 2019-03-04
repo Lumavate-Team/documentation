@@ -37,7 +37,7 @@ GO
 
  Base widget container: https://github.com/Lumavate-Team/widget-base-go
 
-.. python sample:
+.. _python sample:
 
 Python
 ^^^^^^
