@@ -1,4 +1,4 @@
-.. _Additional Terms
+.. _Additional Terms:
 
 Additional Terms
 ----------------
