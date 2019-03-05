@@ -1,5 +1,7 @@
-Glossary
---------
+.. _Additional Terms
+
+Additional Terms
+----------------
 
 .. Activations
 .. ^^^^^^^^^^^
