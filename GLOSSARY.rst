@@ -43,7 +43,7 @@ Progressive Web Application
 
  A Progressive Web Application (PWA) is a cloud-based web application that complies with the PWA standards started by Google in 2015 and adopted by Google, Microsoft, and Apple. The PWA specification establishes technical standards for such things as offline use, push notifications, save to desktop, and other native type capabilities previously unavailable to cloud-based applications. 
  
- _`Visit Google’s PWA Compliance Checklist to learn more <https://developers.google.com/web/progressive-web-apps/checklist>`_.
+ `Visit Google’s PWA Compliance Checklist to learn more <https://developers.google.com/web/progressive-web-apps/checklist>`_.
 
 .. Property
 .. ^^^^^^^^
