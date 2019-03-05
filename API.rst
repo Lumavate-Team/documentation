@@ -1,5 +1,5 @@
 
-.. _APU Reference:
+.. _API Reference:
 
 API Reference
 -------------
