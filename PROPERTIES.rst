@@ -6,13 +6,13 @@ Properties
 The Discover endpoint enables the developer to expose configurable settings through the Lumavate studio, by returning an array of properties via JSON.
 
 
-A property is defined by denoting the tab name, section name, help text, property name, property label, default value, and property type using the following JSON structure:
+A property can have a tab name, section name, help text, property name, property label, default value, and property type all defined using the following JSON structure:
 
 .. code-block:: javascript
 
   var property = {
-    'classification': 'Tab name',
-    'section': 'Section name',
+    'classification': 'Tab name. The name of the tab the property field is under in the studio.',
+    'section': 'Section name. The name of the section the property field is located in the studio.',
     'help': 'Help text for the property. Use Markdown to provide additional formatting.',
     'name': 'Property name. Use this when referencing the property.',
     'label': 'Property label. The name of the field shown in the studio.',
@@ -41,7 +41,7 @@ ________________________________________________________________________________
 Translatable Text
 ^^^^^^^^^^^^^^^^^
 
- Translatable Text allows studio users to set a language specific text value. The application will then render the proper text based on the end user's language settings.
+ Translatable text allows studio users to set a language specific text value. The application will then render the proper text based on the end user's language settings.
 
  .. code-block:: javascript
 
@@ -52,7 +52,7 @@ Translatable Text
  .. figure:: ../images/translatedtextfield.PNG
        :align: center
        :width: 400px
-       :alt: Image of a Translatable Text field
+       :alt: Image of a translatable text field.
       
        ..
        
@@ -69,7 +69,7 @@ Translatable Text
   * ``"options": {OPTIONS}`` 
   
    * ``"readonly": true || false`` (defaults to false)
-   * ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1)
+   * ``"rows" INTAGER`` (the studio displays the number of rows specified, defaults to 1)
     
 ________________________________________________________________________________________________________________________________________
 
@@ -90,7 +90,7 @@ Text
  .. figure:: ../images/textfield.PNG
        :align: center
        :width: 700px
-       :alt: Image of a Text field
+       :alt: Image of a text field.
       
        ..
        
@@ -100,7 +100,7 @@ Required Fields:
   * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
   
    * ``"readonly": true || false`` (defaults to false)
-   * ``"rows" INTAGER`` (the studio displayes the number of rows specified, defaults to 1)
+   * ``"rows" INTAGER`` (the studio displays the number of rows specified, defaults to 1)
    
   * ``"type": "text"``
   
@@ -128,7 +128,7 @@ Color
  .. figure:: ../images/colorfield.PNG
        :align: center
        :width: 600px
-       :alt: Image of a color field
+       :alt: Image of a color field.
       
        ..
        
@@ -164,7 +164,7 @@ Image
  .. figure:: ../images/imagefield.PNG
        :align: center
        :width: 600px
-       :alt: Image of a Image Upload field
+       :alt: Image of a image upload field.
       
        ..
        
@@ -198,7 +198,7 @@ Checkbox
  .. figure:: ../images/checkboxfield.PNG
        :align: center
        :width: 700px
-       :alt: Image of a Checkbox field
+       :alt: Image of a checkbox field.
       
        ..
        
@@ -220,7 +220,7 @@ ________________________________________________________________________________
 Toggle
 ^^^^^^
 
- Toggle allows studio users to set a boolean value by toggling a toggle on or off. Toggle is the default property type if an invalid type is sent.
+ Toggle allows studio users to set a boolean value by toggling a toggle on or off. Toggle is the default property type if an invalid type is used.
 
  .. code-block:: javascript
 
@@ -231,7 +231,7 @@ Toggle
  .. figure:: ../images/togglefield.PNG
        :align: center
        :width: 600px
-       :alt: Image of a Toggle field
+       :alt: Image of a toggle field.
       
        ..
        
@@ -269,7 +269,7 @@ Dropdown
  .. figure:: ../images/dropdownfield.PNG
        :align: center
        :width: 600px
-       :alt: Image of a Dropdown field
+       :alt: Image of a dropdown field.
       
        .. 
        
@@ -278,7 +278,7 @@ Dropdown
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
   
-   * ``"NAME STRING":"LABEL STRING"`` (name is used to referance to the option, label is what studio users see in the dropdown field)
+   * ``"NAME STRING":"LABEL STRING"`` (name is used to referance the option, label is what studio users see in the dropdown field)
    
   * ``"type": "dropdown"``
   
@@ -308,7 +308,7 @@ Numeric
  .. figure:: ../images/numricfield.PNG
        :align: center
        :width: 700px
-       :alt: Image of a Numeric field
+       :alt: Image of a numeric field.
       
        ..
        
@@ -350,7 +350,7 @@ Multiple Selection
  .. figure:: ../images/multiselectfield.PNG
        :align: center
        :width: 700px
-       :alt: Image of a Multiselect field
+       :alt: Image of a multiselect field.
       
        ..
        
@@ -375,7 +375,7 @@ ________________________________________________________________________________
 Page Link
 ^^^^^^^^^
 
- Page Link allows studio users to link to another URL by either selecting a widget from the current experience or by typing in a URL.
+ Page link allows studio users to link to another URL by either selecting a widget from the current experience or by typing in a URL.
 
  .. code-block:: javascript
 
@@ -386,7 +386,7 @@ Page Link
  .. figure:: ../images/pagelinkfield.PNG
        :align: center
        :width: 400px
-       :alt: Image of a Page-Link field
+       :alt: Image of a page-link field.
       
        ..
        
