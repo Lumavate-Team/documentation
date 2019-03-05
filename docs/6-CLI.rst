@@ -24,12 +24,20 @@ ________________________________________________________________________________
 
 Requirements
 -------------
+
 You will need to install `Python 3.1.1 or higher <https://www.python.org/downloads/>`_ in order to use the CLI. 
+
+ .. figure:: ../images/pythoninstall.PNG
+    :align: center
+    :width: 400px
+    :alt: Image of a Python downloader with the "Add Python To Enviromental Variable Path" checkbox highlighted.
+      
+    Remember to click the “Add Python To Enviromental Variable Path” checkbox when installing Python.  
 
 It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
 
-.. tip::
-   Use `ZSH <https://sourceforge.net/projects/zsh/files/>`_ to get the most out of the CLI. This enables extra features such as showing help text during autocompletion. 
+.. note::
+   Luma supports `ZSH <https://sourceforge.net/projects/zsh/files/>`_. 
 
 _______________________________________________________________________________________________________________________________________
 
@@ -39,25 +47,27 @@ Installation
 ------------
 The CLI can be installed two different ways:
 
- #. :ref:`From Pip<Installation Pip>`
- #. :ref:`From Source<Installation Source>`.
+ #. :ref:`From Pip<Installation Pip>` (install without downloading files)
+ #. :ref:`From Source<Installation Source>` (install by downloading files)
 
 .. _Installation Pip:
 
 From Pip
 ^^^^^^^^
 
- As a Non-admin run:
+ On Mac and Linx:
   
    .. code-block:: bash
      
       $ sudo pip3 install luma
 
- As an Admin run:
+ On Windows:
   
    .. code-block:: bash
      
       $ pip3 install luma
+
+ The CLI should now be installed. Continue on to :ref:`Provisioning Credentials`. 
 
 .. _Installation Source:
 
@@ -79,8 +89,14 @@ From Source
   #. Run:
   
      .. code-block:: bash
-      
+        
+        On Windows:
+        
         $ pip3 install luma --user
+        
+        On Mac and Linx:
+        
+        $ sudo pip3 install luma --user
  
   #. Add the returned path URL to your system environment variables. 
    
@@ -91,6 +107,8 @@ From Source
         The script luma.exe is installed in 'C:\ComputerName\UserName\AppData\Roaming\Python\Python37\Scripts' which is not on PATH. 
         Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
   
+  #. The CLI should now be installed. Continue on to :ref:`Provisioning Credentials`. 
+ 
  Installing the CLI as an Admin:
 
   #. Clone the `CLI repo <https://github.com/LabelNexus/lumavate-cli>`_.
@@ -106,12 +124,16 @@ From Source
   #. Run:
    
      .. code-block:: bash
+     
+        On Windows:
+        
+        $ pip3 install luma
+        
+        On Mac and Linx:
        
         $ sudo pip3 install luma
 
- .. note::
-    To activate autocompletion after install, restart your terminal or source your shell configuration (either ``$ source ~/.zshrc`` or ``$ source ~/.bash_profile``).  
-
+  #. The CLI should now be installed. Continue on to :ref:`Provisioning Credentials`. 
 _______________________________________________________________________________________________________________________________________
 
 .. _Provisioning Credentials:
@@ -160,7 +182,7 @@ Setting-Up Environments:
          $ luma env config --env-name prod --app https://not-a-real-realm.place.lumavate-type.com --audience https://place.lumavate-type.com/notarealapp --token place-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
       
   #. Paste the command into your Bash window and click enter. 
-  #. The CLI should return the following showing that the new enviroment Prod has been created.
+  #. The CLI should return the following showing that the new enviroment Prod has been created. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
      
      .. code-block:: bash
      
@@ -211,7 +233,7 @@ Setting-Up Environments:
            Client id: <<user clientId>>
            Client secret: <<user clientSecret>>
           
-  #. The CLI should return the following with the env name you specified listed with the other enviroments showing that the new enviroment has been created. 
+  #. The CLI should return the following with the env name you specified listed with the other enviroments showing that the new enviroment has been created. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
   
      .. code-block:: bash
      
@@ -264,7 +286,7 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-         Profile Name: <<profile’s name in the CLI>>
+         Profile Name: <<profile name: used to reference an organization>>
 
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
@@ -279,7 +301,7 @@ Setting up Profiles:
 
           Org ID you want to associate with this profile: <<org id>>
   
-  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created.
+  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
   
     .. code-block:: bash
     
@@ -326,7 +348,7 @@ Setting up Profiles:
 
           Org ID you want to associate with this profile: <<org id>>
          
-  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created.
+  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
   
     .. code-block:: bash
     
