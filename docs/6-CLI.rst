@@ -137,21 +137,21 @@ Setting-Up Environments:
 
   #. Log into the command center you want to modify with the CLI.
   
-      .. figure:: ../images/enviromentselect.PNG
-          :align: center
-          :width: 400px
-          :alt: Image of the Lumavate Organization Select Page.
+     .. figure:: ../images/enviromentselect.PNG
+         :align: center
+         :width: 400px
+         :alt: Image of the Lumavate Organization Select Page.
       
-          The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
+         The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
   
   #. Go to the CLI tab located in the side menu bar.
   
-      .. figure:: ../images/sidebarforcli.PNG
-          :align: center
-          :width: 800px
-          :alt: Image of the sidebar with the CLI option highlighted.
+     .. figure:: ../images/sidebarforcli.PNG
+         :align: center
+         :width: 800px
+         :alt: Image of the sidebar with the CLI option highlighted.
       
-          The CLI tab in the sidebar allows Admin users to create a CLI accounts.
+         The CLI tab in the sidebar allows Admin users to create a CLI accounts.
   
   #. Copy the information from the Configure An Environment field. It should look like this:
    
@@ -176,14 +176,14 @@ Setting-Up Environments:
 
   #. Log into the command center you want to modify with the CLI.
      
-      .. figure:: ../images/enviromentselect.PNG
-          :align: center
-          :width: 400px
-          :alt: Image of the Lumavate Organization Select Page.
+     .. figure:: ../images/enviromentselect.PNG
+         :align: center
+         :width: 400px
+         :alt: Image of the Lumavate Organization Select Page.
       
-          The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
+         The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
  
- #. Go to the CLI tab located in the side menu bar.
+  #. Go to the CLI tab located in the side menu bar.
   
       .. figure:: ../images/sidebarforcli.PNG
           :align: center
@@ -236,21 +236,21 @@ Setting up Profiles:
 
   #. Log into a Lumavate command center.
   
-      .. figure:: ../images/enviromentselect.PNG
-          :align: center
-          :width: 400px
-          :alt: Image of the Lumavate Organization Select Page.
+     .. figure:: ../images/enviromentselect.PNG
+         :align: center
+         :width: 400px
+         :alt: Image of the Lumavate Organization Select Page.
       
-          The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
+         The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
          
   #. Navigate to the CLI tab located in the side menu bar.
      
-      .. figure:: ../images/sidebarforcli.PNG
-          :align: center
-          :width: 800px
-          :alt: Image of the sidebar with the CLI option highlighted.
+     .. figure:: ../images/sidebarforcli.PNG
+         :align: center
+         :width: 800px
+         :alt: Image of the sidebar with the CLI option highlighted.
       
-          The CLI tab in the sidebar allows Admin users to create a CLI accounts.
+         The CLI tab in the sidebar allows Admin users to create a CLI accounts.
          
   #. Copy the information from the Add A Profile field. It should look like this:
    
