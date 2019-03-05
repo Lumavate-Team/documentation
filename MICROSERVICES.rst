@@ -7,7 +7,7 @@ Microservices are container-based applications hosted inside a Docker container.
 
 Microservices provide additional behind-the-scenes functions, such as services and data-processing, within experiences. However, microservices rarely have their own UI. Instead, they add UI functionality to widgets through the use of component-sets. 
 
-Microservices cannot be used to create an experience without the addition of a widget. They, instead, assist widgets by adding additional logic and/or data access to an experience. 
+Microservices cannot be used to create an experience without the addition of a widget. Instead, they assist widgets by adding additional logic and/or data access to an experience. 
 
 Microservices should be used when an application:
  * Delivers access to an external API
@@ -37,13 +37,13 @@ Implementing API Endpoints
 
   .. code-block:: python
    
-     /<string:integration_cloud>/<string:widget_type>/<route>
+     /<string:integration_cloud>/<string:service_type>/<route>
 
   Some endpoints may also contain the specific instance of the microservice (instance_id).
    
   .. code-block:: python
    
-     /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/<route>
+     /<string:integration_cloud>/<string:service_type>/instances/<int:instance_id>/<route>
  
  Any microservice developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
 
@@ -54,7 +54,7 @@ Required Endpoints
 
  #. DISCOVER
 
-    This endpoint informs the platform via a JSON payload which :ref:`properties <properties>` exist for the microservice. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
+    This endpoint informs the platform via JSON which :ref:`properties <properties>` exist for the microservice. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
     
     Sent:
     
@@ -106,7 +106,7 @@ Optional Endpoints
 
  * ON_CREATE_VERSION
 
-   This endpoint is called BEFORE the properties are saved within the Lumavate studio. This allows the developer to modify and/or override any property data before saving.
+   This endpoint is called **before** the properties are saved within the Lumavate studio. This allows the developer to modify and/or override any property data before saving.
 
    .. code-block:: python
 
@@ -115,7 +115,7 @@ Optional Endpoints
 
  * AFTER_CREATE_VERSION
 
-   This endpoint is called AFTER the properties are saved within the Lumavate studio. This allows the developer to adjust any property data after saving.
+   This endpoint is called **after** the properties are saved within the Lumavate studio. This allows the developer to adjust any property data after saving.
 
    .. code-block:: python
 
