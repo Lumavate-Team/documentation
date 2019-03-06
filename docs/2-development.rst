@@ -206,10 +206,20 @@ Check The Logs
 Setup Custom Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- Any Docker container may be used to create Tools within Lumavate. Custom Docker containers can be used to create the precise runtime environment needed for a given tool.
-
- The `Docker Hub <https://hub.docker.com/>`_ contains all publicly available registered Docker images for use with a variety of technologies. Base Lumavate containers all start with a `base image from the Docker Hub <https://hub.docker.com/>`_ .
-
+ Any Docker container may be used to create Tools within Lumavate allowing developers to use the Docker Hub Image they want. Truly, custom Docker containers can also be used by creating a custom base image. These two options allow developers to create the precise runtime environment needed for a given tool.
+ 
+Ducker Hub Images
++++++++++++++++++
+ 
+ The `Docker Hub <https://hub.docker.com/search?q=&type=image>`_ contains all publicly available registered Docker images for use with a variety of technologies. The containers range from programming language libraries to dev ops applications to fully functioning programs. These containers can be downloaded using ``docker pull <<container name from Docker hub>>`` command and run using ``docker run <<container name from Docker hub>>``.
+ 
+ Base Lumavate containers all start with a `base image from the Docker Hub <https://hub.docker.com/_/golang>`_ .
+ 
+Custom Base Images
+++++++++++++++++++
+ 
+ As Docker expects users to use a base image when creating a new Docker file, there are extra steps one needs to take in order to make a completely custom Docker container. If you are interested in this option, we recommend that you read `the Docker documentation for base images <https://docs.docker.com/develop/develop-images/baseimages/>`_. 
+ 
 .. _Uploading Docker Containers:
 
 Uploading Docker Containers
