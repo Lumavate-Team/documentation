@@ -211,7 +211,7 @@ Setup Custom Docker Containers
 Ducker Hub Images
 +++++++++++++++++
  
- The `Docker Hub <https://hub.docker.com/search?q=&type=image>`_ contains all publicly available registered Docker images for use with a variety of technologies. The containers range from programming language libraries to dev ops applications to fully functioning programs. These containers can be downloaded using ``docker pull <<container name from Docker hub>>`` command and run using ``docker run <<container name from Docker hub>>``.
+ The `Docker Hub <https://hub.docker.com/search?q=&type=image>`_ contains all publicly available registered Docker images for use with a variety of technologies. The containers range from programming language libraries to dev ops applications to fully functioning programs. These containers can be downloaded using ``docker pull <<container name from Docker hub>>`` and run using ``docker run <<container name from Docker hub>>``.
  
  Base Lumavate containers all start with a `base image from the Docker Hub <https://hub.docker.com/_/golang>`_ .
  
