@@ -49,13 +49,47 @@ In the following sections, we will explain how to:
 Installing Locally
 ^^^^^^^^^^^^^^^^^^
 
- Docker must be installed on your development machine in order to upload a tool to the Lumavate platform. Docker must be added to your local envrioment for you to acces the :ref:`Lumavate Test Harness <thor>`.
+ Docker must be installed on your development machine in order to upload a tool to the Lumavate platform. Docker must be added to your local environment for you to access the :ref:`Lumavate Test Harness <thor>`.
 
- To setup Docker on your local machine, download at least the Community Edition of Docker. The community edition is free and can be downloaded from the `Docker site <https://www.docker.com/community-edition>`_.
+ To setup Docker on your local machine:
+ 
+  #. Download at least the Community Edition of Docker. The community edition is free and can be downloaded from the `Docker site <https://www.docker.com/community-edition>`_.
+  
+  #. You will be taken to a download page. Select the correct Docker Engine for your operating system.
+  
+  #. Login to Docker or create an account. 
+  
+  #. Click the Get Docker button
+  
+  #. Open and run the Docker Installer
+  
+  #. Docker should now be setup on your machine. Run ``docker version`` in a command prompt to make sure Docker downloaded correctly. A version number should be returned:
+  
+     .. code-block:: bash
+     
+        Client: Docker Engine - Community
+	Version:           18.09.2
+	API version:       1.39
+	Go version:        go1.10.8
+	Git commit:        6247962
+	Built:             Sun Feb 10 04:12:31 2019
+	OS/Arch:           windows/amd64
+	Experimental:      false
+	
+	Server: Docker Engine - Community
+	Engine:
+	 Version:          18.09.2
+	 API version:      1.39 (minimum version 1.12)
+	 Go version:       go1.10.6
+	 Git commit:       6247962
+	 Built:            Sun Feb 10 04:13:06 2019
+	 OS/Arch:          linux/amd64
+	 Experimental:     false
 
- Instructions on how to install Docker are avalible through `the Docker help documentation <https://docs.docker.com/get-started/>`_.
 
- Docker provides troubleshooting information for both `Windows <https://docs.docker.com/docker-for-windows/troubleshoot/>`_ and `Macs <https://docs.docker.com/docker-for-mac/troubleshoot/>`_ if you encounter issues with your download.
+ Additional instructions on how to install Docker are available through `the Docker help documentation <https://docs.docker.com/get-started/>`_.
+
+ Docker provides troubleshooting information for both `Windows <https://docs.docker.com/docker-for-windows/troubleshoot/>`_ and `Macs <https://docs.docker.com/docker-for-mac/troubleshoot/>`_ if you encounter issues with your download. 
 
  .. tip::
    Lumavate relies heavily on Docker for its tool develpoment. Many of the commands, options, and syntax that are required when devloping a tool will come from Docker. Therfore, we recommend that you learn more about Docker and how it works at: https://docs.docker.com.
