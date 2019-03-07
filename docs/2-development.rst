@@ -12,14 +12,14 @@ There are three types of tools that the Lumavate platform uses: widgets, microse
  :ref:`Microservices` are the data-driven portion of experiences. This tool takes information that studio users provide to create a recurring service or data-set that the rest of the tools can use. Microservices almost never have their own end user UI, instead they add functionality to widgets.
 
  :ref:`Component-sets` are elements that are used by widgets or microservices. This tool has two primary functions. It allows studio users to redistribute information collected in one widget or microservice to another. It also provides identical functionality across multiple widgets. Component-sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
-|
-*Widgets* and *microservices* consist of four primary parts:
+
+| *Widgets* and *microservices* consist of four primary parts:
  #. The :ref:`Docker container <Setting-up Docker>` that provides the operating environment needed to fully execute and render the tool. 
  #. A standard set of :ref:`widget REST APIs <API Endpoints W>` and :ref:`microservice REST APIs <API Endpoints M>` that simplify common tasks and provide key capabilities to efficiently integrate the tool into the broader Lumavate platform.
  #. A :ref:`list of properties <properties>` studio users can set to adopt the tool functionality to their specific experience.
  #. The :ref:`code <Code Samples>` that implements the tool's specific logic and capability (back-end processing, web page(s) rendering, etc.).
-|
-*Component-sets* consist of a :ref:`component.json metadata file <metadata>` that contains two primary parts:
+
+| *Component-sets* consist of a :ref:`component.json metadata file <metadata>` that contains two primary parts:
  #. A :ref:`list of properties <properties>` studio users can set to adopt the tool functionality to their specific experience.
  #. The :ref:`code <Code Samples>` that implements the tool's specific logic and capability (called template and style in the metadata file) 
 
@@ -216,9 +216,13 @@ Setup Custom Docker Containers
 Ducker Hub Images
 +++++++++++++++++
  
- The `Docker Hub <https://hub.docker.com/search?q=&type=image>`_ contains all publicly available registered Docker images for use with a variety of technologies. The containers range from programming language libraries to dev ops applications to fully functioning programs. These containers can be downloaded using ``docker pull <<container name from Docker hub>>`` and run using ``docker run <<container name from Docker hub>>``.
+ The `Docker Hub <https://hub.docker.com/search?q=&type=image>`_ contains all publicly available registered Docker images, called containers, for use with a variety of technologies. The containers range from programming language libraries to dev ops applications to fully functioning programs. These containers can be downloaded using ``docker pull <<container name from Docker hub>>`` and run using ``docker run <<container name from Docker hub>>``.
  
- Base Lumavate containers all start with a `base image from the Docker Hub <https://hub.docker.com/_/golang>`_ .
+ Base Lumavate containers all start with a base image from the Docker Hub:
+ 
+  * `Docker hub Go container <https://hub.docker.com/_/golang>`_ 
+  * `Docker hub Python container <https://hub.docker.com/_/python>`_ 
+  * `Docker hub .Net container <https://hub.docker.com/_/microsoft-dotnet-core>`_
  
 Custom Base Images
 ++++++++++++++++++
