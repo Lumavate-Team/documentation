@@ -27,8 +27,8 @@ Accepted File Types
 
 .. _metadata:
 
-Metadata
-^^^^^^^^
+Metadata File
+^^^^^^^^^^^^^
 
  A Component-set's metadata defines general information for the component-set along with its properties via the component-set JSON file. For more information on properties and a list of property types, please consult the :ref:`Properties` page. 
  
