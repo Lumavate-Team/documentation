@@ -40,9 +40,9 @@ Implementing API Endpoints
  
  All endpoint will contain two dynamic parts and a route:
   
-  * The first part corresponds to the type of widget uploaded denoted as ``widget_type``. 
+  * The first part corresponds to the logical location of the widget denoted as ``integration_cloud``. 
   
-  * The second part corresponds to the logical location of the widget denoted as ``integration_cloud``. 
+  * The second part corresponds to the type of widget uploaded denoted as ``widget_type``. 
 
     .. code-block:: python
    
