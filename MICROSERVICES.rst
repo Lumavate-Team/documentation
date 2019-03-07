@@ -20,8 +20,8 @@ Microservices should be used when an application:
 
 .. _Accepted File Types M:
 
-Accepted File Types
-^^^^^^^^^^^^^^^^^^^
+File Requirements
+^^^^^^^^^^^^^^^^^
 
  Microservices need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
 
