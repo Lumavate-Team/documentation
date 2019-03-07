@@ -21,7 +21,7 @@ Widgets and microservices consist of four primary parts:
 
 Component-sets consist of a :ref:`component.json metadata file <metadata>` that contains two primary parts:
  #. A :ref:`list of properties <properties>` studio users can set to adopt the tool functionality to their specific experience.
- #. The :ref:`code <Code Samples>` that implements the tool's specific logic and capability (back-end processing, web page(s) rendering, etc.) 
+ #. The :ref:`code <Code Samples>` that implements the tool's specific logic and capability (called template and style in the metadata file) 
 
 ________________________________________________________________________________________________________________________________________
 
