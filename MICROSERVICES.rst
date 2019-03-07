@@ -16,7 +16,7 @@ Microservices should be used when an application:
  * Provides a service (For example: emailing listed individuals, running calculations, or creating a pdf document)
 
 .. warning::
-   All microservices that make platform level calls must send their URI signed. Lumavate provides signing libraries for Go, Python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <Sample Code>`.
+   All microservices that make platform level calls must send their URI signed. Lumavate provides signing libraries for Go, Python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <Code Samples>`.
 
 .. _Accepted File Types M:
 
@@ -34,23 +34,23 @@ Accepted File Types
 Implementing API Endpoints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+ Any microservice developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
+ 
  All endpoints will contain two dynamic parts and a route: 
  
-  The first part corresponds to the type of microservice uploaded denoted as service_type. 
+  * The first part corresponds to the type of microservice uploaded denoted as ``service_type``. 
  
-  The second part corresponds to the logical location of the microservice denoted as integration_cloud. 
+  * The second part corresponds to the logical location of the microservice denoted as ``integration_cloud``. 
 
-  .. code-block:: python
+    .. code-block:: python
    
-     /<string:integration_cloud>/<string:service_type>/<route>
+       /<string:integration_cloud>/<string:service_type>/<route>
 
-  Some endpoints may also contain the specific instance of the microservice (instance_id).
+  Some endpoints may also contain the specific instance of the microservice denoted as ``instance_id``.
    
-  .. code-block:: python
+    .. code-block:: python
    
-     /<string:integration_cloud>/<string:service_type>/instances/<int:instance_id>/<route>
- 
- Any microservice developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
+       /<string:integration_cloud>/<string:service_type>/instances/<int:instance_id>/<route>
 
 Required Endpoints
 ++++++++++++++++++
@@ -97,7 +97,7 @@ Required Endpoints
           }
 
     .. tip::
-       Lumavate provides property libraries for Go, Python, and C# that allow properties to be written in alternate formats that better match those languages normal style. For the property libraries as well as example containers that use them, :ref:`please consult the sample code section<Sample Code>`.
+       Lumavate provides property libraries for Go, Python, and C# that allow properties to be written in alternate formats that better match those languages normal style. For the property libraries as well as example containers that use them, :ref:`please consult the sample code section<Code Samples>`.
  
  #. RENDER
 
