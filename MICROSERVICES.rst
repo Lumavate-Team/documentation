@@ -38,9 +38,9 @@ Implementing API Endpoints
  
  All endpoints will contain two dynamic parts and a route: 
  
-  * The first part corresponds to the type of microservice uploaded denoted as ``service_type``. 
+  * The first part corresponds to the type of logical location of the microservice denoted as ``integration_cloud``. 
  
-  * The second part corresponds to the logical location of the microservice denoted as ``integration_cloud``. 
+  * The second part corresponds to the microservice uploaded denoted as ``service_type``. 
 
     .. code-block:: python
    
