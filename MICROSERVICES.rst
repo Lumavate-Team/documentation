@@ -46,7 +46,7 @@ Implementing API Endpoints
    
        /<string:integration_cloud>/<string:service_type>/<route>
 
-  Some endpoints may also contain the specific instance of the microservice denoted as ``instance_id``.
+ Some endpoints may also contain the specific instance of the microservice denoted as ``instance_id``.
    
     .. code-block:: python
    
