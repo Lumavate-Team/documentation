@@ -16,6 +16,9 @@ Widgets should be used when the application:
  
  .. note::
     Widgets can function as shells for microservices or component-sets providing a convenient place for studio users to customize the UI. These widgets can then be used to create web pages or data displays.
+    
+ .. warning::
+    All widgets that make platform level calls must send their URI signed. Lumavate provides signing libraries for go, python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <sample code>`. 
 
 .. _Accepted File Types W:
 
@@ -25,6 +28,8 @@ Accepted File Types
  Widgets need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
 
  For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
+ 
+ There is no required file names or structure. A widget is only required to define two endpoints: Discover and Render.
 
 .. _API Endpoints W:
 
@@ -33,9 +38,9 @@ Implementing API Endpoints
 
  All endpoint will contain two dynamic parts and a route:
   
-  The first part corresponds to the type of widget uploaded denoted as widget_type. 
+  * The first part corresponds to the type of widget uploaded denoted as widget_type. 
   
-  The second part corresponds to the logical location of the widget denoted as integration_cloud. 
+  * The second part corresponds to the logical location of the widget denoted as integration_cloud. 
 
   .. code-block:: python
    
@@ -56,7 +61,7 @@ Required Endpoints
 
  #. DISCOVER
 
-    This endpoint informs the platform via JSON which :ref:`properties <properties>` exist for the widget. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the widget does not require any properties.
+    This endpoint informs the platform via JSON which :ref:`properties <properties>` exist for the widget. The platform automatically adds a few platform level properties outside of this endpoint. An empty data set should be sent if the widget does not require any properties.
 
     Sent:
 
@@ -94,7 +99,10 @@ Required Endpoints
               ]
             }
           }
-
+    
+    .. Tip::
+      Lumavate provides property libraries for go, python, and C# that allow properties to be written in alternate formats that better match those languages normal style. For the property libraries as well as example containers that use them, :ref:`please consult the sample code section<sample code>`.
+       
  #. RENDER
 
     This endpoint is called when the widget renders itself for preview and production. This is the core endpoint that produces the end user UI for the widget.
