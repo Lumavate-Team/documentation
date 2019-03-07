@@ -14,11 +14,11 @@ Widgets should be used when the application:
  * Implements multiple pages
  * Contains a stand-alone function with accompanying UI
  
- .. note::
+.. note::
     Widgets can function as shells for microservices or component-sets providing a convenient place for studio users to customize the UI. These widgets can then be used to create web pages or data displays.
     
- .. warning::
-    All widgets that make platform level calls must send their URI signed. Lumavate provides signing libraries for go, python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <sample code>`. 
+.. warning::
+    All widgets that make platform level calls must send their URI signed. Lumavate provides signing libraries for go, python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <Code Samples>`. 
 
 .. _Accepted File Types W:
 
@@ -69,7 +69,7 @@ Required Endpoints
 
        /<string:integration_cloud>/<string:widget_type>/discover/properties
 
-    Response:
+    Properties need to be written in the following format:
 
      .. code-block::  rest
 
@@ -101,7 +101,7 @@ Required Endpoints
           }
     
     .. Tip::
-      Lumavate provides property libraries for go, python, and C# that allow properties to be written in alternate formats that better match those languages normal style. For the property libraries as well as example containers that use them, :ref:`please consult the sample code section<sample code>`.
+      Lumavate provides property libraries for Go, Python, and C# that allow properties to be written in alternate formats that better match those languages normal style. For the property libraries as well as example containers that use them, :ref:`please consult the sample code section<Code Samples>`.
        
  #. RENDER
 
