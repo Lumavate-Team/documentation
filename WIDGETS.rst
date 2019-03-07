@@ -36,6 +36,8 @@ Accepted File Types
 Implementing API Endpoints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+ Any widget developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
+ 
  All endpoint will contain two dynamic parts and a route:
   
   * The first part corresponds to the type of widget uploaded denoted as ``widget_type``. 
@@ -51,8 +53,6 @@ Implementing API Endpoints
     .. code-block:: python
   
        /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/<route>
-
- Any widget developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
 
 Required Endpoints
 ++++++++++++++++++
