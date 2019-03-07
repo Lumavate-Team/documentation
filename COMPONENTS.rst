@@ -16,12 +16,14 @@ Component-sets should be used when an application:
 
 .. _Accepted File Types C:
 
-Accepted File Types
-^^^^^^^^^^^^^^^^^^^
+File Requirements
+^^^^^^^^^^^^^^^^^
 
  Component-sets must be a **compressed zip file** in order to be uploaded to the Lumavate platform. 
  
- The compressed file needs to contain a metadata file named, component.json, written in JSON that defines the component-set :ref:`properties <properties>` and code. Optionally, the component-set code and resources can be split into multiple files. However, these files will need to be correctly referenced in the component.json's template and/or icon sections. 
+ The compressed file needs to contain a metadata file named component.json in the root folder of the zip file that is uploaded to lumavate. The component.json file must be written in JSON and define the component-set :ref:`properties <properties>` and code. 
+ 
+ Optionally, the component-set code and resources can be split into multiple files. However, these files will need to be correctly referenced in the component.json's template and/or icon sections. 
 
  For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
 
@@ -31,8 +33,6 @@ Metadata File
 ^^^^^^^^^^^^^
 
  A Component-set's metadata defines general information for the component-set along with its properties via the component-set JSON file. For more information on properties and a list of property types, please consult the :ref:`Properties` page. 
- 
- The component-sets JSON file must be included within the root folder of the distributable that is uploaded to Lumavate.
  
  The component-set file adheres to the following JSON structure:
 
