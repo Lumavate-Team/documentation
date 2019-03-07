@@ -25,7 +25,7 @@ ________________________________________________________________________________
 Requirements
 -------------
 
-You will need to install `Python 3.1.1 or higher <https://www.python.org/downloads/>`_ in order to use the CLI. If you are windows, remember to click the “Add Python To Path” checkbox when installing Python.  
+You will need to install `Python 3.1.1 or higher <https://www.python.org/downloads/>`_ in order to use the CLI. If you are Windows, remember to click the “Add Python To Path” checkbox when installing Python.  
 
 It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
 
