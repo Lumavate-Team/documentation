@@ -15,6 +15,9 @@ Microservices should be used when an application:
  * Uses or provides access to a database 
  * Provides a service (For example: emailing listed individuals, running calculations, or creating a pdf document)
 
+.. warning::
+   All microservices that make platform level calls must send their URI signed. Lumavate provides signing libraries for Go, Python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <Sample Code>`.
+
 .. _Accepted File Types M:
 
 Accepted File Types
@@ -23,6 +26,8 @@ Accepted File Types
  Microservices need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
 
  For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
+ 
+ There is no required file names or structure. A microservice is only required to define two endpoints: Discover and Render.
 
 .. _API Endpoints M:
 
@@ -56,13 +61,11 @@ Required Endpoints
 
     This endpoint informs the platform via JSON which :ref:`properties <properties>` exist for the microservice. The platform automatically adds a few platform level properties outside of this endpoint. An empty set should be sent if the microservice does not require any properties.
     
-    Sent:
-    
      .. code-block:: python
 
         /<string:integration_cloud>/<string:service_type>/discover/properties
 
-    Response:
+    Properties need to be written in the following format:
 
      .. code-block::  rest
 
@@ -93,6 +96,9 @@ Required Endpoints
             }
           }
 
+    .. tip::
+       Lumavate provides property libraries for Go, Python, and C# that allow properties to be written in alternate formats that better match those languages normal style. For the property libraries as well as example containers that use them, :ref:`please consult the sample code section<Sample Code>`.
+ 
  #. RENDER
 
     This endpoint is called when the microservice renders itself for preview. If the microservice does not have a UI, a default image should be sent.
