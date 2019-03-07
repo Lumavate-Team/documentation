@@ -32,7 +32,7 @@ You will need to install `Python 3.1.1 or higher <https://www.python.org/downloa
     :width: 400px
     :alt: Image of a Python downloader with the "Add Python To Path" checkbox highlighted.
       
-    Remember to click the “Add Python To Path” checkbox when installing Python.  
+    If you are windows, remember to click the “Add Python To Path” checkbox when installing Python.  
 
 It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
 
