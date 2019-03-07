@@ -18,7 +18,7 @@ Widgets should be used when the application:
     Widgets can function as shells for microservices or component-sets providing a convenient place for studio users to customize the UI. These widgets can then be used to create web pages or data displays.
     
 .. warning::
-    All widgets that make platform level calls must send their URI signed. Lumavate provides signing libraries for go, python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <Code Samples>`. 
+    All widgets that make platform level calls must send their URI signed. Lumavate provides signing libraries for Go, Python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <Code Samples>`. 
 
 .. _Accepted File Types W:
 
@@ -38,19 +38,19 @@ Implementing API Endpoints
 
  All endpoint will contain two dynamic parts and a route:
   
-  * The first part corresponds to the type of widget uploaded denoted as widget_type. 
+  * The first part corresponds to the type of widget uploaded denoted as ``widget_type``. 
   
-  * The second part corresponds to the logical location of the widget denoted as integration_cloud. 
+  * The second part corresponds to the logical location of the widget denoted as ``integration_cloud``. 
 
-  .. code-block:: python
+    .. code-block:: python
    
-     /<string:integration_cloud>/<string:widget_type>/<route>
+       /<string:integration_cloud>/<string:widget_type>/<route>
    
-  Some endpoints will also contain a specific instance of the widget denoted by instance_id.
+  Some endpoints will also contain a specific instance of the widget denoted by ``instance_id``.
   
-  .. code-block:: python
+    .. code-block:: python
   
-   /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/<route>
+       /<string:integration_cloud>/<string:widget_type>/instances/<int:instance_id>/<route>
 
  Any widget developed for Lumavate must implement two key API endpoints, **Discover** and **Render**.
 
@@ -62,8 +62,6 @@ Required Endpoints
  #. DISCOVER
 
     This endpoint informs the platform via JSON which :ref:`properties <properties>` exist for the widget. The platform automatically adds a few platform level properties outside of this endpoint. An empty data set should be sent if the widget does not require any properties.
-
-    Sent:
 
      .. code-block:: python
 
@@ -106,8 +104,6 @@ Required Endpoints
  #. RENDER
 
     This endpoint is called when the widget renders itself for preview and production. This is the core endpoint that produces the end user UI for the widget.
-
-    Sent:
    
      .. code-block:: python
 
