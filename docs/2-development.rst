@@ -52,7 +52,9 @@ In the following sections, we will explain how to:
 Installing Locally
 ^^^^^^^^^^^^^^^^^^
 
- Docker must be installed on your development machine in order to upload a tool to the Lumavate platform. Docker must be added to your local environment for you to access the :ref:`Lumavate Test Harness <thor>`.
+ Docker must be installed on your development machine in order to upload a tool to the Lumavate platform. 
+
+  .. Docker must be added to your local environment for you to access the :ref:`Lumavate Test Harness <thor>`.
 
  To setup Docker on your local machine:
  
