@@ -22,8 +22,8 @@ Widgets should be used when the application:
 
 .. _Accepted File Types W:
 
-Accepted File Types
-^^^^^^^^^^^^^^^^^^^
+File Requirements
+^^^^^^^^^^^^^^^^^
 
  Widgets need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
 
