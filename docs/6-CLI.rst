@@ -416,8 +416,8 @@ Delete
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - ``--help``
-     * - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do. 
  
  .. note::
