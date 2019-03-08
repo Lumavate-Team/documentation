@@ -18,6 +18,8 @@ Additional Terms
 
 .. A component-set is a group of custom Web Components that can be used within experiences, similar to widgets. Web Components are based on existing web standards and are an industry standard with the intent to bring component-based engineering to the World Wide Web.
 
+.. _Enviroment Variables:
+
 Environment Variables
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -40,6 +42,8 @@ Environment Variables
 
 .. Similar to Widgets, Microservices are container-based applications used within Experiences. A Microservice is intended to be a behind-the-scenes addition to an Experience, providing additional business logic and/or data access to an Experience.
 
+.. _PWA:
+
 Progressive Web Application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -56,6 +60,8 @@ Progressive Web Application
 .. ^^^^^^^
 
 .. Publish or Publishing refers to the action a studio user takes to promote their designed experience into production with the Lumavate studio. As part of this process, Lumavate automatically assembles the required elements to publish the experience as a fully compliant PWA. It also automatically securely routes all the traffic to the various widgets used within the Experience.
+
+.. _Secret:
 
 Secret
 ^^^^^^
