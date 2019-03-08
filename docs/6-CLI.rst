@@ -1800,15 +1800,25 @@ Rm
      id  versionNumber label  createdAt
      999 9.9.9         prod   02/22/19 19:57:16
      
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-ms, --microservice ID``
-  * ``-vm, --version-mask INTAGER (*.*.*)``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to see the logs of.
+     * - ``-ms, --microservice ID``
+       - The microservice container you wish to edit.
+     * - ``-vm, --version-mask INTAGER (*.*.*)``
+       - Rmoves all version with that major, minor, or path. Use a * to indicate all. Sending (*.*.*) will delete all versions.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - The version number of the microservice you wish to remove. For example, ``--version (9.9.9)``.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -1837,14 +1847,23 @@ Start
      id  Current State Version # Created At
      999 running       9.9.9     02/22/19 19:57:16
 
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-ms, --microservice ID``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to see the logs of.
+     * - ``-ms, --microservice ID``
+       - The microservice container you wish to edit.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - The version number of the microservice you wish to edit. For example, ``--version (9.9.9)``.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated. 
@@ -1873,14 +1892,23 @@ Stop
      id  Current State Version # Created At
      999 stopped       9.9.9     02/22/19 19:57:16
 
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-ms, -- microservice ID``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to see the logs of.
+     * - ``-ms, --microservice ID``
+       - The microservice container you wish to edit.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - The version number of the microservice you wish to edit. For example, ``--version (9.9.9)``.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -1909,20 +1937,30 @@ Update
      id  versionNumber label createdAt
      999 9.9.9         dev   02/22/19 19:57:16
      
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-ms, -- microservice ID``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``-l, --label "[dev, old, prod]"``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+.. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to see the logs of.
+     * - ``-ms, --microservice ID``
+       - The microservice container you wish to edit.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - - The version number of the microservice you wish to edit. For example, ``--version (9.9.9)``.
+     * - ``-l, --label "[dev, old, prod]"``
+       - The new status of the version. It can be ready-for-production, in-development, or deprecated respectively.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
     Use ``--format`` to see JSON values organized in table format.
-
+    
 _______________________________________________________________________________________________________________________________________
 
 .. _Org:
@@ -1954,12 +1992,19 @@ Child-orgs
      999 Child Command Center   dev          None
      9   Dragon Studio          studio       False
      
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-  * ``--json``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to see the logs of.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
+       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 .. _Org Ls:
 
@@ -1984,12 +2029,19 @@ Ls
      99  Dragon Command Center dev          None
      9   Dragon Studio         studio       False
      
- Options: 
-  * ``--env "STRING"``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-  * ``--json``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``--env "STRING"``
+       - The name of the environment whose organizations you want listed.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
+       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 _______________________________________________________________________________________________________________________________________
 
@@ -2034,10 +2086,15 @@ Add
      Environment Org Name              Org ID
      Fantasy     Dragon Command Center 99
      
- Options: 
-  * ``--profile-name "STRING"``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``--profile-name "STRING"``
+       - What you wish to call the profile in the CLI. The profile will be associated with a studio or command center of your choosing, so keep that in mind when naming the profile.  
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. The only options are ``--format "{env}, {orgName}, {orgId}"``. 
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 .. _Profile Ls:
 
@@ -2061,10 +2118,15 @@ Ls
      dragon-two        Fantasy Dragon Studio                9
      profile           prod    Sample Command Center        35
 
- Options: 
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{env}, {orgName}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 .. _Profile Rm:
 
@@ -2086,9 +2148,13 @@ Rm
  
      {"accessToken": "NotAccessTokenOiJSUzI1NiIsImtpZCI6Ik5VSXhSVFpHTmpORU9FVkdNVVZHTlRGQk9FWXdRMNotAccessToken1RnME1FTTBOdyJ9.eyJodHRwczovL2x1bWF2YXRlLmNvbS91dWlkIjoiOGZjMGM1NTgtZmJkNS00MWRlLWFhOTUtN2FkMmJmNDAyOGM3IiwiaXNzIjoiaHR0cHM6Ly9kcmFnb25mbHktbHVtYXZhdGUtZGV2LmF1dGgwLmNvbS8iLCJzdWIiOiJreW8yZkQwMXgwd1JVM3RFTGh1ajJlSXhLSUxvbUNkQUBjbNotAccessTokenkcmFnb25mbHkubHVtYXZhdGUtZGV2LmNvbS9hcHAiLCJpYXQiOjE1NDg3MTA1MzUsImV4cCI6MTU0ODc5NjkzNSwiYXpwIjoia3lvMmZEMDF4MHdSVTN0RUxodWoyZUl4S0lMb21DZEEiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.oOWd0sd05uvMVnZZJDTpXA9pqbAsVsq2Je97nS3J7wy8c-o7LUuN_kNYeCyxZWZ2FEBhVl2galmUB_dvUxdnYOzRMNhiiIqxZhQHeNotAccessTokenjCHDqCmuQQvPg-yqZxlQL6xfHqcmh2-syTeCyHf5y_gCWdxsUhuMSj28vtH5_v76NotAccessTokenSyb5XktrdUobFuSdvy4fw-GU5eUAEFRgzlYbnRzq8ygB4SXONZvbcKqVqpBDFdbdcmo4jIWk4a2gK5-v51a49Sh798dSBxiNotAccessTokennCxD7f7VcCWuUW0wNX87YtIjHsAw", "env": "Fantasy", "orgId": 99, "orgName": "Dragon Command Center"}
 
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The name of teh profile you want to remove.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 _______________________________________________________________________________________________________________________________________
 
@@ -2111,8 +2177,11 @@ Response:
 
     Lumavate CLI Version: 0.8.9
 
-Options: 
- * ``--help``
+.. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 _______________________________________________________________________________________________________________________________________
 
@@ -2145,16 +2214,27 @@ Access
      failed sharedWith          unsharedFrom resultingGrantees
      []     [{'granteeId': 99}] []           ['Dragon Command Center']
      
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-w, --widget ID``
-  * ``--add ID``
-  * ``--rm ID``
-  * ``--absolute ID``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``--add ID``
+       - The studio or command center you want to **share** with.
+     * - ``--rm ID``
+       - The studio or command center you want to **unshare** with.
+     * - ``--absolute ID``
+       - Unshares the tool with all organizations and than shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{failed}, {resultingGrantees}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2183,15 +2263,25 @@ Add
      id  name  urlRef createdAt
      999 Hydra hydra  02/22/19 20:28:17
      
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``--name "STRING"``
-  * ``--url-ref "LOWERCASE STRING"``
-  * ``-path, --icon-file "FILE PATH"``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"`` 
-  * ``--json`` 
-  * ``--table`` 
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``--name "STRING"``
+       - What the widget container will be called in the command center and studio. 
+     * - ``--url-ref "STRING"``
+       - url-ref: What the widget will be referenced by in URLs. For example: https://urltoexperience.com/url-ref or ic/url-ref. It contain only lowercase alphanomics with no special characters or spaces. There is a max length of 20. 
+     * - ``-path, --icon-file "FILE PATH"``
+       - The absolute path where the icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2219,15 +2309,25 @@ Ls
      999 Hydra hydra     02/22/19 20:28:17
      99  European Dragon 02/22/19 20:28:17
 
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"`` 
-  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"`` 
-  * ``--page INTAGER``
-  * ``--pagesize INTAGER``
-  * ``--json`` 
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"`` 
+       - Returns results that match the filter criteria. For example: ``--filter "{name=Hydra}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+     * - ``--page INTAGER``
+       - The results page you wish to view.
+     * - ``--pagesize INTAGER``
+       - The number of results you want to show per page.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2255,13 +2355,21 @@ Rm
      id  name  urlRef createdAt
      999 Hydra hydra  02/22/19 20:38:07
 
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-w, --widget ID``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table`` 
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2289,15 +2397,25 @@ Update
      id  name            urlRef createdAt
      999 European Dragon hydra  02/22/19 20:38:07
 
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-w, --widget ID``
-  * ``--name "STRING"``
-  * ``-path, --icon-file "FILE PATH"``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``  
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``--name "STRING"``
+       - The new name for the widget container. It will be used in the command center and studio. 
+     * - ``-path, --icon-file "FILE PATH"``
+       - The absolute path where the new icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2340,23 +2458,43 @@ Add
      id  actualState versionNumber label createdAt
      999 created     9.9.9         prod  02/22/19 20:46:08
      
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``--port INTAGER``
-  * ``-w, --widget ID``
-  * ``-path, --widget-file-path "FILE PATH"``
-  * ``-image, --docker-image "FILE PATH"``
-  * ``-fv, --from-version INTAGER (*.*.*)``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``--patch INTAGER``
-  * ``--minor INTAGER``
-  * ``--major INTAGER``
-  * ``--env-var "{"STRING":"KEY"}"``
-  * ``-l, --label "[dev, old, prod]"``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``--port INTAGER``
+       - The port that the version will run on. This will either be set in your code or be your programming language’s default port.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``--name "STRING"``
+       - The new name for the widget container. It will be used in the command center and studio. 
+     * - ``-path, --widget-file-path "FILE PATH"``
+       - The absolute path where the widget tar file is located. For example: C:/Users/User/Desktop/Folder/widget.tar. 
+     * - ``-image, --docker-image "FILE PATH"``
+       - The absolute path where the widget docker file is located. For example: C:/Users/User/Desktop/Folder/docker.py. 
+     * - ``-fv, --from-version INTAGER (*.*.*)``
+       - The version you wish to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (1.1.*)`` will take the most recent version that has a major and minor value of 1. 
+     * - ``-v, --version INTAGER (*.*.*)``
+       - What the widget’s version number will be. For example, ``--version (9.9.9)``.
+     * - ``--patch``
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version (1.1.1) --patch`` sets the version number to (1.1.2).
+     * - ``--minor``
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version (1.1.1) --minor`` sets the version number to (1.2.0).
+     * - ``--major``
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version (1.1.1) --major`` sets the version number to (2.0.0).
+     * - ``--env-var "{"STRING":"KEY"}"``
+       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`.
+     * - ``-l, --label "[dev, old, prod]"``
+       - The status of the version as either ready-for-production, in-development, or deprecated respectively.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2378,15 +2516,22 @@ Exec
        Widget: 999
        Version Number: 9.9.9
 
- Options: 
-  *	``-p, --profile "STRING"``
-  *	``-w, --widget ID``
-  *	``-v, --version INTAGER (*.*.*)``
-  *	``--target [one, all]``
-  *	``--json``
-  *	``--table``
-  *	``--help``
-
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - The version number of the widget version you want to edit. For example, ``--version (9.9.9)``.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+       
  .. warning:: 
     ``--table`` is deprecated.
     Use ``--format`` to see JSON values organized in table format.
@@ -2429,14 +2574,21 @@ Logs
      2019/02/22 20:48:26.774 [1;34m[I] [asm_amd64.s:2197] http server Running on http://:8080[0m
      2019/02/22 20:48:30.578 [1;44m[D] [server.go:2568] | 54.164.117.6|[42m 200 [0m| 127.084µs| match|[44m GET [0m /ic/hydra/discover/health r:/:ic/:url_ref/discover/health[0m
      
- Options: 
-
-  * ``-p, --profile "STRING"``
-  * ``-w, --widget ID``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - The version number of the widget version you want to edit. For example, ``--version (9.9.9)``.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2465,16 +2617,27 @@ Ls
      999 running     9.9.9         prod  02/22/19 20:46:08
      99  running     9.9.99        old   02/22/19 20:46:08
      
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-w, --widget ID``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-  * ``--page INTAGER``
-  * ``--pagesize INTAGER``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
+       - Returns results that match the filter criteria. For example: ``--filter "{actualState=running}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+     * - ``--page INTAGER``
+       - The results page you wish to view.
+     * - ``--pagesize INTAGER``
+       - The number of results you want to show per page.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2506,15 +2669,25 @@ Rm
      id  versionNumber label createdAt
      999 9.9.9         prod  02/22/19 20:46:08
      
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-w, --widget ID``
-  * ``-vm, --version-mask INTAGER (*.*.*)``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table`` 
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``-vm, --version-mask INTAGER (*.*.*)``
+       - Removes all version with that major, minor, or path. Use a * to indicate all. Sending (*.*.*) will delete all versions.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - The number of the version you wish to remove. For example: ``--version (9.9.9)``.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2543,14 +2716,23 @@ Start
      id  Current State Version # Created At
      999 running       9.9.9     02/22/19 20:46:08
 
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-w, --widget ID``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - The number of the version you wish to edit. For example: ``--version (9.9.9)``.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2579,14 +2761,23 @@ Stop
      id  Current State Version # Created At
      999 stopped       9.9.9     02/22/19 20:46:08
      
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-w, --widget ID``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - The number of the version you wish to edit. For example: ``--version (9.9.9)``.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -2615,15 +2806,25 @@ Update
      id  versionNumber label createdAt
      999 9.9.9         dev   02/22/19 20:46:08
   
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-w, --widget ID``
-  * ``-v, --version INTAGER (*.*.*)``
-  * ``-l, --label "[dev, old, prod]"``
-  * ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-  * ``--json``
-  * ``--table``
-  * ``–help``
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-w, --widget ID``
+       - The widget container you want to edit.
+     * - ``-v, --version INTAGER (*.*.*)``
+       - The number of the version you wish to edit. For example: ``--version (9.9.9)``.
+     * - ``-l, --label "[dev, old, prod]"``
+       - The new status of the version. It can be ready-for-production, in-development, or deprecated respectively.
+     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
