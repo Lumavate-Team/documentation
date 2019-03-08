@@ -412,10 +412,8 @@ Delete
      "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", 
      "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
- .. list-table:: Options
- 
-     :widths: 25 75
-     :width: 90
+ .. list-table:: Options 
+     :widths: 10 20
 
      * - ``-p, --profile "STRING"``
        - ``--help``
