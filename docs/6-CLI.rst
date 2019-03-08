@@ -416,7 +416,7 @@ Delete
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do. 
  
@@ -456,7 +456,7 @@ Get
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -490,7 +490,7 @@ Post
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * -  ``-d, --data "{JSON}, {JSON}"``
        - The JSON payload/body of the call.
      * - ``--help``
@@ -526,7 +526,7 @@ Put
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * -  ``-d, --data "{JSON}, {JSON}"``
        - The JSON payload/body of the call.
      * - ``--help``
@@ -569,15 +569,15 @@ Access
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you wish to edit.
+       - The component-set container you want to edit.
      * - ``--add ID || Name``
        - The studio or command center you want to **share** with.
      * - ``--rm ID || Name``
        - The studio or command center you want to **unshare** with.
      * - ``--absolute ID || Name``
-       - Unshares the tool with all organizations and than shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{failed}, {unsharedFrom}"`` 
      * - ``--json``
@@ -618,15 +618,15 @@ Add
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``--name “STRING”``
-       - What component-set container will be called in the command center and studio.
-     * - ``--url-ref “LOWERCASE STRING”``
-       - What the tool will be referenced by in URLs. For example: https://urltoexperience.com/url-ref.
+       - What you want to call the component-set container. The name will appear in the command center and studio.
+     * - ``--url-ref “STRING”``
+       - What the tool will be referenced by in URLs. For example: urltoexperience.com/url-ref or ic/url-ref. It can contain only lowercase letters, numbers, and dashes.
      * - ``-path, --icon-file “FILE PATH”``
        - The absolute path where the icon  SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {urlRef}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -664,14 +664,14 @@ Ls
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {id}"``
      * - ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
        - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
-     * - ``--page INTAGER`` 
-       - The results page you wish to view.
-     * - ``--pagesize INTAGER``
+     * - ``--page INTEGER`` 
+       - The results page you want to view.
+     * - ``--pagesize INTEGER``
        - The number of results you want to show per page.
      * - ``--json``
        - Returns the raw JSON payload.
@@ -710,9 +710,9 @@ Rm
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you wish to edit.
+       - The component-set container you want to edit.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {urlRef}"`` 
      * - ``--json``
@@ -752,11 +752,11 @@ Update
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you wish to edit.
+       - The component-set container you want to edit.
      * - ``--name “STRING”``
-       - The new name for the component-set container. This is used in the command center and studio. 
+       - The new name for the component-set container. The name will appear in the command center and studio. 
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {id}"``
      * - ``--json``
@@ -809,15 +809,15 @@ Add
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you wish to edit.
+       - The component-set container you want to edit.
      * - ``-path, --component-set-file-path “FILE PATH”``
        - The absolute path where the component-sets zip file is located. For example: C:/Users/User/Desktop/Folder/file.zip.  
-     * - ``-fv, --from-version INTAGER (*.*.*)``
-       - The version you wish to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (9.9.*)`` will take the most recent version that has a major and minor value of 1.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - What the component-set's version number will be. For example, ``--version (9.9.9)``.
+     * - ``-fv, --from-version INTEGER (*.*.*)``
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (9.9.*)`` will take the most recent version that has a major and minor value of 1.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - What you want the component-set version number to be. For example, ``--version (9.9.9)``.
      * - ``--patch``
        - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version (1.1.1) --patch`` sets the version number to (1.1.2).
      * - ``--minor``
@@ -872,11 +872,11 @@ Components
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you wish to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - What the component-set's version number will be. For example, ``--version (9.9.9)``.
+       - The component-set container you want to edit.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the component-set you want to view. For example, ``--version (9.9.9)``.
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -915,16 +915,16 @@ Ls
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you wish to edit.
+       - The component-set container you want to edit.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
-     * -  ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+     * - ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
        - Returns results that match the filter criteria. For example: ``--filter "{label=prod}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
-     * - ``--page INTAGER``
-       - The results page you wish to view.
-     * - ``--pagesize INTAGER``
+     * - ``--page INTEGER``
+       - The results page you want to view.
+     * - ``--pagesize INTEGER``
        - The number of results you want to show per page.
      * - ``--json``
        - Returns the raw JSON payload.
@@ -967,13 +967,13 @@ Rm
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you wish to edit.
-     * - ``-vm, --version-mask INTAGER (*.*.*)``
+       - The component-set container you want to edit.
+     * - ``-vm, --version-mask INTEGER (*.*.*)``
        - Removes all version with that major, minor, or path. Use a * to indicate all. Sending (*.*.*) will delete all version.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The version number of the version you want to remove. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the component-set you want to remove. For example, ``--version (9.9.9)``.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
      * - ``--json``
@@ -1014,11 +1014,11 @@ Update
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you wish to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The version number of the version you want to edit. For example, ``--version (9.9.9)``.
+       - The component-set container you want to edit.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the component-set you want to edit. For example, ``--version (9.9.9)``.
      * - ``-l, --label "[prod, dev, old]"```
        - The new status of the version. It can either be ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
@@ -1073,13 +1073,13 @@ Config
      :widths: 10 20
 
      * - ``--env-name "STRING"``
-       - What you want the environment to be called in the CLI.
+       - What you want to call the environment. The name will only appear in the CLI.
      * - ``--app "LINK"``
-       - The domain where the studio and command centers you wish to work with are located.
+       - The domain where the studio and command centers you want to work with are located.
      * - ``--token "LINK"``
        - A value the platform produces to authenticate the environment. 
      * - ``--audience "LINK"``
-       - Auth value provided by the platform required by the platform to find the environment. 
+       - Auth value used to identify the environment provided by the platform. 
      * - ``--client-id "ID"``
        - The user’s ID provided by the platform. The environment will have access to the same studios and command centers as the user whose ID was used. This must match the client secret for the environment to be created. 
      * - ``--client-secret "SECRET"``
@@ -1145,7 +1145,7 @@ Rm
      :widths: 10 20
 
      * - ``--env-name "STRING"``
-       - What you want the environment to be called in the CLI.
+       - The name of the environment you want to remove.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -1184,11 +1184,11 @@ Export
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-l, --label "STRING"``
        - The experience's name in the studio. 
      * - ``-n, --name "STRING"``
-       - The experience's referance name in the studio designer URL. 
+       - The experience's referenced name in the studio designer URL.
      * - ``-path, --export-file "FILE PATH"``
        - The absolute path where the experience JSON file will be saved. For example: C:/Users/User/Desktop/experience.json. 
      * - ``--json``
@@ -1230,19 +1230,19 @@ Import
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-l, --label "STRING"``
        - What the experience's name will be in the studio. 
      * - ``-d, --description "STRING"``
        - What description will accompany the experience. This will appear when studio users hover over an experience. 
      * - ``-ci, --collection-id ID``
-       - The collection you want to add the experience to. The collection must exist before importing the experience.
+       - The collection where you want to add the experience. The collection must exist before importing the experience.
      * - ``--device "[mobile, tablet, web]"``
        - What device the experience will be previewed on.
      * - ``-cn, --collection-name "STRING"``
-       - The name of the collection you want to add the experience to. The collection must exist before importing the experience.  
+       - The name of the collection where you want to add the experience. The collection must exist before importing the experience.  
      * - ``-ac, --activation-code "STRING"``
-       - What the activation code for the experience is. This must be all lower case with no special characters or spaces.
+       - What the activation code will be for the experience. It can contain only lowercase alphanomics with no special characters or spaces. There is a max length of 20.
      * - ``-t, --template``
        - Makes the experience a template.
      * - ``-ru, --redirect-url "URL"``
@@ -1283,13 +1283,13 @@ Ls
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
        - Returns results that match the filter criteria. For example: ``--filter "{name=drag}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
      * - ``--page INTEGER``
-       - The results page you wish to view.
+       - The results page you want to view.
      * - ``--pagesize INTEGER``
        - The number of results you want to show per page.
      * - ``--json``
@@ -1361,15 +1361,15 @@ Access
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to share or unshare.
+       - The microservice container you want to share or unshare.
      * - ``--add ID``
-       - The studio or command center you want to **share** with.
+       - The studio or command center with whom you want to **share**.
      * - ``--rm ID``
-       - The studio or command center you want to **unshare** with.
+       - The studio or command center with whom you want to **unshare**.
      * - ``--absolute ID``
-       - Unshares the tool with all organizations and than shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{sharedWith}, {failed}"``.
      * - ``--json``
@@ -1410,9 +1410,9 @@ Add
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``--name "STRING"``
-       - What the microservice container will be called in the command center and studio. 
+       - What you want to call the microservice container. The name will appear in the command center and studio. 
      * - ``--url-ref "STRING"``
        - What the microservice will be referenced by in URLs. For example: https://urltoexperience.com/url-ref or ic/url-ref.
      * - ``-path, --icon-file "FILE PATH"``
@@ -1456,14 +1456,14 @@ Ls
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit. 
+       - The profile associated with the studio or command center you want to edit. 
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
        - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
-     * - ``--page INTAGER``
-       - The results page you wish to view.
-     * - ``--pagesize INTAGER``
+     * - ``--page INTEGER``
+       - The results page you want to view.
+     * - ``--pagesize INTEGER``
        - The number of results you want to show per page.
      * - ``--json``
        - Returns the raw JSON payload. 
@@ -1502,9 +1502,9 @@ Rm
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to remove.
+       - The microservice container you want to remove.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
      * - ``--json``
@@ -1544,13 +1544,13 @@ Update
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to remove.
+       - The microservice container you want to remove.
      * - ``--name "STRING"``
-       - What the microservice container will be called in the command center and studio. 
+       - The new name for the microservice container. The name will appear in the command center and studio. 
      * - ``-path, --icon-file "FILE PATH"``
-       - The absolute path where the icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
+       - The absolute path where the new icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
      * - ``--json``
@@ -1606,33 +1606,33 @@ Add
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to edit.
-     * - ``--port INTAGER``
+       - The microservice container you want to edit.
+     * - ``--port INTEGER``
        - The port that the version will run on. This will either be set in your code or be your programming language’s default port.
      * - ``-image, --docker-image "FILE PATH"``
        - The absolute path where the microservice Docker file is located. For example: C:/Users/User/Desktop/Folder/dockerfile.py. 
-     * - ``-path, --icon-file "FILE PATH"``
-       - The absolute path where the microservice tar file is located. For example: C:/Users/User/Desktop/Folder/file.tar. 
-     * - ``-fv, --from-version INTAGER (*.*.*)``
-       - The version you wish to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (1.1.*)`` will take the most recent version that has a major and minor value of 1.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - What the microservice's version number will be. For example, ``--version (9.9.9)``.
-     * - ``--patch INTAGER``
+     * - ``-path, --microservice-file-path "FILE PATH"``
+       - The absolute path where the microservice tar file is located. For example: C:/Users/User/Desktop/Folder/microservice.tar. 
+     * - ``-fv, --from-version INTEGER (*.*.*)``
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (1.1.*)`` will take the most recent version that has a major and minor value of 1.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - What you want the microservice's version number to be. For example, ``--version (9.9.9)``.
+     * - ``--patch INTEGER``
        - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version (1.1.1) --patch`` sets the version number to (1.1.2).
-     * - ``--minor INTAGER``
+     * - ``--minor INTEGER``
        - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version (1.1.1) --minor`` sets the version number to (1.2.0).
-     * - ``--major INTAGER``
+     * - ``--major INTEGER``
        - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version (1.1.1) --major`` sets the version number to (2.0.0).
      * - ``--env-var "{"STRING":"KEY"}"``
        - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`. 
      * - ``-l, --label "[dev, old, prod]"``
-       - The status of the version as either ready-for-production, in-development, or deprecated respectively.
+       - The status of the version as either ready-for-production, in-development, or deprecated. respectively.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
      * - ``--json``
-       - Returns the raw JSON payload. 
+       - Returns the raw JSON payload.
      * - ``--table`` 
        - Returns a table with several basic JSON values.
      * - ``--help``
@@ -1662,11 +1662,11 @@ Exec
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The version number of the microservice you wish to edit. For example, ``--version (9.9.9)``.
+       - The microservice container you want to edit.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the microservice you want to edit. For example, ``--version (9.9.9)``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1710,11 +1710,11 @@ Logs
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to see the logs of.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The version number of the microservice you wish to see the logs of. For example, ``--version (9.9.9)``.
+       - The microservice container you want to edit.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the microservice whose logs you want to see. For example, ``--version (9.9.9)``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1752,16 +1752,16 @@ Ls
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to see the logs of.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to edit.
+       - The microservice container you want to edit.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
        - Returns results that match the filter criteria. For example: ``--filter "{id=999}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
-     * - ``--page INTAGER``
-       - The results page you wish to view.
-     * - ``--pagesize INTAGER``
+     * - ``--page INTEGER``
+       - The results page you want to view.
+     * - ``--pagesize INTEGER``
        - The number of results you want to show per page.
      * - ``--json``
        - Returns the raw JSON payload. 
@@ -1780,7 +1780,7 @@ Ls
 .. _Microservice-version Rm:
 
 Rm
-++
++++
 
  Removes a version from a microservice container.
 
@@ -1804,13 +1804,13 @@ Rm
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to see the logs of.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to edit.
-     * - ``-vm, --version-mask INTAGER (*.*.*)``
-       - Rmoves all version with that major, minor, or path. Use a * to indicate all. Sending (*.*.*) will delete all versions.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The version number of the microservice you wish to remove. For example, ``--version (9.9.9)``.
+       - The microservice container you want to edit.
+     * - ``-vm, --version-mask INTEGER (*.*.*)``
+       - Removes all versions with that major, minor, or patch. Use a * to indicate all. Sending (*.*.*) will delete all versions.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the microservice you want to remove. For example, ``--version (9.9.9)``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -1851,11 +1851,11 @@ Start
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to see the logs of.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The version number of the microservice you wish to edit. For example, ``--version (9.9.9)``.
+       - The microservice container you want to edit.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the microservice you want to start. For example, ``--version (9.9.9)``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -1896,11 +1896,11 @@ Stop
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to see the logs of.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The version number of the microservice you wish to edit. For example, ``--version (9.9.9)``.
+       - The microservice container you want to edit.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the microservice you want to stop. For example, ``--version (9.9.9)``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -1941,11 +1941,11 @@ Update
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to see the logs of.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
-       - The microservice container you wish to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - - The version number of the microservice you wish to edit. For example, ``--version (9.9.9)``.
+       - The microservice container you want to edit.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the microservice you want to update. For example, ``--version (9.9.9)``.
      * - ``-l, --label "[dev, old, prod]"``
        - The new status of the version. It can be ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
@@ -1988,19 +1988,19 @@ Child-orgs
  
  .. code-block:: bash
  
-     id  name                   instanceType isTest
-     999 Child Command Center   dev          None
-     9   Dragon Studio          studio       False
+     id    name                                   instanceType isTest
+     999 Child Command Center   dev                  None
+     9      Dragon Studio                   studio             False
      
  .. list-table:: Options 
      :widths: 10 20
 
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to see the logs of.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{instanceType=studio}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--help``
@@ -2035,9 +2035,9 @@ Ls
      * - ``--env "STRING"``
        - The name of the environment whose organizations you want listed.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {isTest}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{isTest=None}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--help``
@@ -2090,7 +2090,7 @@ Add
      :widths: 10 20
 
      * - ``--profile-name "STRING"``
-       - What you wish to call the profile in the CLI. The profile will be associated with a studio or command center of your choosing, so keep that in mind when naming the profile.  
+       - What you want to call the profile in the CLI. The profile will be associated with a studio or command center of your choosing, so keep that in mind when naming the profile.  
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. The only options are ``--format "{env}, {orgName}, {orgId}"``. 
      * - ``--help``
@@ -2152,7 +2152,7 @@ Rm
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The name of teh profile you want to remove.
+       - The name of the profile you want to remove.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -2197,7 +2197,7 @@ Commands that add, modify, share, and delete widget containers.
 Access
 ++++++
 
- Shares and unshares a widget container with child organizations.
+ Shares or unshares a widget container with child organizations.
 
  Example:
 
@@ -2218,15 +2218,15 @@ Access
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
      * - ``--add ID``
-       - The studio or command center you want to **share** with.
+       - The studio or command center whom with you want to **share**.
      * - ``--rm ID``
-       - The studio or command center you want to **unshare** with.
+       - The studio or command center whom with you want to **unshare**.
      * - ``--absolute ID``
-       - Unshares the tool with all organizations and than shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{failed}, {resultingGrantees}"``. 
      * - ``--json``
@@ -2267,11 +2267,11 @@ Add
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``--name "STRING"``
-       - What the widget container will be called in the command center and studio. 
+       - What you want to call the widget container. The name will appear in the command center and studio. 
      * - ``--url-ref "STRING"``
-       - url-ref: What the widget will be referenced by in URLs. For example: https://urltoexperience.com/url-ref or ic/url-ref. It contain only lowercase alphanomics with no special characters or spaces. There is a max length of 20. 
+       - url-ref: What the widget will be referenced by in URLs. For example: https://urltoexperience.com/url-ref or ic/url-ref. It can contain only lowercase letters, numbers, or dashes. 
      * - ``-path, --icon-file "FILE PATH"``
        - The absolute path where the icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
@@ -2313,14 +2313,14 @@ Ls
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"`` 
        - Returns results that match the filter criteria. For example: ``--filter "{name=Hydra}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
-     * - ``--page INTAGER``
-       - The results page you wish to view.
-     * - ``--pagesize INTAGER``
+     * - ``--page INTEGER``
+       - The results page you want to view.
+     * - ``--pagesize INTEGER``
        - The number of results you want to show per page.
      * - ``--json``
        - Returns the raw JSON payload. 
@@ -2359,7 +2359,7 @@ Rm
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
@@ -2401,11 +2401,11 @@ Update
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
      * - ``--name "STRING"``
-       - The new name for the widget container. It will be used in the command center and studio. 
+       - The new name for the widget container. The name will appear in the command center and studio. 
      * - ``-path, --icon-file "FILE PATH"``
        - The absolute path where the new icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
@@ -2462,21 +2462,19 @@ Add
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
-     * - ``--port INTAGER``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``--port INTEGER``
        - The port that the version will run on. This will either be set in your code or be your programming language’s default port.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``--name "STRING"``
-       - The new name for the widget container. It will be used in the command center and studio. 
      * - ``-path, --widget-file-path "FILE PATH"``
        - The absolute path where the widget tar file is located. For example: C:/Users/User/Desktop/Folder/widget.tar. 
      * - ``-image, --docker-image "FILE PATH"``
        - The absolute path where the widget docker file is located. For example: C:/Users/User/Desktop/Folder/docker.py. 
-     * - ``-fv, --from-version INTAGER (*.*.*)``
-       - The version you wish to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (1.1.*)`` will take the most recent version that has a major and minor value of 1. 
-     * - ``-v, --version INTAGER (*.*.*)``
-       - What the widget’s version number will be. For example, ``--version (9.9.9)``.
+     * - ``-fv, --from-version INTEGER (*.*.*)``
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (1.1.*)`` will take the most recent version that has a major and minor value of 1. 
+     * - ``-v, --version INTEGER (*.*.*)``
+       - What you want the widget’s version number to be. For example, ``--version (9.9.9)``.
      * - ``--patch``
        - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version (1.1.1) --patch`` sets the version number to (1.1.2).
      * - ``--minor``
@@ -2486,7 +2484,7 @@ Add
      * - ``--env-var "{"STRING":"KEY"}"``
        - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`.
      * - ``-l, --label "[dev, old, prod]"``
-       - The status of the version as either ready-for-production, in-development, or deprecated respectively.
+       - The status of the version as ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -2520,11 +2518,11 @@ Exec
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The version number of the widget version you want to edit. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the widget you want to edit. For example, ``--version (9.9.9)``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2561,28 +2559,28 @@ Logs
      | ___ \ / _ \ / _ \
      | |_/ /| __/| __/
      \____/ \___| \___| v1.10.0
-     [21m[0m2019/02/22 20:48:24 [34m[1mINFO [21m[0m ▶ 0001 Using 'widget' as 'appname'
-     2019/02/22 20:48:24 [34m[1mINFO [21m[0m ▶ 0002 Initializing watcher...
+      [21m [0m2019/02/22 20:48:24  [34m [1mINFO  [21m [0m ▶ 0001 Using 'widget' as 'appname'
+     2019/02/22 20:48:24  [34m [1mINFO  [21m [0m ▶ 0002 Initializing watcher...
      github.com/Place/Repository/File
      widget/models
      widget/controllers
      widget/routers
      widget
-     2019/02/22 20:48:26 [32m[1mSUCCESS [21m[0m ▶ 0003 Built Successfully!
-     2019/02/22 20:48:26 [34m[1mINFO [21m[0m ▶ 0004 Restarting 'widget'...
-     2019/02/22 20:48:26 [32m[1mSUCCESS [21m[0m ▶ 0005 './widget' is running...
-     2019/02/22 20:48:26.774 [1;34m[I] [asm_amd64.s:2197] http server Running on http://:8080[0m
-     2019/02/22 20:48:30.578 [1;44m[D] [server.go:2568] | 54.164.117.6|[42m 200 [0m| 127.084µs| match|[44m GET [0m /ic/hydra/discover/health r:/:ic/:url_ref/discover/health[0m
+     2019/02/22 20:48:26  [32m [1mSUCCESS  [21m [0m ▶ 0003 Built Successfully!
+     2019/02/22 20:48:26  [34m [1mINFO  [21m [0m ▶ 0004 Restarting 'widget'...
+     2019/02/22 20:48:26  [32m [1mSUCCESS  [21m [0m ▶ 0005 './widget' is running...
+     2019/02/22 20:48:26.774  [1;34m[I] [asm_amd64.s:2197] http server Running on http://:8080 [0m
+     2019/02/22 20:48:30.578  [1;44m[D] [server.go:2568] | 54.164.117.6| [42m 200  [0m| 127.084µs| match| [44m GET  [0m /ic/hydra/discover/health r:/:ic/:url_ref/discover/health [0m
      
  .. list-table:: Options 
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The version number of the widget version you want to edit. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the widget whose logs you want to see. For example, ``--version (9.9.9)``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2621,16 +2619,16 @@ Ls
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
-       - The widget container you want to edit.
+       - The widget container whose version you want to see.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
        - Returns results that match the filter criteria. For example: ``--filter "{actualState=running}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
-     * - ``--page INTAGER``
-       - The results page you wish to view.
-     * - ``--pagesize INTAGER``
+     * - ``--page INTEGER``
+       - The results page you want to view.
+     * - ``--pagesize INTEGER``
        - The number of results you want to show per page.
      * - ``--json``
        - Returns the raw JSON payload. 
@@ -2673,13 +2671,13 @@ Rm
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-vm, --version-mask INTAGER (*.*.*)``
+     * - ``-vm, --version-mask INTEGER (*.*.*)``
        - Removes all version with that major, minor, or path. Use a * to indicate all. Sending (*.*.*) will delete all versions.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The number of the version you wish to remove. For example: ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the widget you want to remove. For example: ``--version (9.9.9)``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -2720,11 +2718,11 @@ Start
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The number of the version you wish to edit. For example: ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the widget you want to start. For example: ``--version (9.9.9)``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -2765,11 +2763,11 @@ Stop
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The number of the version you wish to edit. For example: ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the widget you want to stop. For example: ``--version (9.9.9)``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -2810,11 +2808,11 @@ Update
      :widths: 10 20
  
      * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you wish to edit.
+       - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTAGER (*.*.*)``
-       - The number of the version you wish to edit. For example: ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER (*.*.*)``
+       - The version number of the widget you want to update. For example: ``--version (9.9.9)``.
      * - ``-l, --label "[dev, old, prod]"``
        - The new status of the version. It can be ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
