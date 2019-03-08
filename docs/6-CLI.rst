@@ -415,7 +415,8 @@ Delete
  Options:
  
  .. list-table:: Title
-   :widths: 25% 75%
+   :widths: 25 75
+   :width: 90
    :header-rows: 0
 
    * - ``-p, --profile "STRING"``
