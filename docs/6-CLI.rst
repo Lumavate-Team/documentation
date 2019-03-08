@@ -413,8 +413,14 @@ Delete
      "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  Options:
-  * ``-p, --profile "STRING"``
-  * ``--help``
+ .. list-table:: Title
+   :widths: 25 75
+   :header-rows: 0
+
+   * - ``-p, --profile "STRING"``
+     - ``--help``
+   * - The profile associated with the studio or command center you wish to edit.
+     - A list of available sub-commands and options. Several commands and options have a description explaining what they do. 
  
  .. note::
     API paths cannot include sort criteria.
