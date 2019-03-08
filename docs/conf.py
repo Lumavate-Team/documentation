@@ -189,6 +189,11 @@ html_show_copyright = True
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'ReadtheDocsTemplatedoc'
 
+html_context = {
+    'css_files': [
+        '_static/custom.css',  # override wide tables in RTD theme
+        ],
+     }
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
