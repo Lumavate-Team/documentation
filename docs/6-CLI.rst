@@ -414,14 +414,14 @@ Delete
 
  Options:
  
- .. list-table:: Title
-    :widths: 25 75
-    :width: 90
+ .. list-table:: Options
+     :widths: 25 75
+     :width: 90
 
-   * - ``-p, --profile "STRING"``
-     - ``--help``
-   * - The profile associated with the studio or command center you wish to edit.
-     - A list of available sub-commands and options. Several commands and options have a description explaining what they do. 
+     * - ``-p, --profile "STRING"``
+       - ``--help``
+     * - The profile associated with the studio or command center you wish to edit.
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do. 
  
  .. note::
     API paths cannot include sort criteria.
