@@ -279,7 +279,7 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-         Profile Name: <<profile name: used to reference an organization>>
+         Profile Name: <<STRING Cannot have spaces or special characters in it. This is used to reference an organization.>>
 
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
@@ -315,7 +315,7 @@ Setting up Profiles:
    
      .. code-block:: bash
        
-         Profile Name: <<profile’s name in the CLI>>
+         Profile Name: <<STRING Cannot have spaces or special characters in it. This is used to reference an organization.>>
      
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
