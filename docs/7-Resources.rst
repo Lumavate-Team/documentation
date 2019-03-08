@@ -22,9 +22,14 @@ Code samples can be found at https://github.com/Lumavate-Team
 C#
 ^^
 
- A pre-built Docker container using .NET Core with a lightweight shell for use with C#.
+ Common libraries and scaffolding codefor .NET Core with a lightweight shell for use with C#.
 
+ C# property library: Coming Soon.
+ 
+ C# signer library: Coming Soon.
+ 
  Base widget container: https://github.com/Lumavate-Team/widget-base-csharp
+ 
 
 .. _Go Sample:
 
@@ -33,7 +38,9 @@ GO
 
  Common libraries and scaffolding code for use with Golang.
 
- Go common container: https://github.com/Lumavate-Team/lumavate-go-common
+ Go property library: https://github.com/Lumavate-Team/lumavate-go-common
+ 
+ Go signer library: Coming Soon.
 
  Base widget container: https://github.com/Lumavate-Team/widget-base-go
 
@@ -44,9 +51,18 @@ Python
 
  Common libraries and scaffolding code for use with Python.
 
- Python signer container: https://github.com/Lumavate-Team/python-signer
+ Go property library: Coming Soon.
+ 
+ Python signer library: https://github.com/Lumavate-Team/python-signer
 
  Base widget container: https://github.com/Lumavate-Team/python-hello
+
+JSON
+^^^^
+
+ Example component-set containers for use with JSON. 
+
+ Base component-set container: Coming Soon. 
 
 ________________________________________________________________________________________________________________________________________
 
