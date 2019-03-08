@@ -452,9 +452,13 @@ Get
       "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null,
       "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
 
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. note::
     API paths cannot include sort criteria.
@@ -482,10 +486,15 @@ Post
      "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null,
      "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
- Options: 
-  * ``-p, --profile "STRING"``
-  * ``-d, --data "{JSON}, {JSON}"``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * -  ``-d, --data "{JSON}, {JSON}"``
+       - The JSON payload/body of the call.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. note::
     API paths cannot include sort criteria.
@@ -513,10 +522,15 @@ Put
      "premium": false, "type": "widget", "urlRef": "fireball", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null,
      "manageUrl": null, "versionNumber": null}}}}}
 
- Options: 
-  * ``-p, --profile “STRING”``
-  * ``-d, --data "{JSON}, {JSON}"``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * -  ``-d, --data "{JSON}, {JSON}"``
+       - The JSON payload/body of the call.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. note::
     API paths cannot include sort criteria.
@@ -551,16 +565,27 @@ Access
      failed sharedWith          unsharedFrom resultingGrantees
      []     [{'granteeId': 9}]  []           ['Dragon Studio']
 
- Options: 
-  * ``-p, --profile “STRING”``
-  * ``-cs, --component-set ID``
-  * ``--add ID || Name``
-  * ``--rm ID || Name``
-  * ``--absolute ID || Name``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-cs, --component-set ID``
+       - The component-set container you wish to edit.
+     * - ``--add ID || Name``
+       - The studio or command center you want to **share** with.
+     * - ``--rm ID || Name``
+       - The studio or command center you want to **unshare** with.
+     * - ``--absolute ID || Name``
+       -
+     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+       - Returns a table with the requested JSON values. For example: ``--format "{failed}, {unsharedFrom}"`` 
+     * - ``--json``
+       - Returns the raw JSON payload.
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -589,15 +614,25 @@ Add
      id  name        urlRef      createdAt
      999 Fire Breath firebreath  02/22/19 16:36:09
 
- Options: 
-  * ``-p, --profile “STRING”``
-  * ``--name “STRING”``
-  * ``--url-ref “LOWERCASE STRING”``
-  * ``-path, --icon-file “FILE PATH”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-  * ``--json`` 
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``--name “STRING”``
+       - What the tool container will be called in the command center and studio.
+     * - ``--url-ref “LOWERCASE STRING”``
+       - What the tool will be referenced by in URLs. For example: https://urltoexperience.com/url-ref.
+     * - ``-path, --icon-file “FILE PATH”``
+       - The absolute path where the icon  SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG.
+     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+       - Returns a table with the requested JSON values. For example: ``--format "{id}, {url-ref}"``
+     * - ``--json``
+       - Returns the raw JSON payload.
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
@@ -625,15 +660,25 @@ Ls
      999 Fire Breath   firebreath   02/22/19 16:36:09
      99  Frosty Breath frostybreath 02/22/19 16:36:09
 
- Options:
-  * ``-p, --profile “STRING”``
-  * ``-f, --format “{JSON VALUE}, {JSON VALUE}”`` 
-  * ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
-  * ``--page INTAGER`` 
-  * ``--pagesize INTAGER``
-  * ``--json``
-  * ``--table``
-  * ``--help``
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you wish to edit.
+     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
+       - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {id}"``
+     * - ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
+       - Returns results that match the filter criteria. For example: ``--filter "{urlref=firebreath}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+     * - ``--page INTAGER`` 
+       - The results page you wish to view.
+     * - ``--pagesize INTAGER``
+       - The number of results you want to show per page.
+     * - ``--json``
+       - Returns the raw JSON payload.
+     * - ``--table``
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning:: 
     ``--table`` is deprecated.
