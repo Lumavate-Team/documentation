@@ -78,6 +78,6 @@ Metadata File
  	- ``body`` adds GUI that the end user will interact with and the studio user can place anywhere on the page. Normally you can add multiple of the same component.
  	- ``model`` adds elements that appear in a specific spot on the page. Normally you would only add one of the same components.
  	- ``logic`` adds logic code that takes specific actions when certain criteria are met. Normally you would only add one of the same components.
- 	-``footer`` adds a footer.
- 	-``header`` adds a header.
+ 	- ``footer`` adds a footer.
+ 	- ``header`` adds a header.
  	- ``STRING`` can create a custom tag by adding a string value that is not listed above to the tag array. Be aware that a widget or microservice will need to be designed that calls the new dynamic component before the component can be used in the studio.  
