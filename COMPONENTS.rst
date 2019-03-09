@@ -41,10 +41,10 @@ Metadata File
      {
        "components": [
         {
-         'label': 'Component Label',
-         'icon': 'Relative path within the Distributable to an SVG icon that will be displayed when previewed in the Studio',
-         'tags': ['Array of Tags which can be used within a widget or microservice to denote where a component-set can be used'],
-         'type': 'Unique Label (each component-set needs its own unique label names)',
+         'label': 'Name of the component in the studio.',
+         'icon': 'Relative path within the zip file to an SVG icon that will accompany the component in the studio.',
+         'tags': [`Array of Dynamic component Values used within widget and microservices to denote where the component-set can be used. A current list of Lumavate tags can be found below.`],
+         'type': 'Used when referencing the component. This must be a unique value that is different from all other component types in the command center.',
          'properties':
          [  
            {
@@ -62,11 +62,22 @@ Metadata File
            // Array of Properties to be shown within the studio
            }
          ],
-
-         'template': '<component-tag property1='{{componentData.property1}}'></component-tag>'
+         
+         'template': '<component-tag property1='{{componentData.property1}}'></component-tag><Additional template information can be found below.>'
         }
       ],
       "styleData": []  
      }
-     
- The template defines the HTML that is output upon the component-sets use. The properties exposed can be substituted within the template using the templating syntax: ``{{ componentData.propertyName }}``. For instance, the template defined above will set the ``property1`` attribute to the value set within the platform.
+ 
+ Templates are the HTML code that is implemented when the component is used. To call the properties that the studio user sets, use the templating syntax, ``{componentData.propertyname}``, where ``propertyname`` is the name of the property whose value you want to use.
+
+ .. note::
+    Templates supports jinja.
+ 
+ The current tags available are:
+ 	- ``body`` adds GUI that the end user will interact with and the studio user can place anywhere on the page. Normally you can add multiple of the same component.
+ 	- ``model`` adds elements that appear in a specific spot on the page. Normally you would only add one of the same components.
+ 	- ``logic`` adds logic code that takes specific actions when certain criteria are met. Normally you would only add one of the same components.
+ 	-``footer`` adds a footer.
+ 	-``header`` adds a header.
+ 	- ``STRING`` can create a custom tag by adding a string value that is not listed above to the tag array. Be aware that a widget or microservice will need to be designed that calls the new dynamic component before the component can be used in the studio.  
