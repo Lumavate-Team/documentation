@@ -134,7 +134,7 @@ ________________________________________________________________________________
 Provisioning Credentials
 -------------------------
 
-The CLI requares two variables to be configured in order to talk to the platform: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
+The CLI requires two variables to be configured in order to talk to the platform: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
     
     * **Environments** know how to get and refresh tokens so the user stays authorized with the platform. They also set what command centers or studios the user has access to.
     * **Profiles** give the user a company context in a specific environment which is required by most of the platform API. They set what studio or command center the user is modifying.  
