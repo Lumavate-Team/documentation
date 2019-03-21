@@ -38,95 +38,22 @@ ________________________________________________________________________________
 
 Installation
 ------------
-The CLI can be installed two different ways:
+The CLI can be installed without downloading any files. Follow the steps below to install. For alternative installation routes that involve downloading files, see "Alternative CLI Installations" in the "Resources" section of this site. 
 
- #. :ref:`From Pip<Installation Pip>` (install without downloading files)
- #. :ref:`From Source<Installation Source>` (install by downloading files)
-
-.. _Installation Pip:
-
-From Pip
-^^^^^^^^
-
- On Mac and Linx:
+On Mac and Linux, run the following command in your Terminal:
   
-   .. code-block:: bash
+  .. code-block:: bash
      
-      $ sudo pip3 install luma
+     $ sudo pip3 install luma
 
- On Windows:
+On Windows, run the following command in your Command Prompt:
   
-   .. code-block:: bash
+  .. code-block:: bash
      
-      $ pip3 install luma
+     $ pip3 install luma
 
- The CLI should now be installed. Continue on to :ref:`Provisioning Credentials`. 
+The CLI should now be installed. Continue on to :ref:`Provisioning Credentials`. 
 
-.. _Installation Source:
-
-From Source
-^^^^^^^^^^^
-
- Installing the CLI as a Non-admin:
-
-  #. Clone the `CLI repo <https://github.com/LabelNexus/lumavate-cli>`_.
-  
-  #. Unzip the file you just downloaded.
-  
-  #. CD into the CLI directory.
-  
-     .. Code-block:: bash
-     
-        $ cd C:/User/DownloadLocation/lumavate-cli-master/cli
-        
-  #. Run:
-  
-     .. code-block:: bash
-        
-        On Windows:
-        
-        $ pip3 install luma --user
-        
-        On Mac and Linx:
-        
-        $ sudo pip3 install luma --user
- 
-  #. Add the returned path URL to your system environment variables. 
-   
-     Example Response: 
-   
-     .. code-block:: bash
-       
-        The script luma.exe is installed in 'C:\ComputerName\UserName\AppData\Roaming\Python\Python37\Scripts' which is not on PATH. 
-        Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
-  
-  #. The CLI should now be installed. Continue on to :ref:`Provisioning Credentials`. 
- 
- Installing the CLI as an Admin:
-
-  #. Clone the `CLI repo <https://github.com/LabelNexus/lumavate-cli>`_.
-  
-  #. Unzip the file you just downloaded.
-  
-  #. CD into the CLI directory.
-  
-     .. Code-block:: bash
-     
-        $ cd C:/User/DownloadLocation/lumavate-cli-master/cli
-        
-  #. Run:
-   
-     .. code-block:: bash
-     
-        On Windows:
-        
-        $ pip3 install luma
-        
-        On Mac and Linx:
-       
-        $ sudo pip3 install luma
-
-  #. The CLI should now be installed. Continue on to :ref:`Provisioning Credentials`. 
 _______________________________________________________________________________________________________________________________________
 
 .. _Provisioning Credentials:
