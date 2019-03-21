@@ -71,7 +71,7 @@ The CLI requires two variables to be configured in order to talk to the platform
 Setting-Up Environments:
 ^^^^^^^^^^^^^^^^^^^^^^^
 
- You can use either the :ref:`Lumavate pre-configured<enviroment preset configuration>` environment or you can :ref:`setup your own environment configuration<enviroment your own configuration>`.
+ The simplest way to setup an environment is to use the :ref:`Lumavate pre-configured<enviroment preset configuration>` environment. 
 
 .. _enviroment preset configuration:
 
@@ -114,28 +114,10 @@ Setting-Up Environments:
  
  .. _enviroment your own configuration:
  
+ You can also set up an environment using your own configuration settings. When you do, you can provide your own name for the environment. You will need the app, audience, token, client-id, and client secret information. This information can be found in the "Configure an Environment" section of the Lumavate CLI tab inside a Lumavate command center. 
+ 
  Using your own configuration:
 
-  #. Log into the command center you want to modify with the CLI.
-     
-     .. figure:: ../images/enviromentselect.PNG
-         :align: center
-         :width: 400px
-         :alt: Image of the Lumavate Organization Select Page.
-      
-         The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
- 
-  #. Go to the CLI tab located in the side menu bar.
-  
-      .. figure:: ../images/sidebarforcli.PNG
-          :align: center
-          :width: 800px
-          :alt: Image of the sidebar with the CLI option highlighted.
-      
-          The CLI tab in the sidebar allows Admin users to create a CLI accounts.
-       
-  #. Take note of the app, audience, token, client-id, and client-secret information from the Configure An Environment field.
-  
   #. In your Bash window, run:
    
      .. code-block:: bash
