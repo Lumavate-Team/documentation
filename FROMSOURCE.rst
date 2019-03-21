@@ -1,7 +1,7 @@
 Alternative CLI Installations
 -----------------------------
 
-For installing the CLI by downloading files, see the instruction sets below. 
+To install the CLI by downloading files, see the instruction sets below. 
 
  Installing the CLI as a Non-admin:
 
