@@ -814,16 +814,16 @@ Add
        - The component-set container you want to edit.
      * - ``-path, --component-set-file-path “FILE PATH”``
        - The absolute path where the component-sets zip file is located. For example: C:/Users/User/Desktop/Folder/file.zip.  
-     * - ``-fv, --from-version INTEGER (*.*.*)``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (9.9.*)`` will take the most recent version that has a major and minor value of 1.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - What you want the component-set version number to be. For example, ``--version (9.9.9)``.
+     * - ``-fv, --from-version INTEGER "*.*.*"``
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 1.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - What you want the component-set version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch``
-       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version (1.1.1) --patch`` sets the version number to (1.1.2).
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version "1.1.1" --patch`` sets the version number to "1.1.2".
      * - ``--minor``
-       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version (1.1.1) --minor`` sets the version number to (1.2.0).
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version "1.1.1" --minor`` sets the version number to "1.2.0".
      * - ``--major``
-       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version (1.1.1) --major`` sets the version number to (2.0.0).
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version "1.1.1" --major`` sets the version number to "2.0.0".
      * - ``--css-includes “STRING”``
        - CSS includes for the version.
      * - ``--direct-includes “STRING”``
@@ -875,8 +875,8 @@ Components
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
        - The component-set container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the component-set you want to view. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the component-set you want to view. For example, ``--version "9.9.9"``.
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -970,10 +970,10 @@ Rm
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
        - The component-set container you want to edit.
-     * - ``-vm, --version-mask INTEGER (*.*.*)``
-       - Removes all version with that major, minor, or path. Use a * to indicate all. Sending (*.*.*) will delete all version.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the component-set you want to remove. For example, ``--version (9.9.9)``.
+     * - ``-vm, --version-mask INTEGER "*.*.*"``
+       - Removes all version with that major, minor, or path. Use a * to indicate all. Sending ``"*.*.*"`` will delete all version.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the component-set you want to remove. For example, ``--version "9.9.9"``.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
      * - ``--json``
@@ -1017,8 +1017,8 @@ Update
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
        - The component-set container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the component-set you want to edit. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the component-set you want to edit. For example, ``--version "9.9.9"``.
      * - ``-l, --label "[prod, dev, old]"```
        - The new status of the version. It can either be ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
@@ -1615,16 +1615,16 @@ Add
        - The absolute path where the microservice Docker file is located. For example: C:/Users/User/Desktop/Folder/dockerfile.py. 
      * - ``-path, --microservice-file-path "FILE PATH"``
        - The absolute path where the microservice tar file is located. For example: C:/Users/User/Desktop/Folder/microservice.tar. 
-     * - ``-fv, --from-version INTEGER (*.*.*)``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (1.1.*)`` will take the most recent version that has a major and minor value of 1.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - What you want the microservice's version number to be. For example, ``--version (9.9.9)``.
+     * - ``-fv, --from-version INTEGER "*.*.*"``
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "1.1.*"`` will take the most recent version that has a major and minor value of 1.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - What you want the microservice's version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch INTEGER``
-       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version (1.1.1) --patch`` sets the version number to (1.1.2).
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version "1.1.1" --patch`` sets the version number to "1.1.2".
      * - ``--minor INTEGER``
-       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version (1.1.1) --minor`` sets the version number to (1.2.0).
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version "1.1.1" --minor`` sets the version number to "1.2.0".
      * - ``--major INTEGER``
-       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version (1.1.1) --major`` sets the version number to (2.0.0).
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version "1.1.1" --major`` sets the version number to "2.0.0".
      * - ``--env-var "{"STRING":"KEY"}"``
        - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`. 
      * - ``-l, --label "[dev, old, prod]"``
@@ -1665,8 +1665,8 @@ Exec
        - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
        - The microservice container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the microservice you want to edit. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to edit. For example, ``--version "9.9.9"``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1713,8 +1713,8 @@ Logs
        - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
        - The microservice container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the microservice whose logs you want to see. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice whose logs you want to see. For example, ``--version "9.9.9"``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1807,10 +1807,10 @@ Rm
        - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
        - The microservice container you want to edit.
-     * - ``-vm, --version-mask INTEGER (*.*.*)``
-       - Removes all versions with that major, minor, or patch. Use a * to indicate all. Sending (*.*.*) will delete all versions.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the microservice you want to remove. For example, ``--version (9.9.9)``.
+     * - ``-vm, --version-mask INTEGER "*.*.*"``
+       - Removes all versions with that major, minor, or patch. Use a * to indicate all. Sending "*.*.*" will delete all versions.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to remove. For example, ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -1854,8 +1854,8 @@ Start
        - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
        - The microservice container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the microservice you want to start. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to start. For example, ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -1899,8 +1899,8 @@ Stop
        - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
        - The microservice container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the microservice you want to stop. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to stop. For example, ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -1944,8 +1944,8 @@ Update
        - The profile associated with the studio or command center you want to edit.
      * - ``-ms, --microservice ID``
        - The microservice container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the microservice you want to update. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to update. For example, ``--version "9.9.9"``.
      * - ``-l, --label "[dev, old, prod]"``
        - The new status of the version. It can be ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
@@ -2471,16 +2471,16 @@ Add
        - The absolute path where the widget tar file is located. For example: C:/Users/User/Desktop/Folder/widget.tar. 
      * - ``-image, --docker-image "FILE PATH"``
        - The absolute path where the widget docker file is located. For example: C:/Users/User/Desktop/Folder/docker.py. 
-     * - ``-fv, --from-version INTEGER (*.*.*)``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version (1.1.*)`` will take the most recent version that has a major and minor value of 1. 
-     * - ``-v, --version INTEGER (*.*.*)``
-       - What you want the widget’s version number to be. For example, ``--version (9.9.9)``.
+     * - ``-fv, --from-version INTEGER "*.*.*"``
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "1.1.*"`` will take the most recent version that has a major and minor value of 1. 
+     * - ``-v, --version INTEGER "*.*.*"``
+       - What you want the widget’s version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch``
-       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version (1.1.1) --patch`` sets the version number to (1.1.2).
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version "1.1.1" --patch`` sets the version number to "1.1.2".
      * - ``--minor``
-       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version (1.1.1) --minor`` sets the version number to (1.2.0).
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version "1.1.1" --minor`` sets the version number to "1.2.0".
      * - ``--major``
-       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version (1.1.1) --major`` sets the version number to (2.0.0).
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version "1.1.1" --major`` sets the version number to "2.0.0".
      * - ``--env-var "{"STRING":"KEY"}"``
        - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`.
      * - ``-l, --label "[dev, old, prod]"``
@@ -2521,8 +2521,8 @@ Exec
        - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the widget you want to edit. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the widget you want to edit. For example, ``--version "9.9.9"``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2579,8 +2579,8 @@ Logs
        - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the widget whose logs you want to see. For example, ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the widget whose logs you want to see. For example, ``--version "9.9.9"``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2674,10 +2674,10 @@ Rm
        - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-vm, --version-mask INTEGER (*.*.*)``
-       - Removes all version with that major, minor, or path. Use a * to indicate all. Sending (*.*.*) will delete all versions.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the widget you want to remove. For example: ``--version (9.9.9)``.
+     * - ``-vm, --version-mask INTEGER "*.*.*"``
+       - Removes all version with that major, minor, or path. Use a * to indicate all. Sending "*.*.*" will delete all versions.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the widget you want to remove. For example: ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -2721,8 +2721,8 @@ Start
        - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the widget you want to start. For example: ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the widget you want to start. For example: ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -2766,8 +2766,8 @@ Stop
        - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the widget you want to stop. For example: ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the widget you want to stop. For example: ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--json``
@@ -2811,8 +2811,8 @@ Update
        - The profile associated with the studio or command center you want to edit.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
-     * - ``-v, --version INTEGER (*.*.*)``
-       - The version number of the widget you want to update. For example: ``--version (9.9.9)``.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the widget you want to update. For example: ``--version "9.9.9"``.
      * - ``-l, --label "[dev, old, prod]"``
        - The new status of the version. It can be ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
