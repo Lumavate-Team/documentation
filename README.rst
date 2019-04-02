@@ -11,6 +11,7 @@ Overview
 
 The following guide will:
 
+* Help you Get Started developing your first application: :ref: `Get Started`
 * Explain how to develop tools: :ref:`Developing tools`
 * Provide a run-down of Lumavate's standard tools: :ref:`Lumavate tools`
 * Walk-through the relevant terms used in the Lumavate platform: :ref:`platform`
