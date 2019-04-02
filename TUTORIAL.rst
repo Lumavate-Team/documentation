@@ -15,12 +15,12 @@ After completing this tutorial, you will be able to:
 
 * Build an Experience using Lumavate Tools
 * Publish an Experience
-* Describe the communication from Component to Widget to Microservice'
+* Describe the communication from Component to Widget to Microservice
 * Be able to use Lumavate Components including:
-  * Markdown
-  * Radio Buttons
-  * Button
-  * Data Repeater
+     * Markdown
+     * Radio Buttons
+     * Button
+     * Data Repeater
 * Be able to configure & use the Lumavate Data Store Microservice
 
 ## Time Estimate: 35 minutes
