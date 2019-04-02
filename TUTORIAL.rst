@@ -31,6 +31,7 @@ Creating a Collection & an Experience
 Login to the Lumavate Studio to begin by creating a Collection to house your Experience.
 
 1. Add a new "Examples" Collection
+
   a. In the lower left corner of the Experiences screen, Click Add Collection
   b. Enter Name: ``Examples``
   c. Click Save
@@ -39,6 +40,7 @@ Login to the Lumavate Studio to begin by creating a Collection to house your Exp
   The Examples Collection may already exist, if so, feel free to create a different named collection to be used in this example, or simply go to Step 2.
 
 2. Add A New Experience, updating the following fields:
+
   a. Name: ``My Quick Survey``
   b. Text Activation Code: <your initials>
 
@@ -70,7 +72,7 @@ e. Redirect URL: Leave Blank
 11. Click on the Body tab & scroll down to the Body Items section
 12. Click on the Add button
 13. Click Markdown (icon)
-14. Back on the designer page, click the Edit icon for the Markdown item just added & modify the following fields:
+14. Back on the designer page, click the Edit icon for the Markdown item just added & update the following fields:
 
   a. Content:
       ``<div style="text-align:center">Today's question<hr/>
@@ -91,7 +93,7 @@ Radio Buttons can be found in Lumavate Components, which is added to a new Exper
 2.  Click on the Add Button
 3.  Click on the Radio Buttons icon
 4.  Back on the designer page, click the Edit icon for the Radio Button item just added & modify the following fields:
-    
+
     a. Component Id: ``rdo1``
     b. Label: <leave blank>
     c. Select Options: ``Python|Python,NodeJS|NodeJS,Java|Java,Go|Go``
@@ -215,17 +217,23 @@ Adding a Results Page
 2. Click the Page Builder - Grid container
 3. Click the Start Designing button
 4. On the Widget tab, update the following fields:
+
    a. Name: ``Results Page``
+
 5. Click on the Header tab
 6. Update the following fields:
+
    a. Display Header: ``On``
    b. Text: ``Survey Results``
+
 7. Click on the Body tab & scroll down to the Body Items section
 8. Click on the Add button
 9. Click on the Markdown icon
 10. Back on the designer page, click the Edit icon for the Markdown component just added & update the following fields:
+
     a. Content: ``<div style="text-align:center">And the winner is….<hr/></div><br/>``
     b. Number of Rows to Span: ``2``
+
 11. Click Apply
 
 Displaying the results
