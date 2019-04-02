@@ -73,7 +73,8 @@ e. Redirect URL: Leave Blank
 14. Back on the designer page, click the Edit icon for the Markdown item just added & modify the following fields:
 
   a. Content:
-      ``<div style="text-align:center">Today's question<hr/>What is your favorite programming language?</div>``
+      ``<div style="text-align:center">Today's question<hr/>
+      What is your favorite programming language?</div>``
   b. Number of Rows to Span: ``2``
 
 15. Click Apply
