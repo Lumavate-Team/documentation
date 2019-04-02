@@ -23,7 +23,7 @@ After completing this tutorial, you will be able to:
      * Data Repeater
 * Be able to configure & use the Lumavate Data Store Microservice
 
-## Time Estimate: 35 minutes
+**Time Estimate**: 35 minutes
 
 Creating a Collection & an Experience
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -75,9 +75,8 @@ e. Redirect URL: Leave Blank
 14. Back on the designer page, click the Edit icon for the Markdown item just added & modify the following fields:
 
   a. Content:
-      <div style="text-align:center">Today's question<hr/>What is your favorite programming language?</div>
-  b. Number of Rows to Span: 2
-  c. Number of Columns to Span: 5
+      ``<div style="text-align:center">Today's question<hr/>What is your favorite programming language?</div>``
+  b. Number of Rows to Span: ``2``
 
 15. Click Apply
 
@@ -93,14 +92,12 @@ Radio Buttons can be found in Lumavate Components, which is added to a new Exper
 2.  Click on the Add Button
 3.  Click on the Radio Buttons icon
 4.  Back on the designer page, click the Edit icon for the Radio Button item just added & modify the following fields:
-    a. Component Id: rdo1
+    a. Component Id: ``rdo1``
     b. Label: <leave blank>
-    c. Select Options: Python|Python,NodeJS|NodeJS,Java|Java,Go|Go
-    d. Display Vertically: On
-    e. Body Row start: 3
-    f. Number of Rows to Span: 2
-    g. Body Column Start: 3
-    h. Number of Columns to Span: 2
+    c. Select Options: ``Python|Python,NodeJS|NodeJS,Java|Java,Go|Go``
+    d. Display Vertically: ``On``
+    e. Body Row start: ``3``
+    f. Number of Rows to Span: ``2``
 5. Click Apply
 
 By now, your Quick Survey should be starting to take shape:
@@ -113,12 +110,10 @@ Creating a Submit Button to store data
 2. Click Button (image)
 3. Back on the designer page, click the Edit icon for the Button just added & modify the following fields:
 
-  a. Component Id: btnSubmit
-  b. Button text: Submit
-  c. Body Row Start: 5
-  d. Number of Rows to Span: 1
-  e. Body Column Start: 3
-  f. Number of Columns to Span: 1
+  a. Component Id: ``btnSubmit``
+  b. Button text: ``Submit``
+  c. Body Row Start: ``5``
+  d. Number of Rows to Span: ``1``
 
 4. Click Apply
 5. Click Save
@@ -140,7 +135,7 @@ Initializing the Data Store using JavaScript
 
 1. On the Experience Designer page, click the Edit icon on the Home Page widget
 2. Click on the Script tab
-3. Under the `/* Please place your code beneath this comment */` lines, paste the following code:
+3. Under the ``/* Please place your code beneath this comment */`` lines, paste the following code:
 
 .. code-block:: javascript
 
@@ -169,9 +164,9 @@ Now that we have added code to initialize the Data Store, we will ensure the Exp
 7. On the Data Store tab, click the Add button
 8. Click the Edit icon on the newly added type, labeled: Type - None
 9. Update the following fields:
-   a. Type Name: survey-answers
-   b. View Access: Click "All Users"
-   c. Modify Access: Click "All Users"
+   a. Type Name: ``survey-answers``
+   b. View Access: ``Click "All Users"``
+   c. Modify Access: ``Click "All Users"``
 10. Click Apply
 11. Click Save
 
@@ -179,12 +174,12 @@ Hooking up the Submit Button
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. On the Experience Designer page, click the Edit icon on the Home Page widget
-2. On the Script tab, paste the following code **immediately above** the `/* Please place your code above this comment */`:
+2. On the Script tab, paste the following code **immediately above** the ``/* Please place your code above this comment */``:
 
 .. code-block:: javascript
 
 	//Add an onPress Event Listener for the submit button
-	c_btnSubmit.addEventListener('onPress', async function(evt) {
+	c_btnSubmit.addEventListener('lumaClick', async function(evt) {
 
 		//Disable the button to ensure it is not clicked multiple times
 		c_btnSubmit.disabled = true;
@@ -217,21 +212,17 @@ Adding a Results Page
 2. Click the Page Builder - Grid container
 3. Click the Start Designing button
 4. On the Widget tab, update the following fields:
-   a. Name: Results Page
+   a. Name: ``Results Page``
 5. Click on the Header tab
 6. Update the following fields:
-   a. Display Header: On
-   b. Text: Survey Results
+   a. Display Header: ``On``
+   b. Text: ``Survey Results``
 7. Click on the Body tab & scroll down to the Body Items section
 8. Click on the Add button
 9. Click on the Markdown icon
 10. Back on the designer page, click the Edit icon for the Markdown component just added & update the following fields:
-    a. Content:
-
-      `<div style="text-align:center">And the winner is….<hr/></div><br/>`
-
-    b. Number of Rows to Span: 2
-    c. Number of Columns to Span: 5
+    a. Content: ``<div style="text-align:center">And the winner is….<hr/></div><br/>``
+    b. Number of Rows to Span: ``2``
 11. Click Apply
 
 Displaying the results
@@ -240,16 +231,14 @@ Displaying the results
 1. On the Body tab of the Results Page, scroll down to the Body Items & Click the Add button
 2. Click the Data Repeater icon under the Lumavate Components section
 3. Back on the designer page, click the Edit icon for the Data Repeater component just added & update the following fields:
-   a. Component Id: rpt1
+   a. Component Id: ``rpt1``
    b. Row Template (set the field value to the HTML below):
-
-    `<div style="width:100%;text-align:center;color:var(--accent-color-family-100)">
+    ``<div style="width:100%;text-align:center;color:var(--accent-color-family-100)">
       <div style="font-size:2em;font-weight:bold">\{answer\}</div><br/>
       <div style="font-size:1.5em;color:var(--primary-color-family-100)">\{total\}</div><br/>
-    </div>`
+    </div>``
 
-  c. Body Row Start: 3
-  d. Number of Columns to Span: 5
+  c. Body Row Start: ``3``
 
 4. Click Apply
 5. Click Save
@@ -258,7 +247,7 @@ Retrieving the results
 ^^^^^^^^^^^^^^^^^^^^^^
 
 1. On the Results Page, click the Script tab
-2. Under the `/* Please place your code beneath this comment */`, paste the following code:
+2. Under the ``/* Please place your code beneath this comment */``, paste the following code:
 
 .. code-block:: javascript
 
@@ -291,7 +280,7 @@ Publishing the Experience
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Navigate dto the Experience View Page.  If you are still on the Experience Designer Page, click Close
-2. On the left hand side ofh te screen, clikc PUBLISH
+2. On the left hand side ofh te screen, clic PUBLISH
 
 After the publish confirmation message pops-up, use the QR Code, URL or Text Activation located on the bottom right part of the screen to see your Quick
 Survey in action!
