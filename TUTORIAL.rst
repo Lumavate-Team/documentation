@@ -23,8 +23,7 @@ After completing this tutorial, you will be able to:
   * Data Repeater
 * Be able to configure & use the Lumavate Data Store Microservice
 
-## Time Estimate
-35 minutes
+## Time Estimate: 35 minutes
 
 Creating a Collection & an Experience
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -32,22 +31,25 @@ Creating a Collection & an Experience
 Login to the Lumavate Studio to begin by creating a Collection to house your Experience.
 
 1. Add a new "Examples" Collection
-NOTE: The Examples Collection may already exist, if so, feel free to create a different named collection to be used in this example, or simply go to Step 2.
+
+.. note::
+  The Examples Collection may already exist, if so, feel free to create a different named collection to be used in this example, or simply go to Step 2.
+
 a. In the lower left corner of the Experiences screen, Click Add New Collection
 b. Name: Examples
 c. Click Save
 
-2. Add A New Experience
-· Name: My Quick Survey
-· Text Activation Code: <your initials>
+2. Add A New Experience, updating the following fields:
+
+a. Name: My Quick Survey
+b. Text Activation Code: <your initials>
 
 .. note::
-        This code will serve as the code that will be texted in to receive the Experience via SMS, along with becoming the domain used for your Experience.
+  This code will serve as the code that will be texted in to receive the Experience via SMS, along with becoming the domain used for your Experience.
 
-
-· Experience Collection: Examples
-· Default Device: Mobile
-· Redirect URL: Leave Blank
+c. Experience Collection: Examples
+d. Default Device: Mobile
+e. Redirect URL: Leave Blank
 
 3. Click Save
 4. Click Design
