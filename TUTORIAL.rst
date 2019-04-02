@@ -31,24 +31,22 @@ Creating a Collection & an Experience
 Login to the Lumavate Studio to begin by creating a Collection to house your Experience.
 
 1. Add a new "Examples" Collection
+  a. In the lower left corner of the Experiences screen, Click Add Collection
+  b. Enter Name: ``Examples``
+  c. Click Save
 
 .. note::
   The Examples Collection may already exist, if so, feel free to create a different named collection to be used in this example, or simply go to Step 2.
 
-a. In the lower left corner of the Experiences screen, Click Add New Collection
-b. Name: Examples
-c. Click Save
-
 2. Add A New Experience, updating the following fields:
-
-a. Name: My Quick Survey
-b. Text Activation Code: <your initials>
+  a. Name: ``My Quick Survey``
+  b. Text Activation Code: <your initials>
 
 .. note::
   This code will serve as the code that will be texted in to receive the Experience via SMS, along with becoming the domain used for your Experience.
 
-c. Experience Collection: Examples
-d. Default Device: Mobile
+c. Experience Collection: ``Examples``
+d. Default Device: ``Mobile``
 e. Redirect URL: Leave Blank
 
 3. Click Save
@@ -60,14 +58,14 @@ e. Redirect URL: Leave Blank
 
 9. Update the following fields
 
-  a. Name: Home Page
-  b. Page Type: Home
+  a. Name: ``Home Page``
+  b. Page Type: ``Home``
 
 10. Click on the Header tab & update the following fields:
 
-  a. Display Header: On
-  b. Show Back Button: Off
-  c. Text: My Quick Survey
+  a. Display Header: ``On``
+  b. Show Back Button: ``Off``
+  c. Text: ``My Quick Survey``
 
 11. Click on the Body tab & scroll down to the Body Items section
 12. Click on the Add button
@@ -92,12 +90,14 @@ Radio Buttons can be found in Lumavate Components, which is added to a new Exper
 2.  Click on the Add Button
 3.  Click on the Radio Buttons icon
 4.  Back on the designer page, click the Edit icon for the Radio Button item just added & modify the following fields:
+    
     a. Component Id: ``rdo1``
     b. Label: <leave blank>
     c. Select Options: ``Python|Python,NodeJS|NodeJS,Java|Java,Go|Go``
     d. Display Vertically: ``On``
     e. Body Row start: ``3``
     f. Number of Rows to Span: ``2``
+
 5. Click Apply
 
 By now, your Quick Survey should be starting to take shape:
@@ -164,9 +164,11 @@ Now that we have added code to initialize the Data Store, we will ensure the Exp
 7. On the Data Store tab, click the Add button
 8. Click the Edit icon on the newly added type, labeled: Type - None
 9. Update the following fields:
+
    a. Type Name: ``survey-answers``
    b. View Access: ``Click "All Users"``
    c. Modify Access: ``Click "All Users"``
+
 10. Click Apply
 11. Click Save
 
