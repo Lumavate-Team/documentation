@@ -83,7 +83,6 @@ Text
 
       "classification": "Classification",
       "name": "Name",
-      "options": {},
       "type": "text"
 
  .. figure:: ../images/textfield.PNG
@@ -103,7 +102,7 @@ Required Fields:
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
   * ``"deafult": "STRING"`` (does not have a default)
-  * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
+  * ``"options": {OPTIONS}``
    * ``"readonly": true || false`` (defaults to false)
    * ``"rows": INTAGER`` (the studio displays the number of rows specified, defaults to 1)
 
