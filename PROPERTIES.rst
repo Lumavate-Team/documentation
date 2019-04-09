@@ -67,9 +67,8 @@ Translatable Text
   * ``"label": "STRING"``
   * ``"deafult": "STRING"`` (defaults to "None")
   * ``"options": {OPTIONS}`` 
-  
    * ``"readonly": true || false`` (defaults to false)
-   * ``"rows" INTAGER`` (the studio displays the number of rows specified, defaults to 1)
+   * ``"rows": INTAGER`` (the studio displays the number of rows specified, defaults to 1)
     
 ________________________________________________________________________________________________________________________________________
 
@@ -85,7 +84,7 @@ Text
       "classification": "Classification",
       "name": "Name",
       "options": {},
-      "type": “text"
+      "type": "text"
 
  .. figure:: ../images/textfield.PNG
        :align: center
@@ -97,17 +96,15 @@ Text
 Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
   * ``"name": "STRING"``
-  * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
-  
-   * ``"readonly": true || false`` (defaults to false)
-   * ``"rows" INTAGER`` (the studio displays the number of rows specified, defaults to 1)
-   
   * ``"type": "text"``
   
  Optional Fields:
   * ``"section": "STRING"``
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
+  * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
+   * ``"readonly": true || false`` (defaults to false)
+   * ``"rows": INTAGER`` (the studio displays the number of rows specified, defaults to 1)
   * ``"deafult": "STRING"`` (does not have a default)
 
 _______________________________________________________________________________________________________________________________________
