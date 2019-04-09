@@ -222,7 +222,7 @@ Toggle
 
     "classification": "Classification",
     "name": "Name",
-    "type": “toggle"
+    "type": "toggle"
  
  .. figure:: ../images/togglefield.PNG
        :align: center
