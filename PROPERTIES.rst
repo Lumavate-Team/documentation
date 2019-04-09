@@ -65,7 +65,7 @@ Translatable Text
   * ``"section": "STRING"``
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"deafult": "STRING"`` (defaults to "None")
+  * ``"deafult": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}`` 
    * ``"readonly": true || false`` (defaults to false)
    * ``"rows": INTAGER`` (the studio displays the number of rows specified, defaults to 1)
@@ -102,10 +102,10 @@ Required Fields:
   * ``"section": "STRING"``
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
+  * ``"deafult": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
    * ``"readonly": true || false`` (defaults to false)
    * ``"rows": INTAGER`` (the studio displays the number of rows specified, defaults to 1)
-  * ``"deafult": "STRING"`` (does not have a default)
 
 _______________________________________________________________________________________________________________________________________
 
