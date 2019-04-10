@@ -242,8 +242,10 @@ Displaying the results
 1. On the Body tab of the Results Page, scroll down to the Body Items & Click the Add button
 2. Click the Data Repeater icon under the Lumavate Components section
 3. Back on the designer page, click the Edit icon for the Data Repeater component just added & update the following fields:
+
    a. Component Id: ``rpt1``
    b. Row Template (set the field value to the HTML below):
+
     ``<div style="width:100%;text-align:center;color:var(--accent-color-family-100)">
       <div style="font-size:2em;font-weight:bold">\{answer\}</div><br/>
       <div style="font-size:1.5em;color:var(--primary-color-family-100)">\{total\}</div><br/>
