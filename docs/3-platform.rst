@@ -1,4 +1,4 @@
-.. _platform:
+.. _Platform terms:
 
 ========
 Platform
