@@ -12,8 +12,8 @@ Overview
 The following guide will:
 
 * Explain how to develop tools: :ref:`Developing tools`
-* Walk through the development of an experience: :ref:`Getting Started`
 * Provide a run-down of Lumavate's standard tools: :ref:`Lumavate tools`
-* Define the relevant terms used in the Lumavate platform: :ref:`Platform terms`
+* Walk through the development of an experience: :ref:`Getting Started`
 * Detail the Lumavate Command Line Interface: :ref:`CLI`
+* Define the relevant terms used in the Lumavate platform: :ref:`Platform terms`
 * Provide additional resources for developing and creating with the Lumavate platform: :ref:`Resources`
