@@ -67,7 +67,7 @@ JSON
 Lumavate Components
 ^^^^^^^^^^^^^^^^^^^
 
-Information regarding the Lumavate Base set of Components can be found here: https://lumavate-team.github.io/lumavate-base-components/
+ Information regarding the Lumavate Base set of Components can be found here: https://lumavate-team.github.io/lumavate-base-components/
 ________________________________________________________________________________________________________________________________________
 
 .. include:: ../GLOSSARY.rst
