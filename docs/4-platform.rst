@@ -36,7 +36,7 @@ ________________________________________________________________________________
 Tools
 -----
 
-Tools are the basic parts of an :ref:`experience <experiences>`. There are three types: :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component-sets <component-sets>`.
+Tools are the basic parts of an :ref:`experience <experiences>`. There are three types: :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component sets <component-sets>`.
 
 What it does
 ^^^^^^^^^^^^
@@ -102,7 +102,7 @@ What it does
 Why it matters
 ^^^^^^^^^^^^^^
 
- Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component-sets <component-sets>` meet-up, and should always be kept in mind when developing an individual :ref:`tool <tools>`. At the end of the day, it is much more common for users to fuse together a wide variety of tools to make one unified experience than for them to use a single tool in isolation. 
+ Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component sets <component-sets>` meet-up, and should always be kept in mind when developing an individual :ref:`tool <tools>`. At the end of the day, it is much more common for users to fuse together a wide variety of tools to make one unified experience than for them to use a single tool in isolation. 
 
 ________________________________________________________________________________________________________________________________________
 
