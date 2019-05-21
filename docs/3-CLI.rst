@@ -25,12 +25,12 @@ ________________________________________________________________________________
 Requirements
 -------------
 
-You will need to install `Python 3.1.1 or higher <https://www.python.org/downloads/>`_ in order to use the CLI. If you are Windows, remember to click the “Add Python To Path” checkbox when installing Python.  
+You will need to install `Python 3.1.1 or higher <https://www.python.org/downloads/>`_ in order to use the CLI. If you are on Windows, remember to click the “Add Python To Path” checkbox when installing Python.  
 
 It is recommended that you install `Gitbash <https://git-scm.com/downloads>`_ as the CLI is written for and tested in a BASH shell. 
 
 .. note::
-   Luma supports `ZSH <https://sourceforge.net/projects/zsh/files/>`_. 
+   The CLI supports `ZSH <https://sourceforge.net/projects/zsh/files/>`_. 
 
 _______________________________________________________________________________________________________________________________________
 
@@ -40,8 +40,8 @@ Installation
 ------------
 The CLI can be installed two different ways:
 
- #. :ref:`From Pip<Installation Pip>` (install without downloading files)
- #. :ref:`From Source<Installation Source>` (install by downloading files)
+ #. :ref:`From Pip<Installation Pip>` (install ready-to-start)
+ #. :ref:`From Source<Installation Source>` (install by manually downloading and configuring source files)
 
 .. _Installation Pip:
 
@@ -49,12 +49,16 @@ From Pip
 ^^^^^^^^
 
  On Mac and Linx:
-  
+   
+   Run the following command in a Bash or command prompt.
+   
    .. code-block:: bash
      
       $ sudo pip3 install luma
 
  On Windows:
+ 
+   Run the following command in a Bash or command prompt.
   
    .. code-block:: bash
      
@@ -73,6 +77,8 @@ From Source
   
   #. Unzip the file you just downloaded.
   
+  #. Open a Bash or command prompt.
+  
   #. CD into the CLI directory.
   
      .. Code-block:: bash
@@ -85,11 +91,11 @@ From Source
         
         On Windows:
         
-        $ pip3 install luma --user
+         $ pip3 install luma --user
         
         On Mac and Linx:
         
-        $ sudo pip3 install luma --user
+         $ sudo pip3 install luma --user
  
   #. Add the returned path URL to your system environment variables. 
    
@@ -108,6 +114,8 @@ From Source
   
   #. Unzip the file you just downloaded.
   
+  #. Open a Bash or command prompt.
+  
   #. CD into the CLI directory.
   
      .. Code-block:: bash
@@ -120,11 +128,11 @@ From Source
      
         On Windows:
         
-        $ pip3 install luma
+         $ pip3 install luma
         
         On Mac and Linx:
        
-        $ sudo pip3 install luma
+         $ sudo pip3 install luma
 
   #. The CLI should now be installed. Continue on to :ref:`Provisioning Credentials`. 
 _______________________________________________________________________________________________________________________________________
@@ -134,9 +142,9 @@ ________________________________________________________________________________
 Provisioning Credentials
 -------------------------
 
-The CLI requares two variables to be configured in order to talk to the platform: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
+The CLI requares two variables be configured in order to talk to the platform: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
     
-    * **Environments** know how to get and refresh tokens so the user stays authorized with the platform. They also set what command centers or studios the user has access to.
+    * **Environments** know how to get and refresh tokens so the user stays authorized within the platform. They also set what command centers or studios the user has access to.
     * **Profiles** give the user a company context in a specific environment which is required by most of the platform API. They set what studio or command center the user is modifying.  
 
 .. _Provisioning Environments:
