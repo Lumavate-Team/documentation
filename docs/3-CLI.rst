@@ -142,7 +142,7 @@ ________________________________________________________________________________
 Provisioning Credentials
 -------------------------
 
-The CLI requares two variables be configured in order to talk to the platform: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
+The CLI requires two variables be configured in order to talk to the platform: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
     
     * **Environments** know how to get and refresh tokens so the user stays authorized within the platform. They also set what command centers or studios the user has access to.
     * **Profiles** give the user a company context in a specific environment which is required by most of the platform API. They set what studio or command center the user is modifying.  
@@ -152,15 +152,15 @@ The CLI requares two variables be configured in order to talk to the platform: :
 Setting-Up Environments:
 ^^^^^^^^^^^^^^^^^^^^^^^
 
- You can use either the :ref:`Lumavate pre-configured<enviroment preset configuration>` environment or you can :ref:`setup your own environment configuration<enviroment your own configuration>`.
+ You can use either the :ref:`Lumavate pre-configured<environment preset configuration>` environment or you can :ref:`setup your own environment configuration<environment your own configuration>`.
 
-.. _enviroment preset configuration:
+.. _environment preset configuration:
 
  Using the preset configuration:
 
   #. Log into the command center you want to modify with the CLI.
   
-     .. figure:: ../images/enviromentselect.PNG
+     .. figure:: ../images/environmentselect.PNG
          :align: center
          :width: 400px
          :alt: Image of the Lumavate Organization Select Page.
@@ -183,7 +183,7 @@ Setting-Up Environments:
          $ luma env config --env-name prod --app https://not-a-real-realm.place.lumavate-type.com --audience https://place.lumavate-type.com/notarealapp --token place-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
       
   #. Paste the command into your Bash window and click enter. 
-  #. The CLI should return the following showing that the new enviroment Prod has been created. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
+  #. The CLI should return the following showing that the new environment Prod has been created. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
      
      .. code-block:: bash
      
@@ -193,13 +193,13 @@ Setting-Up Environments:
      .. warning::
         If there are two environments with the same name, the newer version will overwrite the older version.
  
- .. _enviroment your own configuration:
+ .. _environment your own configuration:
  
  Using your own configuration:
 
   #. Log into the command center you want to modify with the CLI.
      
-     .. figure:: ../images/enviromentselect.PNG
+     .. figure:: ../images/environmentselect.PNG
          :align: center
          :width: 400px
          :alt: Image of the Lumavate Organization Select Page.
@@ -228,13 +228,13 @@ Setting-Up Environments:
      .. code-block:: bash
        
          $ Env Name: <<name of environment in CLI>>
-           App: <<enviroment Url>>
-           Token: <<enviroment token>>
+           App: <<environment Url>>
+           Token: <<environment token>>
            Audience: <<envitoment audience>>
            Client id: <<user clientId>>
            Client secret: <<user clientSecret>>
           
-  #. The CLI should return the following with the env name you specified listed with the other enviroments showing that the new enviroment has been created. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
+  #. The CLI should return the following with the env name you specified listed with the other environments showing that the new environment has been created. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
   
      .. code-block:: bash
      
@@ -259,7 +259,7 @@ Setting up Profiles:
 
   #. Log into a Lumavate command center.
   
-     .. figure:: ../images/enviromentselect.PNG
+     .. figure:: ../images/environmentselect.PNG
          :align: center
          :width: 400px
          :alt: Image of the Lumavate Organization Select Page.
@@ -292,7 +292,7 @@ Setting up Profiles:
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
     
-  #. You will then be presented with a list of organizations associated with the preset Lumavate enviroment. Pick the one you want to edit with this profile, and enter its ID number. It should look like this:
+  #. You will then be presented with a list of organizations associated with the preset Lumavate environment. Pick the one you want to edit with this profile, and enter its ID number. It should look like this:
    
      .. code-block:: bash
        
@@ -1634,7 +1634,7 @@ Add
      * - ``--major INTEGER``
        - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version "1.1.1" --major`` sets the version number to "2.0.0".
      * - ``--env-var "{"STRING":"KEY"}"``
-       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`. 
+       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Environment Variables>`. 
      * - ``-l, --label "[dev, old, prod]"``
        - The status of the version as either ready-for-production, in-development, or deprecated. respectively.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
@@ -2490,7 +2490,7 @@ Add
      * - ``--major``
        - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version "1.1.1" --major`` sets the version number to "2.0.0".
      * - ``--env-var "{"STRING":"KEY"}"``
-       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`.
+       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Environment Variables>`.
      * - ``-l, --label "[dev, old, prod]"``
        - The status of the version as ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
