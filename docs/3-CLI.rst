@@ -5,7 +5,7 @@
 CLI
 ============
 
-The Lumavate Commandline Line Interface (CLI) can be used to streamline many administrative tasks.
+The Lumavate Command-line Interface (CLI) can be used to streamline many administrative tasks.
 
 .. The CLI uses the native REST APIs available via the Platform. To learn more about Lumavate's REST APIs, please go here: <link to come>.
 
