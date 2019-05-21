@@ -292,8 +292,8 @@ Previewing the home page, you can see how the Survey will store your response & 
 Publishing the Experience
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Navigate dto the Experience View Page.  If you are still on the Experience Designer Page, click Close
-2. On the left hand side ofh te screen, clic PUBLISH
+1. Navigate to the Experience View Page.  If you are still on the Experience Designer Page, click Close
+2. On the left hand side of the screen, click PUBLISH
 
 After the publish confirmation message pops-up, use the QR Code, URL or Text Activation located on the bottom right part of the screen to see your Quick
 Survey in action!
