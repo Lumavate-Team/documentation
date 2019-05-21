@@ -1,15 +1,15 @@
 .. _component-sets:
 
-Component-Sets
+Component Sets
 --------------
 
-Component-sets are bundled web components. For more information on web components, please consult `webcomponents.org <https://www.webcomponents.org/introduction>`_.  
+Component sets are bundled web components. For more information on web components, please consult `webcomponents.org <https://www.webcomponents.org/introduction>`_.  
 
-Any component-set can be used by any widget or microservice immediately after upload as long as the proper tags are used. For widgets, these tags allow extra UI features and functionality to be used by multiple widgets. For microservices, these tags allow the component-set to compile and redistribute microservice information to other tools.
+Any component set can be used by any widget or microservice immediately after upload as long as the proper tags are used. For widgets, these tags add extra UI features and functionality. For microservices, these tags allow the component set to compile and redistribute microservice information to other tools.
 
-Component-sets cannot be used to create an experience without the presence of a widget. Instead, component-sets help by adding additional UI and functions that can be used by multiple tools.
+Component sets cannot be used to create an experience without the presence of a widget. Instead, component sets help by adding additional UI and functions that can be used by multiple tools.
 
-Component-sets should be used when an application:
+Component sets should be used when an application:
  * Provides client-side rendering and logic
  * Provides frequently used UI/UX tasks
  * Communicates information between multiple tools
@@ -19,11 +19,11 @@ Component-sets should be used when an application:
 File Requirements
 ^^^^^^^^^^^^^^^^^
 
- Component-sets must be a **compressed zip file** in order to be uploaded to the Lumavate platform. 
+ Component sets must be a **compressed zip file** in order to be uploaded to the Lumavate platform. 
  
- The compressed file needs to contain a metadata file named component.json in the root folder of the zip file that is uploaded to Lumavate. The component.json file must be written in JSON and define the component-set :ref:`properties <properties>` and code. 
+ The compressed file needs to contain a metadata file named component.json in the root folder of the zip file that is uploaded to Lumavate. The component.json file must be written in JSON and define the component set :ref:`properties <properties>` and code. 
  
- Optionally, the component-set code and resources can be split into multiple files. However, these files will need to be correctly referenced in the component.json's template and/or icon sections. 
+ Optionally, the component set code and resources can be split into multiple files. However, these files will need to be correctly referenced in the component.json's template and/or icon sections. 
 
  For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
 
@@ -32,9 +32,9 @@ File Requirements
 Metadata File
 ^^^^^^^^^^^^^
 
- A Component-set's metadata defines general information for the component-set along with its properties via the component-set JSON file. For more information on properties and a list of property types, please consult the :ref:`Properties` page. 
+ A Component set's metadata defines general information for the component set along with its properties via the component set JSON file. For more information on properties and a list of property types, please consult the :ref:`Properties` page. 
  
- The component-set file adheres to the following JSON structure:
+ The component set file adheres to the following JSON structure:
 
   .. code-block:: javascript
      
@@ -43,7 +43,7 @@ Metadata File
         {
          "label": "Name of the component in the studio.",
          "icon": "Relative path within the zip file to an SVG icon that will accompany the component in the studio.",
-         "tags": ["Array of Dynamic component Values used within widget and microservices to denote where the component-set can be used. A current list of Lumavate tags can be found below."],
+         "tags": ["Array of Dynamic component Values used within widget and microservices to denote where the component set can be used. A current list of Lumavate tags can be found below."],
          "type": "Used when referencing the component. This must be a unique value that is different from all other component types in the command center.",
          "properties":
          [  
