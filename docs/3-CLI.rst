@@ -249,7 +249,7 @@ Setting-Up Environments:
 Setting up Profiles:
 ^^^^^^^^^^^^^^^^^^^
 
- Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or using :ref:`your own configuration<profile your own configuraiton>`. 
+ Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or using :ref:`your own configuration<profile your own configuration>`. 
 
  You will need to have :ref:`configured an environment<Provisioning Environments>` on your machine through the CLI to configure a profile.  
 
@@ -309,7 +309,7 @@ Setting up Profiles:
         Environment Org Name              Org ID
         prod        Sample Command Center 35
 
-.. _profile your own configuraiton:
+.. _profile your own configuration:
 
  Using your own configuration:
 
@@ -953,7 +953,7 @@ Ls
 Rm
 ++
 
- Deletes a version from a componentset container.
+ Deletes a version from a component set container.
 
  Example:
 
