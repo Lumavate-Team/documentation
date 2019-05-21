@@ -354,7 +354,7 @@ Uploading A Tool
 	     The upload image field is in the content container section and contains the Upload button. 	
 
           .. warning::
-             Different tools accept different file types. Check that the correct file type for the tool was used if you are unable to find the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Types W>`, :ref:`microservice <Accepted File Types M>`, or :ref:`component set <Accepted File Types C> ` pages. 
+             Different tools accept different file types. Check that the correct file type for the tool was used if you are unable to find the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Types W>`, :ref:`microservice <Accepted File Types M>`, or :ref:`component set <Accepted File Types C>` pages. 
 
     * To use an existing version:
       
