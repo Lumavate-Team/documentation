@@ -541,14 +541,14 @@ ________________________________________________________________________________
 Component-set
 ^^^^^^^^^^^^^
 
-Commands that create, modify, share, and delete component-set containers.
+Commands that create, modify, share, and delete component set containers.
 
 .. _Component-set Access:
 
 Access
 ++++++
 
- Shares and unshares component-set containers with child organizations.
+ Shares and unshares component set containers with child organizations.
 
  Example:
 
@@ -571,7 +571,7 @@ Access
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you want to edit.
+       - The component set container you want to edit.
      * - ``--add ID || Name``
        - The studio or command center you want to **share** with.
      * - ``--rm ID || Name``
@@ -596,7 +596,7 @@ Access
 Add
 +++
 
- Adds a component-set container. 
+ Adds a component set container. 
 
  Example:
 
@@ -620,11 +620,11 @@ Add
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``--name “STRING”``
-       - What you want to call the component-set container. The name will appear in the command center and studio.
+       - What you want to call the component set container. The name will appear in the command center and studio.
      * - ``--url-ref “STRING”``
-       - What the tool will be referenced by in URLs. For example: urltoexperience.com/url-ref or ic/url-ref. It can contain only lowercase letters, numbers, and dashes.
+       - What the tool will be referenced by in URLs. For example: urlToExperience.com/url-ref or ic/url-ref. It can contain only lowercase letters, numbers, and dashes.
      * - ``-path, --icon-file “FILE PATH”``
-       - The absolute path where the icon  SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG.
+       - The absolute path where the icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``
      * - ``--json``
@@ -643,7 +643,7 @@ Add
 Ls
 ++
 
- Lists all component-set containers in the command center associated with the specified profile. 
+ Lists all component set containers in the command center associated with the specified profile. 
 
  Example:
 
@@ -689,7 +689,7 @@ Ls
 Rm
 ++
 
- Deletes a component-set container. This can only be done after all versions in the container have been deleted.
+ Deletes a component set container. This can only be done after all versions in the container have been deleted.
 
  Example:
 
@@ -712,7 +712,7 @@ Rm
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you want to edit.
+       - The component set container you want to edit.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {urlRef}"`` 
      * - ``--json``
@@ -731,7 +731,7 @@ Rm
 Update
 ++++++
 
- Updates the name or image of a component-set container. 
+ Updates the name or image of a component set container. 
 
  Example:
 
@@ -756,7 +756,7 @@ Update
      * - ``-cs, --component-set ID``
        - The component-set container you want to edit.
      * - ``--name “STRING”``
-       - The new name for the component-set container. The name will appear in the command center and studio. 
+       - The new name for the component set container. The name will appear in the command center and studio. 
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {id}"``
      * - ``--json``
@@ -776,14 +776,14 @@ ________________________________________________________________________________
 Component-set-version
 ^^^^^^^^^^^^^^^^^^^^^
 
-Commands that create, modify, and delete component-set versions.
+Commands that create, modify, and delete component set versions.
 
 .. _Component-set-version Add:
 
 Add
 +++
 
- Adds a version to a component-set container.  
+ Adds a version to a component set container.  
 
  Example:
 
@@ -811,13 +811,13 @@ Add
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you want to edit.
+       - The component set container you want to edit.
      * - ``-path, --component-set-file-path “FILE PATH”``
-       - The absolute path where the component-sets zip file is located. For example: C:/Users/User/Desktop/Folder/file.zip.  
+       - The absolute path where the component set zip file is located. For example: C:/Users/User/Desktop/Folder/file.zip.  
      * - ``-fv, --from-version INTEGER "*.*.*"``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 1.
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9.
      * - ``-v, --version INTEGER "*.*.*"``
-       - What you want the component-set version number to be. For example, ``--version "9.9.9"``.
+       - What you want the component set version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch``
        - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version "1.1.1" --patch`` sets the version number to "1.1.2".
      * - ``--minor``
@@ -851,7 +851,7 @@ Add
 Components
 ++++++++++
 
- Returns the JSON of a component-set version. 
+ Returns the JSON of a component set version. 
 
  Example:
 
@@ -874,9 +874,9 @@ Components
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you want to edit.
+       - The component set container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the component-set you want to view. For example, ``--version "9.9.9"``.
+       - The version number of the component set you want to view. For example, ``--version "9.9.9"``.
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -893,7 +893,7 @@ Components
 Ls
 ++
 
- Lists all versions in a component-set container.
+ Lists all versions in a component set container.
 
  Example:
 
@@ -917,7 +917,7 @@ Ls
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you want to edit.
+       - The component set container you want to edit.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
      * - ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
@@ -945,7 +945,7 @@ Ls
 Rm
 ++
 
- Deletes a version from a component-set container.
+ Deletes a version from a componentset container.
 
  Example:
 
@@ -969,11 +969,11 @@ Rm
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you want to edit.
+       - The component set container you want to edit.
      * - ``-vm, --version-mask INTEGER "*.*.*"``
        - Removes all version with that major, minor, or path. Use a * to indicate all. Sending ``"*.*.*"`` will delete all version.
      * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the component-set you want to remove. For example, ``--version "9.9.9"``.
+       - The version number of the component set you want to remove. For example, ``--version "9.9.9"``.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
      * - ``--json``
@@ -992,7 +992,7 @@ Rm
 Update
 ++++++
 
- Updates the label of a component-set version.
+ Updates the label of a component set version.
 
  Example:
 
@@ -1016,9 +1016,9 @@ Update
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you want to edit.
+       - The component set container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the component-set you want to edit. For example, ``--version "9.9.9"``.
+       - The version number of the component set you want to edit. For example, ``--version "9.9.9"``.
      * - ``-l, --label "[prod, dev, old]"```
        - The new status of the version. It can either be ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
@@ -1414,7 +1414,7 @@ Add
      * - ``--name "STRING"``
        - What you want to call the microservice container. The name will appear in the command center and studio. 
      * - ``--url-ref "STRING"``
-       - What the microservice will be referenced by in URLs. For example: https://urltoexperience.com/url-ref or ic/url-ref.
+       - What the microservice will be referenced by in URLs. For example: https://urlToExperience.com/url-ref or ic/url-ref.
      * - ``-path, --icon-file "FILE PATH"``
        - The absolute path where the icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
@@ -1616,7 +1616,7 @@ Add
      * - ``-path, --microservice-file-path "FILE PATH"``
        - The absolute path where the microservice tar file is located. For example: C:/Users/User/Desktop/Folder/microservice.tar. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "1.1.*"`` will take the most recent version that has a major and minor value of 1.
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9.
      * - ``-v, --version INTEGER "*.*.*"``
        - What you want the microservice's version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch INTEGER``
@@ -2175,7 +2175,7 @@ Response:
 
 .. code-block:: bash
 
-    Lumavate CLI Version: 0.8.9
+    Lumavate CLI Version: 0.9.2
 
 .. list-table:: Options 
      :widths: 10 20
@@ -2271,7 +2271,7 @@ Add
      * - ``--name "STRING"``
        - What you want to call the widget container. The name will appear in the command center and studio. 
      * - ``--url-ref "STRING"``
-       - url-ref: What the widget will be referenced by in URLs. For example: https://urltoexperience.com/url-ref or ic/url-ref. It can contain only lowercase letters, numbers, or dashes. 
+       - url-ref: What the widget will be referenced by in URLs. For example: https://urlToExperience.com/url-ref or ic/url-ref. It can contain only lowercase letters, numbers, or dashes. 
      * - ``-path, --icon-file "FILE PATH"``
        - The absolute path where the icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
@@ -2472,7 +2472,7 @@ Add
      * - ``-image, --docker-image "FILE PATH"``
        - The absolute path where the widget docker file is located. For example: C:/Users/User/Desktop/Folder/docker.py. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "1.1.*"`` will take the most recent version that has a major and minor value of 1. 
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. 
      * - ``-v, --version INTEGER "*.*.*"``
        - What you want the widget’s version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch``
