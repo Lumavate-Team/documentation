@@ -50,7 +50,7 @@ Metadata File
            {
              "classification": "Tab name",
              "section": "Section name",
-             "helpText": "Help text for the property. Use Markdown to add additonal formatting to the help text",
+             "helpText": "Help text for the property. Use Markdown to add additional formatting to the help text",
              "name": "Property name which will be used to reference this property",
              "label": "Property label",
              "type": "Property type --see property page",
