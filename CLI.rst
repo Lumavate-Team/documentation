@@ -35,7 +35,7 @@ $ pip3 install luma --user
 ### CLI support:
 ---
 * The CLI is written for and tested in a BASH shell
-* To get the most of of the CLI, use it with ZSH. This enables extra features such as showing help text during autocompletion
+* To get the most of the CLI, use it with ZSH. This enables extra features such as showing help text during autocompletion
 * To activate autocompletion after install, restart your terminal or source your shell config (Either .zshrc or .bash_profile)
 
 Provisioning Credentials
