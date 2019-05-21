@@ -65,7 +65,7 @@ Translatable Text
   * ``"section": "STRING"``
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"deafult": "STRING"`` (does not have a default)
+  * ``"default": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}`` 
    * ``"readonly": true || false`` (defaults to false)
    * ``"rows": INTAGER`` (the studio displays the number of rows specified, defaults to 1)
@@ -101,7 +101,7 @@ Required Fields:
   * ``"section": "STRING"``
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"deafult": "STRING"`` (does not have a default)
+  * ``"default": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}``
    * ``"readonly": true || false`` (defaults to false)
    * ``"rows": INTAGER`` (the studio displays the number of rows specified, defaults to 1)
@@ -137,7 +137,7 @@ Color
   * ``"section": "STRING"``
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"deafult": "STRING"`` (defaults to #fff/white)
+  * ``"default": "STRING"`` (defaults to #fff/white)
   
  .. warning::
     The tool will error when used in the studio if the default field contains an invalid value.
@@ -207,7 +207,7 @@ Checkbox
   * ``"section": "STRING"``
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"deafult": true || false`` (defaults to false)
+  * ``"default": true || false`` (defaults to false)
   
 ________________________________________________________________________________________________________________________________________
 
@@ -240,7 +240,7 @@ Toggle
   * ``"section": "STRING"``
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"deafult": true || false`` (defaults to false)
+  * ``"default": true || false`` (defaults to false)
   
 ________________________________________________________________________________________________________________________________________
 
@@ -282,7 +282,7 @@ Dropdown
   * ``"section": "STRING"``
   * ``"help": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"deafult": "Option Name"`` (does not have a default)
+  * ``"default": "Option Name"`` (does not have a default)
 
 ________________________________________________________________________________________________________________________________________
 
@@ -310,11 +310,11 @@ Numeric
        
  Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  * ``"deafult": INTAGER`` (does not have a default)
+  * ``"default": INTAGER`` (does not have a default)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
   
-   * ``"min": INTAGER`` (deafults to none)
+   * ``"min": INTAGER`` (defaults to none)
    * ``"max": INTAGER`` (defaults to none)
    
   * ``"type": "numeric"``
@@ -355,7 +355,7 @@ Multiple Selection
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
   
-   * ``{"value":"STRING","displayValue":"STRING"}`` (deafults to none)
+   * ``{"value":"STRING","displayValue":"STRING"}`` (defaults to none)
    
   * ``"type": "multiselect"``
   
