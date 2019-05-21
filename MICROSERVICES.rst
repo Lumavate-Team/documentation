@@ -16,7 +16,7 @@ Microservices should be used when an application:
  * Provides a service (For example: emailing listed individuals, running calculations, or creating a pdf document)
 
 .. warning::
-   All microservices that make platform level calls must send their URI signed. Lumavate provides signing libraries for Go, Python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <Code Samples>`.
+   All microservices that make platform level calls must send their URI signed. Lumavate provides signing libraries for Go, Python, and #C. All other containers will be unable to send signed URIs. :ref:`Visit the sample code section for a link to each of these signed libraries <Code Samples>`.
 
 .. _Accepted File Types M:
 
