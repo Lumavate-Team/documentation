@@ -11,7 +11,7 @@ There are three types of tools that the Lumavate platform uses: widgets, microse
 
  :ref:`Microservices` are the data-driven portion of experiences. This tool takes information that studio users provide to create a recurring service or data-set that the rest of the tools can use. Microservices almost never have their own end user UI, instead they add functionality to widgets.
 
- :ref:`Component sets` are elements that are used by widgets or microservices. This tool has two primary functions. It allows studio users to redistribute information collected in one widget or microservice to another. It also provides identical functionality across multiple widgets. Component sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
+ :ref:`Component sets <component-sets>` are elements that are used by widgets or microservices. This tool has two primary functions. It allows studio users to redistribute information collected in one widget or microservice to another. It also provides identical functionality across multiple widgets. Component sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
 |
 *Widgets* and *microservices* consist of four primary parts:
  #. The :ref:`Docker container <Setting-up Docker>` that provides the operating environment needed to fully execute and render the tool. 
