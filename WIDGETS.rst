@@ -3,7 +3,7 @@
 Widgets
 -------
 
-Widgets are reusable web application hosted within a Docker container. 
+Widgets are reusable web applications hosted within a Docker container. 
 
 Widgets can consist of one or more pages that perform a stand-alone function. There are times when a widget will require another tool to provide any solid functionality, but they should always strive to be self-contained, stand-alone applications. 
 
@@ -25,7 +25,7 @@ Widgets should be used when the application:
 File Requirements
 ^^^^^^^^^^^^^^^^^
 
- Widgets need to be either a **gzip** or **tar** file in order to be upload to the Lumavate platform. 
+ Widgets need to be either a **gzip** or **tar** file in order to be uploaded to the Lumavate platform. 
 
  For more information about uploading tools to the platform, consult :ref:`Uploading A Tool`. 
  
