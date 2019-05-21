@@ -21,7 +21,7 @@ File Requirements
 
  Component-sets must be a **compressed zip file** in order to be uploaded to the Lumavate platform. 
  
- The compressed file needs to contain a metadata file named component.json in the root folder of the zip file that is uploaded to lumavate. The component.json file must be written in JSON and define the component-set :ref:`properties <properties>` and code. 
+ The compressed file needs to contain a metadata file named component.json in the root folder of the zip file that is uploaded to Lumavate. The component.json file must be written in JSON and define the component-set :ref:`properties <properties>` and code. 
  
  Optionally, the component-set code and resources can be split into multiple files. However, these files will need to be correctly referenced in the component.json's template and/or icon sections. 
 
@@ -41,29 +41,29 @@ Metadata File
      {
        "components": [
         {
-         'label': 'Name of the component in the studio.',
-         'icon': 'Relative path within the zip file to an SVG icon that will accompany the component in the studio.',
-         'tags': [`Array of Dynamic component Values used within widget and microservices to denote where the component-set can be used. A current list of Lumavate tags can be found below.`],
-         'type': 'Used when referencing the component. This must be a unique value that is different from all other component types in the command center.',
-         'properties':
+         "label": "Name of the component in the studio.",
+         "icon": "Relative path within the zip file to an SVG icon that will accompany the component in the studio.",
+         "tags": ["Array of Dynamic component Values used within widget and microservices to denote where the component-set can be used. A current list of Lumavate tags can be found below."],
+         "type": "Used when referencing the component. This must be a unique value that is different from all other component types in the command center.",
+         "properties":
          [  
            {
-             'classification': 'Tab name',
-             'section': 'Section name',
-             'help': 'Help text for the property. Use Markdown to add additonal formatting to the help text',
-             'name': 'Property name which will be used to reference this property',
-             'label': 'Property label',
-             'type': 'Property type --see property page',
-             'default': 'Default value',
-             'label': 'Display label',
-             'options': {},
+             "classification": "Tab name",
+             "section": "Section name",
+             "helpText": "Help text for the property. Use Markdown to add additonal formatting to the help text",
+             "name": "Property name which will be used to reference this property",
+             "label": "Property label",
+             "type": "Property type --see property page",
+             "default": "Default value",
+             "label": "Display label",
+             "options": {},
            },
            {
            // Array of Properties to be shown within the studio
            }
          ],
          
-         'template': '<component-tag property1='{{componentData.property1}}'></component-tag><Additional template information can be found below.>'
+         "template": "<component-tag property1='{{componentData.property1}}'></component-tag><Additional template information can be found below.>"
         }
       ],
       "styleData": []  
@@ -72,7 +72,7 @@ Metadata File
  Templates are the HTML code that is implemented when the component is used. To call the properties that the studio user sets, use the templating syntax, ``{componentData.propertyname}``, where ``propertyname`` is the name of the property whose value you want to use.
 
  .. note::
-    Templates supports jinja.
+    The template section supports jinja.
  
  The current tags available are:
  	- ``body`` adds GUI that the end user will interact with and the studio user can place anywhere on the page. Normally you can add multiple of the same component.
