@@ -11,20 +11,20 @@ Lumavate Tools
 +---------------------------------------+-------------------------------------------------------------------------+
 | Github repository: https://github.com/Lumavate-Team/layout-widget                                               |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Allows users to design experience pages through a dynamic grid and components. Users can also add logic to      |
-| their pages using either JavaScript or logic components.                                                        |
+| Allows users to design experience pages through the user of a dynamic grid and component sets. Users can also   |
+| add logic to their pages using either JavaScript or logic components.                                           |
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+-------------------------------+------------------+----------------------+
 |    **Page Builder - Knockout**        |        Version: 2.0.0         |   Status: prod   |         Widget       |
 +---------------------------------------+-------------------------------+------------------+----------------------+
-| Integrates other tools.               | Supports all tools. The user specifies which  tools they are using in   |
-|                                       | their script tab.                                                       |
+| Integrates other tools.               | Supports all tools. The widget creates a varaible for all added tools   |
+|                                       | added to the experience in the script tab.                              |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Github repository:                                                                                              |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Allows users to construct experience pages through Knockout and components. For more information about Knockout,| 
-| please visit https://knockoutjs.com/.                                                                           |
+| Allows users to construct experience pages through the use of Knockout and component sets. For more information |
+| about Knockout, please visit https://knockoutjs.com/.                                                           |
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
@@ -68,8 +68,7 @@ Lumavate Tools
 | Github repository:                                                                                              |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Authenticates users based on their email address. Can be restricted to specific email patterns (everybody whose |
-| email ends with company.com) or paired with the Data Service to specify a list of specific user emails. Requires|
-| Email Service and Base Component Set.                                                                           |
+| email ends with company.com) or paired with the Data Service to specify a list of specific user emails.         |
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
@@ -90,7 +89,7 @@ Lumavate Tools
 +---------------------------------------+-------------------------------------------------------------------------+
 | Github repository:                                                                                              |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Authenticates users using a specified SAML services provider.                                                   |
+| Authenticates users using a specified SAML service provider.                                                    |
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
@@ -122,19 +121,19 @@ Lumavate Tools
 +---------------------------------------+--------------------------------------------------------------------------------+
 | Github repository:                                                                                                     |
 +------------------------------------------------------------------------------------------------------------------------+
-| Allows users to upload and implement media, files, and service workers in an experience. Assets can be made availed    |
+| Allows users to upload and implement media, files, and service workers in an experience. Assets can be made available  |
 | studio-wide or kept exclusive to an experience.                                                                        |
 +------------------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
 |        **Job Scheduler**              |        Version: 2.0.0        |   Status: prod   | Microservice (service)|
 +---------------------------------------+------------------------------+------------------+-----------------------+
-| Integrates other tools.               | Supports any tool. The user can specify any route to be called.         |
+| Integrates other tools.               | Supports any tool. The user can specify any route from an added tool.   |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Github repository:                                                                                              |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Allows users to specify when they want an experience to call a specific route. Can be set based on the day      |
-| and/or time the route should be called.                                                                         |
+| and/or time the user wants the route called.                                                                    |
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
