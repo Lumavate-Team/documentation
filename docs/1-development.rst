@@ -43,8 +43,8 @@ We currently provide the following Docker container types as a template:
 In the following sections, we will explain how to:
 
 * Install :ref:`Docker locally <Installing Locally>`
-* Setup the Lumavate :ref:`prebuilt containers <Setup Lumavate Containers>`
-* Create your :ref:`own web-development stack <Setup Custom Docker Containers>` 
+* Set up the Lumavate :ref:`prebuilt containers <Set up Lumavate Containers>`
+* Create your :ref:`own web-development stack <Set up Custom Docker Containers>` 
 * :ref:`Upload your web-devlopment stack <Uploading Docker Containers>` to Lumavate
 
 .. _Installing Locally:
@@ -56,7 +56,7 @@ Installing Locally
 
   .. Docker must be added to your local environment for you to access the :ref:`Lumavate Test Harness <thor>`.
 
- To setup Docker on your local machine:
+ To set up Docker on your local machine:
  
   #. Download at least the Community Edition of Docker. The community edition is free and can be downloaded from the `Docker site <https://www.docker.com/community-edition>`_.
   
@@ -68,7 +68,7 @@ Installing Locally
   
   #. Open and run the Docker Installer
   
-  #. Docker should now be setup on your machine. Run ``docker version`` in a command prompt to make sure Docker downloaded correctly. A version number should be returned:
+  #. Docker should now be set up on your machine. Run ``docker version`` in a command prompt to make sure Docker downloaded correctly. A version number should be returned:
   
      .. code-block:: bash
      
@@ -99,9 +99,9 @@ Installing Locally
  .. tip::
    Lumavate relies heavily on Docker for its tool development. Many of the commands, options, and syntax that are required when developing a tool will come from Docker. Therefore, we recommend that you learn more about Docker and how it works at: https://docs.docker.com.
 
-.. _Setup Lumavate Containers:
+.. _Set up Lumavate Containers:
 
-Setup Lumavate Prebuilt Containers
+Set up Lumavate Prebuilt Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  Lumavate provides three base containers to help developers start developing tools for the Lumavate platform. The following explanation uses Go. For the full Go container, please see the `Go Github repository <https://github.com/Lumavate-Team/widget-base-go>`_. Additional :ref:`Python sample <python sample>` and :ref:`C# sample <C# sample>` containers are provided.
 
@@ -206,9 +206,9 @@ Check The Logs
 
  #. The selected container's logs will now be streaming directly to your terminal.
 
-.. _Setup Custom Docker Containers:
+.. _Set up Custom Docker Containers:
 
-Setup Custom Docker Containers
+Set up Custom Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  Any Docker container may be used to create Tools within Lumavate allowing developers to use the Docker Hub Image they want. Truly, custom Docker containers can also be used by creating a custom base image. These two options allow developers to create the precise runtime environment needed for a given tool.
