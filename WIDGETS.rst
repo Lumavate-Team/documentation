@@ -18,7 +18,7 @@ Widgets should be used when the application:
     Widgets can function as shells for microservices or component-sets providing a convenient place for studio users to customize the UI. These widgets can then be used to create web pages or data displays.
     
 .. warning::
-    All widgets that make platform level calls must send their URI signed. Lumavate provides signing libraries for Go, Python, and #C. All other containers will be unable to send signed URIs. :ref:`Vist the sample code section for a link to each of these signed libraries <Code Samples>`. 
+    All widgets that make platform level calls must send their URI signed. Lumavate provides signing libraries for Go, Python, and #C. All other containers will be unable to send signed URIs. :ref:`Visit the sample code section for a link to each of these signed libraries <Code Samples>`. 
 
 .. _Accepted File Types W:
 
