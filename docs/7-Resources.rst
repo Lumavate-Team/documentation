@@ -22,7 +22,7 @@ Code samples can be found at https://github.com/Lumavate-Team
 C#
 ^^
 
- Common libraries and scaffolding codefor .NET Core with a lightweight shell for use with C#.
+ Common libraries and scaffolding code for .NET Core with a lightweight shell for use with C#.
 
  C# property library: Coming Soon.
  
