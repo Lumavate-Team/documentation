@@ -43,8 +43,8 @@ We currently provide the following Docker container types as a template:
 In the following sections, we will explain how to:
 
 * Install :ref:`Docker locally <Installing Locally>`
-* Set up the Lumavate :ref:`prebuilt containers <Set up Lumavate Containers>`
-* Create your :ref:`own web-development stack <Set up Custom Docker Containers>` 
+* Set up the Lumavate :ref:`prebuilt containers <Set Up Lumavate Containers>`
+* Create your :ref:`own web-development stack <Set Up Custom Docker Containers>` 
 * :ref:`Upload your web-devlopment stack <Uploading Docker Containers>` to Lumavate
 
 .. _Installing Locally:
@@ -99,9 +99,9 @@ Installing Locally
  .. tip::
    Lumavate relies heavily on Docker for its tool development. Many of the commands, options, and syntax that are required when developing a tool will come from Docker. Therefore, we recommend that you learn more about Docker and how it works at: https://docs.docker.com.
 
-.. _Set up Lumavate Containers:
+.. _Set Up Lumavate Containers:
 
-Set up Lumavate Prebuilt Containers
+Set Up Lumavate Prebuilt Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  Lumavate provides three base containers to help developers start developing tools for the Lumavate platform. The following explanation uses Go. For the full Go container, please see the `Go Github repository <https://github.com/Lumavate-Team/widget-base-go>`_. Additional :ref:`Python sample <python sample>` and :ref:`C# sample <C# sample>` containers are provided.
 
@@ -206,9 +206,9 @@ Check The Logs
 
  #. The selected container's logs will now be streaming directly to your terminal.
 
-.. _Set up Custom Docker Containers:
+.. _Set Up Custom Docker Containers:
 
-Set up Custom Docker Containers
+Set Up Custom Docker Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  Any Docker container may be used to create Tools within Lumavate allowing developers to use the Docker Hub Image they want. Truly, custom Docker containers can also be used by creating a custom base image. These two options allow developers to create the precise runtime environment needed for a given tool.
