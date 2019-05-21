@@ -73,7 +73,7 @@ From Source
 
  Installing the CLI as a Non-admin:
 
-  #. Clone the `CLI repo <https://github.com/LabelNexus/lumavate-cli>`_.
+  #. Clone the `CLI repo <https://pypi.org/project/luma/>`_.
   
   #. Unzip the file you just downloaded.
   
@@ -110,7 +110,7 @@ From Source
  
  Installing the CLI as an Admin:
 
-  #. Clone the `CLI repo <https://github.com/LabelNexus/lumavate-cli>`_.
+  #. Clone the `CLI repo <https://pypi.org/project/luma/>`_.
   
   #. Unzip the file you just downloaded.
   
