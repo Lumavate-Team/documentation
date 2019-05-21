@@ -60,14 +60,14 @@ Python
 JSON
 ^^^^
 
- Example component-set containers for use with JSON. 
+ Example component set containers for use with JSON. 
 
- Base component-set container: Coming Soon. 
+ Base component set container: Coming Soon. 
 
 Lumavate Components
 ^^^^^^^^^^^^^^^^^^^
 
- Information regarding the Lumavate Base set of Components can be found here: https://lumavate-team.github.io/lumavate-base-components/
+ Information regarding the Lumavate Base set of components can be found here: https://lumavate-team.github.io/lumavate-base-components/
 ________________________________________________________________________________________________________________________________________
 
 .. include:: ../GLOSSARY.rst
