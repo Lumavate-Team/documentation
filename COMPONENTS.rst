@@ -3,7 +3,7 @@
 Component-Sets
 --------------
 
-Component-sets are bundled web components. For more information on web components, please consult `webcompoents.org <https://www.webcomponents.org/introduction>`_.  
+Component-sets are bundled web components. For more information on web components, please consult `webcomponents.org <https://www.webcomponents.org/introduction>`_.  
 
 Any component-set can be used by any widget or microservice immediately after upload as long as the proper tags are used. For widgets, these tags allow extra UI features and functionality to be used by multiple widgets. For microservices, these tags allow the component-set to compile and redistribute microservice information to other tools.
 
