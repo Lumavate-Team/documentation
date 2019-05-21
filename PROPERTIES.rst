@@ -13,7 +13,7 @@ A property can have a tab name, section name, help text, property name, property
   var property = {
     'classification': 'Tab name. The name of the tab the property field is under in the studio.',
     'section': 'Section name. The name of the section the property field is located in the studio.',
-    'help': 'Help text for the property. Use Markdown to provide additional formatting.',
+    'helpText': 'Help text for the property. Use Markdown to provide additional formatting.',
     'name': 'Property name. Use this when referencing the property.',
     'label': 'Property label. The name of the field shown in the studio.',
     'default': 'Default value'
@@ -63,7 +63,7 @@ Translatable Text
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
   * ``"default": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}`` 
@@ -99,7 +99,7 @@ Required Fields:
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
   * ``"default": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}``
@@ -135,7 +135,7 @@ Color
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
   * ``"default": "STRING"`` (defaults to #fff/white)
   
@@ -171,7 +171,7 @@ Image
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
   
  .. note::
@@ -205,7 +205,7 @@ Checkbox
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
   * ``"default": true || false`` (defaults to false)
   
@@ -238,7 +238,7 @@ Toggle
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
   * ``"default": true || false`` (defaults to false)
   
@@ -280,7 +280,7 @@ Dropdown
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
   * ``"default": "Option Name"`` (does not have a default)
 
@@ -321,7 +321,7 @@ Numeric
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
   
 ________________________________________________________________________________________________________________________________________
@@ -361,7 +361,7 @@ Multiple Selection
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
 
 ________________________________________________________________________________________________________________________________________
@@ -393,5 +393,5 @@ Page Link
   
  Optional Fields:
   * ``"section": "STRING"``
-  * ``"help": "STRING with Markdown"``
+  * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
