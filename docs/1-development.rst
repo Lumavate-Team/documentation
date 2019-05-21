@@ -5,13 +5,13 @@
 Developing Tools
 ================
 
-There are three types of tools that the Lumavate platform uses: widgets, microservices, and component-sets. 
+There are three types of tools that the Lumavate platform uses: widgets, microservices, and component sets. 
 
  :ref:`Widgets` are the base that the other tools add on to and build off of. This tool should always allow studio users to customize part of the end user UI. 
 
  :ref:`Microservices` are the data-driven portion of experiences. This tool takes information that studio users provide to create a recurring service or data-set that the rest of the tools can use. Microservices almost never have their own end user UI, instead they add functionality to widgets.
 
- :ref:`Component-sets` are elements that are used by widgets or microservices. This tool has two primary functions. It allows studio users to redistribute information collected in one widget or microservice to another. It also provides identical functionality across multiple widgets. Component-sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
+ :ref:`Component sets` are elements that are used by widgets or microservices. This tool has two primary functions. It allows studio users to redistribute information collected in one widget or microservice to another. It also provides identical functionality across multiple widgets. Component sets will never have their own UI, but they frequently add UI elements to compatible widgets.  
 |
 *Widgets* and *microservices* consist of four primary parts:
  #. The :ref:`Docker container <Setting-up Docker>` that provides the operating environment needed to fully execute and render the tool. 
@@ -19,7 +19,7 @@ There are three types of tools that the Lumavate platform uses: widgets, microse
  #. A :ref:`list of properties <properties>` studio users can set to adopt the tool functionality to their specific experience.
  #. The :ref:`code <Code Samples>` that implements the tool's specific logic and capability (back-end processing, web page(s) rendering, etc.).
 |
-*Component-sets* consist of a :ref:`component.json metadata file <metadata>` that contains two primary parts:
+*Component sets* consist of a :ref:`component.json metadata file <metadata>` that contains two primary parts:
  #. A :ref:`list of properties <properties>` studio users can set to adopt the tool functionality to their specific experience.
  #. The :ref:`code <Code Samples>` that implements the tool's specific logic and capability (called template and style in the metadata file) 
 
@@ -253,14 +253,14 @@ Uploading A Tool
       
        The Organization Select page allows users to select the command center or studio he/she wishes to edit. Command centers are shown with a gear Settings icon. Studios are shown with a paint palette Color_Lens icon.
 	
- #. Once inside the command center, you will have the option to view the uploaded :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, or :ref:`component-sets <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s Library page.
+ #. Once inside the command center, you will have the option to view the uploaded :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, or :ref:`component sets <component-sets>`. Click on the corresponding tab in the sidebar for the tool you wish to add. You will be taken to that tool’s Library page.
 
     .. figure:: ../images/sidebarcc.PNG
        :align: center
        :width: 550px
-       :alt: Image of the Lumavate command center navigation sidebar with the Widget, Microservice, and Component-set tabs highlighted.
+       :alt: Image of the Lumavate command center navigation sidebar with the Widget, Microservice, and Component set tabs highlighted.
       
-       The navigation sidebar links to the Widget, Microservice, Component-set, Users, and CLI pages.
+       The navigation sidebar links to the Widget, Microservice, Component set, Users, and CLI pages.
 
  #. Inside the tool Library page, you will have the option to add a new container or edit an existing one. A tool's versions are grouped in a container. New tool will need a new container. New versions of old tools will be added to the original version’s container. 
 
@@ -354,7 +354,7 @@ Uploading A Tool
 	     The upload image field is in the content container section and contains the Upload button. 	
 
           .. warning::
-             Different tools accept different file types. Check that the correct file type for the tool was used if you are unable to find the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Types W>`, :ref:`microservice <Accepted File Types M>`, or :ref:`component-set <Accepted File Types C> ` pages. 
+             Different tools accept different file types. Check that the correct file type for the tool was used if you are unable to find the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Types W>`, :ref:`microservice <Accepted File Types M>`, or :ref:`component set <Accepted File Types C> ` pages. 
 
     * To use an existing version:
       
@@ -370,7 +370,7 @@ Uploading A Tool
        b. All fields other than the Version Number field should have updated with the previous version’s information. Fill out the Version Number field with the new version number. 
 
           .. note::
-	     Component-sets will also need a new image uploaded as the previous version’s image will not carry over. 
+	     Component sets will also need a new image uploaded as the previous version’s image will not carry over. 
 
  #. Fill-out any additional fields that your tool requires. 
    
@@ -392,9 +392,9 @@ Uploading A Tool
       .. figure:: ../images/directfield.PNG
          :align: center
          :width: 500px
-         :alt: Image of the Direct Includes edit section from the component-set Add Version page.
+         :alt: Image of the Direct Includes edit section from the component set Add Version page.
       
-         The component-set Add Version page allows users to add direct includes using the Direct Include edit section.
+         The component set Add Version page allows users to add direct includes using the Direct Include edit section.
    
       a. Click the + add_circle_outline button by the Direct Includes header. This will create a new direct include variable field. 
       
@@ -405,9 +405,9 @@ Uploading A Tool
       .. figure:: ../images/cssfield.PNG
          :align: center
          :width: 500px
-         :alt: Image of the CSS Includes edit section from the component-set Add Version page.
+         :alt: Image of the CSS Includes edit section from the component set Add Version page.
       
-         The component-set Add Version page allows users to add CSS using the CSS Include section.
+         The component set Add Version page allows users to add CSS using the CSS Include section.
    
       a. Click the + add_circle_outline button by the CSS Includes header. This will create a new CSS variable field.
       
