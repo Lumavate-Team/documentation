@@ -44,7 +44,7 @@ In the following sections, we will explain how to:
 
 * Install :ref:`Docker locally <Installing Locally>`
 * Setup the Lumavate :ref:`prebuilt containers <Setup Lumavate Containers>`
-* Create your :ref:`own web-devlopment stack <Setup Custom Docker Containers>` 
+* Create your :ref:`own web-development stack <Setup Custom Docker Containers>` 
 * :ref:`Upload your web-devlopment stack <Uploading Docker Containers>` to Lumavate
 
 .. _Installing Locally:
@@ -97,13 +97,13 @@ Installing Locally
  Docker provides troubleshooting information for both `Windows <https://docs.docker.com/docker-for-windows/troubleshoot/>`_ and `Macs <https://docs.docker.com/docker-for-mac/troubleshoot/>`_ if you encounter issues with your download. 
 
  .. tip::
-   Lumavate relies heavily on Docker for its tool develpoment. Many of the commands, options, and syntax that are required when devloping a tool will come from Docker. Therfore, we recommend that you learn more about Docker and how it works at: https://docs.docker.com.
+   Lumavate relies heavily on Docker for its tool development. Many of the commands, options, and syntax that are required when developing a tool will come from Docker. Therefore, we recommend that you learn more about Docker and how it works at: https://docs.docker.com.
 
 .. _Setup Lumavate Containers:
 
 Setup Lumavate Prebuilt Containers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- Lumavate provides three base containers to help devlopers start devloping tools for the Lumavate platform. The following explanation uses Go. For the full Go container, please see the `Go Github repository <https://github.com/Lumavate-Team/widget-base-go>`_. Additional :ref:`Python sample <python sample>` and :ref:`C# sample <C# sample>` containers are provided.
+ Lumavate provides three base containers to help developers start developing tools for the Lumavate platform. The following explanation uses Go. For the full Go container, please see the `Go Github repository <https://github.com/Lumavate-Team/widget-base-go>`_. Additional :ref:`Python sample <python sample>` and :ref:`C# sample <C# sample>` containers are provided.
 
 .. _Build The Container:
 
@@ -136,14 +136,14 @@ Build The Container
     
     | The ``--no-cache`` command specifies that cache will not be used when building containers.
     
-    | The ``--rm`` command removes intermediate containers after a successful builld.
+    | The ``--rm`` command removes intermediate containers after a successful build.
     
     | The ``-t gobasetool:1.0`` command names the tool gobasetool and tags the tool as 1.0. 
 
  #. An image will be built with the sample Docker file. 
 
  .. note::
-  	Additional Docker build options are avaliable at: https://docs.docker.com/engine/reference/commandline/build/
+  	Additional Docker build options are available at: https://docs.docker.com/engine/reference/commandline/build/
 
 .. _Run The Container:
 
@@ -339,7 +339,7 @@ Uploading A Tool
           The required fields are:
             - Port: which is the port number for the  programing language used in the image
 	    - Version number: which is the version's major, minor, and patch
-	    - Label: which lables the verison as in-development (dev), ready-for-production (prod), or deprecated (old)
+	    - Label: which labels the version as in-development (dev), ready-for-production (prod), or deprecated (old)
 	 
 	  .. note::
              The port number will either be the port number set in the tool’s code or the tool’s programming language’s standard port number. The port number must match the tool code’s port number. The tool will error while starting up if they do not match. 
@@ -354,7 +354,7 @@ Uploading A Tool
 	     The upload image field is in the content container section and contains the Upload button. 	
 
           .. warning::
-             Different tools accept different file types. Check that the correct file type for the tool was used if you are unable to find the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Types W>`, :ref:`microservice <Accepted File Types M>`, or :ref:`component-set <Accepted File Types C>` pages. 
+             Different tools accept different file types. Check that the correct file type for the tool was used if you are unable to find the image file. For more information on accepted file types, please visit the :ref:`widget <Accepted File Types W>`, :ref:`microservice <Accepted File Types M>`, or :ref:`component-set <Accepted File Types C> ` pages. 
 
     * To use an existing version:
       
@@ -383,7 +383,7 @@ Uploading A Tool
       
          The widget and microservice Add Version pages allow users to add environmental variables using the Environment Variables edit section.
       
-      a. Click the + add_circle_outline button by the Environmental Variables header. This will ceate a new environmental variable field. 
+      a. Click the + add_circle_outline button by the Environmental Variables header. This will create a new environmental variable field. 
       
       b. Fill out the Environment Key and Environment Value fields with the necessary information.   
    
