@@ -68,7 +68,7 @@ Translatable Text
   * ``"default": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}`` 
    * ``"readonly": true || false`` (defaults to false)
-   * ``"rows": INTAGER`` (the studio displays the number of rows specified, defaults to 1)
+   * ``"rows": INTEGER`` (the studio displays the number of rows specified, defaults to 1)
     
 ________________________________________________________________________________________________________________________________________
 
@@ -104,7 +104,7 @@ Required Fields:
   * ``"default": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}``
    * ``"readonly": true || false`` (defaults to false)
-   * ``"rows": INTAGER`` (the studio displays the number of rows specified, defaults to 1)
+   * ``"rows": INTEGER`` (the studio displays the number of rows specified, defaults to 1)
 
 _______________________________________________________________________________________________________________________________________
 
@@ -310,12 +310,12 @@ Numeric
        
  Required Fields:
   * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
-  * ``"default": INTAGER`` (does not have a default)
+  * ``"default": INTEGER`` (does not have a default)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
   
-   * ``"min": INTAGER`` (defaults to none)
-   * ``"max": INTAGER`` (defaults to none)
+   * ``"min": INTEGER`` (defaults to none)
+   * ``"max": INTEGER`` (defaults to none)
    
   * ``"type": "numeric"``
   
