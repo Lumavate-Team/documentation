@@ -48,7 +48,7 @@ The CLI can be installed two different ways:
 From Pip
 ^^^^^^^^
 
- On Mac and Linx:
+ On Mac and Linux:
    
    Run the following command in a Bash or command prompt.
    
@@ -93,7 +93,7 @@ From Source
         
          $ pip3 install luma --user
         
-        On Mac and Linx:
+        On Mac and Linux:
         
          $ sudo pip3 install luma --user
  
@@ -130,7 +130,7 @@ From Source
         
          $ pip3 install luma
         
-        On Mac and Linx:
+        On Mac and Linux:
        
          $ sudo pip3 install luma
 
