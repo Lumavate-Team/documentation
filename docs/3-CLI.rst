@@ -2605,7 +2605,7 @@ Logs
 Ls
 ++
 
- Lists all the version for a widget container.
+ Lists all the versions for a widget container.
 
  Example:
 
