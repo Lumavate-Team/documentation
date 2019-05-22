@@ -111,7 +111,7 @@ ________________________________________________________________________________
 Activations
 -----------
 
-Activations refer to the method by which an :ref:`experience <experiences>` is started. Activation methods can include URL links, QR codes, NFC tags, or SMS messages. The Lumavate :ref:`studio <studio>` automatically generates activation methods for each experience. The studio user also has the option to setup their own activation codes. 
+Activations refer to the method by which an :ref:`experience <experiences>` is started. Activation methods can include URL links, QR codes, NFC tags, or SMS messages. The Lumavate :ref:`studio <studio>` automatically generates activation methods for each experience. The studio user also has the option to set up their own activation codes. 
 
 What it does
 ^^^^^^^^^^^^
