@@ -11,15 +11,15 @@ Lumavate Tools
 +---------------------------------------+-------------------------------------------------------------------------+
 | Github repository: https://github.com/Lumavate-Team/layout-widget                                               |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Allows users to design experience pages through the user of a dynamic grid and component sets. Users can also   |
+| Allows users to design experience pages through the use of a dynamic grid and component sets. Users can also    |
 | add logic to their pages using either JavaScript or logic components.                                           |
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+-------------------------------+------------------+----------------------+
 |    **Page Builder - Knockout**        |        Version: 2.0.0         |   Status: prod   |         Widget       |
 +---------------------------------------+-------------------------------+------------------+----------------------+
-| Integrates other tools.               | Supports all tools. The widget creates a varaible for all added tools   |
-|                                       | added to the experience in the script tab.                              |
+| Integrates other tools.               | Supports all tools. The widget creates a variable for all tools added   |
+|                                       | to the experience in the script tab.                                    |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
@@ -68,7 +68,7 @@ Lumavate Tools
 | Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Authenticates users based on their email address. Can be restricted to specific email patterns (everybody whose |
-| email ends with company.com) or paired with the Data Service to specify a list of specific user emails.         |
+| email ends with company.com) or paired with the Data Service to specify a list of authorized emails.            |
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
@@ -143,7 +143,7 @@ Lumavate Tools
 +---------------------------------------+-------------------------------------------------------------------------+
 | Github repository: https://github.com/Lumavate-Team/lumavate-components                                         |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Allows users to create and email a pdf of a page from an experience.                                            |
+| Allows users to create and email a pdf from an experience.                                                      |
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
@@ -168,18 +168,19 @@ Lumavate Tools
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
-|         **Base Components**           |        Version: 2.0.0        |   Status: prod   |     Component set     |
+|         **Lumavate Components**           |        Version: 2.0.0        |   Status: prod   |     Component set     |
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Does not integrate other tools.                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
-| A set of header, body, and modal material design components. For more information about material design, please | 
-| go to https://material.io/design/introduction/#.                                                                |
+| A set of header, body, and modal material design components. The component set supports experience-wide colors  |
+| and fonts for its components. For more information about material design, please go to                          |
+| https://material.io/design/introduction/#.                                                                      |
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
-|         **Camera Components**           |        Version: 1.0.0        |   Status: prod   |     Component set     |
+|         **Camera Components**         |        Version: 1.0.0        |   Status: prod   |     Component set     |
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Does not integrate other tools.                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
