@@ -149,7 +149,7 @@ The CLI requires two variables be configured in order to talk to the platform: :
 
 .. _Provisioning Environments:
 
-Setting-Up Environments:
+Setting-Up Environments
 ^^^^^^^^^^^^^^^^^^^^^^^
 
  You can use either the :ref:`Lumavate pre-configured<environment preset configuration>` environment or you can :ref:`setup your own environment configuration<environment your own configuration>`.
@@ -246,7 +246,7 @@ Setting-Up Environments:
 
 .. _Provisioning Profiles:
   
-Setting up Profiles:
+Setting up Profiles
 ^^^^^^^^^^^^^^^^^^^
 
  Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or using :ref:`your own configuration<profile your own configuration>`. 
