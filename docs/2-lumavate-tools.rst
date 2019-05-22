@@ -21,7 +21,7 @@ Lumavate Tools
 | Integrates other tools.               | Supports all tools. The widget creates a varaible for all added tools   |
 |                                       | added to the experience in the script tab.                              |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Allows users to construct experience pages through the use of Knockout and component sets. For more information |
 | about Knockout, please visit https://knockoutjs.com/.                                                           |
@@ -32,7 +32,7 @@ Lumavate Tools
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Does not integrate other tools.                                                                                 |
 +-----------------------------------------------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Displays an under-construction message to end users who visit an unpublished experience. Only needs to be added |
 | to one experience in the studio in order to affect all experiences in the studio.                               |
@@ -43,7 +43,7 @@ Lumavate Tools
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Integrates other tools.               | Supports Media Service.                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Stores and distributes data for an experience. Data can be made available studio-wide or kept exclusive to an   |
 | experience.                                                                                                     |
@@ -54,7 +54,7 @@ Lumavate Tools
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Does not integrate other tools.                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Allows users to compose and send emails from an experience.                                                     |
 +-----------------------------------------------------------------------------------------------------------------+
@@ -65,7 +65,7 @@ Lumavate Tools
 | Requires and integrates other tools.  | Requires Email Service and Base Component Set. Supports Profile and Data| 
 |                                       | Service.                                                                |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Authenticates users based on their email address. Can be restricted to specific email patterns (everybody whose |
 | email ends with company.com) or paired with the Data Service to specify a list of specific user emails.         |
@@ -76,7 +76,7 @@ Lumavate Tools
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Does not integrate other tools.                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Allows users to create, store, and distribute profile information from an experience. Profile information can be|
 | made available studio-wide or kept exclusive to an experience.                                                  |
@@ -87,7 +87,7 @@ Lumavate Tools
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Integrates other tools.               | Supports Profile.                                                       |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Authenticates users using a specified SAML service provider.                                                    |
 +-----------------------------------------------------------------------------------------------------------------+
@@ -97,7 +97,7 @@ Lumavate Tools
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Does not integrate other tools.                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Allows users to compose and send SMS messages from an experience. Requires a Twilio account. For more           |
 | information on Twilio, go to https://www.twilio.com/.                                                           |
@@ -108,7 +108,7 @@ Lumavate Tools
 +---------------------------------------+------------------------------+------------------+------------------------------+
 | Does not integrate other tools.                                                                                        |
 +---------------------------------------+--------------------------------------------------------------------------------+
-| Github repository:                                                                                                     |
+| Github repository: Coming Soon!                                                                                        |
 +---------------------------------------+--------------------------------------------------------------------------------+
 | Allows users to upload, download, and modify media from an experience. Requires a Cloudinary account. For more         |
 | information on Cloudinary, please go to https://cloudinary.com/.                                                       |
@@ -119,7 +119,7 @@ Lumavate Tools
 +---------------------------------------+------------------------------+------------------+------------------------------+
 | Does not integrate other tools.                                                                                        |
 +---------------------------------------+--------------------------------------------------------------------------------+
-| Github repository:                                                                                                     |
+| Github repository: Coming Soon!                                                                                        |
 +------------------------------------------------------------------------------------------------------------------------+
 | Allows users to upload and implement media, files, and service workers in an experience. Assets can be made available  |
 | studio-wide or kept exclusive to an experience.                                                                        |
@@ -130,7 +130,7 @@ Lumavate Tools
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Integrates other tools.               | Supports any tool. The user can specify any route from an added tool.   |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | Allows users to specify when they want an experience to call a specific route. Can be set based on the day      |
 | and/or time the user wants the route called.                                                                    |
@@ -147,12 +147,46 @@ Lumavate Tools
 +-----------------------------------------------------------------------------------------------------------------+
 
 +---------------------------------------+------------------------------+------------------+-----------------------+
+|               **Queue**               |        Version: 1.0.0        |   Status: prod   | Microservice (service)|
++---------------------------------------+------------------------------+------------------+-----------------------+
+| Integrates other tools.               | Supports all tools. The user can schedule any tool’s route with Queue   |
+|                                       | in the Page Builder or Page Builder – Knockout Script tab.              |
++---------------------------------------+-------------------------------------------------------------------------+
+| Github repository: Coming Soon!                                                                                 |
++---------------------------------------+-------------------------------------------------------------------------+
+| Allows users to asynchronously handle the workload in an experience.                                            |
++-----------------------------------------------------------------------------------------------------------------+
+
++---------------------------------------+------------------------------+------------------+-----------------------+
+|            **Platform**               |        Version: 1.0.0        |   Status: dev    | Microservice (service)|
++---------------------------------------+------------------------------+------------------+-----------------------+
+| Does not integrate other tools.                                                                                 |
++---------------------------------------+-------------------------------------------------------------------------+
+| Github repository: Coming Soon!                                                                                 |
++---------------------------------------+-------------------------------------------------------------------------+
+| Allows users to make calls to the Lumavate API in an experience.                                                |
++-----------------------------------------------------------------------------------------------------------------+
+
++---------------------------------------+------------------------------+------------------+-----------------------+
 |         **Base Components**           |        Version: 2.0.0        |   Status: prod   |     Component set     |
 +---------------------------------------+------------------------------+------------------+-----------------------+
 | Does not integrate other tools.                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
-| Github repository:                                                                                              |
+| Github repository: Coming Soon!                                                                                 |
 +---------------------------------------+-------------------------------------------------------------------------+
 | A set of header, body, and modal material design components. For more information about material design, please | 
 | go to https://material.io/design/introduction/#.                                                                |
++-----------------------------------------------------------------------------------------------------------------+
+
++---------------------------------------+------------------------------+------------------+-----------------------+
+|         **Camera Components**           |        Version: 1.0.0        |   Status: prod   |     Component set     |
++---------------------------------------+------------------------------+------------------+-----------------------+
+| Does not integrate other tools.                                                                                 |
++---------------------------------------+-------------------------------------------------------------------------+
+| Github repository: Coming Soon!                                                                                 |
++---------------------------------------+-------------------------------------------------------------------------+
+| A set of body, logic, and modal camera components. The various components work together to allow an experience  |
+| to modify, identify, and access images using the device’s native camera. The components allow the user to access|
+| the camera; recognize images and QR codes; display 3D and 2D images; and redirect users based on camera         |
+| permissions, QR codes, and image matches.                                                                       |
 +-----------------------------------------------------------------------------------------------------------------+
