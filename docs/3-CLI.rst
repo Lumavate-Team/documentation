@@ -1384,6 +1384,8 @@ Access
        - Returns the raw JSON payload. 
      * - ``--table`` 
        - Returns a table with several basic JSON values.
+     * - ``--current``
+       - Lists the organizations the specified tool is shared with.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -1619,6 +1621,10 @@ Add
        - The microservice container you want to edit.
      * - ``--port INTEGER``
        - The port that the version will run on. This will either be set in your code or be your programming language’s default port.
+     * - ``--editor-port INTEGER``
+       - The editor port checked by the Visual Studio Code Luma extension. 
+     * - ``--is-editable``
+       - Marks the microservice version as editable. Editable versions can be edited through the Visual Studio Code Luma extension.
      * - ``-image, --docker-image "FILE PATH"``
        - The absolute path where the microservice Docker file is located. For example: C:/Users/User/Desktop/Folder/dockerfile.py. 
      * - ``-path, --microservice-file-path "FILE PATH"``
@@ -1649,6 +1655,45 @@ Add
  .. warning:: 
     ``--table`` is deprecated. 
     Use ``--format`` to see JSON values organized in table format.
+
+.. _Microservice-version Download:
+
+Download
+++++++++
+
+ Downloads a zip file of an editable microservice version's Image.
+ 
+ Example:
+ 
+ .. code-block:: bash
+ 
+     $ luma microservice-version download
+       Profile: dragon
+       Container: 999
+       Version: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+      % Total    % Received % Xferd  Average Speed    Time     Time      Time  Current
+                                      Dload  Upload   Total    Spent     Left  Speed
+    100 42275  100    42275 0     0    42275     0  0:00:01  0:00:01 --:--:--    42275
+    
+    File Location: C:\Users\User\Desktop\application.999999.zip  
+ 
+ .. list-table:: Options
+     :widths: 10 20
+     
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The microservice container you want to edit.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to edit. For example, ``--version "9.9.9"``.
+     * - ``--path "FILE PATH"``
+       - The absolute path where the microservice zip file will be saved. For example: C:/Users/User/Desktop/Folder/microservice.zip. Defaults to the desktop if no path is specified.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 .. _Microservice-version Exec:
 
@@ -1686,12 +1731,46 @@ Exec
     ``--table`` is deprecated.
     Use ``--format`` to see JSON values organized in table format.
 
+.. _Microservice-version Force:
+
+Force
++++++
+
+ Restarts the microservice version's editor application without discarding code changes.
+ 
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma microservice-version force 
+       Profile: dragon 
+       Container: 999
+       Version Number: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
+    
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The microservice container you want to edit.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice who you want to restart. For example, ``--version "9.9.9"``.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
 .. _Microservice-version Logs:
 
 Logs
 ++++
 
- Returns the logs for a microservice version.
+ Returns the logs for a microservice version. If the microservice version is editable, the editor logs will be followed. If the microservice version is read-only or is not editable, the production logs will be tailed. 
 
  Example:
 
@@ -1699,7 +1778,7 @@ Logs
    
      $ luma microservice-version logs 
        Profile: dragon 
-       Microservice: 999
+       Container: 999
        Version Number: 9.9.9
 
  Response:
@@ -1719,7 +1798,7 @@ Logs
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice whose logs you want to see. For example, ``--version "9.9.9"``.
@@ -2136,6 +2215,34 @@ Ls
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
+.. _Profile Refresh-Token:
+
+Refresh-token 
++++++++++++++
+
+ Refreshes the profiles cached token used by the Visual Studio Code Luma extension. 
+ 
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma profile refresh-token
+       Profile: dragon
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     Refreshed 'dragon' access token.
+
+ .. list-table:: Options 
+     :widths: 10 20
+ 
+     * - ``-p, --profile "STRING"``
+       - The name of the profile whose token is to be refreshed.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
 .. _Profile Rm:
 
 Rm
@@ -2241,6 +2348,8 @@ Access
        - Returns the raw JSON payload. 
      * - ``--table``
        - Returns a table with several basic JSON values.
+     * - ``--current``
+       - Lists the organizations the specified tool is shared with.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -2473,6 +2582,10 @@ Add
        - The profile associated with the studio or command center you want to edit.
      * - ``--port INTEGER``
        - The port that the version will run on. This will either be set in your code or be your programming language’s default port.
+     * - ``--editor-port INTEGER``
+       - The editor port checked by the Visual Studio Code Luma extension. 
+     * - ``--is-editable``
+       - Marks the widget version as editable. Editable versions can be edited through the Visual Studio Code Luma extension.
      * - ``-w, --widget ID``
        - The widget container you want to edit.
      * - ``-path, --widget-file-path "FILE PATH"``
@@ -2505,6 +2618,45 @@ Add
  .. warning:: 
     ``--table`` is deprecated.
     Use ``--format`` to see JSON values organized in table format.
+
+.. _Widget-version Download:
+
+Download
+++++++++
+
+ Downloads a zip file of an editable widget version's Image.
+ 
+ Example:
+ 
+ .. code-block:: bash
+ 
+     $ luma widget-version download
+       Profile: dragon
+       Container: 999
+       Version: 9.9.9
+       
+ Response:
+ 
+ .. code-block:: bash
+      % Total    % Received % Xferd  Average Speed    Time     Time      Time  Current
+                                      Dload  Upload   Total    Spent     Left  Speed
+    100 42275  100    42275 0     0    42275     0  0:00:01  0:00:01 --:--:--    42275
+    
+    File Location: C:\Users\User\Desktop\application.999999.zip    
+       
+ .. list-table:: Options
+     :widths: 10 20
+     
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The widget container you want to edit.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the widget you want to edit. For example, ``--version "9.9.9"``.
+     * - ``--path "FILE PATH"``
+       - The absolute path where the widget zip file will be saved. For example: C:/Users/User/Desktop/Folder/widget.zip. Defaults to the desktop if no path is specified.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 .. _Widget-version Exec:
 
@@ -2542,12 +2694,46 @@ Exec
     ``--table`` is deprecated.
     Use ``--format`` to see JSON values organized in table format.
 
+.. _Microservice-version Force:
+
+Force
++++++
+
+ Restarts the widget version's editor application without discarding code changes.
+ 
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma widget-version force 
+       Profile: dragon 
+       Container: 999
+       Version Number: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
+    
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The widget container you want to edit.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice who you want to restart. For example, ``--version "9.9.9"``.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
 .. _Widget-version Logs:
 
 Logs
 ++++
 
- Returns the logs for a widget version.
+ Returns the logs for a widget version. Returns the logs for a widget version. If the widget version is editable, the editor logs will be followed. If the widget version is read-only or is not editable, the production logs will be tailed. 
 
  Example:
 
@@ -2555,7 +2741,7 @@ Logs
    
      $ luma widget-version logs
        Profile: dragon
-       Widget: 999
+       Container: 999
        Version Number: 9.9.9
  
  Response:
@@ -2585,7 +2771,7 @@ Logs
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget whose logs you want to see. For example, ``--version "9.9.9"``.
