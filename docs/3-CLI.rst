@@ -449,16 +449,7 @@ Get
   
  .. code-block:: bash
   
-      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc",
-      "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview":
-      "https://s3.amazonaws.com/from.through.to.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=nota
-      Signaturev8xyp8cnhE%3D&Expires=999993222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false,
-      "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00",
-      "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", 
-      "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": 
-      {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true,
-      "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null,
-      "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
+      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/from.through.to.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=nota Signaturev8xyp8cnhE%3D&Expires=999993222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
 
  .. list-table:: Options 
      :widths: 10 20
@@ -489,10 +480,7 @@ Post
  
  .. code-block:: bash
     
-     {"payload": {"data": {"createdAt": "2019-02-22T15:56:21.722668", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null,
-     "name": "Dragon Command Center"}}, "id": 9, "image": {"key": "containers/dragon/icons/af7ef4a6", "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T15:56:21.722632",
-     "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null,
-     "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
+     {"payload": {"data": {"createdAt": "2019-02-22T15:56:21.722668", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9, "image": {"key": "containers/dragon/icons/af7ef4a6", "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T15:56:21.722632", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  .. list-table:: Options 
      :widths: 10 20
@@ -525,10 +513,7 @@ Put
  
  .. code-block:: bash
  
-     {"payload": {"data": {"createdAt": "2019-02-22T16:03:22.950331", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, 
-     "name": "Dragon Command Center"}}, "id": 1675, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:03:22.950312", "lastModifiedBy": 99, "name": "Fire Breathing",
-     "premium": false, "type": "widget", "urlRef": "fireball", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null,
-     "manageUrl": null, "versionNumber": null}}}}}
+     {"payload": {"data": {"createdAt": "2019-02-22T16:03:22.950331", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 1675, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:03:22.950312", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fireball", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  .. list-table:: Options 
      :widths: 10 20
@@ -1752,34 +1737,7 @@ Force
  
  .. code-block:: bash
  
-     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 
-     'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running',
-     'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': 
-     {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 
-     'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [],
-     'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error',
-     'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError':
-     False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed',
-     {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting',
-     'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage':
-     "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999',
-     'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 
-     'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2):
-     ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary':
-     {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [],
-     'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id':
-     '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate',
-     'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4):
-     ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': 
-     {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [],
-     'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 
-     'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False,
-     'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 
-     'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100,
-     'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 
-     'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 
-     'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-
-     10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
+     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
     
  .. list-table:: Options 
      :widths: 10 20
@@ -2743,34 +2701,7 @@ Force
  
  .. code-block:: bash
  
-     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 
-     'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running',
-     'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': 
-     {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 
-     'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [],
-     'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error',
-     'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError':
-     False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed',
-     {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting',
-     'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage':
-     "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999',
-     'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 
-     'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2):
-     ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary':
-     {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [],
-     'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id':
-     '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate',
-     'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4):
-     ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': 
-     {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [],
-     'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 
-     'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False,
-     'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 
-     'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100,
-     'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 
-     'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 
-     'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-
-     10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
+     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
     
  .. list-table:: Options 
      :widths: 10 20
