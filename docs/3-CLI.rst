@@ -1675,6 +1675,7 @@ Download
  Response:
  
  .. code-block:: bash
+      
       % Total    % Received % Xferd  Average Speed    Time     Time      Time  Current
                                       Dload  Upload   Total    Spent     Left  Speed
     100 42275  100    42275 0     0    42275     0  0:00:01  0:00:01 --:--:--    42275
@@ -1751,7 +1752,34 @@ Force
  
  .. code-block:: bash
  
-     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
+     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 
+     'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running',
+     'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': 
+     {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 
+     'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [],
+     'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error',
+     'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError':
+     False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed',
+     {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting',
+     'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage':
+     "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999',
+     'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 
+     'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2):
+     ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary':
+     {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [],
+     'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id':
+     '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate',
+     'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4):
+     ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': 
+     {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [],
+     'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 
+     'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False,
+     'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 
+     'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100,
+     'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 
+     'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 
+     'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-
+     10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
     
  .. list-table:: Options 
      :widths: 10 20
@@ -2638,6 +2666,7 @@ Download
  Response:
  
  .. code-block:: bash
+ 
       % Total    % Received % Xferd  Average Speed    Time     Time      Time  Current
                                       Dload  Upload   Total    Spent     Left  Speed
     100 42275  100    42275 0     0    42275     0  0:00:01  0:00:01 --:--:--    42275
@@ -2714,7 +2743,34 @@ Force
  
  .. code-block:: bash
  
-     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
+     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 
+     'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running',
+     'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': 
+     {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 
+     'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [],
+     'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error',
+     'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError':
+     False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed',
+     {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting',
+     'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage':
+     "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999',
+     'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 
+     'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2):
+     ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary':
+     {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [],
+     'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id':
+     '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate',
+     'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4):
+     ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': 
+     {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [],
+     'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 
+     'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False,
+     'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 
+     'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100,
+     'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 
+     'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 
+     'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-
+     10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
     
  .. list-table:: Options 
      :widths: 10 20
