@@ -2061,9 +2061,9 @@ Child-orgs
  
  .. code-block:: bash
  
-     id    name                                   instanceType isTest
-     999 Child Command Center   dev                  None
-     9      Dragon Studio                   studio             False
+     id  name                   instanceType isTest
+     999 Child Command Center   dev          None
+     9   Dragon Studio          studio       False
      
  .. list-table:: Options 
      :widths: 10 20
