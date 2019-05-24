@@ -416,9 +416,7 @@ Delete
  
  .. code-block:: bash
     
-     {"payload": {"data": {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, 
-     "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", 
-     "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
+     {"payload": {"data": {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}}}
 
  .. list-table:: Options 
      :widths: 10 20
@@ -661,7 +659,7 @@ Ls
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {id}"``
      * - ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
-       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER`` 
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -914,7 +912,7 @@ Ls
      * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
      * - ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
-       - Returns results that match the filter criteria. For example: ``--filter "{label=prod}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{label=prod}"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -1280,7 +1278,7 @@ Ls
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{name=drag}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{name=drag}"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -1455,7 +1453,7 @@ Ls
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -1831,7 +1829,7 @@ Ls
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{id=999}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{id=999}"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -2073,7 +2071,7 @@ Child-orgs
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{instanceType=studio}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{instanceType=studio}"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--help``
@@ -2110,7 +2108,7 @@ Ls
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {isTest}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{isTest=None}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{isTest=None}"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--help``
@@ -2420,7 +2418,7 @@ Ls
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"`` 
-       - Returns results that match the filter criteria. For example: ``--filter "{name=Hydra}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{name=Hydra}"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -2806,7 +2804,7 @@ Ls
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
      * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{actualState=running}"``. Additional filter options are available in the :ref:``Ls Filters`` section.
+       - Returns results that match the filter criteria. For example: ``--filter "{actualState=running}"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
