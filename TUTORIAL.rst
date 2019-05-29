@@ -121,59 +121,38 @@ Creating a Submit Button to store data
 4. Click Apply
 5. Click Save
 
-Adding the Data Store service to store answers
+Data Store service configuration to store answers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Anytime a Microservice is added to an Experience, a page level object is created which enables the Page Builder Widget to easily communicate with the
-Microservice. At this time, we will just be adding the Data Store service to the Experience for use later.
+Follow these steps to add and configure the Data Store service on the Experience.
 
 1. On the Experience Designer page, hover the Add button
 2. This time, click Add Microservice
 3. Click Data Store
 4. Click Start Designing
-5. Since we are just adding the service to the Experience for use later, click Save in the upper right-hand corner of the screen
+5. Click the Launch button that appears under Admin
+6. After user is redirected to Admin GUI window, click the Add table button
+7. Enter 'survey-answers' as the table name and click the Add button that appears in middle of screen
+8. After new row appears, enter question for Column Name and set it to type Text
+9. Click Add button again
+10. After new row appears, enter answer for Column Name and set it to type Text
+11. You'll notice we default the Dev Name field to match the Column Name value, but users can edit these if necessary
+12. Click the Create button that appears at bottom right of screen
+13. Close the Admin GUI to return to the Experience Designer
 
-Initializing the Data Store using JavaScript
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Now that we have added schema to the Data Store, we will ensure the Experience is set up to view & modify data accordingly
 
-1. On the Experience Designer page, click the Edit icon on the Home Page widget
-2. Click on the Script tab
-3. Under the ``/* Please place your code beneath this comment */`` lines, paste the following code:
-
-.. code-block:: javascript
-
-    //Initialize Data Store
-    //Code to initialize the datastore, not needed after first visit to the page
-    m_Data_Store.get('/type?name=survey-answers').then ((r) => {
-      // Check to see if the Survey-Answers type has already been created
-      if (r.payload.data.length == 0) {
-        // Insert a new type record for survey-answers
-        data = {}
-        data['name'] = 'survey-answers';
-        data['scope'] = 'experience';
-        m_Data_Store.post('/type', data=JSON.stringify(data)).then( (response) => {
-          console.log("Data Store has been initialized for Survey Answers");
-        });
-      }
-    });
-    //End Initialization Code
-
-4. Click Apply
-5. Click Save
-
-Now that we have added code to initialize the Data Store, we will ensure the Experience is set up to view & modify data accordingly.
-
-6. On the Experience Designer page, click the Edit icon next to the Data Store service
-7. On the Data Store tab, click the Add button
-8. Click the Edit icon on the newly added type, labeled: Type - None
-9. Update the following fields:
+14. On the Experience Designer page, click the Edit icon next to the Data Store service
+15. On the Data Store tab, click the Add button
+16. Click the Edit icon on the newly added type, labeled: Type - None
+17. Update the following fields:
 
    a. Type Name: ``survey-answers``
    b. View Access: ``Click "All Users"``
    c. Modify Access: ``Click "All Users"``
 
-10. Click Apply
-11. Click Save
+18. Click Apply
+19. Click Save
 
 Hooking up the Submit Button
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
