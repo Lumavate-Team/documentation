@@ -140,7 +140,7 @@ Follow these steps to add and configure the Data Store service on the Experience
 12. Click the Create button that appears at bottom right of screen
 13. Close the Admin GUI to return to the Experience Designer
 
-Now that we have added schema to the Data Store, we will ensure the Experience is set up to view & modify data accordingly
+Now that we have added schema to the Data Store, we will ensure the Experience is set up to view & modify data accordingly.
 
 14. On the Experience Designer page, click the Edit icon next to the Data Store service
 15. On the Data Store tab, click the Add button
