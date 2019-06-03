@@ -290,7 +290,7 @@ Before You Start
 
 Before going forward, you will need to have the following available on your machine:
 
-* `VS.Code <https://code.visualstudio.com/download>`_
+* <a href="https://code.visualstudio.com/downloads" target="_blank">VS.Code</a>
 * Lumavate CLI
 * Git - This example requires downloading code from Github.com
 
