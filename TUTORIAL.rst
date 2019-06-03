@@ -312,11 +312,13 @@ After creating an environment, create a profile using the CLI by using the follo
 
 .. code-block:: javascript
 
-  luma-cli profile add
+  luma profile add
 
 Set up your profile based on your "prod" environment as follows:
 
-Profile name: ``CommandCenter``
+.. code-block:: javascript
+
+  Profile name: ``CommandCenter``
 
 You should then see your environments like the following:
 
