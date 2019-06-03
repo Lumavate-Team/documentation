@@ -357,6 +357,20 @@ Connecting VS.Code
 
 Using VS.Code & the Lumavate Extension, you can edit code directly within a Lumavate running container for easier debugging & development.
 
-After installing `VS.Code <https://code.visualstudio.com/download>`_ , goto the Extension Manager within VS.Code & search for Lumavate.
+After installing `VS.Code <https://code.visualstudio.com/download>`_ , view the Extensions within VS.Code.
+Using the Search Extensions in the Marketplace input box, type ``Lumavate``, to search for the Lumavate Extension.
+
+  .. figure:: ../images/extension.PNG
+
+Click on the Lumavate Extension & proceed to install the latest version.
+
+Using the Command Palette, you should now be able to start using the ``Luma:`` commands, which will enable you to:
+
+* Edit a running Container
+* Commit Container Changes - Make a development ready container read-only for use in Production mode
+* Follow Container Logs Real-Time
+* Add Packages - Add refenerce libraries as needed to the current running container
+* Download Source
+
 
 MORE TO COME SOON
