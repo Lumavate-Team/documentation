@@ -282,6 +282,14 @@ Local Development
 Using VS.Code, it is easy to modify running containers within Lumavate.  The following steps will walk you through getting a development enabled cotnainer
 regsitered with Lumavate & then using VS.Code to edit that container real-time.
 
+Learning Objectives
+^^^^^^^^^^^^^^^^^^^
+
+After completing this walk through, you will be able to:
+
+* Use the Lumavate CLI to connect to a running container
+* Use VS.Code to edit a running Microservice
+
 Before You Start
 ^^^^^^^^^^^^^^^^
 
@@ -290,5 +298,63 @@ Before going forward, you will need to have the following available on your mach
 * `VS.Code <https://code.visualstudio.com/download>`_
 * Lumavate CLI
 * Git - This example requires downloading code from Github.com
+
+
+Setting up your Profile
+^^^^^^^^^^^^^^^^^^^^^^^
+
+To start developing on running containers, you will need to configure your development profile via the Lumavate CLI.
+
+Login to your current Command Center & copy the environment creation code under the Lumavate CLI menu item. This environment will enable you to create a
+profile to manage tools within the Command Center.
+
+After creating an environment, create a profile using the CLI by using the following command:
+
+.. code-block:: javascript
+
+  luma-cli profile add
+
+Set up your profile based on your "prod" environment as follows:
+
+Profile name: ``CommandCenter``
+
+You should then see your environments like the following:
+
+.. code-block:: javascript
+
+  Env Name App                                         Audience                               Token
+  prod     https://app.studio.lumavate.com             https://designer.lumavate.com/app      lumavate.auth0.com
+
+  Name of the Env you want to use with this profile:
+
+Select your "prod" environment,by typing the Env Name (in this case prod)
+
+You will then see a list of Studios & Command Centers associated to this environment like below:
+
+.. code-block:: javascript
+
+  id  Org Name           Org Type Test Org
+  51  Trial              studio   True
+  52  Trial CC           dev      None
+
+  Org ID you want to associate with this profile:
+
+Select the Command Center that will be used to manage your Tools, in the case above org ID 52, for the Trial CC.
+
+This should result in the following:
+
+.. code-block:: javascript
+
+  Environment Org Name Org ID
+  prod        Trial CC 52
+
+You will now be able to use the ``CommandCenter`` profile anytime you use the Lumavate CLI to connect when managing Tools within your Command Center
+
+Connecting VS.Code
+^^^^^^^^^^^^^^^^^^
+
+Using VS.Code & the Lumavate Extension, you can edit code directly within a Lumavate running container for easier debugging & development.
+
+After installing `VS.Code <https://code.visualstudio.com/download>`_ , goto the Extension Manager within VS.Code & search for Lumavate.
 
 MORE TO COME SOON
