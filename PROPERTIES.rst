@@ -26,6 +26,7 @@ Properties Index:
  #. :ref:`Translatable Text`
  #. :ref:`Text`
  #. :ref:`Color`
+ #. :ref:`Theme Color`
  #. :ref:`Image`
  #. :ref:`Checkbox`
  #. :ref:`Toggle`
@@ -138,6 +139,43 @@ Color
   * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
   * ``"default": "STRING"`` (defaults to #fff/white)
+  
+ .. warning::
+    The tool will error when used in the studio if the default field contains an invalid value.
+    
+_______________________________________________________________________________________________________________________________________
+
+.. _Theme Color:
+
+Theme Color
+^^^^^^^^^^^
+
+ Color allows studio users to set a color value via a theme color picker.  The theme color picker will use all the color properties defined within a Component
+ Set, including a gradient scale of any properties that are identified as color families.
+
+ .. code-block:: javascript
+
+    "classification": "Classification",
+    "name": "Name",
+    "type": "theme-color"
+  
+ .. figure:: ../images/colorfield.PNG
+       :align: center
+       :width: 600px
+       :alt: Image of a color field.
+      
+       ..
+       
+ Required Fields:
+  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"name": "STRING"``
+  * ``"type": "theme-color"``
+  
+ Optional Fields:
+  * ``"section": "STRING"``
+  * ``"helpText": "STRING with Markdown"``
+  * ``"label": "STRING"``
+  * ``"deafult": "STRING"`` (defaults to #fff/white)
   
  .. warning::
     The tool will error when used in the studio if the default field contains an invalid value.
