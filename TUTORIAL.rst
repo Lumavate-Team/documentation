@@ -174,11 +174,8 @@ Hooking up the Submit Button
 
 		//Create the data object to POST to the Data Store
 		var data = {
-			'data':
-			{
 				'question': 'What is Your favorite programming language', 
 				'answer': selection
-			}
 		};
 		//Post data to the Service
 		m_Data_Store.post('/survey-answers', data=JSON.stringify(data)).then( (response) =>
@@ -247,7 +244,7 @@ Retrieving the results
 	m_Data_Store.get("/survey-answers").then(async function(response) {
 		var answers = [];
 		for (const [key, value] of Object.entries(response.payload.data)) {
-			var dataKey = value.data.answer;
+			var dataKey = value.answer;
 			var answer = answers.find(obj => {
 				return obj.answer === dataKey
 			});
@@ -290,7 +287,7 @@ Before You Start
 
 Before going forward, you will need to have the following available on your machine:
 
-* <a href="https://code.visualstudio.com/downloads" target="_blank">VS.Code</a>
+* `VS.Code <https://code.visualstudio.com/download>`_
 * Lumavate CLI
 * Git - This example requires downloading code from Github.com
 
