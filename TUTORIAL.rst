@@ -4,7 +4,8 @@
 Getting Started
 ================
 
-This tutorial will have you designing & publishing a Lumavate Experience using Tools available within the Platform.
+The following tutorials will have you designing & publishing a Lumavate Experience using Tools available within the Platform, as well as prepare your
+environment to develop containers to run within Lumavate.
 
 Example: Quick Survey Tool
 --------------------------
@@ -277,3 +278,20 @@ Publishing the Experience
 After the publish confirmation message pops-up, use the QR Code, URL or Text Activation located on the bottom right part of the screen to see your Quick
 Survey in action!
 
+
+Local Development
+-----------------
+
+Using VS.Code, it is easy to modify running containers within Lumavate.  The following steps will walk you through getting a development enabled cotnainer
+regsitered with Lumavate & then using VS.Code to edit that container real-time.
+
+Before You Start
+^^^^^^^^^^^^^^^^
+
+Before going forward, you will need to have the following available on your machine:
+
+* `VS.Code <https://code.visualstudio.com/download>`_
+* Lumavate CLI
+* Git - This example requires downloading code from Github.com
+
+MORE TO COME SOON
