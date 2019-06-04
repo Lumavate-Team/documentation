@@ -362,10 +362,10 @@ Using the Search Extensions in the Marketplace input box, type ``Lumavate``, to 
 
  .. figure:: ../images/extension.PNG
        :align: center
-       :width: 400px
-       :alt: Installing the VS.Code Extension
-
-      ..
+       :width: 700px
+       :alt: VSCode Extension
+      
+       ..
 
 Click on the Lumavate Extension & proceed to install the latest version.
 
