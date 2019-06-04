@@ -360,7 +360,10 @@ Using VS.Code & the Lumavate Extension, you can edit code directly within a Luma
 After installing `VS.Code <https://code.visualstudio.com/download>`_, view the Extensions within VS.Code.
 Using the Search Extensions in the Marketplace input box, type ``Lumavate``, to search for the Lumavate Extension.
 
-  .. figure:: ../images/extension.PNG
+ .. figure:: ../images/extension.PNG
+       :align: center
+       :width: 400px
+       :alt: Installing the VS.Code Extension
 
 Click on the Lumavate Extension & proceed to install the latest version.
 
