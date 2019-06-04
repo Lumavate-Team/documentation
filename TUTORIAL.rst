@@ -365,6 +365,8 @@ Using the Search Extensions in the Marketplace input box, type ``Lumavate``, to 
        :width: 400px
        :alt: Installing the VS.Code Extension
 
+      ..
+
 Click on the Lumavate Extension & proceed to install the latest version.
 
 Using the Command Palette, you should now be able to start using the ``Luma`` commands, which will enable you to:
