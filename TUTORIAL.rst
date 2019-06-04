@@ -285,7 +285,7 @@ regsitered with Lumavate & then using VS.Code to edit that container real-time.
 Learning Objectives
 ^^^^^^^^^^^^^^^^^^^
 
-After completing this walk through, you will be able to:
+After completing this walkthrough, you will be able to:
 
 * Use the Lumavate CLI to connect to a running container
 * Use VS.Code to edit a running Microservice
@@ -329,7 +329,7 @@ You should then see your environments like the following:
 
   Name of the Env you want to use with this profile:
 
-Select your "prod" environment,by typing the Env Name (in this case prod)
+Select your "prod" environmentby typing the Env Name (in this case prod)
 
 You will then see a list of Studios & Command Centers associated to this environment like below:
 
@@ -357,19 +357,19 @@ Connecting VS.Code
 
 Using VS.Code & the Lumavate Extension, you can edit code directly within a Lumavate running container for easier debugging & development.
 
-After installing `VS.Code <https://code.visualstudio.com/download>`_ , view the Extensions within VS.Code.
+After installing `VS.Code <https://code.visualstudio.com/download>`_, view the Extensions within VS.Code.
 Using the Search Extensions in the Marketplace input box, type ``Lumavate``, to search for the Lumavate Extension.
 
   .. figure:: ../images/extension.PNG
 
 Click on the Lumavate Extension & proceed to install the latest version.
 
-Using the Command Palette, you should now be able to start using the ``Luma:`` commands, which will enable you to:
+Using the Command Palette, you should now be able to start using the ``Luma`` commands, which will enable you to:
 
 * Edit a running Container
 * Commit Container Changes - Make a development ready container read-only for use in Production mode
 * Follow Container Logs Real-Time
-* Add Packages - Add refenerce libraries as needed to the current running container
+* Add Packages - Add reference libraries as needed to the current running container
 * Download Source
 
 
