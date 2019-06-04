@@ -1245,7 +1245,7 @@ Import
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
  
-  .. warning::
+ .. warning::
     File paths with spaces in them may need to be specified in the main command using the ``-path`` option so as to preserve the spaces.
     
 .. _Experience Ls:
@@ -1745,7 +1745,7 @@ Force
      * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the microservice who you want to restart. For example, ``--version "9.9.9"``.
+       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -2709,7 +2709,7 @@ Force
      * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the microservice who you want to restart. For example, ``--version "9.9.9"``.
+       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -2718,7 +2718,7 @@ Force
 Logs
 ++++
 
- Returns the logs for a widget version. Returns the logs for a widget version. If the widget version is editable, the editor logs will be followed. If the widget version is read-only or is not editable, the production logs will be tailed. 
+ Returns the logs for a widget version. If the widget version is editable, the editor logs will be followed. If the widget version is read-only or is not editable, the production logs will be tailed. 
 
  Example:
 
