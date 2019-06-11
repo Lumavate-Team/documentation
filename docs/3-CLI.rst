@@ -1353,7 +1353,7 @@ Access
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to share or unshare.
      * - ``--add ID``
        - The studio or command center with whom you want to **share**.
@@ -1496,7 +1496,7 @@ Rm
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to remove.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
@@ -1538,7 +1538,7 @@ Update
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to remove.
      * - ``--name "STRING"``
        - The new name for the microservice container. The name will appear in the command center and studio. 
@@ -1600,7 +1600,7 @@ Add
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``--port INTEGER``
        - The port that the version will run on. This will either be set in your code or be your programming language’s default port.
@@ -1700,7 +1700,7 @@ Exec
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to edit. For example, ``--version "9.9.9"``.
@@ -1824,7 +1824,7 @@ Ls
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
@@ -1876,7 +1876,7 @@ Rm
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``-vm, --version-mask INTEGER "*.*.*"``
        - Removes all versions with that major, minor, or patch. Use a * to indicate all. Sending "*.*.*" will delete all versions.
@@ -1923,7 +1923,7 @@ Start
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to start. For example, ``--version "9.9.9"``.
@@ -1968,7 +1968,7 @@ Stop
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to stop. For example, ``--version "9.9.9"``.
@@ -2013,7 +2013,7 @@ Update
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-ms, --microservice ID``
+     * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to update. For example, ``--version "9.9.9"``.
@@ -2318,7 +2318,7 @@ Access
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``--add ID``
        - The studio or command center whom with you want to **share**.
@@ -2461,7 +2461,7 @@ Rm
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
@@ -2503,7 +2503,7 @@ Update
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``--name "STRING"``
        - The new name for the widget container. The name will appear in the command center and studio. 
@@ -2570,7 +2570,7 @@ Add
        - The editor port checked by the Visual Studio Code Luma extension. 
      * - ``--is-editable``
        - Marks the widget version as editable. Editable versions can be edited through the Visual Studio Code Luma extension.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-path, --widget-file-path "FILE PATH"``
        - The absolute path where the widget tar file is located. For example: C:/Users/User/Desktop/Folder/widget.tar. 
@@ -2664,7 +2664,7 @@ Exec
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to edit. For example, ``--version "9.9.9"``.
@@ -2799,7 +2799,7 @@ Ls
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container whose version you want to see.
      * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
@@ -2851,7 +2851,7 @@ Rm
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-vm, --version-mask INTEGER "*.*.*"``
        - Removes all version with that major, minor, or path. Use a * to indicate all. Sending "*.*.*" will delete all versions.
@@ -2898,7 +2898,7 @@ Start
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to start. For example: ``--version "9.9.9"``.
@@ -2943,7 +2943,7 @@ Stop
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to stop. For example: ``--version "9.9.9"``.
@@ -2988,7 +2988,7 @@ Update
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-w, --widget ID``
+     * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to update. For example: ``--version "9.9.9"``.
