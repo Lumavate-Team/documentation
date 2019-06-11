@@ -1339,7 +1339,7 @@ Access
    
      $ luma microservice access --add 99
        Profile: dragon
-       Microservice: 999
+       Container: 999
  
  Response:
  
@@ -1482,7 +1482,7 @@ Rm
    
      $ luma microservice rm 
        Profile: dragon 
-       Microservice: 999
+       Container: 999
  
  Response:
  
@@ -1524,7 +1524,7 @@ Update
    
      $ luma microservice update --name "World Building" 
        Profile: dragon 
-       Microservice: 999 
+       Container: 999 
  
  Response:
  
@@ -1579,7 +1579,7 @@ Add
    
      $ luma microservice-version add 
        Profile: dragon 
-       Microservice: 999
+       Container: 999
        Label: prod
        Version: 9.9.9 
        Port: 5000
@@ -1692,7 +1692,7 @@ Exec
    
      $ luma microservice-version exec '<<Docker command>>' 
        Profile: dragon 
-       Mirocservice: 999 
+       Container: 999 
        Version Number: 9.9.9
 
  .. list-table:: Options 
@@ -1810,7 +1810,7 @@ Ls
    
      $ luma microservice-version ls 
        Profile: dragon
-       Microservice: 999
+       Container: 999
  
  Response:
  
@@ -1861,7 +1861,7 @@ Rm
    
      $ luma microservice-version rm
        Profile: dragon
-       Microservice: 999
+       Container: 999
        Version: 9.9.9
  
  Response:
@@ -1908,7 +1908,7 @@ Start
    
      $ luma microservice-version start
        Profile: dragon
-       Microservice: 999
+       Container: 999
        Version: 9.9.9
  
  Response:
@@ -1953,7 +1953,7 @@ Stop
    
      $ luma microservice-version stop
        Profile: dragon
-       Microservice: 999
+       Container: 999
        Version: 9.9.9
  
  Response:
@@ -1998,7 +1998,7 @@ Update
    
     $ luma microservice-version update --label dev
       Profile: dragon
-      Microservice: 999
+      Container: 999
       Version: 9.9.9
 
  Response:
@@ -2304,7 +2304,7 @@ Access
    
      $ luma widget access --add 99
        Profile: dragon
-       Widget: 999
+       Container: 999
  
  Response:
  
@@ -2447,7 +2447,7 @@ Rm
    
      $ luma widget rm
        Profile: dragon
-       Widget: 999
+       Container: 999
  
  Response:
  
@@ -2489,7 +2489,7 @@ Update
    
      $ luma widget update --name "European Dragon"
        Profile: dragon
-       Widget: 999
+       Container: 999
  
  Response:
  
@@ -2544,7 +2544,7 @@ Add
    
      $ luma widget-version add
        Profile: dragon
-       Widget: 999
+       Container: 999
        Label: prod 
        Version Number: 9.9.9
        Widget File Path: "C:\fantasy\creatures\dragons\hydra.gz"
@@ -2656,7 +2656,7 @@ Exec
    
      $ luma widget-version exec '<<Docker Command>>'
        Profile: dragon
-       Widget: 999
+       Container: 999
        Version Number: 9.9.9
 
  .. list-table:: Options 
@@ -2784,7 +2784,7 @@ Ls
    
      $ luma widget-version ls
        Profile: dragon
-       Widget: 999
+       Container: 999
 
  Response:
  
@@ -2836,7 +2836,7 @@ Rm
    
      $ luma widget-version rm
        Profile: dragon
-       Widget: 999
+       Container: 999
        Version Number: 9.9.9
 
  Response:
@@ -2883,7 +2883,7 @@ Start
    
      $ luma widget-version start
        Profile: dragon
-       Widget: 999
+       Container: 999
        Version Number: 9.9.9
 
  Response:
@@ -2928,7 +2928,7 @@ Stop
    
      $ luma widget-version stop
        Profile: dragon
-       Widget: 999
+       Container: 999
        Version Number: 9.9.9
 
  Response:
@@ -2973,7 +2973,7 @@ Update
    
      $ luma widget-version update -l dev
        Profile: dragon
-       Widget: 999
+       Container: 999
        Version Number: 9.9.9
 
  Response:
