@@ -1625,8 +1625,8 @@ Add
        - The editor port checked by the Visual Studio Code Luma extension. 
      * - ``--is-editable``
        - Marks the microservice version as editable. Editable versions can be edited through the Visual Studio Code Luma extension.
-     * - ``-image, --docker-image "FILE PATH"``
-       - The absolute path where the microservice Docker file is located. For example: ``-image "C:/Users/User/Desktop/Folder/dockerfile.py"``. 
+     * - ``-image, --docker-image "STRING"``
+       - The name and tag of a microservice Docker container from the Docker daemon. Docker must be installed locally to use this option. For more information about installing Docker, please see :ref:`Docker set-up<Installing Locally>`. 
      * - ``-path, --container-file-path "FILE PATH"``
        - The absolute path where the microservice tar file is located. For example: ``-path "C:/Users/User/Desktop/Folder/microservice.tar"``. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
@@ -2564,8 +2564,8 @@ Add
        - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-path, --container-file-path "FILE PATH"``
        - The absolute path where the widget tar file is located. For example: ``-path "C:/Users/User/Desktop/Folder/widget.tar"``. 
-     * - ``-image, --docker-image "FILE PATH"``
-       - The absolute path where the widget docker file is located. For example: ``-image "C:/Users/User/Desktop/Folder/docker.py"``. 
+     * - ``-image, --docker-image "STRING"``
+       - The name and tag of a microservice Docker container from the Docker daemon. Docker must be installed locally to use this option. For more information about installing Docker, please see :ref:`Docker set-up<Installing Locally>`. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
        - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. ``--version-mask "*.*.*"`` will take the most recent version. 
      * - ``-v, --version INTEGER "*.*.*"``
