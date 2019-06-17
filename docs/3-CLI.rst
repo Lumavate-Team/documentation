@@ -561,13 +561,13 @@ Access
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component set container you want to edit.
-     * - ``--add ID || Name``
-       - The studio or command center you want to **share** with.
-     * - ``--rm ID || Name``
-       - The studio or command center you want to **unshare** with.
-     * - ``--absolute ID || Name``
-       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
+       - The component set container you want to edit. You can pass either the ID or UrlRef.
+     * - ``--add ID``
+       - The studio or command center you want to **share** with. You can pass either the ID or Name.
+     * - ``--rm ID``
+       - The studio or command center you want to **unshare** with. You can pass either the ID or Name.
+     * - ``--absolute ID``
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*. You can pass either the ID or Name.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{failed} {unsharedFrom}"`` 
      * - ``--json``
@@ -702,7 +702,7 @@ Rm
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component set container you want to edit.
+       - The component set container you want to edit. You can pass either the ID or UrlRef.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{createdBy} {urlRef}"`` 
      * - ``--json``
@@ -744,7 +744,7 @@ Update
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component-set container you want to edit.
+       - The component-set container you want to edit. You can pass either the ID or UrlRef.
      * - ``--name "STRING"``
        - The new name for the component set container. The name will appear in the command center and studio. 
      * - ``-f, --format "{JSON VALUE}"``
@@ -801,7 +801,7 @@ Add
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component set container you want to edit.
+       - The component set container you want to edit. You can pass either the ID or UrlRef.
      * - ``-path, --component-set-file-path "FILE PATH"``
        - The absolute path where the component set zip file is located. For example: ``-path "C:/Users/User/Desktop/Folder/file.zip"``. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
@@ -864,7 +864,7 @@ Components
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component set container you want to edit.
+       - The component set container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the component set you want to view. For example, ``--version "9.9.9"``.
      * - ``--json``
@@ -907,7 +907,7 @@ Ls
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component set container you want to edit.
+       - The component set container you want to edit. You can pass either the ID or UrlRef.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id} {CreatedBy}"``. 
      * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
@@ -959,7 +959,7 @@ Rm
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component set container you want to edit.
+       - The component set container you want to edit. You can pass either the ID or UrlRef.
      * - ``-vm, --version-mask INTEGER "*.*.*"``
        - Removes all version with that major, minor, or path. Use a * to indicate all. For example, ``--version-mask "9.*.*"`` will delete all versions that have a major value of 9. ``--version-mask "*.*.*"`` will delete all version.
      * - ``-v, --version INTEGER "*.*.*"``
@@ -1006,7 +1006,7 @@ Update
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
-       - The component set container you want to edit.
+       - The component set container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the component set you want to edit. For example, ``--version "9.9.9"``.
      * - ``-l, --label "[prod|dev|old]"```
@@ -1371,13 +1371,13 @@ Access
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to share or unshare.
+       - The microservice container you want to share or unshare. You can pass either the ID or UrlRef.
      * - ``--add ID``
-       - The studio or command center with whom you want to **share**.
+       - The studio or command center with whom you want to **share**. You can pass either the ID or Name.
      * - ``--rm ID``
-       - The studio or command center with whom you want to **unshare**.
+       - The studio or command center with whom you want to **unshare**. You can pass either the ID or Name.
      * - ``--absolute ID``
-       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*. You can pass either the ID or Name.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{sharedWith} {failed}"``.
      * - ``--json``
@@ -1514,7 +1514,7 @@ Rm
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to remove.
+       - The microservice container you want to remove. You can pass either the ID or UrlRef.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
      * - ``--json``
@@ -1556,7 +1556,7 @@ Update
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to remove.
+       - The microservice container you want to remove. You can pass either the ID or UrlRef.
      * - ``--name "STRING"``
        - The new name for the microservice container. The name will appear in the command center and studio. 
      * - ``-path, --icon-file "FILE PATH"``
@@ -1618,7 +1618,7 @@ Add
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``--port INTEGER``
        - The port that the version will run on. This will either be set in your code or be your programming language’s default port.
      * - ``--editor-port INTEGER``
@@ -1688,7 +1688,7 @@ Download
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to edit. For example, ``--version "9.9.9"``.
      * - ``--path "FILE PATH"``
@@ -1718,7 +1718,7 @@ Exec
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to edit. For example, ``--version "9.9.9"``.
      * - ``--json``
@@ -1760,7 +1760,7 @@ Force
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
      * - ``--help``
@@ -1800,7 +1800,7 @@ Logs
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice whose logs you want to see. For example, ``--version "9.9.9"``.
      * - ``--json``
@@ -1842,7 +1842,7 @@ Ls
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
@@ -1894,7 +1894,7 @@ Rm
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-vm, --version-mask INTEGER "*.*.*"``
        - Removes all versions with that major, minor, or patch. Use a * to indicate all. For example, ``--version-mask "9.*.*"`` will delete all versions with a major value of 9. "--version-mask *.*.*" will delete all versions.
      * - ``-v, --version INTEGER "*.*.*"``
@@ -1941,7 +1941,7 @@ Start
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to start. For example, ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}"``
@@ -1986,7 +1986,7 @@ Stop
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to stop. For example, ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}"``
@@ -2031,7 +2031,7 @@ Update
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The microservice container you want to edit.
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to update. For example, ``--version "9.9.9"``.
      * - ``-l, --label "[prod|dev|old]"``
@@ -2308,14 +2308,14 @@ Access
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-c, --container ID || Name``
-       - The widget container you want to edit.
-     * - ``--add ID || Name``
-       - The studio or command center whom with you want to **share**.
-     * - ``--rm ID || Name``
-       - The studio or command center whom with you want to **unshare**.
+     * - ``-c, --container ID``
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
+     * - ``--add ID``
+       - The studio or command center whom with you want to **share**. You can pass either the ID or Name.
+     * - ``--rm ID``
+       - The studio or command center whom with you want to **unshare**. You can pass either the ID or Name.
      * - ``--absolute ID``
-       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*. You can pass either the ID or Name.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{failed} {resultingGrantees}"``. 
      * - ``--json``
@@ -2452,7 +2452,7 @@ Rm
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
@@ -2494,7 +2494,7 @@ Update
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``--name "STRING"``
        - The new name for the widget container. The name will appear in the command center and studio. 
      * - ``-path, --icon-file "FILE PATH"``
@@ -2561,7 +2561,7 @@ Add
      * - ``--is-editable``
        - Marks the widget version as editable. Editable versions can be edited through the Visual Studio Code Luma extension.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-path, --container-file-path "FILE PATH"``
        - The absolute path where the widget tar file is located. For example: ``-path "C:/Users/User/Desktop/Folder/widget.tar"``. 
      * - ``-image, --docker-image "FILE PATH"``
@@ -2625,7 +2625,7 @@ Download
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to edit. For example, ``--version "9.9.9"``.
      * - ``--path "FILE PATH"``
@@ -2655,7 +2655,7 @@ Exec
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to edit. For example, ``--version "9.9.9"``.
      * - ``--json``
@@ -2697,7 +2697,7 @@ Force
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
      * - ``--help``
@@ -2747,7 +2747,7 @@ Logs
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget whose logs you want to see. For example, ``--version "9.9.9"``.
      * - ``--json``
@@ -2790,7 +2790,7 @@ Ls
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container whose version you want to see.
+       - The widget container whose version you want to see. You can pass either the ID or UrlRef.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
@@ -2842,7 +2842,7 @@ Rm
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-vm, --version-mask INTEGER "*.*.*"``
        - Removes all version with that major, minor, or path. Use a * to indicate all. For example, ``--version-mask "9.*.*"`` will delete all versions with a major value of 9. ``--version-mask "*.*.*"`` will delete all versions.
      * - ``-v, --version INTEGER "*.*.*"``
@@ -2889,7 +2889,7 @@ Start
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to start. For example: ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}"``
@@ -2934,7 +2934,7 @@ Stop
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to stop. For example: ``--version "9.9.9"``.
      * - ``-f, --format "{JSON VALUE}"``
@@ -2979,7 +2979,7 @@ Update
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
-       - The widget container you want to edit.
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to update. For example: ``--version "9.9.9"``.
      * - ``-l, --label "[prod|dev|old]"``
