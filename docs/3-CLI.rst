@@ -1803,10 +1803,8 @@ Logs
        - The microservice container you want to edit. You can pass either the ID or UrlRef.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice whose logs you want to see. For example, ``--version "9.9.9"``.
-     * - ``--json``
-       - Returns the raw JSON payload. 
-     * - ``--table`` 
-       - Returns a table with several basic JSON values.
+     * - ``-n, --tail-number INTEGER``
+       - The number of log lines you want to display.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
