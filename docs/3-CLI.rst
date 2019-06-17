@@ -809,11 +809,11 @@ Add
      * - ``-v, --version INTEGER "*.*.*"``
        - What you want the component set version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch``
-       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to "1.1.2".
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to 1.1.2.
      * - ``--minor``
-       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to "1.2.0".
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to 1.2.0.
      * - ``--major``
-       - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to "2.0.0".
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to 2.0.0.
      * - ``--css-includes "STRING"``
        - CSS includes for the version.
      * - ``--direct-includes "STRING"``
@@ -1618,15 +1618,15 @@ Add
      * - ``-path, --container-file-path "FILE PATH"``
        - The absolute path where the microservice tar file is located. For example: ``-path "C:/Users/User/Desktop/Folder/microservice.tar"``. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. ``--from-version "*.*.*" will take the most recent version.
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. ``--from-version "*.*.*"`` will take the most recent version.
      * - ``-v, --version INTEGER "*.*.*"``
        - What you want the microservice's version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch INTEGER``
-       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to "1.1.2".
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to 1.1.2.
      * - ``--minor INTEGER``
-       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to "1.2.0".
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to 1.2.0.
      * - ``--major INTEGER``
-       - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to "2.0.0".
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to 2.0.0.
      * - ``--env-var "{"STRING":"KEY"}"``
        - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Environment Variables>`. 
      * - ``-l, --label "[prod|dev|old]"``
@@ -2555,15 +2555,15 @@ Add
      * - ``-image, --docker-image "FILE PATH"``
        - The absolute path where the widget docker file is located. For example: ``-image "C:/Users/User/Desktop/Folder/docker.py"``. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. ``--version-mask "*.*.*" will take the most recent version.`` 
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. ``--version-mask "*.*.*"`` will take the most recent version. 
      * - ``-v, --version INTEGER "*.*.*"``
        - What you want the widget’s version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch``
-       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to "1.1.2".
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to 1.1.2.
      * - ``--minor``
-       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to "1.2.0".
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to 1.2.0.
      * - ``--major``
-       - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to "2.0.0".
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to 2.0.0.
      * - ``--env-var "{"STRING":"KEY"}"``
        - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Environment Variables>`.
      * - ``-l, --label "[prod|dev|old]"``
