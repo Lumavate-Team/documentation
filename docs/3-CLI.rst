@@ -567,7 +567,7 @@ Access
      * - ``--rm ID``
        - The studio or command center you want to **unshare** with. You can pass either the ID or Name.
      * - ``--absolute ID``
-       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*. You can pass either the ID or Name.
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores* ``--add`` *and* ``--rm`` *commands*. You can pass either the ID or Name.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{failed} {unsharedFrom}"`` 
      * - ``--json``
@@ -1377,7 +1377,7 @@ Access
      * - ``--rm ID``
        - The studio or command center with whom you want to **unshare**. You can pass either the ID or Name.
      * - ``--absolute ID``
-       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*. You can pass either the ID or Name.
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores* ``--add`` *and* ``--rm`` *commands*. You can pass either the ID or Name.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{sharedWith} {failed}"``.
      * - ``--json``
@@ -2315,7 +2315,7 @@ Access
      * - ``--rm ID``
        - The studio or command center whom with you want to **unshare**. You can pass either the ID or Name.
      * - ``--absolute ID``
-       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*. You can pass either the ID or Name.
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores* ``--add`` *and* ``--rm`` *commands*. You can pass either the ID or Name.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{failed} {resultingGrantees}"``. 
      * - ``--json``
