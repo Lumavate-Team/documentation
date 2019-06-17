@@ -28,7 +28,7 @@ C#
  
  C# signer library: Coming Soon.
  
- Base widget container: https://github.com/Lumavate-Team/widget-base-csharp
+ Starter container: https://github.com/Lumavate-Team/widget-base-csharp
  
 
 .. _Go Sample:
@@ -42,7 +42,7 @@ GO
  
  Go signer library: Coming Soon.
 
- Base widget container: https://github.com/Lumavate-Team/widget-base-go
+ Starter container: https://github.com/Lumavate-Team/widget-base-go
 
 .. _python sample:
 
@@ -55,14 +55,14 @@ Python
  
  Python signer library: https://github.com/Lumavate-Team/python-signer
 
- Base widget container: https://github.com/Lumavate-Team/python-hello
+ Starter container: https://github.com/Lumavate-Team/python-hello
 
 JSON
 ^^^^
 
  Example component set containers for use with JSON. 
 
- Base component set container: Coming Soon. 
+ Starter component set container: Coming Soon. 
 
 ________________________________________________________________________________________________________________________________________
 
