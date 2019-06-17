@@ -1628,7 +1628,7 @@ Add
      * - ``--major INTEGER``
        - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to 2.0.0.
      * - ``--env-var "{"STRING":"KEY"}"``
-       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Environment Variables>`. 
+       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`. 
      * - ``-l, --label "[prod|dev|old]"``
        - The status of the version as either ready-for-production, in-development, or deprecated. respectively.
      * - ``-f, --format "{JSON VALUE}"``
@@ -2565,7 +2565,7 @@ Add
      * - ``--major``
        - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to 2.0.0.
      * - ``--env-var "{"STRING":"KEY"}"``
-       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Environment Variables>`.
+       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`.
      * - ``-l, --label "[prod|dev|old]"``
        - The status of the version as ready-for-production, in-development, or deprecated respectively.
      * - ``-f, --format "{JSON VALUE}"``
