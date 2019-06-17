@@ -1319,6 +1319,18 @@ Response:
 .. list-table:: Options 
     :widths: 10 20
      
+    * - ``-p, --profile "STRING"``
+      - The profile associated with the studio or command center you want to edit.
+    * - ``-f, --format "{JSON VALUE}"``
+      - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+    * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+      - Returns results that match the filter criteria. For example: ``--filter "name=Creatures"``. Additional filter options are available in the :ref:`Ls Filters` section.
+    * - ``--page INTEGER``
+      - The results page you want to view.
+    * - ``--pagesize INTEGER``
+      - The number of results you want to show per page.
+    * - ``--json``
+      - Returns the raw JSON payload. 
     * - ``--help``
       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
