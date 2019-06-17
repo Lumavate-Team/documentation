@@ -383,7 +383,6 @@ Command Index:
  #. :ref:`Microservice-version`
  #. :ref:`Org`
  #. :ref:`Profile`
- #. :ref:`Version`
  #. :ref:`Widget`
  #. :ref:`Widget-version`
  #. :ref:`Ls Filters`
@@ -569,8 +568,8 @@ Access
        - The studio or command center you want to **unshare** with.
      * - ``--absolute ID || Name``
        - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
-     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{failed}, {unsharedFrom}"`` 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{failed} {unsharedFrom}"`` 
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -610,14 +609,14 @@ Add
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``--name “STRING”``
+     * - ``--name "STRING"``
        - What you want to call the component set container. The name will appear in the command center and studio.
-     * - ``--url-ref “STRING”``
+     * - ``--url-ref "STRING"``
        - What the tool will be referenced by in URLs. For example: urlToExperience.com/url-ref or ic/url-ref. It can contain only lowercase letters, numbers, and dashes.
-     * - ``-path, --icon-file “FILE PATH”``
-       - The absolute path where the icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG.
-     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``
+     * - ``-path, --icon-file "FILE PATH"``
+       - The absolute path where the icon SVG file is located. For example: ``-path "C:/Users/User/Desktop/Folder/icon.SVG"``.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -656,10 +655,10 @@ Ls
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {id}"``
-     * - ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
-       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{createdBy} {id}"``
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "urlRef=firebreath"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER`` 
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -704,8 +703,8 @@ Rm
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
        - The component set container you want to edit.
-     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {urlRef}"`` 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{createdBy} {urlRef}"`` 
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -746,10 +745,10 @@ Update
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
        - The component-set container you want to edit.
-     * - ``--name “STRING”``
+     * - ``--name "STRING"``
        - The new name for the component set container. The name will appear in the command center and studio. 
-     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{createdBy}, {id}"``
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{createdBy} {id}"``
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -783,7 +782,7 @@ Add
      $ luma component-set-version add 
        Profile: dragon
        Component set: 999
-       Component set file: “C:\fantasy\creatures\dragons\firebreather.zip”
+       Component set file: C:\fantasy\creatures\dragons\firebreather.zip
        Label: prod
        Version: 9.9.9
  
@@ -803,26 +802,26 @@ Add
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
        - The component set container you want to edit.
-     * - ``-path, --component-set-file-path “FILE PATH”``
-       - The absolute path where the component set zip file is located. For example: C:/Users/User/Desktop/Folder/file.zip.  
+     * - ``-path, --component-set-file-path "FILE PATH"``
+       - The absolute path where the component set zip file is located. For example: ``-path "C:/Users/User/Desktop/Folder/file.zip"``. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9.
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. ``--from-version "*.*.*"`` will take the most recent version. 
      * - ``-v, --version INTEGER "*.*.*"``
        - What you want the component set version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch``
-       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version "1.1.1" --patch`` sets the version number to "1.1.2".
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to "1.1.2".
      * - ``--minor``
-       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version "1.1.1" --minor`` sets the version number to "1.2.0".
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to "1.2.0".
      * - ``--major``
-       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version "1.1.1" --major`` sets the version number to "2.0.0".
-     * - ``--css-includes “STRING”``
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to "2.0.0".
+     * - ``--css-includes "STRING"``
        - CSS includes for the version.
-     * - ``--direct-includes “STRING”``
+     * - ``--direct-includes "STRING"``
        - Direct includes for the version. 
-     * - ``-l, --label “[prod, dev, old]”``
+     * - ``-l, --label "[prod|dev|old]"``
        - The status of the version as either ready-for-production, in-development, or deprecated respectively.
-     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {CreatedBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -909,10 +908,10 @@ Ls
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
        - The component set container you want to edit.
-     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
-     * - ``--filter “{JSON VALUE=SPECIFIC VALUE}”``
-       - Returns results that match the filter criteria. For example: ``--filter "{label=prod}"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {CreatedBy}"``. 
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "label=prod"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -929,7 +928,7 @@ Ls
     Use ``--format`` to see JSON values organized in table format.
 
  .. note::
-    Version number is filtered as “major=*&minor=*&patch=*”.
+    Version number is filtered as "major=*&minor=*&patch=*".
 
 .. _Component-set-version Rm:
 
@@ -962,11 +961,11 @@ Rm
      * - ``-cs, --component-set ID``
        - The component set container you want to edit.
      * - ``-vm, --version-mask INTEGER "*.*.*"``
-       - Removes all version with that major, minor, or path. Use a * to indicate all. Sending ``"*.*.*"`` will delete all version.
+       - Removes all version with that major, minor, or path. Use a * to indicate all. For example, ``--version-mask "9.*.*"`` will delete all versions that have a major value of 9. ``--version-mask "*.*.*"`` will delete all version.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the component set you want to remove. For example, ``--version "9.9.9"``.
-     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {CreatedBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -1010,10 +1009,10 @@ Update
        - The component set container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the component set you want to edit. For example, ``--version "9.9.9"``.
-     * - ``-l, --label "[prod, dev, old]"```
+     * - ``-l, --label "[prod|dev|old]"```
        - The new status of the version. It can either be ready-for-production, in-development, or deprecated respectively.
-     * - ``-f, --format “{JSON VALUE}, {JSON VALUE}”``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {CreatedBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {CreatedBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table``
@@ -1105,8 +1104,8 @@ Ls
  .. list-table:: Options 
      :widths: 10 20
 
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{app}, {audience}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{app} {audience}"``. 
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--help``
@@ -1117,26 +1116,32 @@ Ls
 Rm
 ++
 
- Removes an environment. 
+Removes an environment. The user will be asked if they want to delete the profiles associated with the environment. If the user sends yes, the environment and associated profiles will be deleted. If the user sends no, the environment will be deleted, but the associated profiles will be retained. Any response that is not understood defaults to no.  
 
  Example:
 
  .. code-block:: bash
    
-     $ luma env rm
-       Name: Fantasy
+     $ luma env rm Fantasy
+       The following profiles are using this environment. Would you like to delete these profiles?
+       ['dragon', 'dragon-two']
+
+       Yes/No: Yes
+
  
  Response: 
  
  .. code-block:: bash
- 
-     {"app": "https://not-a-realm.fantasy.lumavate-type.com", "audience": "https://fantasy.lumavate-type.com/notanapp", "clientId": "NotAClientIdELhuj2eIxKILomCdA", "clientSecret": "NotAClientSecretCbhNEgmEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK", "envName": "Fantasy", "token": "fantasy-lumavate-type.notatoken.com"}
+     
+    Deleted Environment: Fantasy
+
+    Deleted Profiles: ['dragon', 'dragon-two']
 
  .. list-table:: Options 
      :widths: 10 20
 
-     * - ``--env-name "STRING"``
-       - The name of the environment you want to remove.
+     * - ``--force``
+       - Skips the confirmation when deleting environments with profiles. 
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -1162,7 +1167,7 @@ Export
    
      $ luma experience export
        Profile: dragon
-       Export file: “C:\fantasy\creatures\dragon\egg.json”
+       Export file: C:\fantasy\creatures\dragon\egg.json
        Label: Creatures
  
  Response:
@@ -1181,7 +1186,7 @@ Export
      * - ``-n, --name "STRING"``
        - The experience's referenced name in the studio designer URL.
      * - ``-path, --export-file "FILE PATH"``
-       - The absolute path where the experience JSON file will be saved. For example: C:/Users/User/Desktop/experience.json. 
+       - The absolute path where the experience JSON file will be saved. For example: ``-path "C:/Users/User/Desktop/experience.json"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--help``
@@ -1205,7 +1210,7 @@ Import
       Profile: dragon
       Label: Dragon Hatchling
       Activation code: hatch
-      Import file: "C:\fantasy\creatures\dragons\egg.json"
+      Import file: C:\fantasy\creatures\dragons\egg.json
       Collection Name: Creatures
  
  Response:
@@ -1228,7 +1233,7 @@ Import
        - What description will accompany the experience. This will appear when studio users hover over an experience. 
      * - ``-ci, --collection-id ID``
        - The collection where you want to add the experience. The collection must exist before importing the experience.
-     * - ``--device "[mobile, tablet, web]"``
+     * - ``--device "[mobile|tablet|web]"``
        - What device the experience will be previewed on.
      * - ``-cn, --collection-name "STRING"``
        - The name of the collection where you want to add the experience. The collection must exist before importing the experience.  
@@ -1239,7 +1244,7 @@ Import
      * - ``-ru, --redirect-url "URL"``
        - Adds a redirect URL to the experience. The experience will be redirected to the URL when the experience is rendered.
      * - ``-path, --import-file "FILE PATH"``
-       - The absolute path where the experience file is located. For example: C:/Users/User/Desktop/Folder/experience.json. 
+       - The absolute path where the experience file is located. For example: ``-path "C:/Users/User/Desktop/Folder/experience.json"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--help``
@@ -1275,10 +1280,10 @@ Ls
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
-     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{name=drag}"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "name=Dragons"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -1361,8 +1366,8 @@ Access
        - The studio or command center with whom you want to **unshare**.
      * - ``--absolute ID``
        - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{sharedWith}, {failed}"``.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{sharedWith} {failed}"``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1409,9 +1414,9 @@ Add
      * - ``--url-ref "STRING"``
        - What the microservice will be referenced by in URLs. For example: https://urlToExperience.com/url-ref or ic/url-ref.
      * - ``-path, --icon-file "FILE PATH"``
-       - The absolute path where the icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
+       - The absolute path where the icon SVG file is located. For example: ``-path "C:/Users/User/Desktop/Folder/icon.SVG"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1450,10 +1455,10 @@ Ls
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit. 
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
-     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{urlRef=firebreath}"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "urlRef=world"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -1498,8 +1503,8 @@ Rm
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
        - The microservice container you want to remove.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1543,9 +1548,9 @@ Update
      * - ``--name "STRING"``
        - The new name for the microservice container. The name will appear in the command center and studio. 
      * - ``-path, --icon-file "FILE PATH"``
-       - The absolute path where the new icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
+       - The absolute path where the new icon SVG file is located. For example: ``-path "C:/Users/User/Desktop/Folder/icon.SVG"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1583,7 +1588,7 @@ Add
        Label: prod
        Version: 9.9.9 
        Port: 5000
-       Microservice-file-path: "C:\fantasy\creatures\dragons\DragonFactSheet.gz"
+       Container-file-path: C:\fantasy\creatures\dragons\DragonFactSheet.gz
  
  Response:
  
@@ -1609,25 +1614,25 @@ Add
      * - ``--is-editable``
        - Marks the microservice version as editable. Editable versions can be edited through the Visual Studio Code Luma extension.
      * - ``-image, --docker-image "FILE PATH"``
-       - The absolute path where the microservice Docker file is located. For example: C:/Users/User/Desktop/Folder/dockerfile.py. 
-     * - ``-path, --microservice-file-path "FILE PATH"``
-       - The absolute path where the microservice tar file is located. For example: C:/Users/User/Desktop/Folder/microservice.tar. 
+       - The absolute path where the microservice Docker file is located. For example: ``-image "C:/Users/User/Desktop/Folder/dockerfile.py"``. 
+     * - ``-path, --container-file-path "FILE PATH"``
+       - The absolute path where the microservice tar file is located. For example: ``-path "C:/Users/User/Desktop/Folder/microservice.tar"``. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9.
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. ``--from-version "*.*.*" will take the most recent version.
      * - ``-v, --version INTEGER "*.*.*"``
        - What you want the microservice's version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch INTEGER``
-       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version "1.1.1" --patch`` sets the version number to "1.1.2".
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to "1.1.2".
      * - ``--minor INTEGER``
-       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version "1.1.1" --minor`` sets the version number to "1.2.0".
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to "1.2.0".
      * - ``--major INTEGER``
-       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version "1.1.1" --major`` sets the version number to "2.0.0".
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to "2.0.0".
      * - ``--env-var "{"STRING":"KEY"}"``
        - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Environment Variables>`. 
-     * - ``-l, --label "[dev, old, prod]"``
+     * - ``-l, --label "[prod|dev|old]"``
        - The status of the version as either ready-for-production, in-development, or deprecated. respectively.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
      * - ``--json``
        - Returns the raw JSON payload.
      * - ``--table`` 
@@ -1675,7 +1680,7 @@ Download
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to edit. For example, ``--version "9.9.9"``.
      * - ``--path "FILE PATH"``
-       - The absolute path where the microservice zip file will be saved. For example: C:/Users/User/Desktop/Folder/microservice.zip. Defaults to the desktop if no path is specified.
+       - The absolute path or the relative path from the Desktop where the microservice zip file will be saved. For example, ``--path "C:/Users/User/Desktop/Folder/microservice.zip"`` or ``--path "/Folder/microservice.zip"`` Defaults to the Desktop if no path is specified.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -1826,10 +1831,10 @@ Ls
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
        - The microservice container you want to edit.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
-     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{id=999}"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "id=999"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -1879,11 +1884,11 @@ Rm
      * - ``-c, --container ID``
        - The microservice container you want to edit.
      * - ``-vm, --version-mask INTEGER "*.*.*"``
-       - Removes all versions with that major, minor, or patch. Use a * to indicate all. Sending "*.*.*" will delete all versions.
+       - Removes all versions with that major, minor, or patch. Use a * to indicate all. For example, ``--version-mask "9.*.*"`` will delete all versions with a major value of 9. "--version-mask *.*.*" will delete all versions.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to remove. For example, ``--version "9.9.9"``.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1927,8 +1932,8 @@ Start
        - The microservice container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to start. For example, ``--version "9.9.9"``.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -1972,8 +1977,8 @@ Stop
        - The microservice container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to stop. For example, ``--version "9.9.9"``.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -2017,10 +2022,10 @@ Update
        - The microservice container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the microservice you want to update. For example, ``--version "9.9.9"``.
-     * - ``-l, --label "[dev, old, prod]"``
+     * - ``-l, --label "[prod|dev|old]"``
        - The new status of the version. It can be ready-for-production, in-development, or deprecated respectively.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table`` 
@@ -2068,10 +2073,10 @@ Child-orgs
 
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
-     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{instanceType=studio}"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "instanceType=studio"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--help``
@@ -2105,10 +2110,10 @@ Ls
 
      * - ``--env "STRING"``
        - The name of the environment whose organizations you want listed.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {isTest}"``. 
-     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{isTest=None}"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {isTest}"``. 
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "isTest=None"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--help``
@@ -2162,8 +2167,8 @@ Add
 
      * - ``--profile-name "STRING"``
        - What you want to call the profile in the CLI. The profile will be associated with a studio or command center of your choosing, so keep that in mind when naming the profile.  
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. The only options are ``--format "{env}, {orgName}, {orgId}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. The only options are ``--format "{env} {orgName} {orgId}"``. 
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -2192,8 +2197,8 @@ Ls
  .. list-table:: Options 
      :widths: 10 20
  
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{env}, {orgName}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{env} {orgName}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--help``
@@ -2257,33 +2262,6 @@ Rm
 
 _______________________________________________________________________________________________________________________________________
 
-.. _Version:
-
-Version
-^^^^^^^
-
-Lists the luma version that the current machine is on.
-
-Example:
-
-.. code-block:: bash
-   
-    $ luma version
-
-Response:
-
-.. code-block:: bash
-
-    Lumavate CLI Version: 0.9.2
-
-.. list-table:: Options 
-     :widths: 10 20
- 
-     * - ``--help``
-       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
-
-_______________________________________________________________________________________________________________________________________
-
 .. _Widget:
 
 Widget
@@ -2318,16 +2296,16 @@ Access
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-c, --container ID``
+     * - ``-c, --container ID || Name``
        - The widget container you want to edit.
-     * - ``--add ID``
+     * - ``--add ID || Name``
        - The studio or command center whom with you want to **share**.
-     * - ``--rm ID``
+     * - ``--rm ID || Name``
        - The studio or command center whom with you want to **unshare**.
      * - ``--absolute ID``
        - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores ``--add`` and ``--rm`` commands*.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{failed}, {resultingGrantees}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{failed} {resultingGrantees}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2374,9 +2352,9 @@ Add
      * - ``--url-ref "STRING"``
        - url-ref: What the widget will be referenced by in URLs. For example: https://urlToExperience.com/url-ref or ic/url-ref. It can contain only lowercase letters, numbers, or dashes. 
      * - ``-path, --icon-file "FILE PATH"``
-       - The absolute path where the icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+       - The absolute path where the icon SVG file is located. For example: ``-path "C:/Users/User/Desktop/Folder/icon.SVG"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2415,10 +2393,10 @@ Ls
  
      * - ``-p, --profile "STRING"``
        - The profile associated with the studio or command center you want to edit.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
-     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"`` 
-       - Returns results that match the filter criteria. For example: ``--filter "{name=Hydra}"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"`` 
+       - Returns results that match the filter criteria. For example: ``--filter "name=Hydra"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -2463,8 +2441,8 @@ Rm
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
        - The widget container you want to edit.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2508,9 +2486,9 @@ Update
      * - ``--name "STRING"``
        - The new name for the widget container. The name will appear in the command center and studio. 
      * - ``-path, --icon-file "FILE PATH"``
-       - The absolute path where the new icon SVG file is located. For example: C:/Users/User/Desktop/Folder/icon.SVG. 
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+       - The absolute path where the new icon SVG file is located. For example: ``-path "C:/Users/User/Desktop/Folder/icon.SVG"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2547,7 +2525,7 @@ Add
        Container: 999
        Label: prod 
        Version Number: 9.9.9
-       Widget File Path: "C:\fantasy\creatures\dragons\hydra.gz"
+       Container File Path: C:\fantasy\creatures\dragons\hydra.gz
        Port: 8080 
  
  Response:
@@ -2572,26 +2550,26 @@ Add
        - Marks the widget version as editable. Editable versions can be edited through the Visual Studio Code Luma extension.
      * - ``-c, --container ID``
        - The widget container you want to edit.
-     * - ``-path, --widget-file-path "FILE PATH"``
-       - The absolute path where the widget tar file is located. For example: C:/Users/User/Desktop/Folder/widget.tar. 
+     * - ``-path, --container-file-path "FILE PATH"``
+       - The absolute path where the widget tar file is located. For example: ``-path "C:/Users/User/Desktop/Folder/widget.tar"``. 
      * - ``-image, --docker-image "FILE PATH"``
-       - The absolute path where the widget docker file is located. For example: C:/Users/User/Desktop/Folder/docker.py. 
+       - The absolute path where the widget docker file is located. For example: ``-image "C:/Users/User/Desktop/Folder/docker.py"``. 
      * - ``-fv, --from-version INTEGER "*.*.*"``
-       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. 
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. ``--version-mask "*.*.*" will take the most recent version.`` 
      * - ``-v, --version INTEGER "*.*.*"``
        - What you want the widget’s version number to be. For example, ``--version "9.9.9"``.
      * - ``--patch``
-       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``from-version "1.1.1" --patch`` sets the version number to "1.1.2".
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to "1.1.2".
      * - ``--minor``
-       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``from-version "1.1.1" --minor`` sets the version number to "1.2.0".
+       - Sets the version number by increasing the from-version’s number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to "1.2.0".
      * - ``--major``
-       - Sets the version number by increasing the from-version number’s major value by one. For example, ``from-version "1.1.1" --major`` sets the version number to "2.0.0".
+       - Sets the version number by increasing the from-version number’s major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to "2.0.0".
      * - ``--env-var "{"STRING":"KEY"}"``
        - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Environment Variables>`.
-     * - ``-l, --label "[dev, old, prod]"``
+     * - ``-l, --label "[prod|dev|old]"``
        - The status of the version as ready-for-production, in-development, or deprecated respectively.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2639,7 +2617,7 @@ Download
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to edit. For example, ``--version "9.9.9"``.
      * - ``--path "FILE PATH"``
-       - The absolute path where the widget zip file will be saved. For example: C:/Users/User/Desktop/Folder/widget.zip. Defaults to the desktop if no path is specified.
+       - The absolute path where the widget zip file will be saved. For example: ``--path "C:/Users/User/Desktop/Folder/widget.zip"``. Defaults to the desktop if no path is specified.
      * - ``--help``
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
@@ -2801,10 +2779,10 @@ Ls
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
        - The widget container whose version you want to see.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
-     * - ``--filter "{JSON VALUE=SPECIFIC VALUE}"``
-       - Returns results that match the filter criteria. For example: ``--filter "{actualState=running}"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "actualState=running"``. Additional filter options are available in the :ref:`Ls Filters` section.
      * - ``--page INTEGER``
        - The results page you want to view.
      * - ``--pagesize INTEGER``
@@ -2854,11 +2832,11 @@ Rm
      * - ``-c, --container ID``
        - The widget container you want to edit.
      * - ``-vm, --version-mask INTEGER "*.*.*"``
-       - Removes all version with that major, minor, or path. Use a * to indicate all. Sending "*.*.*" will delete all versions.
+       - Removes all version with that major, minor, or path. Use a * to indicate all. For example, ``--version-mask "9.*.*"`` will delete all versions with a major value of 9. ``--version-mask "*.*.*"`` will delete all versions.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to remove. For example: ``--version "9.9.9"``.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2902,8 +2880,8 @@ Start
        - The widget container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to start. For example: ``--version "9.9.9"``.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2947,8 +2925,8 @@ Stop
        - The widget container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to stop. For example: ``--version "9.9.9"``.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -2992,10 +2970,10 @@ Update
        - The widget container you want to edit.
      * - ``-v, --version INTEGER "*.*.*"``
        - The version number of the widget you want to update. For example: ``--version "9.9.9"``.
-     * - ``-l, --label "[dev, old, prod]"``
+     * - ``-l, --label "[prod|dev|old]"``
        - The new status of the version. It can be ready-for-production, in-development, or deprecated respectively.
-     * - ``-f, --format "{JSON VALUE}, {JSON VALUE}"``
-       - Returns a table with the requested JSON values. For example: ``--format "{id}, {createdBy}"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
        - Returns the raw JSON payload. 
      * - ``--table``
@@ -3029,11 +3007,11 @@ Greater Than (gt)
 
  Looks for anything that contains more than the specified value. 
 
- example:
+ Example:
 
  .. code-block:: bash
    
-    $ luma profile ls --filter “name=gt:dragon”
+    $ luma profile ls --filter "name=gt:dragon"
     
  Response:
  
@@ -3049,11 +3027,11 @@ Less Than (lt)
 
  Looks for anything that contains less than the specified value.
 
- example:
+ Example:
 
  .. code-block:: bash
    
-    $ luma profile ls --filter “name=lt:dragon”
+    $ luma profile ls --filter "name=lt:dragon"
     
  Response:
  
@@ -3069,11 +3047,11 @@ Greater Than Or Equal To (gte)
 
  Looks for anything that contains either the specified value or more than the specified value.
 
- example:
+ Example:
 
  .. code-block:: bash
    
-    $ luma profile ls --filter “name=gte:dragon”
+    $ luma profile ls --filter "name=gte:dragon"
     
  Response:
  
@@ -3090,11 +3068,11 @@ Less Than Or Equal To (lte)
 
  Looks for anything that contains either the specified value or less than the specified value.
 
- example:
+ Example:
 
  .. code-block:: bash
    
-    $ luma profile ls --filter “name=lte:dragon”
+    $ luma profile ls --filter "name=lte:dragon"
 
  Response:
  
@@ -3111,11 +3089,11 @@ Containing (ct)
 
  Looks for anything that contains the specified value.
 
- example:
+ Example:
 
  .. code-block:: bash
    
-    $ luma profile ls --filter “name=ct:dragon”
+    $ luma profile ls --filter "name=ct:dragon"
     
  Response:
  
@@ -3134,6 +3112,25 @@ Version Commands
 
 Commands that modify the CLI or luma version.
 
+.. _Version:
+
+Version
++++++++
+
+Lists the luma version that the current machine is on.
+
+Example:
+
+.. code-block:: bash
+   
+   $ luma --version
+
+Response:
+
+.. code-block:: bash
+
+   Lumavate CLI Version: 0.11.0
+       
 .. _Version Commands Install:
 
 Install
@@ -3141,7 +3138,7 @@ Install
 
  Installs luma.
 
- example: 
+ Example: 
 
  .. code-block:: bash
    
@@ -3154,7 +3151,7 @@ Upgrade
 
  Updates the version of luma on the current machine. 
 
- example:
+ Example:
 
  .. code-block:: bash
    
@@ -3167,23 +3164,23 @@ Help
 
  Describes and lists the possible subcommands for any command. This can be done by running any command without passing in any options or by passing in the ``--help`` flag.
 
- example:
+ Example:
 
  .. code-block:: bash
     
-     $ luma
+    $ luma
      
-     OR 
+    OR 
      
-     $ luma <<Command>>
+    $ luma <<Command>>
      
-     OR
+    OR
      
-     $ luma <<Command>> --help 
+    $ luma <<Command>> --help 
      
-     OR
+    OR
      
-     $ luma <<Command>> <<Sub-Command>> --help
+    $ luma <<Command>> <<Sub-Command>> --help
 
 _______________________________________________________________________________________________________________________________________
 
