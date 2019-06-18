@@ -1732,40 +1732,6 @@ Exec
     ``--table`` is deprecated.
     Use ``--format`` to see JSON values organized in table format.
 
-.. _Microservice-version Force:
-
-Force
-+++++
-
- Restarts the microservice version's editor application without discarding code changes.
- 
- Example:
-
- .. code-block:: bash
-   
-     $ luma microservice-version force 
-       Profile: dragon 
-       Container: 999
-       Version Number: 9.9.9
-
- Response:
- 
- .. code-block:: bash
- 
-     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
-    
- .. list-table:: Options 
-     :widths: 10 20
-
-     * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you want to edit.
-     * - ``-c, --container ID``
-       - The microservice container you want to edit. You can pass either the ID or UrlRef.
-     * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
-     * - ``--help``
-       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
-
 .. _Microservice-version Logs:
 
 Logs
@@ -1862,6 +1828,41 @@ Ls
 
  .. note::
     Version number is filtered as ``"major=*&minor=*&patch=*"``.
+
+.. _Microservice-version Restart:
+
+Restart
++++++++
+
+ Restarts the microservice version's editor application without discarding code changes.
+ 
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma microservice-version restart 
+       Profile: dragon 
+       Container: 999
+       Version Number: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-06-18T19:06:37.832178+00:00', 'containerId': 9999, 'createdAt': '2019-06-18T14:55:30.243397+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-06-18T16:24:06.846847+00:00', 'editorPort': None, 'enforceRoutes': True, 'env': {}, 'expand': {}, 'id': 9999, 'instanceCount': 1, 'isEditable': False, 'label': 'prod', 'lastActualStatePayload': {'childHasError': False, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'running', 'eventName': 'do_validate', 'message': 'Container Version 9.9.9 (ID:9999) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d99r99a', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '9d9rag9o', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['running', 'validating', 'running']}}, 'lastModifiedAt': '2019-06-18T19:11:10.410143', 'lastModifiedBy': 30, 'major': 9, 'minor': 0, 'notes': None, 'patch': 9, 'platformVersion': 'v2', 'port': 9999, 'repositoryName': 'registry.realm.lumavate-type.com/factsheet', 'rewriteUrl': False, 'stateChangedAt': '2019-06-18T14:55:30.235871+00:00', 'tag': 'd9r9', 'versionNumber': '9.9.9'}}}
+
+    
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 .. _Microservice-version Rm:
 
@@ -2667,40 +2668,6 @@ Exec
     ``--table`` is deprecated.
     Use ``--format`` to see JSON values organized in table format.
 
-.. _Microservice-version Force:
-
-Force
-+++++
-
- Restarts the widget version's editor application without discarding code changes.
- 
- Example:
-
- .. code-block:: bash
-   
-     $ luma widget-version force 
-       Profile: dragon 
-       Container: 999
-       Version Number: 9.9.9
-
- Response:
- 
- .. code-block:: bash
- 
-     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
-    
- .. list-table:: Options 
-     :widths: 10 20
-
-     * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you want to edit.
-     * - ``-c, --container ID``
-       - The widget container you want to edit. You can pass either the ID or UrlRef.
-     * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
-     * - ``--help``
-       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
-
 .. _Widget-version Logs:
 
 Logs
@@ -2810,6 +2777,40 @@ Ls
 
  .. note::
     Version number is filtered as ``"major=*&minor=*&patch=*"``.
+
+.. _Microservice-version Restart:
+
+Restart
++++++++
+
+ Restarts the widget version's editor application without discarding code changes.
+ 
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma widget-version restart 
+       Profile: dragon 
+       Container: 999
+       Version Number: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+      {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-06-18T19:06:37.832178+00:00', 'containerId': 9999, 'createdAt': '2019-06-18T14:55:30.243397+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-06-18T16:24:06.846847+00:00', 'editorPort': None, 'enforceRoutes': True, 'env': {}, 'expand': {}, 'id': 9999, 'instanceCount': 1, 'isEditable': False, 'label': 'prod', 'lastActualStatePayload': {'childHasError': False, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'running', 'eventName': 'do_validate', 'message': 'Container Version 9.9.9 (ID:9999) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d99r99a', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '9d9rag9o', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['running', 'validating', 'running']}}, 'lastModifiedAt': '2019-06-18T19:11:10.410143', 'lastModifiedBy': 9, 'major': 9, 'minor': 0, 'notes': None, 'patch': 9, 'platformVersion': 'v2', 'port': 9999, 'repositoryName': 'registry.realm.lumavate-type.com/hydra', 'rewriteUrl': False, 'stateChangedAt': '2019-06-18T14:55:30.235871+00:00', 'tag': 'd9r9', 'versionNumber': '9.9.9'}}}
+    
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 .. _Widget-version Rm:
 
