@@ -227,14 +227,14 @@ Setting-Up Environments
    
      .. code-block:: bash
        
-         $ Env Name: <<name of environment in CLI>>
+         $ Env Name: <<What you want to name the environment>>
            App: <<environment Url>>
            Token: <<environment token>>
            Audience: <<envitoment audience>>
            Client id: <<user clientId>>
            Client secret: <<user clientSecret>>
           
-  #. The CLI should return the following with the env name you specified listed with the other environments showing that the new environment has been created. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
+  #. The CLI should return the following with the env name you specified listed with any other environments you have setup. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
   
      .. code-block:: bash
      
@@ -249,7 +249,7 @@ Setting-Up Environments
 Setting up Profiles
 ^^^^^^^^^^^^^^^^^^^
 
- Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or using :ref:`your own configuration<profile your own configuration>`. 
+ Profiles allow users to send commands to a specific organization. Most commands in the CLI require a profile. Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or using :ref:`your own configuration<profile your own configuration>`. 
 
  You will need to have :ref:`configured an environment<Provisioning Environments>` on your machine through the CLI to configure a profile.  
 
@@ -283,16 +283,16 @@ Setting up Profiles
 
   #. Paste the command into your Bash window and click enter.
   
-  #. You will be prompted to name the profile. It should look like this:
+  #. You will be prompted to name the profile. Profiles will be used to reference a command center or studio. The prompt should look like this:
    
      .. code-block:: bash
        
-         Profile Name: <<STRING Cannot have spaces or special characters in it. This is used to reference an organization.>>
+         Profile Name: <<What you want to call the profile. Cannot include spaces or special characters.>>
 
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
     
-  #. You will then be presented with a list of organizations associated with the preset Lumavate environment. Pick the one you want to edit with this profile, and enter its ID number. It should look like this:
+  #. You will then be presented with a list of organizations associated with the preset Lumavate environment. Pick the one you want to associate with this profile, and enter its ID number. The prompt should look like this:
    
      .. code-block:: bash
        
@@ -302,7 +302,7 @@ Setting up Profiles
 
           Org ID you want to associate with this profile: <<org id>>
   
-  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
+  #. The CLI should return the following with the environment, org name, and org id you associated the profile with. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
   
     .. code-block:: bash
     
@@ -319,16 +319,16 @@ Setting up Profiles
        
          $ luma profile add
 
-  #. You will be prompted to name your profile. It should look like this:
+  #. You will be prompted to name your profile. Profiles will be used to reference a command center or studio. The prompt should look like this:
    
      .. code-block:: bash
        
-         Profile Name: <<STRING Cannot have spaces or special characters in it. This is used to reference an organization.>>
+         Profile Name: <<What you want to call the profile. Cannot include spaces or special characters.>>
      
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
 
-  #. A list of environments will appear. Select which environment you wish to associate with the profile, and enter its Name:
+  #. A list of environments will appear. Select which environment you wish to associate with the profile, and enter its name. The prompt should look like this:
    
      .. code-block:: bash
        
@@ -338,7 +338,7 @@ Setting up Profiles
 
           Env: <<Env Name>>
 
-  #. A list of organizations will appear. Pick the one you want to edit with this profile, and enter its ID number. It should look like this:
+  #. A list of organizations will appear. Pick the one you want to edit with this profile, and enter its ID. The prompt should look like this:
    
      .. code-block:: bash
        
@@ -349,7 +349,7 @@ Setting up Profiles
 
           Org ID you want to associate with this profile: <<org id>>
          
-  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
+  #. The CLI should return the following with the environment, org name, and org id you associated the profile with. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
   
     .. code-block:: bash
     
@@ -366,7 +366,7 @@ ________________________________________________________________________________
 CLI Syntax
 ----------
 
-The CLI will allow users to interact with the Lumavate platform from a terminal. For setup instructions, look at the `Github readme <https://github.com/Lumavate-Team/documentation/blob/master/CLI.rst>`_ or the :ref:`CLI setup documentation <CLI>`. All the main commands are listed in the Command Index below. Each of the main commands has their subcommands listed in their section. 
+The CLI allows users to interact with the Lumavate platform from a terminal. For setup instructions, look at the `Github readme <https://github.com/Lumavate-Team/documentation/blob/master/CLI.rst>`_ or the :ref:`CLI setup documentation <CLI>`. All the main commands are listed in the Command Index below. Each of the main commands has their subcommands listed in their section. 
 
 Use the ``--help`` flag with the command for more information on how to use them and how to use their subcommands.
 
@@ -446,7 +446,7 @@ Get
   
  .. code-block:: bash
   
-      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/from.through.to.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=nota Signaturev8xyp8cnhE%3D&Expires=999993222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
+      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 90, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/from.through.to.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=nota Signaturev8xyp8cnhE%3D&Expires=999993222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 90, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
 
  .. list-table:: Options 
      :widths: 10 20
@@ -856,7 +856,7 @@ Components
  
  .. code-block:: bash
  
-     {"payload": {"data": {"componentSetId": 999, "createdAt": "2019-02-22T16:54:00.511074+00:00", "createdBy": 30, "directCssIncludes": [], "directIncludes": [], "distribution": "/iot/v1/dynamic-component-sets/firebreath/9.9.9", "expand": {"components": [{"icon": "/iot/v1/dynamic-component-sets/firebreath/9.9.9/icons/material.svg", "label": "No Template", "properties": [{"label": "No Template", "name": "selectOptions", "options": {"readonly": null}, "type": "text"}], "section": "Fire Breath (v9.9.9)", "tags": ["material", "body"], "template": "<div class=\"mdc-select\"><i class=\"mdc-select__dropdown-icon\"></i><select id=\"{{ componentData.Id }}\" class=\"mdc-select__native-control\"></div>", "type": "material-input-select"}]}, "id": 999, "label": "prod", "lastModifiedAt": "2019-02-22T16:54:00.511040+00:00", "lastModifiedBy": 30, "major": 9, "minor": 9, "patch": 9, "state": "available", "versionNumber": "9.9.9"}}}
+     {"payload": {"data": {"componentSetId": 999, "createdAt": "2019-02-22T16:54:00.511074+00:00", "createdBy": 99, "directCssIncludes": [], "directIncludes": [], "distribution": "/iot/v1/dynamic-component-sets/firebreath/9.9.9", "expand": {"components": [{"icon": "/iot/v1/dynamic-component-sets/firebreath/9.9.9/icons/material.svg", "label": "Fire Breath Properties", "properties": [{"label": "Color", "name": "firecolor", "type": "color"}], "section": "Power Properties", "tags": ["body"], "template": "<div class=\"firepower\"><svg class=\"fire-image\" color=\"{{ componentData.firecolor }}></svg></div>", "type": "material-input-select"}]}, "id": 999, "label": "prod", "lastModifiedAt": "2019-02-22T16:54:00.511040+00:00", "lastModifiedBy": 99, "major": 9, "minor": 9, "patch": 9, "state": "available", "versionNumber": "9.9.9"}}}
 
  .. list-table:: Options 
      :widths: 10 20
