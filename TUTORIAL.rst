@@ -123,7 +123,7 @@ Creating a Submit Button to store data
 5. Click Save
 
 Data Store service configuration to store answers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Follow these steps to add and configure the Data Store service on the Experience.
 
@@ -223,10 +223,12 @@ Displaying the results
    a. Component Id: ``rpt1``
    b. Row Template (set the field value to the HTML below):
 
-    ``<div style="width:100%;text-align:center;color:var(--accent-color-family-100)">
+  .. code-block:: html
+
+    <div style="width:100%;text-align:center;color:var(--accent-color-family-100)">
       <div style="font-size:2em;font-weight:bold">\{answer\}</div><br/>
       <div style="font-size:1.5em;color:var(--primary-color-family-100)">\{total\}</div><br/>
-    </div>``
+    </div>
 
   c. Body Row Start: ``3``
 
@@ -371,11 +373,26 @@ Click on the Lumavate Extension & proceed to install the latest version.
 
 Using the Command Palette, you should now be able to start using the ``Luma`` commands, which will enable you to:
 
-* Edit a running Container
-* Commit Container Changes - Make a development ready container read-only for use in Production mode
-* Follow Container Logs Real-Time
-* Add Packages - Add reference libraries as needed to the current running container
-* Download Source
+* ``Luma:Edit a Container`` - Select a DEV enabled container for editing directly via VS.Code.  The container must be in DEV status, have a valid Editor Port
+  enabled & set to enable Remote Development
+
+* ``Luma:Commit Container Changes`` - Commit the currently active container including the latest code changes.  This will execute a Docker commit to the image
+  & render the container read-only. This command is for when development is complete & the container is to be used as a PROD version.
+
+* ``Luma:Follow Container Logs`` - Select the container which is currently loaded within VS.Code to output the container logs to the terminal within VS.Code.
+  This stream logs real-time & is useful when debugging live code changes.
+
+* ``Luma:Add Package`` - Add reference libraries as needed to the current running container.  By default, this is supported for Python & Go containers.
+
+* ``Luma:Register Routes`` - If any routes are added to the container, the routes need to be registered with Lumavate in order to be accessible via the
+  platform.  Anytime a new route is added, this command should be run.
+
+* ``Luma:Download Application Source`` - Since the code is running within the container, this command will zip up the container contents and be downloaded
+  locally within a ZIP archive.
+
+* ``Luma:Restart App`` - If needed, this will restart the container in question, whilst keeping your current workspace connected to the editor of the
+  container.
 
 
-MORE TO COME SOON
+
+
