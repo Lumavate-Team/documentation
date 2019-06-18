@@ -298,8 +298,7 @@ Before You Start
 Before going forward, you will need to have the following available on your machine:
 
 * `VS.Code <https://code.visualstudio.com/download>`_
-* Lumavate CLI
-* Git - This example requires downloading code from Github.com
+* Lumavate CLI - The VS.Code Extension REQUIRES the Lumavate CLI to run
 
 
 Setting up your Profile
@@ -321,6 +320,10 @@ Set up your profile based on your "prod" environment as follows:
 .. code-block:: javascript
 
   Profile name: ``CommandCenter``
+
+.. note::
+  The name should reflect the Studio or Command Center you wish to connect via the CLI. In this case, we are creating a profile to connect to our main Command
+  Center
 
 You should then see your environments like the following:
 
@@ -376,19 +379,25 @@ Using the Command Palette, you should now be able to start using the ``Luma`` co
 * ``Luma:Edit a Container`` - Select a DEV enabled container for editing directly via VS.Code.  The container must be in DEV status, have a valid Editor Port
   enabled & set to enable Remote Development
 
+
 * ``Luma:Commit Container Changes`` - Commit the currently active container including the latest code changes.  This will execute a Docker commit to the image
   & render the container read-only. This command is for when development is complete & the container is to be used as a PROD version.
+
 
 * ``Luma:Follow Container Logs`` - Select the container which is currently loaded within VS.Code to output the container logs to the terminal within VS.Code.
   This stream logs real-time & is useful when debugging live code changes.
 
+
 * ``Luma:Add Package`` - Add reference libraries as needed to the current running container.  By default, this is supported for Python & Go containers.
+
 
 * ``Luma:Register Routes`` - If any routes are added to the container, the routes need to be registered with Lumavate in order to be accessible via the
   platform.  Anytime a new route is added, this command should be run.
 
+
 * ``Luma:Download Application Source`` - Since the code is running within the container, this command will zip up the container contents and be downloaded
   locally within a ZIP archive.
+
 
 * ``Luma:Restart App`` - If needed, this will restart the container in question, whilst keeping your current workspace connected to the editor of the
   container.
