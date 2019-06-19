@@ -208,7 +208,6 @@ Setting-Up Environments
           49 Sample Studio         studio       False
           
        .. topic:: Troubleshooting
-          
            If you do not see an organization you were expecting:
           
            #. Check that you were logged in as a user who was invited to the missing organization when you copied from the command center. 
@@ -281,7 +280,6 @@ Setting-Up Environments
           9   Dragon Studio         studio       False
           
        .. topic:: Troubleshooting
-          
            If you do not see an organization you were expecting:
           
            #. Check that you collected the clientId and clientSecret of a user who was invited to the missing organization. 
