@@ -220,7 +220,7 @@ Setting-Up Environments
 
   #. Log into the command center as a user who belongs to the organizations you want to modify with the CLI. 
      
-     .. figure:: ../images/environmentselect.PNG
+     .. figure:: ../images/enviromentselect.PNG
          :align: center
          :width: 400px
          :alt: Image of the Lumavate Organization Select Page.
@@ -305,7 +305,7 @@ Setting up Profiles
 
   #. Log into a Lumavate command center.
   
-     .. figure:: ../images/environmentselect.PNG
+     .. figure:: ../images/enviromentselect.PNG
          :align: center
          :width: 400px
          :alt: Image of the Lumavate Organization Select Page.
