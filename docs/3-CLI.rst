@@ -160,7 +160,7 @@ Setting-Up Environments
 
   #. Log into the command center you want to modify with the CLI.
   
-     .. figure:: ../images/environmentselect.PNG
+     .. figure:: ../images/enviromentselect.PNG
          :align: center
          :width: 400px
          :alt: Image of the Lumavate Organization Select Page.
