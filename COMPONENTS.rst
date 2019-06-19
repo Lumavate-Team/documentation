@@ -59,17 +59,42 @@ Metadata File
              "options": {},
            },
            {
-           // Array of Properties to be shown within the studio
+             // Array of component properties. 
+             // These properties only apply to this component.
+             // Will be shown when this component is added to a compatible widget or microservice in the studio.
            }
          ],
          
-         "template": "<component-tag property1='{{componentData.property1}}'></component-tag><Additional template information can be found below.>"
+         "template": "<component-tag property1='{{componentData.propertyName}}'></component-tag><Additional template information can be found below.>"
+        },
+        {
+          // Array of components. 
+          // Will be a selectable option within compatible widgets or microservices in the studio.
         }
       ],
-      "styleData": []  
+      "styleData": 
+      [
+        {
+          "classification": "Tab name",
+          "section": "Section name",
+          "helpText": "Help text for the property. Use Markdown to add additional formatting to the help text",
+          "name": "Property name which will be used to reference this property",
+          "label": "Property label",
+          "type": "Property type --see property page",
+          "default": "Default value",
+          "label": "Display label",
+          "options": {}
+        },
+        {
+          // Array of component set properties. 
+          // These properties will apply to all components.
+          // Will be shown within the component set designer page in the studio.
+        }
+      ]  
      }
  
- Templates are the HTML code that is implemented when the component is used. To call the properties that the studio user sets, use the templating syntax, ``{componentData.propertyname}``, where ``propertyname`` is the name of the property whose value you want to use.
+ Templates are the HTML code that is implemented when the component is used. Each component within the component set requires its own template. 
+ To call the properties that the studio user sets, use the templating syntax, ``{componentData.propertyName}``, where ``propertyName`` is the name of the property whose value you want to use. Components can only call properties that are under their component section or under the styleData section. 
 
  .. note::
     The template section supports jinja.
