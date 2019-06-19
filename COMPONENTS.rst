@@ -50,13 +50,12 @@ Metadata File
            {
              "classification": "Tab name",
              "section": "Section name",
-             "helpText": "Help text for the property. Use Markdown to add additional formatting to the help text",
+             "helpText": "Help text for the property. Use Markdown to add additional formatting.",
              "name": "Property name which will be used to reference this property",
              "label": "Property label",
-             "type": "Property type --see property page",
              "default": "Default value",
-             "label": "Display label",
              "options": {},
+             "type": "Property type"
            },
            {
              // Array of component properties. 
@@ -65,7 +64,7 @@ Metadata File
            }
          ],
          
-         "template": "<component-tag property1='{{componentData.propertyName}}'></component-tag><Additional template information can be found below.>"
+         "template": "<component-tag property='{{componentData.propertyName}}'></component-tag><Additional template information can be found in the Template section.>"
         },
         {
           // Array of components. 
@@ -77,18 +76,18 @@ Metadata File
         {
           "classification": "Tab name",
           "section": "Section name",
-          "helpText": "Help text for the property. Use Markdown to add additional formatting to the help text",
+          "helpText": "Help text for the property. Use Markdown to add additional formatting.",
           "name": "Property name which will be used to reference this property",
           "label": "Property label",
-          "type": "Property type --see property page",
-          "default": "Default value",
-          "label": "Display label",
-          "options": {}
+          "options": {},
+          "value": "Default value",
+          "type": "color || text"
         },
         {
           // Array of component set properties. 
           // These properties will apply to all components.
           // Will be shown within the component set designer page in the studio.
+          // Additonal information can be found in the StyleData section.
         }
       ]  
      }
@@ -117,4 +116,10 @@ Template
 
  .. note::
     The template section supports jinja.
- 
+
+.. _StyleData properties:
+
+StyleData
++++++++++
+
+ Coming Soon.
