@@ -112,7 +112,9 @@ Template
  
  Templates are the HTML code that is implemented when the component is used. Each component within the component set requires its own template. 
  
- To call the properties that the studio user sets, use the templating syntax, ``{componentData.propertyName}``, where ``propertyName`` is the name of the property whose value you want to use. Components can only call properties that are under their component section or under the styleData section. 
+  To call the properties that the studio user sets, use the templating syntax, ``{componentData.propertyName}``, where ``propertyName`` is the name of the property whose value you want to use. Component templates can only call properties that are under their component section.
+ 
+ Templates are mostly used to implement formatting that relies on values set by the end user. For more complex preset formatting, additional HTML and CSS files can be added to the component set zip file. However, the files will need to be referenced in the component.json file for the HTML/CSS to be implemented.   
 
  .. note::
     The template section supports jinja.
