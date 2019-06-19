@@ -227,14 +227,14 @@ Setting-Up Environments
    
      .. code-block:: bash
        
-         $ Env Name: <<name of environment in CLI>>
+         $ Env Name: <<What you want to name the environment>>
            App: <<environment Url>>
            Token: <<environment token>>
            Audience: <<envitoment audience>>
            Client id: <<user clientId>>
            Client secret: <<user clientSecret>>
           
-  #. The CLI should return the following with the env name you specified listed with the other environments showing that the new environment has been created. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
+  #. The CLI should return the following with the env name you specified listed with any other environments you have setup. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
   
      .. code-block:: bash
      
@@ -249,7 +249,7 @@ Setting-Up Environments
 Setting up Profiles
 ^^^^^^^^^^^^^^^^^^^
 
- Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or using :ref:`your own configuration<profile your own configuration>`. 
+ Profiles allow users to send commands to a specific organization. Most commands in the CLI require a profile. Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or using :ref:`your own configuration<profile your own configuration>`. 
 
  You will need to have :ref:`configured an environment<Provisioning Environments>` on your machine through the CLI to configure a profile.  
 
@@ -283,16 +283,16 @@ Setting up Profiles
 
   #. Paste the command into your Bash window and click enter.
   
-  #. You will be prompted to name the profile. It should look like this:
+  #. You will be prompted to name the profile. Profiles will be used to reference a command center or studio. The prompt should look like this:
    
      .. code-block:: bash
        
-         Profile Name: <<STRING Cannot have spaces or special characters in it. This is used to reference an organization.>>
+         Profile Name: <<What you want to call the profile. Cannot include spaces or special characters.>>
 
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
     
-  #. You will then be presented with a list of organizations associated with the preset Lumavate environment. Pick the one you want to edit with this profile, and enter its ID number. It should look like this:
+  #. You will then be presented with a list of organizations associated with the preset Lumavate environment. Pick the one you want to associate with this profile, and enter its ID number. The prompt should look like this:
    
      .. code-block:: bash
        
@@ -302,7 +302,7 @@ Setting up Profiles
 
           Org ID you want to associate with this profile: <<org id>>
   
-  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
+  #. The CLI should return the following with the environment, org name, and org id you associated the profile with. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
   
     .. code-block:: bash
     
@@ -319,16 +319,16 @@ Setting up Profiles
        
          $ luma profile add
 
-  #. You will be prompted to name your profile. It should look like this:
+  #. You will be prompted to name your profile. Profiles will be used to reference a command center or studio. The prompt should look like this:
    
      .. code-block:: bash
        
-         Profile Name: <<STRING Cannot have spaces or special characters in it. This is used to reference an organization.>>
+         Profile Name: <<What you want to call the profile. Cannot include spaces or special characters.>>
      
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
 
-  #. A list of environments will appear. Select which environment you wish to associate with the profile, and enter its Name:
+  #. A list of environments will appear. Select which environment you wish to associate with the profile, and enter its name. The prompt should look like this:
    
      .. code-block:: bash
        
@@ -338,7 +338,7 @@ Setting up Profiles
 
           Env: <<Env Name>>
 
-  #. A list of organizations will appear. Pick the one you want to edit with this profile, and enter its ID number. It should look like this:
+  #. A list of organizations will appear. Pick the one you want to edit with this profile, and enter its ID. The prompt should look like this:
    
      .. code-block:: bash
        
@@ -349,7 +349,7 @@ Setting up Profiles
 
           Org ID you want to associate with this profile: <<org id>>
          
-  #. The CLI should return the following with the profile name you specified listed with the other profiles showing that the new profile has been created. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
+  #. The CLI should return the following with the environment, org name, and org id you associated the profile with. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
   
     .. code-block:: bash
     
@@ -366,7 +366,7 @@ ________________________________________________________________________________
 CLI Syntax
 ----------
 
-The CLI will allow users to interact with the Lumavate platform from a terminal. For setup instructions, look at the `Github readme <https://github.com/Lumavate-Team/documentation/blob/master/CLI.rst>`_ or the :ref:`CLI setup documentation <CLI>`. All the main commands are listed in the Command Index below. Each of the main commands has their subcommands listed in their section. 
+The CLI allows users to interact with the Lumavate platform from a terminal. For setup instructions, look at the `Github readme <https://github.com/Lumavate-Team/documentation/blob/master/CLI.rst>`_ or the :ref:`CLI setup documentation <CLI>`. All the main commands are listed in the Command Index below. Each of the main commands has their subcommands listed in their section. 
 
 Use the ``--help`` flag with the command for more information on how to use them and how to use their subcommands.
 
@@ -446,7 +446,7 @@ Get
   
  .. code-block:: bash
   
-      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 30, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/from.through.to.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=nota Signaturev8xyp8cnhE%3D&Expires=999993222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 30, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
+      {"payload": {"currentItemCount": 2, "data": [{"createdAt": "2019-02-22T16:17:19.878312+00:00", "createdBy": 90, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": {"key": "containers/dragon/icons/78130f31", "preview": "https://s3.amazonaws.com/from.through.to.com/containers/dragon/icons/78130f31?AWSAccessKeyId=NotAnAccessKeyId5Q&Signature=nota Signaturev8xyp8cnhE%3D&Expires=999993222"}, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:19.878294+00:00", "lastModifiedBy": 99, "name": "Dragon", "premium": false, "type": "widget", "urlRef": "dragon", "versionInfo": {"latest": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 99, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}, "recommended": {"createdAt": "2019-02-22T16:23:05.318677+00:00", "createdBy": 90, "id": 9999, "label": "prod", "lastModifiedAt": "2019-02-22T16:23:05.318646+00:00", "lastModifiedBy": 99, "manageUrl": null, "versionNumber": "9.9.9"}}}, {"createdAt": "2019-02-22T16:17:30.165138+00:00", "createdBy": 99, "expand": {"experiences": 0, "grantees": [], "publisher": {"id": 9, "instanceType": "cc", "isTest": null, "name": "Dragon Command Center"}}, "id": 9999, "image": null, "integrationCloudId": 1, "isOwner": true, "lastModifiedAt": "2019-02-22T16:17:30.165109+00:00", "lastModifiedBy": 99, "name": "Fire Breathing", "premium": false, "type": "widget", "urlRef": "fire", "versionInfo": {"latest": {"createdAt": null, "createdBy": null, "id": null, "label": null, "lastModifiedAt": null, "lastModifiedBy": null, "manageUrl": null, "versionNumber": null}}}], "nextPage": null, "page": 1, "pageSize": 100, "prevPage": null, "totalItems": 2, "totalPages": 1}}
 
  .. list-table:: Options 
      :widths: 10 20
@@ -856,7 +856,7 @@ Components
  
  .. code-block:: bash
  
-     {"payload": {"data": {"componentSetId": 999, "createdAt": "2019-02-22T16:54:00.511074+00:00", "createdBy": 30, "directCssIncludes": [], "directIncludes": [], "distribution": "/iot/v1/dynamic-component-sets/firebreath/9.9.9", "expand": {"components": [{"icon": "/iot/v1/dynamic-component-sets/firebreath/9.9.9/icons/material.svg", "label": "No Template", "properties": [{"label": "No Template", "name": "selectOptions", "options": {"readonly": null}, "type": "text"}], "section": "Fire Breath (v9.9.9)", "tags": ["material", "body"], "template": "<div class=\"mdc-select\"><i class=\"mdc-select__dropdown-icon\"></i><select id=\"{{ componentData.Id }}\" class=\"mdc-select__native-control\"></div>", "type": "material-input-select"}]}, "id": 999, "label": "prod", "lastModifiedAt": "2019-02-22T16:54:00.511040+00:00", "lastModifiedBy": 30, "major": 9, "minor": 9, "patch": 9, "state": "available", "versionNumber": "9.9.9"}}}
+     {"payload": {"data": {"componentSetId": 999, "createdAt": "2019-02-22T16:54:00.511074+00:00", "createdBy": 99, "directCssIncludes": [], "directIncludes": [], "distribution": "/iot/v1/dynamic-component-sets/firebreath/9.9.9", "expand": {"components": [{"icon": "/iot/v1/dynamic-component-sets/firebreath/9.9.9/icons/material.svg", "label": "Fire Breath Properties", "properties": [{"label": "Color", "name": "firecolor", "type": "color"}], "section": "Power Properties", "tags": ["body"], "template": "<div class=\"firepower\"><svg class=\"fire-image\" color=\"{{ componentData.firecolor }}></svg></div>", "type": "material-input-select"}]}, "id": 999, "label": "prod", "lastModifiedAt": "2019-02-22T16:54:00.511040+00:00", "lastModifiedBy": 99, "major": 9, "minor": 9, "patch": 9, "state": "available", "versionNumber": "9.9.9"}}}
 
  .. list-table:: Options 
      :widths: 10 20
@@ -1732,40 +1732,6 @@ Exec
     ``--table`` is deprecated.
     Use ``--format`` to see JSON values organized in table format.
 
-.. _Microservice-version Force:
-
-Force
-+++++
-
- Restarts the microservice version's editor application without discarding code changes.
- 
- Example:
-
- .. code-block:: bash
-   
-     $ luma microservice-version force 
-       Profile: dragon 
-       Container: 999
-       Version Number: 9.9.9
-
- Response:
- 
- .. code-block:: bash
- 
-     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
-    
- .. list-table:: Options 
-     :widths: 10 20
-
-     * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you want to edit.
-     * - ``-c, --container ID``
-       - The microservice container you want to edit. You can pass either the ID or UrlRef.
-     * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
-     * - ``--help``
-       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
-
 .. _Microservice-version Logs:
 
 Logs
@@ -1862,6 +1828,41 @@ Ls
 
  .. note::
     Version number is filtered as ``"major=*&minor=*&patch=*"``.
+
+.. _Microservice-version Restart:
+
+Restart
++++++++
+
+ Restarts the microservice version's editor application without discarding code changes.
+ 
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma microservice-version restart 
+       Profile: dragon 
+       Container: 999
+       Version Number: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-06-18T19:06:37.832178+00:00', 'containerId': 9999, 'createdAt': '2019-06-18T14:55:30.243397+00:00', 'createdBy': 99, 'desiredState': 'running', 'desiredStateChangedAt': '2019-06-18T16:24:06.846847+00:00', 'editorPort': None, 'enforceRoutes': True, 'env': {}, 'expand': {}, 'id': 9999, 'instanceCount': 1, 'isEditable': False, 'label': 'prod', 'lastActualStatePayload': {'childHasError': False, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'running', 'eventName': 'do_validate', 'message': 'Container Version 9.9.9 (ID:9999) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d99r99a', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '9d9rag9o', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['running', 'validating', 'running']}}, 'lastModifiedAt': '2019-06-18T19:11:10.410143', 'lastModifiedBy': 99, 'major': 9, 'minor': 0, 'notes': None, 'patch': 9, 'platformVersion': 'v2', 'port': 9999, 'repositoryName': 'registry.realm.lumavate-type.com/factsheet', 'rewriteUrl': False, 'stateChangedAt': '2019-06-18T14:55:30.235871+00:00', 'tag': 'd9r9', 'versionNumber': '9.9.9'}}}
+
+    
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The microservice container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 .. _Microservice-version Rm:
 
@@ -2667,40 +2668,6 @@ Exec
     ``--table`` is deprecated.
     Use ``--format`` to see JSON values organized in table format.
 
-.. _Microservice-version Force:
-
-Force
-+++++
-
- Restarts the widget version's editor application without discarding code changes.
- 
- Example:
-
- .. code-block:: bash
-   
-     $ luma widget-version force 
-       Profile: dragon 
-       Container: 999
-       Version Number: 9.9.9
-
- Response:
- 
- .. code-block:: bash
- 
-     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-05-24T18:26:49.266462+00:00', 'containerId': 999, 'createdAt': '2019-05-10T20:55:50.064218+00:00', 'createdBy': 9, 'desiredState': 'running', 'desiredStateChangedAt': '2019-05-24T18:26:01.221858+00:00', 'editorPort': 9999, 'enforceRoutes': True, 'env': {'APP_SETTINGS': './config/dev.cfg'}, 'expand': {}, 'id': 99, 'instanceCount': 1, 'isEditable': True, 'label': 'dev', 'lastActualStatePayload': {'childHasError': True, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': 'e0fae30e', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'error', 'eventName': 'do_start', 'message': 'Creating service for Container Version 13.0.1 (ID:5211)...'}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 1s (0): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'starting', 'eventName': 'do_validate', 'retryCount': 0}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 2s (1): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 1}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 4s (2): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 2}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 8s (3): ('Communication check failed', {'retry': True})", 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 3}}, {'childHasError': False, 'children': [], 'errorMessage': "on_enter_validating failed. Retrying in 16s (4): ('Communication check failed', {'retry': True})", 'id': '3c5bff13', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'retryCount': 4}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '4fc18a48', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'do_validate', 'message': 'Container Version 13.0.1 (ID:5211) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '99999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['error', 'starting', 'validating', 'running']}}, 'lastModifiedAt': '2019-05-24T19:43:58.994733', 'lastModifiedBy': 30, 'major': 13, 'minor': 0, 'notes': None, 'patch': 1, 'platformVersion': 'v2', 'port': 9000, 'repositoryName': 'registry.dragonfly.lumavate-dev.com/sae', 'rewriteUrl': False, 'stateChangedAt': '2019-05-10T20:55:50.053161+00:00', 'tag': '9999', 'versionNumber': '9.9.9'}}}
-    
- .. list-table:: Options 
-     :widths: 10 20
-
-     * - ``-p, --profile "STRING"``
-       - The profile associated with the studio or command center you want to edit.
-     * - ``-c, --container ID``
-       - The widget container you want to edit. You can pass either the ID or UrlRef.
-     * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
-     * - ``--help``
-       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
-
 .. _Widget-version Logs:
 
 Logs
@@ -2810,6 +2777,40 @@ Ls
 
  .. note::
     Version number is filtered as ``"major=*&minor=*&patch=*"``.
+
+.. _Microservice-version Restart:
+
+Restart
++++++++
+
+ Restarts the widget version's editor application without discarding code changes.
+ 
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma widget-version restart 
+       Profile: dragon 
+       Container: 999
+       Version Number: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+      {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-06-18T19:06:37.832178+00:00', 'containerId': 9999, 'createdAt': '2019-06-18T14:55:30.243397+00:00', 'createdBy': 99, 'desiredState': 'running', 'desiredStateChangedAt': '2019-06-18T16:24:06.846847+00:00', 'editorPort': None, 'enforceRoutes': True, 'env': {}, 'expand': {}, 'id': 9999, 'instanceCount': 1, 'isEditable': False, 'label': 'prod', 'lastActualStatePayload': {'childHasError': False, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'running', 'eventName': 'do_validate', 'message': 'Container Version 9.9.9 (ID:9999) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d99r99a', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '9d9rag9o', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['running', 'validating', 'running']}}, 'lastModifiedAt': '2019-06-18T19:11:10.410143', 'lastModifiedBy': 99, 'major': 9, 'minor': 0, 'notes': None, 'patch': 9, 'platformVersion': 'v2', 'port': 9999, 'repositoryName': 'registry.realm.lumavate-type.com/hydra', 'rewriteUrl': False, 'stateChangedAt': '2019-06-18T14:55:30.235871+00:00', 'tag': 'd9r9', 'versionNumber': '9.9.9'}}}
+    
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The widget container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the microservice you want to restart. For example, ``--version "9.9.9"``.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
 .. _Widget-version Rm:
 
