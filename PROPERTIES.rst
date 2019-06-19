@@ -138,7 +138,7 @@ Color
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"default": "STRING"`` (defaults to #fff/white)
+  * ``"default": "Hex Value"`` (defaults to #fff/white)
   
  .. warning::
     The tool will error when used in the studio if the default field contains an invalid value.
@@ -174,7 +174,7 @@ Theme Color
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"deafult": "styleData variable"``
+  * ``"deafult": "StyleData Variable"`` (defaults to #000/transparent)
   
  .. warning::
     The tool will error when used in the studio if the default field contains an invalid value.
