@@ -58,7 +58,7 @@ Translatable Text
        ..
        
  Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "translated-text"``
   
@@ -94,7 +94,7 @@ Text
        ..
        
 Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "text"``
   
@@ -130,7 +130,7 @@ Color
        ..
        
  Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "color"``
   
@@ -138,7 +138,7 @@ Color
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"default": "Hex Value"`` (defaults to #fff/white)
+  * ``"default": "Hex, RGB, or HSL Value"`` (defaults to #fff/white)
   
  .. warning::
     The tool will error when used in the studio if the default field contains an invalid value.
@@ -150,8 +150,8 @@ ________________________________________________________________________________
 Theme Color
 ^^^^^^^^^^^
 
- Theme color allows studio users to select from a list of colors that where set through the component set's styleData properties.
-
+ Theme color allows studio users to select from a list of colors that where set through the component set's styleData properties. For more information on styleData, please see :ref:`styleData properties`.  
+ 
  .. code-block:: javascript
 
     "classification": "Classification",
@@ -166,7 +166,7 @@ Theme Color
        ..
        
  Required Fields:
-  * ``"classification": "STRING"`` (only avaliable for widgets and microservices)
+  * ``"classification": "STRING"`` (only avaliable/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "theme-color"``
   
@@ -202,7 +202,7 @@ Image
        ..
        
  Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "image-upload"``
   
@@ -236,7 +236,7 @@ Checkbox
        ..
        
  Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "checkbox"``
   
@@ -269,7 +269,7 @@ Toggle
        ..
        
  Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "toggle"``
   
@@ -307,7 +307,7 @@ Dropdown
        .. 
        
  Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
   
@@ -346,7 +346,7 @@ Numeric
        ..
        
  Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"default": INTEGER`` (does not have a default)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
@@ -388,7 +388,7 @@ Multiple Selection
        ..
        
  Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
   
@@ -424,7 +424,7 @@ Page Link
        ..
        
  Required Fields:
-  * ``"classification": "STRING"`` (only available for widgets and microservices)
+  * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"name": "STRING"``
   * ``"type": "page-link"``
   
