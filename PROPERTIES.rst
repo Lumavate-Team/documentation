@@ -150,8 +150,7 @@ ________________________________________________________________________________
 Theme Color
 ^^^^^^^^^^^
 
- Color allows studio users to set a color value via a theme color picker.  The theme color picker will use all the color properties defined within a Component
- Set, including a gradient scale of any properties that are identified as color families.
+ Theme color allows studio users to select from a list of colors that where set through the component set's styleData properties.
 
  .. code-block:: javascript
 
@@ -159,10 +158,10 @@ Theme Color
     "name": "Name",
     "type": "theme-color"
   
- .. figure:: ../images/colorfield.PNG
+ .. figure:: ../images/themecolorfield.PNG
        :align: center
        :width: 600px
-       :alt: Image of a color field.
+       :alt: Image of a theme color field.
       
        ..
        
@@ -175,7 +174,7 @@ Theme Color
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
   * ``"label": "STRING"``
-  * ``"deafult": "STRING"`` (defaults to #fff/white)
+  * ``"deafult": "styleData variable"``
   
  .. warning::
     The tool will error when used in the studio if the default field contains an invalid value.
