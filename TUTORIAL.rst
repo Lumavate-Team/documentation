@@ -394,6 +394,8 @@ Using the Command Palette, you should now be able to start using the ``Luma`` co
 * ``Luma:Register Routes`` - If any routes are added to the container, the routes need to be registered with Lumavate in order to be accessible via the
   platform.  Anytime a new route is added, this command should be run.
 
+.. note::
+  When modifying an existing route definition, you will need to run Register Routes as well.
 
 * ``Luma:Download Application Source`` - Since the code is running within the container, this command will zip up the container contents and be downloaded
   locally within a ZIP archive.
