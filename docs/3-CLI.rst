@@ -142,7 +142,7 @@ ________________________________________________________________________________
 Provisioning Credentials
 -------------------------
 
-The CLI requires two variables be configured in order to talk to the platform: :ref:`configuring environments<Provisioning Environments>` and :ref:`configuring profiles<Provisioning Profiles>`.
+The CLI requires two variables be configured in order to talk to the platform: :ref:`environments<Provisioning Environments>` and :ref:`profiles<Provisioning Profiles>`.
     
     * **Environments** know how to get and refresh tokens so the user stays authorized within the platform. They also set what command centers or studios the user has access to.
     * **Profiles** give the user a company context in a specific environment which is required by most of the platform API. They set what studio or command center the user is modifying.  
@@ -152,7 +152,7 @@ The CLI requires two variables be configured in order to talk to the platform: :
 Setting-Up Environments
 ^^^^^^^^^^^^^^^^^^^^^^^
 
- You can use either the :ref:`Lumavate pre-configured<environment preset configuration>` environment or you can :ref:`setup your own environment configuration<environment your own configuration>`.
+ Environments allow users to access the user’s context for a Lumavate realm. An Environment is required to create a profile. Environments can be setup using either :ref:`the Lumavate pre-configuration<environment preset configuration>` or :ref:`a custom configuration<environment your own configuration>`.
 
 .. _environment preset configuration:
 
@@ -181,23 +181,44 @@ Setting-Up Environments
      .. code-block:: bash
        
          $ luma env config --env-name prod --app https://not-a-real-realm.place.lumavate-type.com --audience https://place.lumavate-type.com/notarealapp --token place-lumavate-type.notarealtoken.com --client-id NotARealId1234j2eIxKILomCdA --client-secret NotARealClientSecretEqeKWD5JgUtzsRkhNNXMPQM6auPhTTjVK
-      
+     
+     .. warning::
+        The environment will be overwritten if you run this command again with a different command center. To avoid this, change prod in the ``--env-name prod`` option to any value that does not have spaces or special characters.
+ 
   #. Paste the command into your Bash window and click enter. 
-  #. The CLI should return the following showing that the new environment Prod has been created. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
+  #. The CLI should return your environment list with Prod listed with any other environments you have setup. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
      
      .. code-block:: bash
      
          envName app                                                  audience                                 token
          prod    https://not-a-real-realm.place.lumavate-type.com     https://place.lumavate-type.com/notanapp place-lumavate-type.notarealtoken.com
 
-     .. warning::
-        If there are two environments with the same name, the newer version will overwrite the older version.
+  #. In your Bash window, enter:
+  
+       .. code-block:: bash
+     
+           $ luma org ls --env prod 
+         
+  #. A list of command centers and/or studios will appear. These are the organizations you can modify with the Prod environment. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
+
+       .. code-block:: bash
+       
+          id Name                  instanceType isTest
+          35 Sample Command Center dev          None
+          49 Sample Studio         studio       False
+          
+       .. topic:: Troubleshooting
+          
+           If you do not see an organization you were expecting:
+          
+           #. Check that you were logged in as a user who was invited to the missing organization when you copied from the command center. 
+           #. Check that you were logged into the realm the missing organization belongs to when you copied from the command center. For more information on realms, please see :ref:` Platform Terms<realm>`. 
  
  .. _environment your own configuration:
  
  Using your own configuration:
 
-  #. Log into the command center you want to modify with the CLI.
+  #. Log into the command center as a user who belongs to the organizations you want to modify with the CLI. 
      
      .. figure:: ../images/environmentselect.PNG
          :align: center
@@ -230,17 +251,42 @@ Setting-Up Environments
          $ Env Name: <<What you want to name the environment>>
            App: <<environment Url>>
            Token: <<environment token>>
-           Audience: <<envitoment audience>>
+           Audience: <<environment audience>>
            Client id: <<user clientId>>
            Client secret: <<user clientSecret>>
-          
-  #. The CLI should return the following with the env name you specified listed with any other environments you have setup. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
+       
+     .. warning::
+        If there are two environments with the same name, the newer version will overwrite the older version.
+        
+  #. The CLI should return your environment list with the environment you created listed with any other environments you have setup. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
   
      .. code-block:: bash
      
          envName app                                                    audience                                    token
          Fantasy https://not-a-real-realm2.fantasy.lumavate-type.com    https://fantasy.lumavate-type.com/notanapp2 fantasy-lumavate-type.notarealtoken2.com
 
+  #. In your Bash window, run:
+  
+       .. code-block:: bash
+     
+           $ luma org ls --env <<envName>> 
+         
+  #. A list of organizations you can modify with the environment will be returned. Continue on to :ref:`Setting up Profiles <Provisioning Profiles>`. 
+
+       .. code-block:: bash
+       
+          id  Name                  instanceType isTest
+          99  Dragon Command Center dev          None
+          999 Child Command Center  dev          None
+          9   Dragon Studio         studio       False
+          
+       .. topic:: Troubleshooting
+          
+           If you do not see an organization you were expecting:
+          
+           #. Check that you collected the clientId and clientSecret of a user who was invited to the missing organization. 
+           #. Check that you collected the app, audience, and token information from the realm the missing organization belongs to. For more information on realms, please see :ref:` Platform Terms<realm>`. 
+           
   .. note:: 
      The CLI uses Client ID and Client Secret to associate a user context to a machine. From this point forward, user will refer to the Client ID and Client Secret information used to setup the environment in the CLI. 
 
@@ -249,9 +295,9 @@ Setting-Up Environments
 Setting up Profiles
 ^^^^^^^^^^^^^^^^^^^
 
- Profiles allow users to send commands to a specific organization. Most commands in the CLI require a profile. Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or using :ref:`your own configuration<profile your own configuration>`. 
+ Profiles allow users to send commands to a specific organization. Most commands in the CLI require a profile. Profiles can be setup using the :ref:`Lumavate pre-set command<profile preset configuration>` or :ref:`a custom configuration<profile your own configuration>`. 
 
- You will need to have :ref:`configured an environment<Provisioning Environments>` on your machine through the CLI to configure a profile.  
+ You will need to have :ref:`configured an environment<Provisioning Environments>` on your machine to configure a profile.  
 
 .. _profile preset configuration:
 
@@ -287,7 +333,7 @@ Setting up Profiles
    
      .. code-block:: bash
        
-         Profile Name: <<What you want to call the profile. Cannot include spaces or special characters.>>
+         Profile Name: <<What you want to name the profile. Cannot include spaces or special characters.>>
 
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
@@ -301,8 +347,11 @@ Setting up Profiles
           49 Sample Studio             studio   False
 
           Org ID you want to associate with this profile: <<org id>>
-  
-  #. The CLI should return the following with the environment, org name, and org id you associated the profile with. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
+     
+     .. note::
+        While running the profile command, you will have the option to associate the new profile to any organization the user has access to regardless of the command center you collected the luma command from.
+        
+  #. The CLI should return the following with the environment, org name, and org ID you associated the profile with. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
   
     .. code-block:: bash
     
@@ -323,7 +372,7 @@ Setting up Profiles
    
      .. code-block:: bash
        
-         Profile Name: <<What you want to call the profile. Cannot include spaces or special characters.>>
+         Profile Name: <<What you want to name the profile. Cannot include spaces or special characters.>>
      
      .. warning::
         If there are two profiles with the same name, the newer version will overwrite the older version. Profiles in different environments can have the same name without overwriting each other.  
@@ -348,16 +397,16 @@ Setting up Profiles
          9   Dragon Studio             studio   False
 
           Org ID you want to associate with this profile: <<org id>>
-         
-  #. The CLI should return the following with the environment, org name, and org id you associated the profile with. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
+     
+     .. note::
+        While running the profile command, you will have the option to associate the new profile to any organization the user has access to regardless of the command center you collected the user information from.
+     
+  #. The CLI should return the following with the environment, org name, and org ID you associated the profile with. Continue on to the :ref:`CLI Syntax<CLI Syntax>` for more help.
   
     .. code-block:: bash
     
         Environment Org Name              Org ID
         Fantasy     Dragon Command Center 9 
-
- .. note::
-    While running the profile command, you will have the option to associate the new profile to any organization the user has access to regardless of the command center you are currently in.
 
 _______________________________________________________________________________________________________________________________________
 
