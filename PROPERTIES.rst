@@ -158,7 +158,7 @@ Theme Color
     "name": "Name",
     "type": "theme-color"
   
- .. figure:: ../images/themecolorfield.PNG
+ .. figure:: ../images/colorfield.PNG
        :align: center
        :width: 600px
        :alt: Image of a theme color field.
