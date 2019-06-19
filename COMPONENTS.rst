@@ -94,6 +94,7 @@ Metadata File
      }
  
  Templates are the HTML code that is implemented when the component is used. Each component within the component set requires its own template. 
+ 
  To call the properties that the studio user sets, use the templating syntax, ``{componentData.propertyName}``, where ``propertyName`` is the name of the property whose value you want to use. Components can only call properties that are under their component section or under the styleData section. 
 
  .. note::
