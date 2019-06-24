@@ -79,7 +79,6 @@ Metadata File
           "helpText": "Help text for the property. Use Markdown to add additional formatting.",
           "name": "Property name which will be used to reference this property",
           "label": "Property label",
-          "options": {},
           "value": "Default value",
           "type": "color || text"
         },
