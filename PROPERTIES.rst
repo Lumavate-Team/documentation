@@ -11,13 +11,13 @@ A property can have a tab name, section name, help text, property name, property
 .. code-block:: javascript
 
   var property = {
-    'classification': 'Tab name. The name of the tab the property field is under in the studio.',
-    'section': 'Section name. The name of the section the property field is located in the studio.',
-    'helpText': 'Help text for the property. Use Markdown to provide additional formatting.',
-    'name': 'Property name. Use this when referencing the property.',
-    'label': 'Property label. The name of the field shown in the studio.',
-    'default': 'Default value'
-    'type': 'Property type. For a complete list of supported properties, see below.'
+    "classification": "Tab name. The name of the tab the property field is under in the studio.",
+    "section": "Section name. The name of the section the property field is located in the studio.",
+    "helpText": "Help text for the property. Use Markdown to provide additional formatting.",
+    "name": "Property name. Use this when referencing the property.",
+    "label": "Property label. The name of the field shown in the studio.",
+    "default": "Default value"
+    "type": "Property type. For a complete list of supported properties, see below."
   }
    
 The following list of types can be implemented by including the appropriate JSON in the Discover endpoint.
@@ -47,7 +47,7 @@ Translatable Text
  .. code-block:: javascript
 
     "classification": "Classification",
-    "name": "Name",
+    "name": "name",
     "type": "translated-text"
  
  .. figure:: ../images/translatedtextfield.PNG
@@ -59,13 +59,13 @@ Translatable Text
        
  Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"type": "translated-text"``
   
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
   * ``"default": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}`` 
    * ``"readonly": true || false`` (defaults to false)
@@ -83,7 +83,7 @@ Text
  .. code-block:: javascript
 
       "classification": "Classification",
-      "name": "Name",
+      "name": "name",
       "type": "text"
 
  .. figure:: ../images/textfield.PNG
@@ -95,13 +95,13 @@ Text
        
 Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"type": "text"``
   
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
   * ``"default": "STRING"`` (does not have a default)
   * ``"options": {OPTIONS}``
    * ``"readonly": true || false`` (defaults to false)
@@ -119,7 +119,7 @@ Color
  .. code-block:: javascript
 
     "classification": "Classification",
-    "name": "Name",
+    "name": "name",
     "type": "color"
   
  .. figure:: ../images/colorfield.PNG
@@ -131,13 +131,13 @@ Color
        
  Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"type": "color"``
   
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
   * ``"default": "Hex, RGB, or HSL Value"`` (defaults to #fff/white)
   
  .. warning::
@@ -155,7 +155,7 @@ Theme Color
  .. code-block:: javascript
 
     "classification": "Classification",
-    "name": "Name",
+    "name": "name",
     "type": "theme-color"
   
  .. figure:: ../images/colorfield.PNG
@@ -167,14 +167,14 @@ Theme Color
        
  Required Fields:
   * ``"classification": "STRING"`` (only avaliable/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"type": "theme-color"``
   
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
-  * ``"deafult": "StyleData Variable"`` (defaults to #000/transparent)
+  * ``"default": "StyleData Variable"`` (defaults to #000/transparent)
   
  .. warning::
     The tool will error when used in the studio if the default field contains an invalid value.
@@ -191,7 +191,7 @@ Image
  .. code-block:: javascript
 
     "classification": "Classification",
-    "name": "Name",
+    "name": "name",
     "type": "image-upload"
  
  .. figure:: ../images/imagefield.PNG
@@ -203,13 +203,13 @@ Image
        
  Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"type": "image-upload"``
   
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
   
  .. note::
         The platform will set the default image to a No Image PNG file. At the current moment, there is no way to change this default image.
@@ -225,7 +225,7 @@ Checkbox
  .. code-block:: javascript
 
     "classification": "Classification",
-    "name": "Name",
+    "name": "name",
     "type": "checkbox"
  
  .. figure:: ../images/checkboxfield.PNG
@@ -237,13 +237,13 @@ Checkbox
        
  Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"type": "checkbox"``
   
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
   * ``"default": true || false`` (defaults to false)
   
 ________________________________________________________________________________________________________________________________________
@@ -258,7 +258,7 @@ Toggle
  .. code-block:: javascript
 
     "classification": "Classification",
-    "name": "Name",
+    "name": "name",
     "type": "toggle"
  
  .. figure:: ../images/togglefield.PNG
@@ -270,13 +270,13 @@ Toggle
        
  Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"type": "toggle"``
   
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
   * ``"default": true || false`` (defaults to false)
   
 ________________________________________________________________________________________________________________________________________
@@ -292,10 +292,10 @@ Dropdown
 
    
     "classification": "Classification",
-    "name": "Name",
+    "name": "name",
     "options":{
-         "option1 name":"label",
-         "option2 name":"label"
+         "optionName":"label",
+         "optionName":"label"
     },
     "type": "dropdown"
  
@@ -308,7 +308,8 @@ Dropdown
        
  Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
   
    * ``"NAME STRING":"LABEL STRING"`` (name is used to reference the option, label is what studio users see in the dropdown field)
@@ -318,7 +319,6 @@ Dropdown
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
   * ``"default": "Option Name"`` (does not have a default)
 
 ________________________________________________________________________________________________________________________________________
@@ -334,7 +334,7 @@ Numeric
 
     "classification": "Classification",
     "default": 34,
-    "name": "Name",
+    "name": "name",
     "options": {},
     "type": "numeric"
  
@@ -348,7 +348,8 @@ Numeric
  Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
   * ``"default": INTEGER`` (does not have a default)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"options": {OPTIONS}`` (send an empty options field to use the default options)
   
    * ``"min": INTEGER`` (defaults to none)
@@ -359,7 +360,6 @@ Numeric
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
   
 ________________________________________________________________________________________________________________________________________
 
@@ -373,10 +373,10 @@ Multiple Selection
  .. code-block:: javascript
 
     "classification": "Classification",
-    "name": "Name",
+    "name": "name",
     "options": [
-       {"value":"Name","displayValue":"Label"},
-       {"value":"Name","displayValue":"Label"}
+       {"value":"name","displayValue":"Label"},
+       {"value":"name","displayValue":"Label"}
     ],
     "type": "multiselect"
  
@@ -389,7 +389,8 @@ Multiple Selection
        
  Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"options": {OPTIONS}`` (at least one option must be added to the options field)
   
    * ``{"value":"STRING","displayValue":"STRING"}`` (defaults to none)
@@ -399,7 +400,6 @@ Multiple Selection
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
 
 ________________________________________________________________________________________________________________________________________
 
@@ -413,7 +413,7 @@ Page Link
  .. code-block:: javascript
 
     "classification": "Classification",
-    "name": "Name",
+    "name": "name",
     "type": "page-link"
  
  .. figure:: ../images/pagelinkfield.PNG
@@ -425,10 +425,10 @@ Page Link
        
  Required Fields:
   * ``"classification": "STRING"`` (only available/required for widgets and microservices)
-  * ``"name": "STRING"``
+  * ``"name": "camelCase STRING"``
+  * ``"label": "STRING"``
   * ``"type": "page-link"``
   
  Optional Fields:
   * ``"section": "STRING"``
   * ``"helpText": "STRING with Markdown"``
-  * ``"label": "STRING"``
