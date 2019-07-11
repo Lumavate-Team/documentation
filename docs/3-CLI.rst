@@ -1007,10 +1007,8 @@ Rm
        - The profile associated with the studio or command center you want to edit.
      * - ``-cs, --component-set ID``
        - The component set container you want to edit. You can pass either the ID or UrlRef.
-     * - ``-vm, --version-mask INTEGER "*.*.*"``
-       - Removes all version with that major, minor, or path. Use a * to indicate all. For example, ``--version-mask "9.*.*"`` will delete all versions that have a major value of 9. ``--version-mask "*.*.*"`` will delete all version.
      * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the component set you want to remove. For example, ``--version "9.9.9"``.
+       - Removes all version with that major, minor, and patch. Use a * to indicate all. For example, ``--version "9.*.*"`` will delete all versions that have a major value of 9. ``--version "*.*.*"`` will delete all version.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id} {CreatedBy}"``. 
      * - ``--json``
@@ -1941,10 +1939,8 @@ Rm
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
        - The microservice container you want to edit. You can pass either the ID or UrlRef.
-     * - ``-vm, --version-mask INTEGER "*.*.*"``
-       - Removes all versions with that major, minor, or patch. Use a * to indicate all. For example, ``--version-mask "9.*.*"`` will delete all versions with a major value of 9. "--version-mask *.*.*" will delete all versions.
      * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the microservice you want to remove. For example, ``--version "9.9.9"``.
+       - Removes all versions with that major, minor, and patch. Use a * to indicate all. For example, ``--version "9.*.*"`` will delete all versions with a major value of 9. "--version *.*.*" will delete all versions.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
@@ -2889,10 +2885,8 @@ Rm
        - The profile associated with the studio or command center you want to edit.
      * - ``-c, --container ID``
        - The widget container you want to edit. You can pass either the ID or UrlRef.
-     * - ``-vm, --version-mask INTEGER "*.*.*"``
-       - Removes all version with that major, minor, or path. Use a * to indicate all. For example, ``--version-mask "9.*.*"`` will delete all versions with a major value of 9. ``--version-mask "*.*.*"`` will delete all versions.
      * - ``-v, --version INTEGER "*.*.*"``
-       - The version number of the widget you want to remove. For example: ``--version "9.9.9"``.
+       - Removes all version with that major, minor, and patch. Use a * to indicate all. For example, ``--version "9.*.*"`` will delete all versions with a major value of 9. ``--version "*.*.*"`` will delete all versions.
      * - ``-f, --format "{JSON VALUE}"``
        - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
      * - ``--json``
