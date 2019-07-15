@@ -1199,6 +1199,57 @@ Experience
 
 Commands that move and list experiences.
 
+.. _Experience Add:
+
+Add
+++++
+
+ Adds an empty experience to a studio. Requires a collection.
+
+ Example:
+
+ .. code-block:: bash
+   
+    $ luma experience add
+      Profile: dragon
+      Name: Dragon Hatchling
+      Activation code: hatch1
+      Device (mobile, tablet, web) [mobile]: mobile 
+      Collection Name: Creatures
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     Label            Namespace  Code   Device
+     Dragon Hatchling hatch      hatch1 mobile
+
+     
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio you want to edit.
+     * - ``-n, --name "STRING"``
+       - The experience's name shown in the studio. 
+     * - ``-d, --description "STRING"``
+       - Adds a description that accompanies the experience. The description appears when studio users hover over an experience. 
+     * - ``--device "[mobile|tablet|web]"``
+       - The device the experience will be previewed on.
+     * - ``-cn, --collection "[Name|ID]"``
+       - The name or id of the collection where you want to add the experience. The collection must exist before adding the experience. 
+     * - ``-ac, --activation-code "STRING"``
+       - The activation code for the experience. Activation codes are used to access the experience through SMS text message and URL. For example, “https://activation-code.domain.com”. The code can contain only lowercase alphanumeric with no special characters or spaces. There is a max length of 20 characters.
+     * - ``-ru, --redirect-url "URL"``
+       - Adds a redirect URL to the experience. The end user will be redirected to the URL when the experience is rendered.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+ 
+ .. warning::
+    File paths with spaces need to be specified in the main command using the ``-path`` option so as to preserve spacing.
+
 .. _Experience Export:
 
 Export
@@ -1238,14 +1289,14 @@ Export
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
 
  .. warning::
-    File paths with spaces in them may need to be specified in the main command using the ``-path`` option so as to preserve the spaces.
+    File paths with spaces need to be specified in the main command using the ``-path`` option so as to preserve spacing.
     
 .. _Experience Import:
 
 Import
 ++++++
 
- Imports an experience JSON file to a studio.
+ Imports an experience JSON file to a studio. Requires a collection.
 
  Example:
 
@@ -1254,7 +1305,8 @@ Import
     $ luma experience import
       Profile: dragon
       Label: Dragon Hatchling
-      Activation code: hatch
+      Activation code: hatch2
+      Device (mobile, tablet, web) [mobile]: mobile
       Import file: C:\fantasy\creatures\dragons\egg.json
       Collection Name: Creatures
  
@@ -1296,7 +1348,7 @@ Import
        - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
  
  .. warning::
-    File paths with spaces in them may need to be specified in the main command using the ``-path`` option so as to preserve the spaces.
+    File paths with spaces need to be specified in the main command using the ``-path`` option so as to preserve spacing.
     
 .. _Experience Ls:
 
