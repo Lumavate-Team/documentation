@@ -6,17 +6,17 @@ Platform Terms
 
 The following is a list of terms commonly used in the Lumavate platform. They are organized by location in the platform:
 
-#. :ref:`Command Center`
+* :ref:`Command Center`
 
-   * :ref:`Tools`
+  * :ref:`Tools`
    
-#. :ref:`Studio`
+* :ref:`Studio`
 
-   * :ref:`Activations`
+  * :ref:`Activations`
    
-   * :ref:`Databases`
+  * :ref:`Databases`
    
-   * :ref:`Experiences`
+  * :ref:`Experiences`
 ________________________________________________________________________________________________________________________________________
 
 .. _command center:
