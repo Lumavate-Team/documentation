@@ -4,6 +4,14 @@
 Platform Terms
 ==============
 
+The following is a list of terms commonly used in the Lumavate platform. They are organized by location in the platform:
+
+- :ref:`Command Center`
+ - :ref:`Tools`
+- :ref:`Studio`
+ - :ref:`Activations`
+ - :ref:`Databases`
+ - :ref:`Experiences`
 ________________________________________________________________________________________________________________________________________
 
 .. _command center:
@@ -81,28 +89,6 @@ Why it matters
 
  Studio users will be the audience for any tool a developer creates. Therefore, a firm grasp of what a studio looks like and how it functions will greatly increase the quality of any tool. In addition, studios will be the main area where tools are tested making them an essential part in any tool's development.
 
-________________________________________________________________________________________________________________________________________
-
-.. _experiences:
-
-Experiences
------------
-
-An experience is a complete web application that delivers a full user experience. An experience can be designed exclusively for mobile, tablets, desktops, or any combination thereof. All experiences are automatically published as an encapsulated `Progressive Web Application <https://developers.google.com/web/progressive-web-apps/>`_ (PWA).
-
-What it does
-^^^^^^^^^^^^
-
- Experiences allow a user to:
-
-  * Use tools shared with them to create applications 
-  * Publish PWAs 
-  * Create pre-set activations for a PWA
-
-Why it matters
-^^^^^^^^^^^^^^
-
- Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component sets <component-sets>` meet-up, and should always be kept in mind when developing an individual :ref:`tool <tools>`. At the end of the day, it is much more common for users to fuse together a wide variety of tools to make one unified experience than for them to use a single tool in isolation. 
 
 ________________________________________________________________________________________________________________________________________
 
@@ -153,3 +139,26 @@ Why it matters
 ^^^^^^^^^^^^^^
 
  Anyone who is developing microservices will need to understand how databases work in order to collect and distribute information. However, people developing other :ref:`tools <tools>` should keep in mind what these databases offer them in terms of customizability and dynamic configuration as only compatible tools will be able to use the microservice's database.  
+
+________________________________________________________________________________________________________________________________________
+
+.. _experiences:
+
+Experiences
+-----------
+
+An experience is a complete web application that delivers a full user experience. An experience can be designed exclusively for mobile, tablets, desktops, or any combination thereof. All experiences are automatically published as an encapsulated `Progressive Web Application <https://developers.google.com/web/progressive-web-apps/>`_ (PWA).
+
+What it does
+^^^^^^^^^^^^
+
+ Experiences allow a user to:
+
+  * Use tools shared with them to create applications 
+  * Publish PWAs 
+  * Create pre-set activations for a PWA
+
+Why it matters
+^^^^^^^^^^^^^^
+
+ Experiences are where various :ref:`widgets <widgets>`, :ref:`microservices <microservices>`, and :ref:`component sets <component-sets>` meet-up, and should always be kept in mind when developing an individual :ref:`tool <tools>`. At the end of the day, it is much more common for users to fuse together a wide variety of tools to make one unified experience than for them to use a single tool in isolation. 
