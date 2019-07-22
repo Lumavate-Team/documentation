@@ -9,9 +9,9 @@ The following is a list of terms commonly used in the Lumavate platform. They ar
 * :ref:`Command Center`
  * :ref:`Tools`
 * :ref:`Studio`
-  * :ref:`Activations`
-  * :ref:`Databases`
-  * :ref:`Experiences`
+ * :ref:`Activations`
+ * :ref:`Databases`
+ * :ref:`Experiences`
 ________________________________________________________________________________________________________________________________________
 
 .. _command center:
