@@ -421,6 +421,10 @@ All commands will start with ``luma``.
 
 Command Index:
  #. :ref:`API`
+ #. :ref:`App-builder`
+ #. :ref:`App-builder-version`
+ #. :ref:`Asset`
+ #. :ref:`Asset-version`
  #. :ref:`Component-set`
  #. :ref:`Component-set-version`
  #. :ref:`Env`
@@ -571,6 +575,747 @@ Put
 
  .. note::
     API paths cannot include sort criteria.
+_______________________________________________________________________________________________________________________________________
+
+.. _App-builder:
+
+App-builder
+^^^^^^^^^^^
+
+Commands that create, modify, share, and delete app builder containers.
+
+.. _App-builder Access:
+
+Access
+++++++
+
+ Shares or unshares an app builder container with child organizations. 
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder access --add 99
+       Profile: dragon
+       Container: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     failed sharedWith          unsharedFrom resultingGrantees
+     []     [{'granteeId': 99}] []           ['Dragon Studio']
+     
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to share or unshare. You can pass either the ID or UrlRef.
+     * - ``--add ID``
+       - The studio or command center with whom you want to **share**. You can pass either the ID or Name.
+     * - ``--rm ID``
+       - The studio or command center with whom you want to **unshare**. You can pass either the ID or Name.
+     * - ``--absolute ID``
+       - Unshares the tool with all organizations and then shares the tool with the specified organizations. *Ignores* ``--add`` *and* ``--rm`` *commands*. You can pass either the ID or Name.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{sharedWith} {failed}"``.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--current``
+       - Lists the organizations the specified tool is shared with.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+.. _App-builder Add:
+
+Add
++++
+
+ Adds an app builder container to a command center.
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder add 
+       Profile: dragon
+       Name: Dragon Branding
+       Url Ref: dragonbranding
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  name              urlRef          createdAt
+     999 Dragon Branding   dragonbranding  02/22/19 19:21:49
+
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``--name "STRING"``
+       - What you want to call the app builder container. The name will appear in the command center and studio. 
+     * - ``--url-ref "STRING"``
+       - What the app builder will be referenced by in URLs. For example: https://urlToExperience.com/url-ref or ic/url-ref.
+     * - ``-path, --icon-file "FILE PATH"``
+       - The absolute path where the icon SVG file is located. For example: ``-path "C:/Users/User/Desktop/Folder/icon.SVG"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+.. _App-builder Ls:
+
+Ls
+++
+
+ Lists all app builder containers in the command center associated with the specified profile.
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder ls 
+       Profile: dragon
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  name              urlRef         createdAt
+     99  Character Sheet   character      10/12/18 20:05:40
+     999 Dragon Branding   dragonbranding 02/22/19 19:21:49
+
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "urlRef=world"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``--page INTEGER``
+       - The results page you want to view.
+     * - ``--pagesize INTEGER``
+       - The number of results you want to show per page.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+.. _App-builder Rm:
+
+Rm
+++
+
+ Removes an app builder container. 
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder rm 
+       Profile: dragon 
+       Container: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  name            urlRef         createdAt
+     999 Dragon Branding dragonbranding 02/22/19 19:21:49
+     
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to remove. You can pass either the ID or UrlRef.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+.. _App-builder Update:
+
+Update
++++++++
+
+ Updates the name or image of an app builder container.
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder update --name "Character Background" 
+       Profile: dragon 
+       Container: 999 
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  name                 urlRef         createdAt
+     999 Character Background dragonbranding 02/22/19 19:31:05
+
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to remove. You can pass either the ID or UrlRef.
+     * - ``--name "STRING"``
+       - The new name for the app builder container. The name will appear in the command center and studio. 
+     * - ``-path, --icon-file "FILE PATH"``
+       - The absolute path where the new icon SVG file is located. For example: ``-path "C:/Users/User/Desktop/Folder/icon.SVG"``. 
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+_______________________________________________________________________________________________________________________________________
+
+.. _App-builder-version:
+
+App-builder-version
+^^^^^^^^^^^^^^^^^^^^
+
+Commands that add, modify, and delete app builder versions.
+
+.. _App-builder-version Add:
+
+Add
++++
+
+ Adds a version to an app builder container.
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder-version add 
+       Profile: dragon 
+       Container: 999
+       Label: prod
+       Version: 9.9.9 
+       Port: 5000
+       Container-file-path: C:\fantasy\creatures\dragons\DragonBranding.gz
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     Uploading image to Lumavate:
+     Image Size: 59.43 MB
+     id  actualState versionNumber label createdAt
+     999 created     9.9.9         prod  02/22/19 19:40:59
+
+     
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app branding container you want to edit. You can pass either the ID or UrlRef.
+     * - ``--port INTEGER``
+       - The port that the version will run on. This will either be set in your code or be your programming language’s default port.
+     * - ``--editor-port INTEGER``
+       - The editor port checked by the Visual Studio Code Luma extension. 
+     * - ``--is-editable``
+       - Marks the app builder version as editable. Editable versions can be edited through the Visual Studio Code Luma extension.
+     * - ``-image, --docker-image "STRING"``
+       - The name and tag of a microservice Docker container from the Docker daemon. Docker must be installed locally to use this option. For more information about installing Docker, please see :ref:`Docker set-up<Installing Locally>`. 
+     * - ``-path, --container-file-path "FILE PATH"``
+       - The absolute path where the app builder tar file is located. For example: ``-path "C:/Users/User/Desktop/Folder/microservice.tar"``. 
+     * - ``-fv, --from-version INTEGER "*.*.*"``
+       - The version you want to use as a base for the current version. This will use the specified version’s port, label, variables, and image unless otherwise specified. Use a * to indicate the most recent version. For example, ``--from-version "9.9.*"`` will take the most recent version that has a major and minor value of 9. ``--from-version "*.*.*"`` will take the most recent version.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - What you want the app builder's version number to be. For example, ``--version "9.9.9"``.
+     * - ``--patch INTEGER``
+       - Sets the version number by increasing the from-version’s number patch value by one. For example, ``--from-version "1.1.1" --patch`` sets the version number to 1.1.2.
+     * - ``--minor INTEGER``
+       - Sets the version number by increasing the from-version's number minor value by one. For example, ``--from-version "1.1.1" --minor`` sets the version number to 1.2.0.
+     * - ``--major INTEGER``
+       - Sets the version number by increasing the from-version's number major value by one. For example, ``--from-version "1.1.1" --major`` sets the version number to 2.0.0.
+     * - ``--env-var "{"STRING":"KEY"}"``
+       - The name of the environmental variable followed by the key value. For more information, see the :ref:`environmental variables definition<Enviroment Variables>`. 
+     * - ``-l, --label "[prod|dev|old]"``
+       - The status of the version as either ready-for-production, in-development, or deprecated respectively.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``.
+     * - ``--json``
+       - Returns the raw JSON payload.
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated. 
+    Use ``--format`` to see JSON values organized in table format.
+
+.. _App-builder-version Download:
+
+Download
+++++++++
+
+ Downloads a zip file of an editable app builder version's Image.
+ 
+ Example:
+ 
+ .. code-block:: bash
+ 
+     $ luma app-builder-version download
+       Profile: dragon
+       Container: 999
+       Version: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+      
+      % Total    % Received % Xferd  Average Speed    Time     Time      Time  Current
+                                      Dload  Upload   Total    Spent     Left  Speed
+    100 42275  100    42275 0     0    42275     0  0:00:01  0:00:01 --:--:--    42275
+    
+    File Location: C:\Users\User\Desktop\application.999999.zip  
+ 
+ .. list-table:: Options
+     :widths: 10 20
+     
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the app builder you want to edit. For example, ``--version "9.9.9"``.
+     * - ``--path "FILE PATH"``
+       - The absolute path or the relative path from the Desktop where the app builder zip file will be saved. For example, ``--path "C:/Users/User/Desktop/Folder/microservice.zip"`` or ``--path "/Folder/microservice.zip"`` Defaults to the Desktop if no path is specified.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+.. _App-builder-version EditorInfo:
+
+EditorInfo
+++++++++++
+
+ Returns information on a app builder version's server. 
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder-version editorInfo
+       Profile: dragon 
+       Container: 999 
+       Version Number: 9.9.9
+
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the app builder you want to edit. For example, ``--version "9.9.9"``.
+     * - ``--tail-number INTEGER``
+       - The number of server information lines you want to display. 
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+.. _App-builder-version Exec:
+
+Exec
+++++
+
+ Sends commands directly to Docker. For more information on Docker commands, consult the `Docker documentation <https://docs.docker.com/engine/reference/commandline/docker/>`_.
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder-version exec '<<Docker command>>' 
+       Profile: dragon 
+       Container: 999 
+       Version Number: 9.9.9
+
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the app builder you want to edit. For example, ``--version "9.9.9"``.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+.. _App-builder-version Logs:
+
+Logs
+++++
+
+ Returns the logs for an app builder version. If the app builder version is editable, the editor logs will be followed. If the app builder version is read-only or is not editable, the production logs will be tailed. 
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder-version logs 
+       Profile: dragon 
+       Container: 999
+       Version Number: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     [2019-02-22 19:58:00 +0000] [1] [INFO] Starting gunicorn 19.9.0
+     [2019-02-22 19:58:00 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+     [2019-02-22 19:58:00 +0000] [1] [INFO] Using worker: eventlet
+     [2019-02-22 19:58:00 +0000] [7] [INFO] Booting worker with pid: 7
+     [2019-02-22 19:58:00 +0000] [9] [INFO] Booting worker with pid: 9
+     [2019-02-22 19:58:00 +0000] [11] [INFO] Booting worker with pid: 11
+     [2019-02-22 19:58:00 +0000] [13] [INFO] Booting worker with pid: 13
+    
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the app builder whose logs you want to see. For example, ``--version "9.9.9"``.
+     * - ``-n, --tail-number INTEGER``
+       - The number of log lines you want to display.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+.. _App-builder-version Ls:
+
+Ls
+++
+
+ Lists all versions of an app builder container.
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder-version ls 
+       Profile: dragon
+       Container: 999
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  actualState versionNumber label createdAt
+     999 stopped     9.9.9         prod  02/22/19 19:57:16
+
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--filter "JSON VALUE=SPECIFIC VALUE"``
+       - Returns results that match the filter criteria. For example: ``--filter "id=999"``. Additional filter options are available in the :ref:`Ls Filters` section.
+     * - ``--page INTEGER``
+       - The results page you want to view.
+     * - ``--pagesize INTEGER``
+       - The number of results you want to show per page.
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+ .. note::
+    Version number is filtered as ``"major=*&minor=*&patch=*"``.
+
+.. _App-builder-version Restart:
+
+Restart
++++++++
+
+ Restarts the app builder version's editor application without discarding code changes.
+ 
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder-version restart 
+       Profile: dragon 
+       Container: 999
+       Version Number: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     {'payload': {'data': {'actualState': 'running', 'actualStateChangedAt': '2019-06-18T19:06:37.832178+00:00', 'containerId': 9999, 'createdAt': '2019-06-18T14:55:30.243397+00:00', 'createdBy': 99, 'desiredState': 'running', 'desiredStateChangedAt': '2019-06-18T16:24:06.846847+00:00', 'editorPort': None, 'enforceRoutes': True, 'env': {}, 'expand': {}, 'id': 9999, 'instanceCount': 1, 'isEditable': False, 'label': 'prod', 'lastActualStatePayload': {'childHasError': False, 'children': [{'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d999999', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'running', 'eventName': 'do_validate', 'message': 'Container Version 9.9.9 (ID:9999) started successfully'}}, {'childHasError': False, 'children': [], 'errorMessage': None, 'id': '9d99r99a', 'overallPercent': 100.0, 'percent': 100, 'summary': {'beginState': 'validating', 'eventName': 'validated'}}], 'errorMessage': None, 'id': '9d9rag9o', 'overallPercent': 100.0, 'percent': 100, 'summary': {'stateLog': ['running', 'validating', 'running']}}, 'lastModifiedAt': '2019-06-18T19:11:10.410143', 'lastModifiedBy': 99, 'major': 9, 'minor': 0, 'notes': None, 'patch': 9, 'platformVersion': 'v3', 'port': 9999, 'repositoryName': 'registry.realm.lumavate-type.com/factsheet', 'rewriteUrl': False, 'stateChangedAt': '2019-06-18T14:55:30.235871+00:00', 'tag': 'd9r9', 'versionNumber': '9.9.9'}}}
+
+    
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the app builder you want to restart. For example, ``--version "9.9.9"``.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+.. _App-builder-version Rm:
+
+Rm
++++
+
+ Removes a version from an app builder container.
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder-version rm
+       Profile: dragon
+       Container: 999
+       Version: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  versionNumber label  createdAt
+     999 9.9.9         prod   02/22/19 19:57:16
+     
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - Removes all versions with that major, minor, and patch. Use a * to indicate all. For example, ``--version "9.*.*"`` will delete all versions with a major value of 9. "--version *.*.*" will delete all versions.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+.. _App-builder-version Start:
+
+Start
++++++
+
+ Starts an app builder version.
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder-version start
+       Profile: dragon
+       Container: 999
+       Version: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  Current State Version # Created At
+     999 running       9.9.9     02/22/19 19:57:16
+
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the app builder you want to start. For example, ``--version "9.9.9"``.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated. 
+    Use ``--format`` to the JSON values organized in table format.
+
+.. _App-builder-version Stop:
+
+Stop
+++++
+
+ Stops an app builder version. An app builder version cannot be stopped if it is being used in an experience.
+
+ Example:
+
+ .. code-block:: bash
+   
+     $ luma app-builder-version stop
+       Profile: dragon
+       Container: 999
+       Version: 9.9.9
+ 
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  Current State Version # Created At
+     999 stopped       9.9.9     02/22/19 19:57:16
+
+ .. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the app builder you want to stop. For example, ``--version "9.9.9"``.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
+
+.. _App-builder-version Update:
+
+Update
+++++++
+
+ Updates the label of an app builder version.
+
+ Example:
+
+ .. code-block:: bash
+   
+    $ luma app-builder-version update --label dev
+      Profile: dragon
+      Container: 999
+      Version: 9.9.9
+
+ Response:
+ 
+ .. code-block:: bash
+ 
+     id  versionNumber label createdAt
+     999 9.9.9         dev   02/22/19 19:57:16
+     
+.. list-table:: Options 
+     :widths: 10 20
+
+     * - ``-p, --profile "STRING"``
+       - The profile associated with the studio or command center you want to edit.
+     * - ``-c, --container ID``
+       - The app builder container you want to edit. You can pass either the ID or UrlRef.
+     * - ``-v, --version INTEGER "*.*.*"``
+       - The version number of the app builder you want to update. For example, ``--version "9.9.9"``.
+     * - ``-l, --label "[prod|dev|old]"``
+       - The new status of the version. It can be ready-for-production, in-development, or deprecated respectively.
+     * - ``-f, --format "{JSON VALUE}"``
+       - Returns a table with the requested JSON values. For example: ``--format "{id} {createdBy}"``. 
+     * - ``--json``
+       - Returns the raw JSON payload. 
+     * - ``--table`` 
+       - Returns a table with several basic JSON values.
+     * - ``--help``
+       - A list of available sub-commands and options. Several commands and options have a description explaining what they do.
+
+ .. warning:: 
+    ``--table`` is deprecated.
+    Use ``--format`` to see JSON values organized in table format.
 _______________________________________________________________________________________________________________________________________
 
 .. _Component-set:
